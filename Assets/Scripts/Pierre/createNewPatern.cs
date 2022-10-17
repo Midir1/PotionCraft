@@ -7,7 +7,7 @@ using UnityEngine.UI;
 
 using static UnityEditor.PlayerSettings;
 
-public class managerInput : MonoBehaviour
+public class createNewPatern : MonoBehaviour
 {
 
     Vector2 posScreen;
