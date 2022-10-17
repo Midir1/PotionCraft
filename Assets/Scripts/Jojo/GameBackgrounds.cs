@@ -2,19 +2,18 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class GameBackground : MonoBehaviour
+public class GameBackgrounds : MonoBehaviour
 {
     [SerializeField] private float lerpDuration;
     [SerializeField] private List<RectTransform> backgroundsRectTransform;
     [SerializeField] private List<Button> swipeButtons;
     [SerializeField] private Vector2 defaultResolution;
-    [SerializeField] private bool isVertical;
 
     private RectTransform rectTransform, canvasRectTransform;
 
     private Vector3 currentRectPos, targetRectPos;
 
-    private bool isLerping = false, isSwipingLeft = false, isSwipingRight = false, isSwipingUp = false, isSwipingDown = false;
+    private bool isLerping = false, isSwipingUp = false, isSwipingDown = false;
 
     private float lerpTime;
 
@@ -51,8 +50,6 @@ public class GameBackground : MonoBehaviour
         ScroolBetweenMenus();
     }
 
-    public void SwipeLeft() => isSwipingLeft = true;
-    public void SwipeRight() => isSwipingRight = true;
     public void SwipeDown() => isSwipingDown = true;
     public void SwipeUp() => isSwipingUp = true;
 
@@ -71,15 +68,18 @@ public class GameBackground : MonoBehaviour
         {
             RectTransform backgroundRectTransform = backgroundsRectTransform[i];
 
-            int middleNbBackgrounds = (backgroundsRectTransform.Count / 2) + 1;
-
-
-            if(!isVertical)
-                backgroundRectTransform.anchoredPosition = new Vector2(Screen.width * (i - middleNbBackgrounds + 1), 0f);
+            //Todo transition height with shop and room
+            /*if(i != 1)
+            {
+                backgroundRectTransform.anchoredPosition = new Vector2(0f, (Screen.height / 2) * i);
+                backgroundRectTransform.sizeDelta = new Vector2(Screen.width, Screen.height);
+            }
             else
-                backgroundRectTransform.anchoredPosition = new Vector2(0f, Screen.height * (i - middleNbBackgrounds + 1));
-
-            backgroundRectTransform.sizeDelta = new Vector2(Screen.width, Screen.height);
+            {
+                backgroundRectTransform.anchoredPosition = new Vector2(0f, Screen.height * (i));
+                backgroundRectTransform.sizeDelta = new Vector2(Screen.width, (Screen.width * backgroundRectTransform.rect.height) / backgroundRectTransform.rect.height);
+            }*/
+            
         }
     }
 
@@ -87,21 +87,7 @@ public class GameBackground : MonoBehaviour
     {
         if(!IsLerping)
         {
-            if (isSwipingRight)
-            {
-                isSwipingRight = false;
-
-                targetRectPos -= new Vector3(Screen.width * canvasRectTransform.lossyScale.x, 0f, 0f);
-                IsLerping = true;
-            }
-            else if (isSwipingLeft)
-            {
-                isSwipingLeft = false;
-
-                targetRectPos += new Vector3(Screen.width * canvasRectTransform.lossyScale.x, 0f, 0f);
-                IsLerping = true;
-            }
-            else if (isSwipingUp)
+            if (isSwipingUp)
             {
                 isSwipingUp = false;
 
