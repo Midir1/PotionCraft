@@ -90,7 +90,6 @@ public class InputPaternRecognition : MonoBehaviour
 
     void ClearLastPath()
     {
-        Debug.Log("resset");
         //clear the last path
         arrPoint.ForEach(Destroy);
         arrPoint.Clear();
@@ -129,14 +128,29 @@ public class InputPaternRecognition : MonoBehaviour
 
         //colition btw finger and point
         bool atLestOnePointTutched = false;
-        foreach (Object point in arrPoint)
+        for (int i = 0; i < arrPoint.Count; i++)
         {
+            Object point = arrPoint[i];
             Vector2 pointPos = point.GetComponent<Transform>().position;
             float distColiision = Vector2.Distance(fingerPos, pointPos);
             if (distColiision < radiusCollision)
             {
                 if (point.GetComponent<Image>())
-                    Destroy(point.GetComponent<Image>());
+                {
+                    if (i == 0 || !arrPoint[i - 1].GetComponent<Image>())
+                    {
+                        Destroy(point.GetComponent<Image>());
+                        if (i == arrPoint.Count -1)
+                        {
+                            Braval();
+                        }
+                    }
+                    else
+                    {
+                        ClearLastPath();
+                        break;
+                    }
+                }
 
                 atLestOnePointTutched = true;
             }
@@ -147,8 +161,14 @@ public class InputPaternRecognition : MonoBehaviour
         }
     }
 
+    void Braval()
+    {
+        Debug.Log("Bravo");
+    }
+
 void SetPatern(Patern _patern)
     {
         patern  = _patern;
     }
 }
+
