@@ -9,7 +9,7 @@ enum RACE
 {
 	PUMPKIN,
 	MUSHROOM,
-	RACE3,
+	DEVIL,
 	RACE4,
 	RACENB
 }
@@ -78,7 +78,7 @@ public class CustomerClass
 
 		askedPotion.price = 100 + 10 * size + 10 * (int)askedPotion.rune;
 
-		race = (RACE)Random.Range(0, (int)RACE.RACE3);
+		race = (RACE)Random.Range(0, (int)RACE.RACE4);
 
     }
 
@@ -103,20 +103,23 @@ public class CustomerClass
 	}
 
 
-    public void DiplayCustomer(int nbCustomer)
+    public void DiplayCustomer()
 	{
 		string path;
 
         switch (race)
 		{
-			case RACE.PUMPKIN:
-                path = Pumpkin();
-                break;
-			case RACE.MUSHROOM:
-                path = Mushroom();
-                break;
-			default:
-                path = Mushroom();
+			//case RACE.PUMPKIN:
+   //             path = Pumpkin();
+   //             break;
+			//case RACE.MUSHROOM:
+   //             path = Mushroom();
+   //             break;
+   //         case RACE.DEVIL:
+   //             path = Devil();
+   //             break;
+            default:
+                path = Devil();
                 break;
 		}
 		part = new int[nbPart];
@@ -127,7 +130,7 @@ public class CustomerClass
         }
 		GameObject parent = new GameObject();
 		parent.transform.position = new Vector2(pos[0].x, pos[0].y);
-		parent.name = "Customer" + nbCustomer;
+		parent.name = "Customer";
 
         for (int i = 0; i < nbPart; i++)
         {
@@ -165,7 +168,7 @@ public class CustomerClass
         pos[0].y = -2.2f ;
         pos[1].y = 0;
         pos[2].y = -0.6f;
-        pos[3].y = 0.5f;
+        pos[3].y = 0;
 
 		return path;
     }
@@ -194,7 +197,29 @@ public class CustomerClass
         return path;
     }
 
-	public void Update()
+    public string Devil()
+    {
+        string path = "demon/";
+
+        nbPart = 4;
+        secondPath = new string[nbPart];
+        partDisplay = new GameObject[nbPart];
+        pos = new Vector2[nbPart];
+
+        secondPath[0] = "cloth/tenus";
+        secondPath[1] = "eye/yeux";
+        secondPath[2] = "face/tete";
+        secondPath[3] = "hair/cheveux";
+
+        pos[0].y = -3f;
+        pos[1].y = 0;
+        pos[2].y = -0.3f;
+        pos[3].y = 1;
+
+        return path;
+    }
+
+    public void Update()
 	{
 		timer -= Time.deltaTime;
 	}
