@@ -109,15 +109,15 @@ public class CustomerClass
 
         switch (race)
 		{
-			//case RACE.PUMPKIN:
-   //             path = Pumpkin();
-   //             break;
-			//case RACE.MUSHROOM:
-   //             path = Mushroom();
-   //             break;
-   //         case RACE.DEVIL:
-   //             path = Devil();
-   //             break;
+            case RACE.PUMPKIN:
+                path = Pumpkin();
+                break;
+            case RACE.MUSHROOM:
+                path = Mushroom();
+                break;
+            case RACE.DEVIL:
+                path = Devil();
+                break;
             default:
                 path = Devil();
                 break;
@@ -168,7 +168,7 @@ public class CustomerClass
         pos[0].y = -2.2f ;
         pos[1].y = 0;
         pos[2].y = -0.6f;
-        pos[3].y = 0;
+        pos[3].y = 0.6f;
 
 		return path;
     }
@@ -211,10 +211,10 @@ public class CustomerClass
         secondPath[2] = "face/tete";
         secondPath[3] = "hair/cheveux";
 
-        pos[0].y = -3f;
+        pos[0].y = -2f;
         pos[1].y = 0;
-        pos[2].y = -0.3f;
-        pos[3].y = 1;
+        pos[2].y = 0;
+        pos[3].y = 0;
 
         return path;
     }

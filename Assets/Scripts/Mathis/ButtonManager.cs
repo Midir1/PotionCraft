@@ -59,14 +59,14 @@ public class ButtonManager : MonoBehaviour
 
 
         //deplacement des clients
-        //for (int i = 0; i < customerTab.Count; i++)
-        //{
-        //    for (int j = 0; j < customerTab[i].nbPart; j++)
-        //    {
-        //        customerTab[i].pos[j].x = 3.5f*(i-2);
-        //        customerTab[i].partDisplay[j].transform.position = new Vector3(customerTab[i].pos[j].x, customerTab[i].pos[j].y);
-        //    }
-        //}
+        for (int i = 0; i < customerTab.Count; i++)
+        {
+            for (int j = 0; j < customerTab[i].nbPart; j++)
+            {
+                customerTab[i].pos[j].x = 3.5f * (i - 2);
+                customerTab[i].partDisplay[j].transform.position = new Vector3(customerTab[i].pos[j].x, customerTab[i].pos[j].y);
+            }
+        }
     }
 
     public void test()
@@ -78,15 +78,6 @@ public class ButtonManager : MonoBehaviour
             customer = new CustomerClass();
             customerTab.Add(customer);
             customer.DiplayCustomer();
-
-            for (int i = 0; i < customerTab.Count; i++)
-            {
-                for (int j = 0; j < customerTab[i].nbPart; j++)
-                {
-                    customerTab[i].pos[j].x += 3.5f;
-                    customerTab[i].partDisplay[j].transform.position = new Vector3(customerTab[i].pos[j].x, customerTab[i].pos[j].y);
-                }
-            }
         }
     }
 }
