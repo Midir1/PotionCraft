@@ -48,6 +48,16 @@ public class GameBackgrounds : MonoBehaviour
     private void Update()
     {
         ScroolBetweenMenus();
+
+
+        //TODO CLAMP BACKGROUND SCROLL CONTENT
+        Debug.Log(rectTransform.position.y > -4100f);
+
+        if (rectTransform.position.y > 0)
+            rectTransform.position = Vector2.zero;
+
+        if (rectTransform.position.y < -4100f)
+            rectTransform.position = new Vector2(0f, -4100f);
     }
 
     public void SwipeDown() => isSwipingDown = true;
@@ -68,6 +78,9 @@ public class GameBackgrounds : MonoBehaviour
         {
             RectTransform backgroundRectTransform = backgroundsRectTransform[i];
 
+            backgroundRectTransform.anchoredPosition = new Vector2(0f, Screen.height * i);
+            backgroundRectTransform.sizeDelta = new Vector2(Screen.width, Screen.height);
+
             //Todo transition height with shop and room
             /*if(i != 1)
             {
@@ -79,7 +92,7 @@ public class GameBackgrounds : MonoBehaviour
                 backgroundRectTransform.anchoredPosition = new Vector2(0f, Screen.height * (i));
                 backgroundRectTransform.sizeDelta = new Vector2(Screen.width, (Screen.width * backgroundRectTransform.rect.height) / backgroundRectTransform.rect.height);
             }*/
-            
+
         }
     }
 
@@ -91,14 +104,14 @@ public class GameBackgrounds : MonoBehaviour
             {
                 isSwipingUp = false;
 
-                targetRectPos -= new Vector3(0f, Screen.height * canvasRectTransform.lossyScale.y, 0f);
+                targetRectPos -= new Vector3(0f, Screen.height * canvasRectTransform.lossyScale.y * 2f, 0f);
                 IsLerping = true;
             }
             else if (isSwipingDown)
             {
                 isSwipingDown = false;
 
-                targetRectPos += new Vector3(0f, Screen.height * canvasRectTransform.lossyScale.y, 0f);
+                targetRectPos += new Vector3(0f, Screen.height * canvasRectTransform.lossyScale.y * 2f, 0f);
                 IsLerping = true;
             }
         }
