@@ -1,67 +1,77 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class GameBackgrounds : MonoBehaviour
+public class GameBackgrounds : MonoBehaviour, IEndDragHandler
 {
-    [SerializeField] private float lerpDuration;
+    [SerializeField] private float lerpSpeed;
     [SerializeField] private List<RectTransform> backgroundsRectTransform;
     [SerializeField] private List<Button> swipeButtons;
     [SerializeField] private Vector2 defaultResolution;
 
-    private RectTransform rectTransform, canvasRectTransform;
+    private RectTransform rectTransform;
 
-    private Vector3 currentRectPos, targetRectPos;
-
-    private bool isLerping = false, isSwipingUp = false, isSwipingDown = false;
-
-    private float lerpTime;
+    private Vector2 targetRectPos;
 
     private CanvasScaler canvasScaler;
+
+    private readonly float swipeUpPos = -Screen.height / 40f;
+    private readonly float swipeDownPos = -Screen.height * 2f + Screen.height / 40f;
+    private readonly float lerpTolerance = Screen.height / 200f;
+
+    private ScrollRect scrollRect;
+
+    private bool isLerping = false, isDownstairs = true;
 
     private bool IsLerping
     {
         get { return isLerping; }
         set
         {
-            foreach (Button swipeButton in swipeButtons)
-            {
-                swipeButton.enabled = !value;
-            }
-
             isLerping = value;
+
+            if (isLerping)
+                scrollRect.movementType = ScrollRect.MovementType.Clamped;
+            else
+                scrollRect.movementType = ScrollRect.MovementType.Elastic;
         }
     }
 
     private void Start()
     {
         rectTransform = GetComponent<RectTransform>();
-        canvasRectTransform = GetComponentInParent<RectTransform>();
         canvasScaler = GetComponentInParent<CanvasScaler>();
+        scrollRect = GetComponent<ScrollRect>();
 
-        currentRectPos = rectTransform.position;
-        targetRectPos = currentRectPos;
+        targetRectPos = rectTransform.anchoredPosition;
 
         ChangeUIResolution();
     }
 
     private void Update()
     {
-        ScroolBetweenMenus();
-
-
-        //TODO CLAMP BACKGROUND SCROLL CONTENT
-        Debug.Log(rectTransform.position.y > -4100f);
-
-        if (rectTransform.position.y > 0)
-            rectTransform.position = Vector2.zero;
-
-        if (rectTransform.position.y < -4100f)
-            rectTransform.position = new Vector2(0f, -4100f);
+        ScroolBetweenFloors();
+        ClampScroll();
     }
 
-    public void SwipeDown() => isSwipingDown = true;
-    public void SwipeUp() => isSwipingUp = true;
+    public void OnEndDrag(PointerEventData data)
+    {
+        if (scrollRect.movementType == ScrollRect.MovementType.Clamped) return;
+
+        if (isDownstairs && rectTransform.anchoredPosition.y < swipeUpPos)
+        {
+            targetRectPos = new Vector2(0f, -Screen.height * 2f);
+            IsLerping = true;
+            isDownstairs = false;
+        }
+        else if (!isDownstairs && rectTransform.anchoredPosition.y > swipeDownPos)
+        {
+            targetRectPos = new Vector2(0f, 0f);
+            IsLerping = true;
+            isDownstairs = true;
+        }  
+    }
 
     private void ChangeUIResolution()
     {
@@ -80,55 +90,30 @@ public class GameBackgrounds : MonoBehaviour
 
             backgroundRectTransform.anchoredPosition = new Vector2(0f, Screen.height * i);
             backgroundRectTransform.sizeDelta = new Vector2(Screen.width, Screen.height);
-
-            //Todo transition height with shop and room
-            /*if(i != 1)
-            {
-                backgroundRectTransform.anchoredPosition = new Vector2(0f, (Screen.height / 2) * i);
-                backgroundRectTransform.sizeDelta = new Vector2(Screen.width, Screen.height);
-            }
-            else
-            {
-                backgroundRectTransform.anchoredPosition = new Vector2(0f, Screen.height * (i));
-                backgroundRectTransform.sizeDelta = new Vector2(Screen.width, (Screen.width * backgroundRectTransform.rect.height) / backgroundRectTransform.rect.height);
-            }*/
-
         }
     }
 
-    private void ScroolBetweenMenus()
+    private void ScroolBetweenFloors()
     {
-        if(!IsLerping)
+        if(IsLerping)
         {
-            if (isSwipingUp)
-            {
-                isSwipingUp = false;
-
-                targetRectPos -= new Vector3(0f, Screen.height * canvasRectTransform.lossyScale.y * 2f, 0f);
-                IsLerping = true;
-            }
-            else if (isSwipingDown)
-            {
-                isSwipingDown = false;
-
-                targetRectPos += new Vector3(0f, Screen.height * canvasRectTransform.lossyScale.y * 2f, 0f);
-                IsLerping = true;
-            }
-        }
-        else 
-        {
-            lerpTime += Time.deltaTime / lerpDuration;
-
-            if (rectTransform.position != targetRectPos)
-                rectTransform.position = Vector3.Lerp(currentRectPos, targetRectPos, lerpTime);
+            if (Mathf.Abs(rectTransform.anchoredPosition.y - targetRectPos.y) > lerpTolerance)
+                rectTransform.anchoredPosition = Vector3.Lerp(rectTransform.anchoredPosition, targetRectPos, 1 - Mathf.Pow(1 - lerpSpeed / 1000f, Time.deltaTime * 60));//lerpTime);
             else
             {
-                currentRectPos = rectTransform.position;
+                rectTransform.anchoredPosition = targetRectPos;
 
                 IsLerping = false;
-
-                lerpTime = 0f;
             }
         }
+    }
+
+    private void ClampScroll()
+    {
+        if (rectTransform.anchoredPosition.y > 0)
+            rectTransform.anchoredPosition = Vector2.zero;
+
+        if (rectTransform.anchoredPosition.y < -Screen.height * 2f)
+            rectTransform.anchoredPosition = new Vector2(0f, -Screen.height * 2f);
     }
 }
