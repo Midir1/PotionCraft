@@ -10,7 +10,7 @@ enum RACE
 	PUMPKIN,
 	MUSHROOM,
 	DEVIL,
-	RACE4,
+	SKELETON,
 	RACENB
 }
 
@@ -78,7 +78,7 @@ public class CustomerClass
 
 		askedPotion.price = 100 + 10 * size + 10 * (int)askedPotion.rune;
 
-		race = (RACE)Random.Range(0, (int)RACE.RACE4);
+		race = (RACE)Random.Range(0, (int)RACE.RACENB);
 
     }
 
@@ -109,21 +109,23 @@ public class CustomerClass
 
         switch (race)
 		{
-            case RACE.PUMPKIN:
-                path = Pumpkin();
-                break;
-            case RACE.MUSHROOM:
-                path = Mushroom();
-                break;
-            case RACE.DEVIL:
-                path = Devil();
-                break;
+            //case RACE.PUMPKIN:
+            //    path = Pumpkin();
+            //    break;
+            //case RACE.MUSHROOM:
+            //    path = Mushroom();
+            //    break;
+            //case RACE.DEVIL:
+            //    path = Devil();
+            //    break;
+            //case RACE.SKELETON:
+            //    path = Skeleton();
+            //    break;
             default:
                 path = Devil();
                 break;
 		}
-		part = new int[nbPart];
-        part[0] = Random.Range(1, 3);
+
         for (int i = 1; i < nbPart; i++)
         {
             part[i] = Random.Range(1, 5);
@@ -134,7 +136,8 @@ public class CustomerClass
 
         for (int i = 0; i < nbPart; i++)
         {
-            pos[i].x = -5;
+            pos[i].x = 0;
+            pos[i].y = 0;
             partDisplay[i] = new GameObject("part" + i);
             SpriteRenderer spriteRenderer = partDisplay[i].AddComponent<SpriteRenderer>();
             BoxCollider2D collide = partDisplay[i].AddComponent<BoxCollider2D>();
@@ -165,17 +168,35 @@ public class CustomerClass
         secondPath[2] = "mouth/bouche";
         secondPath[3] = "hair/cheveux";
 
-        pos[0].y = -2.2f ;
-        pos[1].y = 0;
-        pos[2].y = -0.6f;
-        pos[3].y = 0.6f;
+        part = new int[nbPart];
+        part[0] = Random.Range(1, 3);
 
-		return path;
+        return path;
+    }
+
+    public string Skeleton()
+    {
+        string path = "skeleton/";
+
+        nbPart = 4;
+        secondPath = new string[nbPart];
+        partDisplay = new GameObject[nbPart];
+        pos = new Vector2[nbPart];
+
+        secondPath[0] = "cloth/costume";
+        secondPath[1] = "eye/yeux";
+        secondPath[2] = "face/tete";
+        secondPath[3] = "hair/chapeau";
+
+        part = new int[nbPart];
+        part[0] = Random.Range(1, 5);
+
+        return path;
     }
 
     public string Pumpkin()
 	{
-		string path = "citrouille/";
+		string path = "pumpkin/";
 
         nbPart = 5;
         secondPath = new string[nbPart];
@@ -188,11 +209,8 @@ public class CustomerClass
         secondPath[3] = "hair/tige";
         secondPath[4] = "face/tete";
 
-        pos[0].y = -3;
-		pos[1].y = 0;
-		pos[2].y = -0.3f;
-		pos[3].y = 1;
-		pos[4].y = 0;
+        part = new int[nbPart];
+        part[0] = Random.Range(1, 3);
 
         return path;
     }
@@ -211,10 +229,8 @@ public class CustomerClass
         secondPath[2] = "face/tete";
         secondPath[3] = "hair/cheveux";
 
-        pos[0].y = -2f;
-        pos[1].y = 0;
-        pos[2].y = 0;
-        pos[3].y = 0;
+        part = new int[nbPart];
+        part[0] = Random.Range(1, 3);
 
         return path;
     }
