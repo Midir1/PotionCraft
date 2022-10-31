@@ -7,7 +7,6 @@ public class GameBackgrounds : MonoBehaviour, IEndDragHandler
 {
     [SerializeField] private float lerpSpeed;
     [SerializeField] private List<RectTransform> backgroundsRectTransform;
-    [SerializeField] private List<Button> swipeButtons;
     [SerializeField] private Vector2 defaultResolution;
 
     private RectTransform rectTransform;
@@ -26,7 +25,7 @@ public class GameBackgrounds : MonoBehaviour, IEndDragHandler
 
     private bool IsLerping
     {
-        get { return isLerping; }
+        get => isLerping;
         set
         {
             isLerping = value;
@@ -59,18 +58,27 @@ public class GameBackgrounds : MonoBehaviour, IEndDragHandler
     {
         if (scrollRect.movementType == ScrollRect.MovementType.Clamped) return;
 
-        if (isDownstairs && rectTransform.anchoredPosition.y < swipeUpPos)
+        switch (isDownstairs)
         {
-            targetRectPos = new Vector2(0f, -Screen.height * 2f);
-            IsLerping = true;
-            isDownstairs = false;
+            case true when rectTransform.anchoredPosition.y < swipeUpPos:
+                targetRectPos = new Vector2(0f, -Screen.height * 2f);
+                IsLerping = true;
+                isDownstairs = false;
+                break;
+            case false when rectTransform.anchoredPosition.y > swipeDownPos:
+                targetRectPos = new Vector2(0f, 0f);
+                IsLerping = true;
+                isDownstairs = true;
+                break;
+            case true:
+                targetRectPos = new Vector2(0f, 0f);
+                IsLerping = true;
+                break;
+            case false:
+                targetRectPos = new Vector2(0f, -Screen.height * 2f);
+                IsLerping = true;
+                break;
         }
-        else if (!isDownstairs && rectTransform.anchoredPosition.y > swipeDownPos)
-        {
-            targetRectPos = new Vector2(0f, 0f);
-            IsLerping = true;
-            isDownstairs = true;
-        }  
     }
 
     private void ChangeUIResolution()
