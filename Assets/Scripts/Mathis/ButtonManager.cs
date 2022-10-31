@@ -24,7 +24,6 @@ public class ButtonManager : MonoBehaviour
     void Update()
     {
 
-
         for (int i = 0; i < customerTab.Count; i++)
         {
             customerTab[i].Update();

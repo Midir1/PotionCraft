@@ -13,6 +13,14 @@ enum RACE
 	RACENB
 }
 
+enum HERO
+{
+    MERCHANT,
+    WARIOR,
+    SUCCUBUS,
+    HERONB
+}
+
 //temporaire en attendant la classe
 enum INGREDIENT
 {
@@ -55,6 +63,7 @@ public class CustomerClass
     public Sprite sprite;
 	public Vector2[] pos = new Vector2[5];
 	private RACE race;
+	private HERO hero;
 	public int nbPart;
 
 
@@ -82,9 +91,15 @@ public class CustomerClass
 		askedPotion.rune = (RUNES)Random.Range(0, (int)RUNES.RUNENB);
 
 		askedPotion.price = 100 + 10 * potionSize + 10 * (int)askedPotion.rune;
-
-		race = (RACE)Random.Range(0, (int)RACE.RACENB);
-
+        //if (Random.Range(1,11) != 0)
+        //{
+        //    hero = (HERO)Random.Range(0, (int)HERO.HERONB);
+        //    race = RACE.RACENB;
+        //}
+        //else
+        {
+            race = (RACE)Random.Range(0, (int)RACE.RACENB);
+        }
     }
 
 
@@ -215,29 +230,63 @@ public class CustomerClass
 	{
 		string path;
 
-        switch (race)
-		{
-            case RACE.PUMPKIN:
-                path = Pumpkin();
-                break;
-            case RACE.DEVIL:
-                path = Devil();
-                break;
-            case RACE.SKELETON:
-                path = Skeleton();
-                break;
-            default:
-                path = Devil();
-                break;
-		}
+        if (race == RACE.RACENB)
+        {
+            switch (hero)
+            {
+                case HERO.MERCHANT:
+                    path = "OC/minotaur";
+                    break;
+                case HERO.WARIOR:   
+                    path = "OC/warior";
+                    break;
+                case HERO.SUCCUBUS:
+                    path = "OC/succubus";
+                    break;
+                default:
+                    path = "";
+                    break;
+            }
+
+            nbPart = 1;
+
+            secondPath = new string[nbPart];
+            partDisplay = new GameObject[nbPart];
+            pos = new Vector2[nbPart];
+            part = new int[nbPart];
+
+            part[0] = 0;
+            secondPath[0] = "";
+            pos[0] = new Vector2 (1,3);
+
+        }
+        else
+        {
+            switch (race)
+            {
+                case RACE.PUMPKIN:
+                    path = Pumpkin();
+                    break;
+                case RACE.DEVIL:
+                    path = Devil();
+                    break;
+                case RACE.SKELETON:
+                    path = Skeleton();
+                    break;
+                default:
+                    path = Devil();
+                    break;
+            }
+
+        }
 
         for (int i = 1; i < nbPart; i++)
         {
             part[i] = Random.Range(1, 5);
         }
-		GameObject parent = new GameObject();
-		parent.transform.position = new Vector2(pos[0].x, pos[0].y);
-		parent.name = "Customer";
+        GameObject parent = new GameObject();
+        parent.transform.position = new Vector2(pos[0].x, pos[0].y);
+        parent.name = "Customer";
 
         for (int i = 0; i < nbPart; i++)
         {
@@ -246,7 +295,7 @@ public class CustomerClass
             partDisplay[i] = new GameObject("part" + i);
             SpriteRenderer spriteRenderer = partDisplay[i].AddComponent<SpriteRenderer>();
             BoxCollider2D collide = partDisplay[i].AddComponent<BoxCollider2D>();
-       
+
             sprite = Resources.Load<Sprite>(string.Concat(path, secondPath[i], part[i]));
             partDisplay[i].transform.position = new Vector2(pos[i].x, pos[i].y);
             spriteRenderer.sprite = sprite;
@@ -258,6 +307,7 @@ public class CustomerClass
             partDisplay[i].transform.parent = parent.transform;
 
         }
+        
     }
 
     public void Angry()
