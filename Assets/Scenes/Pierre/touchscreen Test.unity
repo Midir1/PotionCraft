@@ -439,7 +439,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a21a080f45c9665429b9895caa5d0ff7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  distBTWpoint: 0.5
+  distBTWpoint: 0.15
   canva: {fileID: 336052393}
   point: {fileID: 6438192550246423890, guid: aad796938a852f34f99c70dfad033597, type: 3}
 --- !u!4 &2072230399
@@ -469,8 +469,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c0fae0bc572b9c459774a3578953199, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  patern: 1
+  patern: 3
   pointToInstantiate: {fileID: 6438192550246423890, guid: aad796938a852f34f99c70dfad033597, type: 3}
   canva: {fileID: 336052393}
+  numPtc: 4
   radiusCollision: 0.3
   distBTWpoint: 0.2
+  angle: 40
