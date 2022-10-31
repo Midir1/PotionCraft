@@ -6,31 +6,7 @@ using UnityEngine;
 public class MoneyScript : MonoBehaviour
 {
     private TextMeshProUGUI moneyValue;
-    [SerializeField] uint maxMoney;
-    [SerializeField] uint currentMoney;
-
-    public void AddMoney(uint money)
-    {
-        currentMoney += money;
-        if(currentMoney > maxMoney)
-        {
-            currentMoney = maxMoney;
-        }
-    }
-
-    public void RemoveMoney(uint money)
-    {
-        currentMoney -= money;
-        if (currentMoney < 0)
-        {
-            currentMoney = 0;
-        }
-    }
-
-    public uint GetCurrentMoney()
-    {
-        return currentMoney;
-    }
+    GameManager gameManager;
 
     // Start is called before the first frame update
     void Start()
@@ -41,6 +17,6 @@ public class MoneyScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        moneyValue.text = currentMoney.ToString();
+        moneyValue.text = GameManager.Instance.CurrentMoney.ToString();
     }
 }

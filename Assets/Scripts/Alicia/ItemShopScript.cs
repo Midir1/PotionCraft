@@ -5,28 +5,36 @@ using UnityEngine;
 public class ItemShopScript : MonoBehaviour
 {
     [SerializeField] uint price;
+    [SerializeField] string id;
     public BuyButtonScript buyButton;
-    public MoneyScript money;
     bool availablePurchase = true;
+    GameManager gameManager;
+
+    public string Id { get => id; }
+    public uint Price { get => price; }
 
     void OnMouseDown()
     {
         if (availablePurchase)
             buyButton.SelectItemShop(this);
     }
-    public uint GetPrice()
-    {
-        return price;
-    }
+
     public bool BuyIt()
     {
-        if(money.GetCurrentMoney() > price)
+        if (availablePurchase)
         {
-            money.RemoveMoney(price);
-            availablePurchase = false;
-            return true;
+            if (GameManager.Instance.CurrentMoney > price)
+            {
+                GameManager.Instance.RemoveMoney(price);
+                availablePurchase = false;
+                return true;
+            }
         }
         return false;
+    }
+    private void Update()
+    {
+
     }
 
 }
