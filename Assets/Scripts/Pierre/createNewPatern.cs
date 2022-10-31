@@ -72,7 +72,8 @@ public class createNewPatern : MonoBehaviour
 
             if (touch.phase == TouchPhase.Ended)
             {
-
+                Debug.Log("yeehaaa");
+                logRune();
             }
         }
 
