@@ -23,6 +23,9 @@ public class InputPaternRecognition : MonoBehaviour
     [SerializeField] Patern patern = Patern.NotInitialized;
 
 
+    [SerializeField] Object lineToInstantiate;
+    Object line;
+    RuneDrawLine runeDrawLine;
     [SerializeField] Object pointToInstantiate;
     [SerializeField] Canvas canva;
 
@@ -47,6 +50,7 @@ public class InputPaternRecognition : MonoBehaviour
 
     void Start()
     {
+        
 
         switch (patern)
         {
@@ -83,18 +87,24 @@ public class InputPaternRecognition : MonoBehaviour
         {
             Touch touch = Input.GetTouch(0);
             Vector2 fingerPos = Camera.main.ScreenToWorldPoint(touch.position);
+
             if (touch.phase == TouchPhase.Began)
             {
                 flagTouchBegan = true;
                 midlePtc = (int)numPtc / 2;
-                //prepare for the new drawing
+
+                line = Instantiate(lineToInstantiate);
+                runeDrawLine = line.GetComponent<RuneDrawLine>();
+
                 actualDistBTWpoint = distBTWpoint;
                 lastPointPos = fingerPos;
+
                 //Collision finger / starPoint
                 Vector2 startPointPos = arrPoint[0].GetComponent<Transform>().position;
                 float distColiision = Vector2.Distance(fingerPos, startPointPos);
                 if (!(distColiision < radiusCollision))
                 {
+                    runeDrawLine.Fail();
                     ClearPath();
                 }
             }
@@ -108,6 +118,7 @@ public class InputPaternRecognition : MonoBehaviour
     void ClearPath()
     {
         //clear the last path
+        line = null;
         arrPoint.ForEach(Destroy);
         arrPoint.Clear();
         arrFingerPath.ForEach(Destroy);
@@ -118,11 +129,10 @@ public class InputPaternRecognition : MonoBehaviour
             Object circleCopy = Instantiate(pointToInstantiate, pos, Quaternion.identity, canva.transform);
             arrPoint.Add(circleCopy);
         }
-        Debug.Log("You Fail");
         flagTouchBegan = false;
     }
 
-    void draw(Vector2 _pos)
+    void drawPoint(Vector2 _pos)
     {
         Object circleCopy = Instantiate(pointToInstantiate, _pos, Quaternion.identity, canva.transform);
         UnityEngine.Color color = Random.ColorHSV(0f, 1f, 1f, 1f, 0.5f, 1f);
@@ -130,56 +140,6 @@ public class InputPaternRecognition : MonoBehaviour
         arrFingerPath.Add(circleCopy);
     }
 
-    void CheckIfOnPathSimple()
-    {
-        //    Touch touch = Input.GetTouch(0);
-        //    Vector2 fingerPos = Camera.main.ScreenToWorldPoint(touch.position);
-
-        //    if (touch.phase == TouchPhase.Moved)
-        //    {
-        //        //colition btw finger and point
-        //        bool atLestOnePointTutched = false;
-        //        for (int i = 0; i < arrPoint.Count; i++)
-        //        {
-        //            Object point = arrPoint[i];
-        //            Vector2 pointPos = point.GetComponent<Transform>().position;
-        //            float distColiision = Vector2.Distance(fingerPos, pointPos);
-        //            if (distColiision < radiusCollision)
-        //            {
-        //                if (point.GetComponent<Image>())
-        //                {
-        //                    if (i == 0 || !arrPoint[i - 1].GetComponent<Image>())
-        //                    {
-        //                        Destroy(point.GetComponent<Image>());
-        //                        if (i == arrPoint.Count - 1)
-        //                        {
-        //                            Braval();
-        //                        }
-        //                    }
-        //                    else
-        //                    {
-        //                        ClearLastPath();
-        //                        break;
-        //                    }
-        //                }
-
-        //                atLestOnePointTutched = true;
-        //            }
-        //        }
-        //        if (!atLestOnePointTutched)
-        //        {
-        //            ClearLastPath();
-        //        }
-        //    }
-
-        //    if (touch.phase == TouchPhase.Ended)
-        //    {
-        //        if (arrPoint.Count != 0)
-        //        {
-        //            ClearLastPath();
-        //        }
-        //    }
-    }
 
     void CheckIfOnPathAngleCollision()
     {
@@ -197,7 +157,10 @@ public class InputPaternRecognition : MonoBehaviour
             if (distFinger > actualDistBTWpoint)
             {
                 flag = false;
-                draw(fingerPos);
+
+                //ici on dessine
+                runeDrawLine.newLineVertex(fingerPos);
+
                 Vector2 fingerFoward = lastPointPos - fingerPos;
                 lastPointPos = fingerPos;
                 //so that point are seperated by the same distance
@@ -237,6 +200,7 @@ public class InputPaternRecognition : MonoBehaviour
                 }
                 if (!flag)
                 {
+                    runeDrawLine.Fail();
                     ClearPath();
                 }
             }
@@ -250,19 +214,18 @@ public class InputPaternRecognition : MonoBehaviour
             float distColiision = Vector2.Distance(fingerPos, endPointPos);
             if (distColiision < radiusCollision)
             {
-                Braval();
+                runeDrawLine.Braval();
+                ClearPath();
             }
             else
             {
+                runeDrawLine.Fail();
                 ClearPath();
             }
         }
     }
 
-    void Braval()
-    {
-        Debug.Log("Bravo");
-    }
+
 
     void SetPatern(Patern _patern)
     {
