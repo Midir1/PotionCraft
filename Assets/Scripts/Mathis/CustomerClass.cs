@@ -241,8 +241,8 @@ public class CustomerClass
 
         for (int i = 0; i < nbPart; i++)
         {
-            pos[i].x = 0;
-            pos[i].y = 0;
+            pos[i].x = 1;
+            pos[i].y = 3;
             partDisplay[i] = new GameObject("part" + i);
             SpriteRenderer spriteRenderer = partDisplay[i].AddComponent<SpriteRenderer>();
             BoxCollider2D collide = partDisplay[i].AddComponent<BoxCollider2D>();
@@ -250,6 +250,7 @@ public class CustomerClass
             sprite = Resources.Load<Sprite>(string.Concat(path, secondPath[i], part[i]));
             partDisplay[i].transform.position = new Vector2(pos[i].x, pos[i].y);
             spriteRenderer.sprite = sprite;
+            spriteRenderer.sortingOrder = 5;
 
             Vector2 S = spriteRenderer.sprite.bounds.size;
             collide.size = S;

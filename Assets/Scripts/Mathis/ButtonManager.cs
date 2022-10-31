@@ -68,20 +68,13 @@ public class ButtonManager : MonoBehaviour
                 }
                 Destroy(hit.collider.transform.parent.gameObject);
                 customerTab.RemoveAt(nb);
-           
+                customerMove();
             }
         }
 
 
         //deplacement des clients
-        for (int i = 0; i < customerTab.Count; i++)
-        {
-            for (int j = 0; j < customerTab[i].nbPart; j++)
-            {
-                customerTab[i].pos[j].x = 2f * (i - 1);
-                customerTab[i].partDisplay[j].transform.position = new Vector3(customerTab[i].pos[j].x, customerTab[i].pos[j].y);
-            }
-        }
+       
         //for(int i = 0; i < customerTab2.Count; i++)
         //{
         //    for (int j = 0; j < customerTab2[i].nbPart; j++)
@@ -102,13 +95,13 @@ public class ButtonManager : MonoBehaviour
 
     public void test()
     {
-        //if (customerTab.Count < 3)
+        if (customerTab.Count < 3)
         {
             // ajout
             customer = new CustomerClass();
             customerTab.Add(customer);
             customer.DiplayCustomer();
-
+            customerMove();
             //for (int i = 0; i < 4; i++)
             //{
             //    for (int j = 0; j < 4; j++)
@@ -137,4 +130,17 @@ public class ButtonManager : MonoBehaviour
             //}
         }
     }
+
+    public void customerMove()
+    {
+        for (int i = 0; i < customerTab.Count; i++)
+        {
+            for (int j = 0; j < customerTab[i].nbPart; j++)
+            {
+                customerTab[i].pos[j].x = -(i-1.0f+i*1.5f);
+                customerTab[i].partDisplay[j].transform.position = new Vector3(customerTab[i].pos[j].x, customerTab[i].pos[j].y);
+            }
+        }
+    }
 }
+
