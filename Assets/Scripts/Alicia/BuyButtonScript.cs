@@ -6,13 +6,10 @@ public class BuyButtonScript : MonoBehaviour
 {
     ItemShopScript currentItemShop;
 
-    public void SelectItemShop(ItemShopScript itemShop)
-    {
-        currentItemShop = itemShop;
-    }
-
     void OnMouseDown()
     {
+        currentItemShop = GetComponentInParent<ItemShopScript>();
+
         if (currentItemShop !=null)
         {
             Debug.Log("item select : " + currentItemShop.Id);
@@ -28,29 +25,10 @@ public class BuyButtonScript : MonoBehaviour
                     case "cauldron3":
                         GameManager.Instance.cauldron[2].CauldronIsAvailable();
                         break;
-                    case "cauldron1_up1":
-                        GameManager.Instance.cauldron[0].SpeedUpgradeIsAvailable();
-                        break;
-                    case "cauldron2_up1":
-                        GameManager.Instance.cauldron[1].SpeedUpgradeIsAvailable();
-                        break;
-                    case "cauldron3_up1":
-                        GameManager.Instance.cauldron[2].SpeedUpgradeIsAvailable();
-                        break;
-                    case "cauldron1_up2":
-                        GameManager.Instance.cauldron[0].TimeUpgradeIsAvailable();
-                        break;
-                    case "cauldron2_up2":
-                        GameManager.Instance.cauldron[1].TimeUpgradeIsAvailable();
-                        break;
-                    case "cauldron3_up2":
-                        GameManager.Instance.cauldron[2].TimeUpgradeIsAvailable();
-                        break;
                     case "tipBox":
                         GameManager.Instance.tipBox.TipIsAvailable();
                         break;
-                    default :
-                        Debug.Log("unknow ItemShop.Id");
+                    default : Debug.Log("unknow ItemShop.Id");
                         break;
                 }
             }

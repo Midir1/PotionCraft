@@ -6,18 +6,10 @@ public class ItemShopScript : MonoBehaviour
 {
     [SerializeField] uint price;
     [SerializeField] string id;
-    public BuyButtonScript buyButton;
     bool availablePurchase = true;
-    GameManager gameManager;
 
     public string Id { get => id; }
     public uint Price { get => price; }
-
-    void OnMouseDown()
-    {
-        if (availablePurchase)
-            buyButton.SelectItemShop(this);
-    }
 
     public bool BuyIt()
     {
@@ -32,6 +24,7 @@ public class ItemShopScript : MonoBehaviour
         }
         return false;
     }
+
     private void Update()
     {
 
