@@ -39,10 +39,9 @@ public class TurnPage : MonoBehaviour
             }
         }
 
-        int size = pages.Count - 1;
         if (toLeft)
         {
-            if (gameObjectID == size)
+            if (gameObjectID == pages.Count - 1)
             {
                 toLeft = false;
             }
