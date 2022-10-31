@@ -5,7 +5,7 @@ using System.Text;
 using UnityEngine;
 using UnityEngine.UI;
 
-using static UnityEditor.PlayerSettings;
+
 
 public class createNewPatern : MonoBehaviour
 {
@@ -72,7 +72,8 @@ public class createNewPatern : MonoBehaviour
 
             if (touch.phase == TouchPhase.Ended)
             {
-
+                Debug.Log("yeehaaa");
+                logRune();
             }
         }
 

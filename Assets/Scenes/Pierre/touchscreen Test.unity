@@ -235,6 +235,7 @@ GameObject:
   - component: {fileID: 1096261658}
   - component: {fileID: 1096261657}
   - component: {fileID: 1096261656}
+  - component: {fileID: 1096261659}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -308,6 +309,39 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1096261659
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1096261655}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_RenderShadows: 1
+  m_RequiresDepthTextureOption: 2
+  m_RequiresOpaqueTextureOption: 2
+  m_CameraType: 0
+  m_Cameras: []
+  m_RendererIndex: -1
+  m_VolumeLayerMask:
+    serializedVersion: 2
+    m_Bits: 1
+  m_VolumeTrigger: {fileID: 0}
+  m_VolumeFrameworkUpdateModeOption: 2
+  m_RenderPostProcessing: 0
+  m_Antialiasing: 0
+  m_AntialiasingQuality: 2
+  m_StopNaN: 0
+  m_Dithering: 0
+  m_ClearDepth: 1
+  m_AllowXRRendering: 1
+  m_RequiresDepthTexture: 0
+  m_RequiresColorTexture: 0
+  m_Version: 2
 --- !u!1 &1619680720
 GameObject:
   m_ObjectHideFlags: 0
@@ -405,7 +439,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a21a080f45c9665429b9895caa5d0ff7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  distBTWpoint: 0.5
+  distBTWpoint: 0.15
   canva: {fileID: 336052393}
   point: {fileID: 6438192550246423890, guid: aad796938a852f34f99c70dfad033597, type: 3}
 --- !u!4 &2072230399
@@ -435,8 +469,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c0fae0bc572b9c459774a3578953199, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  patern: 1
+  patern: 6
+  lineToInstantiate: {fileID: 8524689591320302899, guid: 6554f5b0d892d0d4d9de628e463668b2, type: 3}
   pointToInstantiate: {fileID: 6438192550246423890, guid: aad796938a852f34f99c70dfad033597, type: 3}
   canva: {fileID: 336052393}
-  radiusCollision: 0.5
-  distBTWpoint: 0.2
+  numPtc: 8
+  radiusCollision: 0.7
+  distBTWpoint: 0.1
+  angle: 40
