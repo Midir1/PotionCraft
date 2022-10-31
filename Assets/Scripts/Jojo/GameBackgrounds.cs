@@ -3,11 +3,12 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class GameBackgrounds : MonoBehaviour, IEndDragHandler
+public class GameBackgrounds : MonoBehaviour, IBeginDragHandler, IEndDragHandler
 {
     [SerializeField] private float lerpSpeed;
     [SerializeField] private List<RectTransform> backgroundsRectTransform;
     [SerializeField] private Vector2 defaultResolution;
+    [SerializeField] private float swipeTolerance;
 
     private RectTransform rectTransform;
 
@@ -21,7 +22,9 @@ public class GameBackgrounds : MonoBehaviour, IEndDragHandler
 
     private ScrollRect scrollRect;
 
-    private bool isLerping = false, isDownstairs = true;
+    private bool isLerping, isDownstairs = true;
+
+    private float startPosY;
 
     private bool IsLerping
     {
@@ -30,10 +33,7 @@ public class GameBackgrounds : MonoBehaviour, IEndDragHandler
         {
             isLerping = value;
 
-            if (isLerping)
-                scrollRect.movementType = ScrollRect.MovementType.Clamped;
-            else
-                scrollRect.movementType = ScrollRect.MovementType.Elastic;
+            scrollRect.vertical = !isLerping;
         }
     }
 
@@ -50,22 +50,28 @@ public class GameBackgrounds : MonoBehaviour, IEndDragHandler
 
     private void Update()
     {
-        ScroolBetweenFloors();
+        ScrollBetweenFloors();
+        ScrollBetweenTransition();
         ClampScroll();
     }
 
+    public void OnBeginDrag(PointerEventData data)
+    {
+        startPosY = rectTransform.anchoredPosition.y;
+    }
+    
     public void OnEndDrag(PointerEventData data)
     {
-        if (scrollRect.movementType == ScrollRect.MovementType.Clamped) return;
-
+        float deltaY = rectTransform.anchoredPosition.y - startPosY;
+        
         switch (isDownstairs)
         {
-            case true when rectTransform.anchoredPosition.y < swipeUpPos:
+            case true when rectTransform.anchoredPosition.y < swipeUpPos && deltaY < 0f:
                 targetRectPos = new Vector2(0f, -Screen.height * 2f);
                 IsLerping = true;
                 isDownstairs = false;
                 break;
-            case false when rectTransform.anchoredPosition.y > swipeDownPos:
+            case false when rectTransform.anchoredPosition.y > swipeDownPos && deltaY > 0f:
                 targetRectPos = new Vector2(0f, 0f);
                 IsLerping = true;
                 isDownstairs = true;
@@ -101,17 +107,54 @@ public class GameBackgrounds : MonoBehaviour, IEndDragHandler
         }
     }
 
-    private void ScroolBetweenFloors()
+    private void ScrollBetweenFloors()
     {
         if(IsLerping)
         {
             if (Mathf.Abs(rectTransform.anchoredPosition.y - targetRectPos.y) > lerpTolerance)
-                rectTransform.anchoredPosition = Vector3.Lerp(rectTransform.anchoredPosition, targetRectPos, 1 - Mathf.Pow(1 - lerpSpeed / 1000f, Time.deltaTime * 60));//lerpTime);
+                rectTransform.anchoredPosition = Vector3.Lerp(rectTransform.anchoredPosition, targetRectPos, 1 - Mathf.Pow(1 - lerpSpeed / 1000f, Time.deltaTime * 60));
             else
             {
                 rectTransform.anchoredPosition = targetRectPos;
 
                 IsLerping = false;
+            }
+        }
+    }
+
+    private void ScrollBetweenTransition()
+    {
+        if (!IsLerping) return;
+        
+        if (Input.touchCount > 0)
+        {
+            Touch touch = Input.GetTouch(0);
+
+            switch (touch.phase)
+            {
+                //Correct deltaPosition != GetAxis
+                case TouchPhase.Ended when touch.deltaPosition.y < -swipeTolerance:
+                    targetRectPos = new Vector2(0f, -Screen.height * 2f);
+                    isDownstairs = false;
+                    break;
+                case TouchPhase.Ended when touch.deltaPosition.y > swipeTolerance:
+                    targetRectPos = new Vector2(0f, 0f);
+                    isDownstairs = true;
+                    break;
+            }
+        }
+        else
+        {
+            switch (isDownstairs)
+            {
+                case true when Input.GetMouseButton(0) && Input.GetAxis("Mouse Y") < -swipeTolerance:
+                    targetRectPos = new Vector2(0f, -Screen.height * 2f);
+                    isDownstairs = false;
+                    break;
+                case false when Input.GetMouseButton(0) && Input.GetAxis("Mouse Y") > swipeTolerance:
+                    targetRectPos = new Vector2(0f, 0f);
+                    isDownstairs = true;
+                    break;
             }
         }
     }

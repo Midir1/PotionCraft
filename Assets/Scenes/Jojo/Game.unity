@@ -491,10 +491,8 @@ MonoBehaviour:
   - {fileID: 1574356333}
   - {fileID: 1605593079}
   - {fileID: 533358261}
-  swipeButtons:
-  - {fileID: 0}
-  - {fileID: 0}
   defaultResolution: {x: 1080, y: 1920}
+  swipeTolerance: 0.2
 --- !u!114 &1092419385
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -20,8 +20,8 @@ public class ShakeScreen : MonoBehaviour
     {
         isShaking = true;
 
-        var startPosition = transform.position;
-        var elapsedTime = 0f;
+        Vector3 startPosition = transform.position;
+        float elapsedTime = 0f;
 
         while (elapsedTime < duration)
         {
