@@ -22,12 +22,12 @@ enum HERO
 }
 
 //temporaire en attendant la classe
-enum INGREDIENT
+enum INGREDIENT_CUSTOMER
 {
 	ROUGE,
 	VERT,
 	BLEU,
-    INGREDIENTNB
+    INGREDIENT_CUSTOMERNB
 }
 
 
@@ -42,9 +42,9 @@ enum RUNES
 	RUNENB
 }
 
-struct Potion
+struct Potion_Customer
 {
-	public List<INGREDIENT> ingredient;
+	public List<INGREDIENT_CUSTOMER> INGREDIENT_CUSTOMER;
     public RUNES rune;
     public int price;
 }
@@ -54,7 +54,7 @@ public class CustomerClass
 	#region Fields
 	private float timerMax;
 	public float timer;
-	Potion askedPotion;
+	Potion_Customer askedPotion_Customer;
 	
 	//Skin random du perso
 	private int[] part;
@@ -75,22 +75,22 @@ public class CustomerClass
 	{
         isAngry = false;
 
-		askedPotion = new Potion();
+		askedPotion_Customer = new Potion_Customer();
 
-		int potionSize = Random.Range(1, 4);
+		int Potion_CustomerSize = Random.Range(1, 4);
 
-		timerMax = 4 * potionSize;
+		timerMax = 4 * Potion_CustomerSize;
 		timer = timerMax;
-		askedPotion.ingredient = new List<INGREDIENT>();
+		askedPotion_Customer.INGREDIENT_CUSTOMER = new List<INGREDIENT_CUSTOMER>();
 
-        for (int i = 0; i < potionSize; i++)
+        for (int i = 0; i < Potion_CustomerSize; i++)
 		{
-			askedPotion.ingredient.Add((INGREDIENT)Random.Range(0, (int)INGREDIENT.INGREDIENTNB));
+			askedPotion_Customer.INGREDIENT_CUSTOMER.Add((INGREDIENT_CUSTOMER)Random.Range(0, (int)INGREDIENT_CUSTOMER.INGREDIENT_CUSTOMERNB));
 		}
 
-		askedPotion.rune = (RUNES)Random.Range(0, (int)RUNES.RUNENB);
+		askedPotion_Customer.rune = (RUNES)Random.Range(0, (int)RUNES.RUNENB);
 
-		askedPotion.price = 100 + 10 * potionSize + 10 * (int)askedPotion.rune;
+		askedPotion_Customer.price = 100 + 10 * Potion_CustomerSize + 10 * (int)askedPotion_Customer.rune;
         //if (Random.Range(1,11) != 0)
         //{
         //    hero = (HERO)Random.Range(0, (int)HERO.HERONB);
@@ -106,16 +106,16 @@ public class CustomerClass
 	#region Methods
 	public int Paiement()
 	{
-		//renvoie le prix d'acar de la potion confectionné
+		//renvoie le prix d'acar de la Potion_Customer confectionné
 
-		float timePrice = (float)askedPotion.price * 0.4f;
+		float timePrice = (float)askedPotion_Customer.price * 0.4f;
 
 		float timeLeft = timer / timerMax;
 
 		timePrice = timePrice * timeLeft;
 		
-		float priceLeft = (float)askedPotion.price * 0.3f;
-		//compare potion créer et demander
+		float priceLeft = (float)askedPotion_Customer.price * 0.3f;
+		//compare Potion_Customer créer et demander
 
 		int result = (int)timePrice + (int)priceLeft * 2;
         
