@@ -10,8 +10,8 @@ public class ButtonManager : MonoBehaviour
     public Sprite sprite;
     CustomerClass customer;
     List<CustomerClass> customerTab = new List<CustomerClass>();
-    List<CustomerClass> customerTab2 = new List<CustomerClass>();
-    List<CustomerClass> customerTab3 = new List<CustomerClass>();
+    //List<CustomerClass> customerTab2 = new List<CustomerClass>();
+    //List<CustomerClass> customerTab3 = new List<CustomerClass>();
     CustomerClass pickedCustomer;
     // Start is called before the first frame update
 
@@ -48,7 +48,6 @@ public class ButtonManager : MonoBehaviour
             RaycastHit2D hit = Physics2D.Raycast(mousePos2D, Vector2.zero);
             if (hit.collider && hit.collider.gameObject.name.Contains("part"))
             {
-
                 for (int i = 0; i < customerTab.Count; i++)
                 {
                     if (hit.collider.gameObject.transform.parent == customerTab[i].partDisplay[0].transform.parent)
@@ -67,14 +66,21 @@ public class ButtonManager : MonoBehaviour
                 }
                 Destroy(hit.collider.transform.parent.gameObject);
                 customerTab.RemoveAt(nb);
-                customerMove();
+                CustomerMove();
             }
         }
 
 
         //deplacement des clients
-       
-        //for(int i = 0; i < customerTab2.Count; i++)
+        //for (int i = 0; i < customerTab.Count; i++)
+        //{
+        //    for (int j = 0; j < customerTab[i].nbPart; j++)
+        //    {
+        //        customerTab[i].pos[j].x = 2f * (i - 1);
+        //        customerTab[i].partDisplay[j].transform.position = new Vector3(customerTab[i].pos[j].x, customerTab[i].pos[j].y);
+        //    }
+        //}
+        //for (int i = 0; i < customerTab2.Count; i++)
         //{
         //    for (int j = 0; j < customerTab2[i].nbPart; j++)
         //    {
@@ -99,8 +105,8 @@ public class ButtonManager : MonoBehaviour
             // ajout
             customer = new CustomerClass();
             customerTab.Add(customer);
-            customer.DiplayCustomer();
-            customerMove();
+            customer.DisplayCustomer();
+            CustomerMove();
             //for (int i = 0; i < 4; i++)
             //{
             //    for (int j = 0; j < 4; j++)
@@ -130,15 +136,31 @@ public class ButtonManager : MonoBehaviour
         }
     }
 
-    public void customerMove()
+    public void CustomerMove()
     {
         for (int i = 0; i < customerTab.Count; i++)
         {
-            for (int j = 0; j < customerTab[i].nbPart; j++)
-            {
-                customerTab[i].pos[j].x = -(i-1.0f+i*1.5f);
-                customerTab[i].partDisplay[j].transform.position = new Vector3(customerTab[i].pos[j].x, customerTab[i].pos[j].y);
-            }
+            //for (int j = 0; j < customerTab[i].nbPart; j++)
+            //{
+                //if (i-1 >= 0)
+                //{
+                //    if (customerTab[i-1].hero == HERO.MERCHANT)
+                //    {
+                //        customerTab[i].pos[j].x = 3 * (-(i - 0.7f + i * 1.5f));
+                //        customerTab[i].partDisplay[j].transform.position = new Vector3(customerTab[i].pos[j].x, customerTab[i].pos[j].y);
+                //    }
+                //    else
+                //    {
+                //        customerTab[i].pos[j].x = -(i - 0.7f + i * 1f);
+                //        customerTab[i].partDisplay[j].transform.position = new Vector3(customerTab[i].pos[j].x, customerTab[i].pos[j].y);
+                //    }
+                //}
+                //else
+                {
+                    customerTab[i].pos.x = -(i - 0.7f + i * 1.5f);
+                    customerTab[i].parent.transform.position = new Vector3(customerTab[i].pos.x, customerTab[i].pos.y);
+                }
+            //}
         }
     }
 }

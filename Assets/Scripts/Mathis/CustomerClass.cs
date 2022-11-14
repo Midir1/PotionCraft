@@ -13,7 +13,7 @@ enum RACE
 	RACENB
 }
 
-enum HERO
+public enum HERO
 {
     MERCHANT,
     WARIOR,
@@ -22,7 +22,7 @@ enum HERO
 }
 
 //temporaire en attendant la classe
-enum INGREDIENT_CUSTOMER
+public enum INGREDIENT_CUSTOMER
 {
 	ROUGE,
 	VERT,
@@ -31,7 +31,7 @@ enum INGREDIENT_CUSTOMER
 }
 
 
-enum RUNES
+public enum RUNES
 {
 	RUNE1,
 	RUNE2,
@@ -42,11 +42,21 @@ enum RUNES
 	RUNENB
 }
 
-struct Potion_Customer
+public enum POTION_NAME
 {
-	public List<INGREDIENT_CUSTOMER> INGREDIENT_CUSTOMER;
+    CHAMP,
+    LOVE,
+    HEXA,
+    SEA,
+    NBPOTION
+}
+
+public struct Potion_Customer
+{
+	public List<INGREDIENT_CUSTOMER> ing;
     public RUNES rune;
     public int price;
+    public POTION_NAME name;
 }
 
 public class CustomerClass 
@@ -54,20 +64,21 @@ public class CustomerClass
 	#region Fields
 	private float timerMax;
 	public float timer;
-	Potion_Customer askedPotion_Customer;
+	public Potion_Customer askedPotion_Customer;
 	
 	//Skin random du perso
 	private int[] part;
 	public GameObject[] partDisplay;
-	private string[] secondPath;
+    public GameObject parent;
+    private string[] secondPath;
     public Sprite sprite;
-	public Vector2[] pos = new Vector2[5];
+	public Vector2 pos;
 	private RACE race;
-	private HERO hero;
+	public HERO hero;
 	public int nbPart;
 
 
-    bool isAngry;
+    private bool isAngry;
 
 	#endregion
 
@@ -77,28 +88,40 @@ public class CustomerClass
 
 		askedPotion_Customer = new Potion_Customer();
 
-		int Potion_CustomerSize = Random.Range(1, 4);
+        askedPotion_Customer.name = (POTION_NAME)Random.Range(0, (int)POTION_NAME.NBPOTION);
+
+        int Potion_CustomerSize = Random.Range(1, 4);
 
 		timerMax = 4 * Potion_CustomerSize;
 		timer = timerMax;
-		askedPotion_Customer.INGREDIENT_CUSTOMER = new List<INGREDIENT_CUSTOMER>();
+		askedPotion_Customer.ing = new List<INGREDIENT_CUSTOMER>();
 
         for (int i = 0; i < Potion_CustomerSize; i++)
 		{
-			askedPotion_Customer.INGREDIENT_CUSTOMER.Add((INGREDIENT_CUSTOMER)Random.Range(0, (int)INGREDIENT_CUSTOMER.INGREDIENT_CUSTOMERNB));
+			askedPotion_Customer.ing.Add((INGREDIENT_CUSTOMER)Random.Range(0, (int)INGREDIENT_CUSTOMER.INGREDIENT_CUSTOMERNB));
 		}
 
 		askedPotion_Customer.rune = (RUNES)Random.Range(0, (int)RUNES.RUNENB);
 
-		askedPotion_Customer.price = 100 + 10 * Potion_CustomerSize + 10 * (int)askedPotion_Customer.rune;
-        //if (Random.Range(1,11) != 0)
-        //{
-        //    hero = (HERO)Random.Range(0, (int)HERO.HERONB);
-        //    race = RACE.RACENB;
-        //}
-        //else
+        secondPath = new string[5];
+
+        secondPath[0] = "cloth/tenu";
+        secondPath[1] = "hair/cheveux";
+        secondPath[2] = "face/tete";
+        secondPath[3] = "eye/yeux";
+        secondPath[4] = "mouth/bouche";
+
+
+        askedPotion_Customer.price = 100 + 10 * Potion_CustomerSize + 10 * (int)askedPotion_Customer.rune;
+        if (Random.Range(1, 11) == 1)
+        {
+            hero = (HERO)Random.Range(0, (int)HERO.HERONB);
+            race = RACE.RACENB;
+        }
+        else
         {
             race = (RACE)Random.Range(0, (int)RACE.RACENB);
+            hero = HERO.HERONB;
         }
     }
 
@@ -123,110 +146,110 @@ public class CustomerClass
 	}
 
 
-    public void DiplayDemon(int p0, int p1, int p2, int p3)
-    {
-        string path = Devil();
+    //public void DisplayDemon(int p0, int p1, int p2, int p3)
+    //{
+    //    string path = Devil();
 
-        part[0] = p0;
-        part[1] = p1;
-        part[2] = p2;
-        part[3] = p3;
+    //    part[0] = p0;
+    //    part[1] = p1;
+    //    part[2] = p2;
+    //    part[3] = p3;
 
-        GameObject parent = new GameObject();
-        parent.transform.position = new Vector2(pos[0].x, pos[0].y);
-        parent.name = "Customer";
+    //    GameObject parent = new GameObject();
+    //    parent.transform.position = new Vector2(pos.x, pos.y);
+    //    parent.name = "Customer";
 
-        for (int i = 0; i < nbPart; i++)
-        {
-            pos[i].x = 0;
-            pos[i].y = 0;
-            partDisplay[i] = new GameObject("part" + i);
-            SpriteRenderer spriteRenderer = partDisplay[i].AddComponent<SpriteRenderer>();
-            BoxCollider2D collide = partDisplay[i].AddComponent<BoxCollider2D>();
+    //    for (int i = 0; i < nbPart; i++)
+    //    {
+    //        pos.x = 0;
+    //        pos.y = 0;
+    //        partDisplay[i] = new GameObject("part" + i);
+    //        SpriteRenderer spriteRenderer = partDisplay[i].AddComponent<SpriteRenderer>();
+    //        BoxCollider2D collide = partDisplay[i].AddComponent<BoxCollider2D>();
 
-            sprite = Resources.Load<Sprite>(string.Concat(path, secondPath[i], part[i]));
-            partDisplay[i].transform.position = new Vector2(pos[i].x, pos[i].y);
-            spriteRenderer.sprite = sprite;
+    //        sprite = Resources.Load<Sprite>(string.Concat(path, secondPath[i], part[i]));
+    //        partDisplay[i].transform.position = new Vector2(pos.x, pos.y);
+    //        spriteRenderer.sprite = sprite;
 
-            Vector2 S = spriteRenderer.sprite.bounds.size;
-            collide.size = S;
+    //        Vector2 S = spriteRenderer.sprite.bounds.size;
+    //        collide.size = S;
 
-            partDisplay[i].transform.parent = parent.transform;
+    //        partDisplay[i].transform.parent = parent.transform;
 
-        }
-    }
-
-
-    public void DiplaySkeleton(int p0, int p1, int p2, int p3)
-    {
-        string path = Skeleton();
-
-        part[0] = p0;
-        part[1] = p1;
-        part[2] = p2;
-        part[3] = p3;
-
-        GameObject parent = new GameObject();
-        parent.transform.position = new Vector2(pos[0].x, pos[0].y);
-        parent.name = "Customer";
-
-        for (int i = 0; i < nbPart; i++)
-        {
-            pos[i].x = 0;
-            pos[i].y = -3;
-            partDisplay[i] = new GameObject("part" + i);
-            SpriteRenderer spriteRenderer = partDisplay[i].AddComponent<SpriteRenderer>();
-            BoxCollider2D collide = partDisplay[i].AddComponent<BoxCollider2D>();
-
-            sprite = Resources.Load<Sprite>(string.Concat(path, secondPath[i], part[i]));
-            partDisplay[i].transform.position = new Vector2(pos[i].x, pos[i].y);
-            spriteRenderer.sprite = sprite;
-
-            Vector2 S = spriteRenderer.sprite.bounds.size;
-            collide.size = S;
-
-            partDisplay[i].transform.parent = parent.transform;
-
-        }
-    }
-
-    public void DiplayPumpkin(int p0, int p1, int p2, int p3, int p4)
-    {
-        string path = Pumpkin();
-
-        part[0] = p0;
-        part[1] = p1;
-        part[2] = p2;
-        part[3] = p3;
-        part[4] = p4;
-
-        GameObject parent = new GameObject();
-        parent.transform.position = new Vector2(pos[0].x, pos[0].y);
-        parent.name = "Customer";
-
-        for (int i = 0; i < nbPart; i++)
-        {
-            pos[i].x = 0;
-            pos[i].y = 3;
-            partDisplay[i] = new GameObject("part" + i);
-            SpriteRenderer spriteRenderer = partDisplay[i].AddComponent<SpriteRenderer>();
-            BoxCollider2D collide = partDisplay[i].AddComponent<BoxCollider2D>();
-
-            sprite = Resources.Load<Sprite>(string.Concat(path, secondPath[i], part[i]));
-            partDisplay[i].transform.position = new Vector2(pos[i].x, pos[i].y);
-            spriteRenderer.sprite = sprite;
-
-            Vector2 S = spriteRenderer.sprite.bounds.size;
-            collide.size = S;
-
-            partDisplay[i].transform.parent = parent.transform;
-
-        }
-
-    }
+    //    }
+    //}
 
 
-    public void DiplayCustomer()
+    //public void DisplaySkeleton(int p0, int p1, int p2, int p3)
+    //{
+    //    string path = Skeleton();
+
+    //    part[0] = p0;
+    //    part[1] = p1;
+    //    part[2] = p2;
+    //    part[3] = p3;
+
+    //    GameObject parent = new GameObject();
+    //    parent.transform.position = new Vector2(pos.x, pos.y);
+    //    parent.name = "Customer";
+
+    //    for (int i = 0; i < nbPart; i++)
+    //    {
+    //        pos.x = 0;
+    //        pos.y = -5;
+    //        partDisplay[i] = new GameObject("part" + i);
+    //        SpriteRenderer spriteRenderer = partDisplay[i].AddComponent<SpriteRenderer>();
+    //        BoxCollider2D collide = partDisplay[i].AddComponent<BoxCollider2D>();
+
+    //        sprite = Resources.Load<Sprite>(string.Concat(path, secondPath[i], part[i]));
+    //        partDisplay[i].transform.position = new Vector2(pos.x, pos.y);
+    //        spriteRenderer.sprite = sprite;
+
+    //        Vector2 S = spriteRenderer.sprite.bounds.size;
+    //        collide.size = S;
+
+    //        partDisplay[i].transform.parent = parent.transform;
+
+    //    }
+    //}
+
+    //public void DisplayPumpkin(int p0, int p1, int p2, int p3, int p4)
+    //{
+    //    string path = Pumpkin();
+
+    //    part[0] = p0;
+    //    part[1] = p1;
+    //    part[2] = p2;
+    //    part[3] = p3;
+    //    part[4] = p4;
+
+    //    GameObject parent = new GameObject();
+    //    parent.transform.position = new Vector2(pos.x, pos.y);
+    //    parent.name = "Customer";
+
+    //    for (int i = 0; i < nbPart; i++)
+    //    {
+    //        pos.x = 0;
+    //        pos.y = 5;
+    //        partDisplay[i] = new GameObject("part" + i);
+    //        SpriteRenderer spriteRenderer = partDisplay[i].AddComponent<SpriteRenderer>();
+    //        BoxCollider2D collide = partDisplay[i].AddComponent<BoxCollider2D>();
+
+    //        sprite = Resources.Load<Sprite>(string.Concat(path, secondPath[i], part[i]));
+    //        partDisplay[i].transform.position = new Vector2(pos.x, pos.y);
+    //        spriteRenderer.sprite = sprite;
+
+    //        Vector2 S = spriteRenderer.sprite.bounds.size;
+    //        collide.size = S;
+
+    //        partDisplay[i].transform.parent = parent.transform;
+
+    //    }
+
+    //}
+
+
+    public void DisplayCustomer()
 	{
 		string path;
 
@@ -235,13 +258,13 @@ public class CustomerClass
             switch (hero)
             {
                 case HERO.MERCHANT:
-                    path = "OC/minotaur";
+                    path = "OC/tenu3";  
                     break;
                 case HERO.WARIOR:   
-                    path = "OC/warior";
+                    path = "OC/tenu1";
                     break;
                 case HERO.SUCCUBUS:
-                    path = "OC/succubus";
+                    path = "OC/tenu2";
                     break;
                 default:
                     path = "";
@@ -252,12 +275,10 @@ public class CustomerClass
 
             secondPath = new string[nbPart];
             partDisplay = new GameObject[nbPart];
-            pos = new Vector2[nbPart];
             part = new int[nbPart];
 
             part[0] = 0;
             secondPath[0] = "";
-            pos[0] = new Vector2 (1,3);
 
         }
         else
@@ -278,28 +299,53 @@ public class CustomerClass
                     break;
             }
 
+            for (int i = 0; i < nbPart; i++)
+            {
+                part[i] = Random.Range(1, 5);
+            }
+
         }
 
-        for (int i = 1; i < nbPart; i++)
-        {
-            part[i] = Random.Range(1, 5);
-        }
-        GameObject parent = new GameObject();
-        parent.transform.position = new Vector2(pos[0].x, pos[0].y);
+        
+        parent = new GameObject();
+        parent.transform.position = new Vector2(0, 1.8f);
         parent.name = "Customer";
 
         for (int i = 0; i < nbPart; i++)
         {
-            pos[i].x = 1;
-            pos[i].y = 3;
+
+            pos = new Vector2(1, 2);
             partDisplay[i] = new GameObject("part" + i);
             SpriteRenderer spriteRenderer = partDisplay[i].AddComponent<SpriteRenderer>();
             BoxCollider2D collide = partDisplay[i].AddComponent<BoxCollider2D>();
-
-            sprite = Resources.Load<Sprite>(string.Concat(path, secondPath[i], part[i]));
-            partDisplay[i].transform.position = new Vector2(pos[i].x, pos[i].y);
+            if (nbPart == 1)
+            {
+                if (hero == HERO.MERCHANT)
+                {
+                    pos = new Vector2(0.5f, 2);
+                }
+                else
+                {
+                    pos = new Vector2(1, 2);
+                }
+                
+                sprite = Resources.Load<Sprite>(path);
+            }
+            else
+            {
+                sprite = Resources.Load<Sprite>(string.Concat(path, secondPath[i], part[i]));
+            }
+            partDisplay[i].transform.position = new Vector2(pos.x, pos.y);
             spriteRenderer.sprite = sprite;
-            spriteRenderer.sortingOrder = 5;
+            if (i == 4)
+            {
+                spriteRenderer.sortingOrder = 6;
+            }
+            else
+            {
+                spriteRenderer.sortingOrder = 1 + i*2;
+            }
+      
 
             Vector2 S = spriteRenderer.sprite.bounds.size;
             collide.size = S;
@@ -307,48 +353,117 @@ public class CustomerClass
             partDisplay[i].transform.parent = parent.transform;
 
         }
-        
+        //Diplay potion
+
+        if (hero != HERO.MERCHANT)
+        {
+            string potionPath = "Potions/";
+            switch (askedPotion_Customer.name)
+            {
+                case POTION_NAME.CHAMP:
+                    potionPath += "Champotion";
+                    break;
+                case POTION_NAME.LOVE:
+                    potionPath += "LovePotion";
+                    break;
+                case POTION_NAME.HEXA:
+                    potionPath += "Hexa_potion";
+                    break;
+                case POTION_NAME.SEA:
+                    potionPath += "SeaPotion";
+                    break;
+                default:
+                    break;
+            }
+            GameObject bulle = new GameObject("parcho");
+            GameObject potion = new GameObject("askedPotion");
+            SpriteRenderer bulleRenderer = bulle.AddComponent<SpriteRenderer>();
+            SpriteRenderer potionRenderer = potion.AddComponent<SpriteRenderer>();
+            Sprite bulleSprite = Resources.Load<Sprite>("UI/Parcho");
+            Sprite potionSprite = Resources.Load<Sprite>(potionPath);
+
+
+            bulleRenderer.sprite = bulleSprite;
+            potionRenderer.sprite = potionSprite;
+
+            bulleRenderer.sortingOrder = 1;
+            potionRenderer.sortingOrder = 2;
+
+            bulle.transform.position = new Vector2(-0.5f, 1.5f);
+            potion.transform.position = new Vector2(-0.5f, 1.5f);
+
+            bulle.transform.parent = parent.transform;
+            potion.transform.parent = parent.transform;
+            
+
+        }
     }
 
     public void Angry()
     {
-        string eye = partDisplay[1].GetComponent<SpriteRenderer>().sprite.name;
+        string eye;
 
         string path;
 
-        switch (race)
+
+        if (race == RACE.RACENB)
         {
-            case RACE.PUMPKIN:
-                path = "pumpkin/eye/yeux_mechant";
-                break;
-            case RACE.DEVIL:
-                path = "demon/eye/yeux_mechant";
-                break;
-            case RACE.SKELETON:
-                path = "skeleton/eye/yeux_mechant";
-                break;
-            default:
-                path = "";
-                break;
+            switch (hero)
+            {
+                case HERO.MERCHANT:
+                    path = "OC/tenu_mechant3";
+                    break;
+                case HERO.WARIOR:
+                    path = "OC/tenu_mechant1-tourner";
+                    break;
+                case HERO.SUCCUBUS:
+                    path = "OC/tenu_mechant2";
+                    break;
+                default:
+                    path = "";
+                    break;
+            }
+            Sprite s = Resources.Load<Sprite>(path);
+
+            partDisplay[0].GetComponent<SpriteRenderer>().sprite = s;
         }
-
-        path += eye[eye.Length - 1];
-
-
-        Sprite s = Resources.Load<Sprite>(path);
-
-        partDisplay[1].GetComponent<SpriteRenderer>().sprite = s;
-
-        if (race == RACE.PUMPKIN)
+        else
         {
-            string mouth = partDisplay[4].GetComponent<SpriteRenderer>().sprite.name;
+            switch (race)
+            {
+                case RACE.PUMPKIN:
+                    path = "pumpkin/";
+                    break;
+                case RACE.DEVIL:
+                    path = "demon/";
+                    break;
+                case RACE.SKELETON:
+                    path = "skeleton/";
+                    break;
+                default:
+                    path = "";
+                    break;
+            }
+
+            path += "eye/yeux_mechant";
+            eye = partDisplay[3].GetComponent<SpriteRenderer>().sprite.name;
+            path += eye[eye.Length - 1];
+
+            Sprite s = Resources.Load<Sprite>(path);
+
+            partDisplay[3].GetComponent<SpriteRenderer>().sprite = s;
+
+            if (race == RACE.PUMPKIN)
+            {
+                string mouth = partDisplay[4].GetComponent<SpriteRenderer>().sprite.name;
 
 
-            s = Resources.Load<Sprite>("pumpkin/mouth/bouche_mechant" + mouth[mouth.Length -1]);
+                s = Resources.Load<Sprite>("pumpkin/mouth/bouche_mechant" + mouth[mouth.Length - 1]);
 
-            partDisplay[4].GetComponent<SpriteRenderer>().sprite = s;
+                partDisplay[4].GetComponent<SpriteRenderer>().sprite = s;
 
-        }
+            }
+        }    
         isAngry = true;
     }
 
@@ -357,18 +472,9 @@ public class CustomerClass
         string path = "skeleton/";
 
         nbPart = 4;
-        secondPath = new string[nbPart];
         partDisplay = new GameObject[nbPart];
-        pos = new Vector2[nbPart];
-
-        secondPath[0] = "cloth/costume";
-        secondPath[1] = "eye/yeux";
-        secondPath[2] = "face/tete";
-        secondPath[3] = "hair/chapeau";
 
         part = new int[nbPart];
-        part[0] = Random.Range(1, 5);
-
         return path;
     }
 
@@ -377,19 +483,9 @@ public class CustomerClass
 		string path = "pumpkin/";
 
         nbPart = 5;
-        secondPath = new string[nbPart];
         partDisplay = new GameObject[nbPart];
-        pos = new Vector2[nbPart];
-
-        secondPath[0] = "cloth/tenu";
-        secondPath[1] = "eye/yeux";
-        secondPath[2] = "face/tete";
-        secondPath[3] = "hair/chapeaux";
-        secondPath[4] = "mouth/bouche";
 
         part = new int[nbPart];
-        part[0] = Random.Range(1, 3);
-
         return path;
     }
 
@@ -398,18 +494,9 @@ public class CustomerClass
         string path = "demon/";
 
         nbPart = 4;
-        secondPath = new string[nbPart];
         partDisplay = new GameObject[nbPart];
-        pos = new Vector2[nbPart];
-
-        secondPath[0] = "cloth/tenus";
-        secondPath[1] = "eye/yeux";
-        secondPath[2] = "face/tete";
-        secondPath[3] = "hair/cheveux";
 
         part = new int[nbPart];
-        part[0] = Random.Range(1, 5);
-
         return path;
     }
 
@@ -419,7 +506,7 @@ public class CustomerClass
         if (timer < timerMax*0.5 && !isAngry)
         {
             Angry();
-        }
+        } 
     }
 
 	#endregion
