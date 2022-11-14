@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CauldronScript : MonoBehaviour
+public class CauldronScript :MonoBehaviour
 {
     #region Attributes
 

@@ -420,6 +420,7 @@ GameObject:
   - component: {fileID: 2072230399}
   - component: {fileID: 2072230398}
   - component: {fileID: 2072230400}
+  - component: {fileID: 2072230401}
   m_Layer: 0
   m_Name: managerInput
   m_TagString: Untagged
@@ -469,7 +470,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c0fae0bc572b9c459774a3578953199, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  runeList: {fileID: 0}
+  runeList: {fileID: 2072230401}
   patern: 6
   lineToInstantiate: {fileID: 8524689591320302899, guid: 6554f5b0d892d0d4d9de628e463668b2, type: 3}
   pointToInstantiate: {fileID: 6438192550246423890, guid: aad796938a852f34f99c70dfad033597, type: 3}
@@ -478,3 +479,15 @@ MonoBehaviour:
   radiusCollision: 0.7
   distBTWpoint: 0.1
   angle: 40
+--- !u!114 &2072230401
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2072230397}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 500d103388814b8428c556e96168e283, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
