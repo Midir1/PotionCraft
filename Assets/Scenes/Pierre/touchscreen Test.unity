@@ -440,7 +440,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a21a080f45c9665429b9895caa5d0ff7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  distBTWpoint: 0.1
+  distBTWpoint: 0.15
   canva: {fileID: 336052393}
   point: {fileID: 6438192550246423890, guid: aad796938a852f34f99c70dfad033597, type: 3}
 --- !u!4 &2072230399
@@ -471,14 +471,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   runeList: {fileID: 2072230401}
-  patern: 7
+  patern: 6
   lineToInstantiate: {fileID: 8524689591320302899, guid: 6554f5b0d892d0d4d9de628e463668b2, type: 3}
   pointToInstantiate: {fileID: 6438192550246423890, guid: aad796938a852f34f99c70dfad033597, type: 3}
   canva: {fileID: 336052393}
-  numPtc: 10
-  radiusCollision: 0.6
+  numPtc: 8
+  radiusCollision: 0.7
   distBTWpoint: 0.1
-  angle: 50
+  angle: 40
 --- !u!114 &2072230401
 MonoBehaviour:
   m_ObjectHideFlags: 0
