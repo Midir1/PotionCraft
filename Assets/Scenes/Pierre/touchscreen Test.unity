@@ -469,6 +469,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c0fae0bc572b9c459774a3578953199, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  runeList: {fileID: 0}
   patern: 6
   lineToInstantiate: {fileID: 8524689591320302899, guid: 6554f5b0d892d0d4d9de628e463668b2, type: 3}
   pointToInstantiate: {fileID: 6438192550246423890, guid: aad796938a852f34f99c70dfad033597, type: 3}
