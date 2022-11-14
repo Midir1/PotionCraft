@@ -13,7 +13,7 @@ public class ItemShopScript : MonoBehaviour
 
     public bool BuyIt()
     {
-        if (availablePurchase)
+        if (availablePurchase && transform.position.y < 3.0f && transform.position.y > -3.3f)
         {
             if (GameManager.Instance.CurrentMoney > price)
             {
@@ -25,9 +25,5 @@ public class ItemShopScript : MonoBehaviour
         return false;
     }
 
-    private void Update()
-    {
-
-    }
 
 }
