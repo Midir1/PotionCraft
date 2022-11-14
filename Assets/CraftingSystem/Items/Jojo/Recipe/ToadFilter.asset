@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b00ad6e8aeabb0418e117a38e2ca308, type: 3}
+  m_Name: ToadFilter
+  m_EditorClassIdentifier: 
+  ingredients:
+  - {fileID: 11400000, guid: 782531ee8dd19654abba4b5575e8674c, type: 2}
+  - {fileID: 11400000, guid: 782531ee8dd19654abba4b5575e8674c, type: 2}
+  - {fileID: 11400000, guid: 7f58031e1425d3741a304364fffdb6c5, type: 2}
+  result: {fileID: 11400000, guid: d6438f9a496f9cf429a7e16b048d606e, type: 2}
