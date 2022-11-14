@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Item
   - DropValid
+  - Ingredient
   layers:
   - Default
   - TransparentFX
