@@ -55,16 +55,23 @@ enum PotionName
 public class Potion : MonoBehaviour
 {
     [SerializeField] Image image;
-    [SerializeField] TMP_Text nom;
+    [SerializeField] TMP_Text name;
+    private string hideName;
     [SerializeField] TMP_Text price;
+    private string hidePrice;
     [SerializeField] TMP_Text description;
+    private string hideDescription;
     [SerializeField] Image rune;
     [SerializeField] List<Ingredient> recipe;
+    private List<Ingredient> hideRecipe;
     [SerializeField] bool locked = true;
 
     private void Start()
     {
-        
+        hideName = name.text;
+        hidePrice = price.text;
+        hideDescription = description.text;
+        hideRecipe = recipe;
     }
     private void Update()
     {
@@ -80,21 +87,21 @@ public class Potion : MonoBehaviour
     private void Unlocked()
     {
         image.color = new Color(255.0f, 255.0f, 255.0f, image.color.a);
-        nom.text = "Potion name";
-        price.text = "123";
-        description.text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ante velit, aliquet iaculis fringilla ut, gravida suscipit nulla. Aliquam vel mauris lectus. Praesent laoreet nisl eget magna bibendum";
+        name.text = hideName;
+        price.text = hidePrice;
+        description.text = hideDescription;
         rune.color = new Color(255.0f, 255.0f, 255.0f, 255.0f);
         for (int i = 0; i < recipe.Count; i++)
         {
             recipe[i].image.color = new Color(255.0f, 255.0f, 255.0f, 255.0f);
-            recipe[i].nom.text = "nom";
-            recipe[i].quantity.text = "x1";
+            recipe[i].nom.text = hideRecipe[i].nom.text;
+            recipe[i].quantity.text = hideRecipe[i].quantity.text;
         }
     }
     private void Locked()
     {
         image.color = new Color(0.0f, 0.0f, 0.0f, image.color.a);
-        nom.text = "???";
+        name.text = "???";
         price.text = "???";
         description.text = "";
         rune.color = new Color(0.0f, 0.0f, 0.0f, 0.0f);
