@@ -12,7 +12,6 @@ public class BuyButtonScript : MonoBehaviour
 
         if (currentItemShop !=null)
         {
-            Debug.Log("item select : " + currentItemShop.Id);
             if(currentItemShop.BuyIt())
             {
                 Debug.Log("achat");
