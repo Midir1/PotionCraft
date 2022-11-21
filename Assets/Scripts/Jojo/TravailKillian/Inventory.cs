@@ -11,6 +11,8 @@ public class Inventory : MonoBehaviour
     [SerializeField] private List<Recipe> recipes;
     [SerializeField] private List<GameObject> potions;
     [SerializeField] private Transform potionParent;
+    [SerializeField] private GameObject drawPanel;
+    [SerializeField] private GameObject inputManager;
 
     private long startTime;
     private long endTime;
@@ -74,15 +76,25 @@ public class Inventory : MonoBehaviour
                 {
                     if (now > endTime)
                     {
-                        ingredients.Clear();
-                        //Instantiate(potions[i], potionParent);
-                        Instantiate(potions[0], potionParent);
-
-                        isBrewing = false;
+                        drawPanel.SetActive(true);
+                        inputManager.SetActive(true);
+                        
                         return;
                     }
                 }
             }
         }
+    }
+
+    public void ClearIngredients()
+    {
+        drawPanel.SetActive(false);
+        inputManager.SetActive(false);
+        
+        ingredients.Clear();
+        //Instantiate(potions[i], potionParent);
+        Instantiate(potions[0], potionParent);
+
+        isBrewing = false;
     }
 }

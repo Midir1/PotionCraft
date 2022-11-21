@@ -10,12 +10,12 @@ using static UnityEngine.GraphicsBuffer;
 
 public class InputPaternRecognition : MonoBehaviour
 {
-    [SerializeField] Canvas canva;
     [SerializeField] Object pointToInstantiate;
     [SerializeField] Object lineToInstantiate;
 
     [SerializeField] RuneList runeList;
     [SerializeField] Patern patern = Patern.NotInitialized;
+    [SerializeField] private Transform parentTransform;
 
     Object line;
     RuneDrawLine runeDrawLine;
@@ -36,15 +36,19 @@ public class InputPaternRecognition : MonoBehaviour
 
     bool flag = false;
 
+    private Inventory inventory;
+
     void Start()
     {
         rune = runeList.GetRune(patern);
 
         foreach (Vector2 pos in rune)
         {
-            Object circleCopy = Instantiate(pointToInstantiate, pos, Quaternion.identity, canva.transform);
+            Object circleCopy = Instantiate(pointToInstantiate, pos, Quaternion.identity, parentTransform);
             arrPointRune.Add(circleCopy);
         }
+
+        inventory = FindObjectOfType<Inventory>();
     }
 
     void Update()
@@ -207,7 +211,7 @@ public class InputPaternRecognition : MonoBehaviour
         //recrate arrPoint 
         foreach (Vector2 pos in rune)
         {
-            Object circleCopy = Instantiate(pointToInstantiate, pos, Quaternion.identity, canva.transform);
+            Object circleCopy = Instantiate(pointToInstantiate, pos, Quaternion.identity, parentTransform);
             arrPointRune.Add(circleCopy);
         }
     }
@@ -224,13 +228,15 @@ public class InputPaternRecognition : MonoBehaviour
 
         foreach (Vector2 pos in rune)
         {
-            Object circleCopy = Instantiate(pointToInstantiate, pos, Quaternion.identity, canva.transform);
+            Object circleCopy = Instantiate(pointToInstantiate, pos, Quaternion.identity, parentTransform);
             arrPointRune.Add(circleCopy);
         }
     }
 
     void Success()
     {
+        inventory.ClearIngredients();
+        
         runeDrawLine.Braval();
         ClearPath();
     }
