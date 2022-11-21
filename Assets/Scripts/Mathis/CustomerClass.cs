@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine.UI;
 using UnityEngine.U2D;
 using System.IO;
+using System;
 
 enum RACE
 {
@@ -61,8 +62,8 @@ public struct Potion_Customer
 
 public class CustomerClass 
 {
-	#region Fields
-	private float timerMax;
+    #region Fields
+    private float timerMax;
 	public float timer;
 	public Potion_Customer askedPotion_Customer;
 	
@@ -71,7 +72,7 @@ public class CustomerClass
 	public GameObject[] partDisplay;
     public GameObject parent;
     private string[] secondPath;
-    public Sprite sprite;
+    private Sprite sprite;
 	public Vector2 pos;
 	private RACE race;
 	public HERO hero;
@@ -79,7 +80,7 @@ public class CustomerClass
 
 
     private bool isAngry;
-
+    
 	#endregion
 
 	public CustomerClass ()
@@ -88,9 +89,9 @@ public class CustomerClass
 
 		askedPotion_Customer = new Potion_Customer();
 
-        askedPotion_Customer.name = (POTION_NAME)Random.Range(0, (int)POTION_NAME.NBPOTION);
+        askedPotion_Customer.name = (POTION_NAME)UnityEngine.Random.Range(0, (int)POTION_NAME.NBPOTION);
 
-        int Potion_CustomerSize = Random.Range(1, 4);
+        int Potion_CustomerSize = UnityEngine.Random.Range(1, 4);
 
 		timerMax = 4 * Potion_CustomerSize;
 		timer = timerMax;
@@ -98,10 +99,10 @@ public class CustomerClass
 
         for (int i = 0; i < Potion_CustomerSize; i++)
 		{
-			askedPotion_Customer.ing.Add((INGREDIENT_CUSTOMER)Random.Range(0, (int)INGREDIENT_CUSTOMER.INGREDIENT_CUSTOMERNB));
+			askedPotion_Customer.ing.Add((INGREDIENT_CUSTOMER)UnityEngine.Random.Range(0, (int)INGREDIENT_CUSTOMER.INGREDIENT_CUSTOMERNB));
 		}
 
-		askedPotion_Customer.rune = (RUNES)Random.Range(0, (int)RUNES.RUNENB);
+		askedPotion_Customer.rune = (RUNES)UnityEngine.Random.Range(0, (int)RUNES.RUNENB);
 
         secondPath = new string[5];
 
@@ -113,14 +114,14 @@ public class CustomerClass
 
 
         askedPotion_Customer.price = 100 + 10 * Potion_CustomerSize + 10 * (int)askedPotion_Customer.rune;
-        if (Random.Range(1, 11) == 1)
+        if (UnityEngine.Random.Range(1, 11) == 1)
         {
-            hero = (HERO)Random.Range(0, (int)HERO.HERONB);
+            hero = (HERO)UnityEngine.Random.Range(0, (int)HERO.HERONB);
             race = RACE.RACENB;
         }
         else
         {
-            race = (RACE)Random.Range(0, (int)RACE.RACENB);
+            race = (RACE)UnityEngine.Random.Range(0, (int)RACE.RACENB);
             hero = HERO.HERONB;
         }
     }
@@ -249,7 +250,7 @@ public class CustomerClass
     //}
 
 
-    public void DisplayCustomer()
+    public void DisplayCustomer(Transform customerParent)
 	{
 		string path;
 
@@ -301,22 +302,22 @@ public class CustomerClass
 
             for (int i = 0; i < nbPart; i++)
             {
-                part[i] = Random.Range(1, 5);
+                part[i] = UnityEngine.Random.Range(1, 5);
             }
 
         }
 
         
-        parent = new GameObject();
-        parent.transform.position = new Vector2(0, 1.8f);
-        parent.name = "Customer";
-
+        parent = new GameObject("Customer", typeof(RectTransform));
+        parent.GetComponent<RectTransform>().anchoredPosition = new Vector2(0, 1.8f);
+        parent.GetComponent<RectTransform>().SetParent(customerParent);
+        parent.transform.SetSiblingIndex(0);
         for (int i = 0; i < nbPart; i++)
         {
 
             pos = new Vector2(1, 2);
-            partDisplay[i] = new GameObject("part" + i);
-            SpriteRenderer spriteRenderer = partDisplay[i].AddComponent<SpriteRenderer>();
+            partDisplay[i] = new GameObject("part" + i, typeof(RectTransform));
+            Image image = partDisplay[i].AddComponent<Image>();
             BoxCollider2D collide = partDisplay[i].AddComponent<BoxCollider2D>();
             if (nbPart == 1)
             {
@@ -335,22 +336,17 @@ public class CustomerClass
             {
                 sprite = Resources.Load<Sprite>(string.Concat(path, secondPath[i], part[i]));
             }
-            partDisplay[i].transform.position = new Vector2(pos.x, pos.y);
-            spriteRenderer.sprite = sprite;
-            if (i == 4)
-            {
-                spriteRenderer.sortingOrder = 6;
-            }
-            else
-            {
-                spriteRenderer.sortingOrder = 1 + i*2;
-            }
+
+            image.sprite = sprite;
+            Vector2 size = image.sprite.bounds.size;
+            collide.size = size;
+            partDisplay[i].GetComponent<RectTransform>().sizeDelta = size;
+            Vector2 pivot = new Vector2(sprite.pivot.x / (size.x* sprite.pixelsPerUnit), sprite.pivot.y / (size.y* sprite.pixelsPerUnit));
+
+            partDisplay[i].GetComponent<RectTransform>().pivot = pivot;
+            partDisplay[i].GetComponent<RectTransform>().anchoredPosition = pos;
       
-
-            Vector2 S = spriteRenderer.sprite.bounds.size;
-            collide.size = S;
-
-            partDisplay[i].transform.parent = parent.transform;
+            partDisplay[i].GetComponent<RectTransform>().SetParent(parent.transform); 
 
         }
         //Diplay potion
@@ -375,26 +371,30 @@ public class CustomerClass
                 default:
                     break;
             }
-            GameObject bulle = new GameObject("parcho");
-            GameObject potion = new GameObject("askedPotion");
-            SpriteRenderer bulleRenderer = bulle.AddComponent<SpriteRenderer>();
-            SpriteRenderer potionRenderer = potion.AddComponent<SpriteRenderer>();
-            Sprite bulleSprite = Resources.Load<Sprite>("UI/Parcho");
-            Sprite potionSprite = Resources.Load<Sprite>(potionPath);
+            //GameObject bulle = new GameObject("parcho", typeof(RectTransform));
+            //GameObject potion = new GameObject("askedPotion", typeof(RectTransform));
+            //Image bulleRenderer = bulle.AddComponent<Image>();
+            //Image potionRenderer = potion.AddComponent<Image>();
+            //Sprite bulleSprite = Resources.Load<Sprite>("UI/Parcho");
+            //Sprite potionSprite = Resources.Load<Sprite>(potionPath);
 
 
-            bulleRenderer.sprite = bulleSprite;
-            potionRenderer.sprite = potionSprite;
 
-            bulleRenderer.sortingOrder = 1;
-            potionRenderer.sortingOrder = 2;
+            //bulleRenderer.sprite = bulleSprite;
+            //potionRenderer.sprite = potionSprite;
 
-            bulle.transform.position = new Vector2(-0.5f, 1.5f);
-            potion.transform.position = new Vector2(-0.5f, 1.5f);
+            //Vector2 size = bulleSprite.bounds.size;
+            //bulle.GetComponent<RectTransform>().sizeDelta = size;
 
-            bulle.transform.parent = parent.transform;
-            potion.transform.parent = parent.transform;
-            
+            //size = potionSprite.bounds.size;
+            //potion.GetComponent<RectTransform>().sizeDelta = size;
+   
+            //bulle.GetComponent<RectTransform>().anchoredPosition = new Vector2(-0.5f, 2);
+            //potion.GetComponent<RectTransform>().anchoredPosition = new Vector2(-0.5f, 2);
+
+            //bulle.transform.SetParent(parent.transform);
+            //potion.transform.SetParent(parent.transform);
+
 
         }
     }
@@ -425,7 +425,7 @@ public class CustomerClass
             }
             Sprite s = Resources.Load<Sprite>(path);
 
-            partDisplay[0].GetComponent<SpriteRenderer>().sprite = s;
+            partDisplay[0].GetComponent<Image>().sprite = s;
         }
         else
         {
@@ -446,21 +446,21 @@ public class CustomerClass
             }
 
             path += "eye/yeux_mechant";
-            eye = partDisplay[3].GetComponent<SpriteRenderer>().sprite.name;
+            eye = partDisplay[3].GetComponent<Image>().sprite.name;
             path += eye[eye.Length - 1];
 
             Sprite s = Resources.Load<Sprite>(path);
 
-            partDisplay[3].GetComponent<SpriteRenderer>().sprite = s;
+            partDisplay[3].GetComponent<Image>().sprite = s;
 
             if (race == RACE.PUMPKIN)
             {
-                string mouth = partDisplay[4].GetComponent<SpriteRenderer>().sprite.name;
+                string mouth = partDisplay[4].GetComponent<Image>().sprite.name;
 
 
                 s = Resources.Load<Sprite>("pumpkin/mouth/bouche_mechant" + mouth[mouth.Length - 1]);
 
-                partDisplay[4].GetComponent<SpriteRenderer>().sprite = s;
+                partDisplay[4].GetComponent<Image>().sprite = s;
 
             }
         }    

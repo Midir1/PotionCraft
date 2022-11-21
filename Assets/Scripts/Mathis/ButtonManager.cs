@@ -7,17 +7,18 @@ using UnityEngine;
 
 public class ButtonManager : MonoBehaviour
 {
-    public Sprite sprite;
+
+    [SerializeField] Transform customerParent;
     CustomerClass customer;
     List<CustomerClass> customerTab = new List<CustomerClass>();
+    CustomerClass pickedCustomer;
     //List<CustomerClass> customerTab2 = new List<CustomerClass>();
     //List<CustomerClass> customerTab3 = new List<CustomerClass>();
-    CustomerClass pickedCustomer;
     // Start is called before the first frame update
 
     void Start()
     {
-        sprite = Resources.Load<Sprite>("unknown");
+
     }
 
     // Update is called once per frame
@@ -98,14 +99,14 @@ public class ButtonManager : MonoBehaviour
         //}
     }
 
-    public void test()
+    public void SpawnCustomer()
     {
         if (customerTab.Count < 3)
         {
             // ajout
             customer = new CustomerClass();
             customerTab.Add(customer);
-            customer.DisplayCustomer();
+            customer.DisplayCustomer(customerParent);
             CustomerMove();
             //for (int i = 0; i < 4; i++)
             //{
