@@ -2424,16 +2424,7 @@ MonoBehaviour:
   price: {fileID: 664070894}
   description: {fileID: 1222259293}
   rune: {fileID: 1631363854}
-  recipe:
-  - image: {fileID: 1735753797}
-    nom: {fileID: 2077905588}
-    quantity: {fileID: 615073218}
-  - image: {fileID: 938210412}
-    nom: {fileID: 1053052646}
-    quantity: {fileID: 1758916426}
-  - image: {fileID: 346091059}
-    nom: {fileID: 1320743887}
-    quantity: {fileID: 1720064096}
+  recipe: {fileID: 257253475}
   locked: 1
 --- !u!114 &252868304
 MonoBehaviour:
@@ -4063,16 +4054,7 @@ MonoBehaviour:
   price: {fileID: 1837258373}
   description: {fileID: 703911597}
   rune: {fileID: 706105715}
-  recipe:
-  - image: {fileID: 1331751811}
-    nom: {fileID: 1387936637}
-    quantity: {fileID: 1117922603}
-  - image: {fileID: 2026494517}
-    nom: {fileID: 1840127282}
-    quantity: {fileID: 1996279434}
-  - image: {fileID: 2069377316}
-    nom: {fileID: 590796960}
-    quantity: {fileID: 1336577141}
+  recipe: {fileID: 2035197980}
   locked: 1
 --- !u!114 &458195463
 MonoBehaviour:
@@ -4599,16 +4581,7 @@ MonoBehaviour:
   price: {fileID: 633079425}
   description: {fileID: 1142986673}
   rune: {fileID: 770278500}
-  recipe:
-  - image: {fileID: 177328082}
-    nom: {fileID: 2031224392}
-    quantity: {fileID: 1832752019}
-  - image: {fileID: 203770746}
-    nom: {fileID: 1983948292}
-    quantity: {fileID: 1038433237}
-  - image: {fileID: 524273871}
-    nom: {fileID: 913939680}
-    quantity: {fileID: 445267099}
+  recipe: {fileID: 751381361}
   locked: 1
 --- !u!114 &493162321
 MonoBehaviour:
@@ -5268,16 +5241,7 @@ MonoBehaviour:
   price: {fileID: 1516669177}
   description: {fileID: 663076610}
   rune: {fileID: 641404763}
-  recipe:
-  - image: {fileID: 1798488607}
-    nom: {fileID: 480486295}
-    quantity: {fileID: 1963286484}
-  - image: {fileID: 2048726090}
-    nom: {fileID: 1707230362}
-    quantity: {fileID: 1185283404}
-  - image: {fileID: 1938785036}
-    nom: {fileID: 640105718}
-    quantity: {fileID: 1479507301}
+  recipe: {fileID: 2032084071}
   locked: 1
 --- !u!114 &560306587
 MonoBehaviour:
@@ -9013,13 +8977,7 @@ MonoBehaviour:
   price: {fileID: 659455557}
   description: {fileID: 491445110}
   rune: {fileID: 1320687309}
-  recipe:
-  - image: {fileID: 619496114}
-    nom: {fileID: 524918047}
-    quantity: {fileID: 665545951}
-  - image: {fileID: 697822356}
-    nom: {fileID: 1217294856}
-    quantity: {fileID: 254209932}
+  recipe: {fileID: 847862211}
   locked: 1
 --- !u!114 &908601970
 MonoBehaviour:
@@ -9683,16 +9641,7 @@ MonoBehaviour:
   price: {fileID: 421845623}
   description: {fileID: 639804571}
   rune: {fileID: 517987139}
-  recipe:
-  - image: {fileID: 79816804}
-    nom: {fileID: 2072537532}
-    quantity: {fileID: 1373703462}
-  - image: {fileID: 333060819}
-    nom: {fileID: 1781706899}
-    quantity: {fileID: 1894466849}
-  - image: {fileID: 891219188}
-    nom: {fileID: 1487156914}
-    quantity: {fileID: 163737661}
+  recipe: {fileID: 1200514745}
   locked: 1
 --- !u!114 &972717176
 MonoBehaviour:
@@ -10351,16 +10300,7 @@ MonoBehaviour:
   price: {fileID: 377032806}
   description: {fileID: 1486420098}
   rune: {fileID: 296535566}
-  recipe:
-  - image: {fileID: 59461043}
-    nom: {fileID: 2046165370}
-    quantity: {fileID: 1772721288}
-  - image: {fileID: 1876630628}
-    nom: {fileID: 1826806965}
-    quantity: {fileID: 166930318}
-  - image: {fileID: 2130641264}
-    nom: {fileID: 973547452}
-    quantity: {fileID: 1656813201}
+  recipe: {fileID: 872708526}
   locked: 1
 --- !u!114 &1095653265
 MonoBehaviour:
@@ -12523,16 +12463,7 @@ MonoBehaviour:
   price: {fileID: 1677136225}
   description: {fileID: 35942598}
   rune: {fileID: 1706590077}
-  recipe:
-  - image: {fileID: 2127667081}
-    nom: {fileID: 71071986}
-    quantity: {fileID: 1700348074}
-  - image: {fileID: 1883806933}
-    nom: {fileID: 1704190098}
-    quantity: {fileID: 1958918357}
-  - image: {fileID: 506554038}
-    nom: {fileID: 2004637281}
-    quantity: {fileID: 104005199}
+  recipe: {fileID: 1254828682}
   locked: 1
 --- !u!114 &1267751686
 MonoBehaviour:
@@ -14235,10 +14166,7 @@ MonoBehaviour:
   price: {fileID: 1738944875}
   description: {fileID: 1108957806}
   rune: {fileID: 571830295}
-  recipe:
-  - image: {fileID: 138676753}
-    nom: {fileID: 684057082}
-    quantity: {fileID: 309792218}
+  recipe: {fileID: 537330870}
   locked: 1
 --- !u!1 &1515893703
 GameObject:
@@ -15090,16 +15018,7 @@ MonoBehaviour:
   price: {fileID: 268539332}
   description: {fileID: 912948390}
   rune: {fileID: 522114483}
-  recipe:
-  - image: {fileID: 1673406913}
-    nom: {fileID: 648146835}
-    quantity: {fileID: 1968711214}
-  - image: {fileID: 105500550}
-    nom: {fileID: 689805556}
-    quantity: {fileID: 2055550461}
-  - image: {fileID: 498981868}
-    nom: {fileID: 691063166}
-    quantity: {fileID: 1686567330}
+  recipe: {fileID: 734265251}
   locked: 1
 --- !u!114 &1644436751
 MonoBehaviour:
@@ -18982,16 +18901,7 @@ MonoBehaviour:
   price: {fileID: 1246438379}
   description: {fileID: 59832133}
   rune: {fileID: 1373213186}
-  recipe:
-  - image: {fileID: 640617946}
-    nom: {fileID: 180032526}
-    quantity: {fileID: 932104400}
-  - image: {fileID: 1259317443}
-    nom: {fileID: 1098754229}
-    quantity: {fileID: 1734040163}
-  - image: {fileID: 786056444}
-    nom: {fileID: 1119426607}
-    quantity: {fileID: 272025289}
+  recipe: {fileID: 273735804}
   locked: 1
 --- !u!114 &1967208823
 MonoBehaviour:
@@ -21255,16 +21165,7 @@ MonoBehaviour:
   price: {fileID: 1231404563}
   description: {fileID: 1620062647}
   rune: {fileID: 1646840359}
-  recipe:
-  - image: {fileID: 1850569551}
-    nom: {fileID: 382901514}
-    quantity: {fileID: 1181669157}
-  - image: {fileID: 1342072846}
-    nom: {fileID: 20917014}
-    quantity: {fileID: 127598298}
-  - image: {fileID: 463624065}
-    nom: {fileID: 203969781}
-    quantity: {fileID: 256982603}
+  recipe: {fileID: 1380964480}
   locked: 1
 --- !u!114 &2130415716
 MonoBehaviour:
