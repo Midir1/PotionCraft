@@ -6,6 +6,6 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Mathis/CustomerScene.unity
-    guid: 9fa51839c4008f84cba98fb50d5f756b
+    path: Assets/Scenes/Merge/MergeScene.unity
+    guid: 289888e6304699c4b8bfff22da7d1629
   m_configObjects: {}
