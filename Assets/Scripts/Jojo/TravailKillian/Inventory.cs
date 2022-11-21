@@ -11,22 +11,28 @@ public class Inventory : MonoBehaviour
     [SerializeField] private List<GameObject> potions;
     [SerializeField] private Transform potionParent;
     
+    //Recipes and Potions Needs to be in the same order in the inspector to give the provided result
     public void CraftPotion()
     {
-        for (var i = 0; i < recipes.Count; i++)
+        foreach (var recipe in recipes)
         {
-            var recipe = recipes[i];
+            Item recipeIngredient1 = recipe.ingredients[0];
+            Item recipeIngredient2 = recipe.ingredients[1];
+            Item recipeIngredient3 = recipe.ingredients[2];
             
             for (var index = 0; index < recipe.ingredients.Count; index++)
             {
-                if (!ingredients.Contains(recipe.ingredients[index])) break;
+                if (ingredients[0] == recipeIngredient1) recipeIngredient1 = null;
+                else if (ingredients[1] == recipeIngredient2) recipeIngredient2 = null;
+                else if (ingredients[2] == recipeIngredient3) recipeIngredient3 = null;
+                else break;
 
-                if (index == recipe.ingredients.Count - 1 && ingredients.Contains(recipe.ingredients[index]))
+                if (index == recipe.ingredients.Count - 1)
                 {
                     ingredients.Clear();
                     //Instantiate(potions[i], potionParent);
                     Instantiate(potions[0], potionParent);
-                    
+
                     Debug.Log(recipe.name);
                     return;
                 }
