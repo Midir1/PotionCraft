@@ -26,7 +26,7 @@ enum INGREDIENT
 }
 
 [System.Serializable]
-class Ingredient
+struct Ingredient
 {
     public Image image;
     public TMP_Text nom;
@@ -62,17 +62,17 @@ public class Potion : MonoBehaviour
     [SerializeField] TMP_Text description;
     private string hideDescription;
     [SerializeField] Image rune;
-    [SerializeField] List<Ingredient> recipe;
-    private List<Ingredient> hideRecipe;
+    [SerializeField] GameObject recipe;
+    private Vector3 position;
     [SerializeField] bool locked = true;
-
     private void Start()
     {
         hideName = name.text;
         hidePrice = price.text;
         hideDescription = description.text;
-        hideRecipe = recipe;
+        position = recipe.transform.position;
     }
+
     private void Update()
     {
         if (locked)
@@ -91,12 +91,7 @@ public class Potion : MonoBehaviour
         price.text = hidePrice;
         description.text = hideDescription;
         rune.color = new Color(255.0f, 255.0f, 255.0f, 255.0f);
-        for (int i = 0; i < recipe.Count; i++)
-        {
-            recipe[i].image.color = new Color(255.0f, 255.0f, 255.0f, 255.0f);
-            recipe[i].nom.text = hideRecipe[i].nom.text;
-            recipe[i].quantity.text = hideRecipe[i].quantity.text;
-        }
+        recipe.transform.position = position;
     }
     private void Locked()
     {
@@ -105,11 +100,6 @@ public class Potion : MonoBehaviour
         price.text = "???";
         description.text = "";
         rune.color = new Color(0.0f, 0.0f, 0.0f, 0.0f);
-        for (int i = 0; i < recipe.Count; i++)
-        {
-            recipe[i].image.color = new Color(0.0f, 0.0f, 0.0f, 0.0f);
-            recipe[i].nom.text = "";
-            recipe[i].quantity.text = "";
-        }
+        recipe.transform.position = new Vector3(10000, 0, 0);
     }
 }
