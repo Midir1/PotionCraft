@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2b00ad6e8aeabb0418e117a38e2ca308, type: 3}
-  m_Name: ProgrammerPotion
+  m_Name: ChillPotion
   m_EditorClassIdentifier: 
   ingredients:
   - {fileID: 11400000, guid: 782531ee8dd19654abba4b5575e8674c, type: 2}
