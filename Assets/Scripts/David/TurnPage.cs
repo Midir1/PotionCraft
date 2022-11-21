@@ -12,6 +12,7 @@ public class TurnPage : MonoBehaviour
     private Vector2 endTouchPosition;
 
     private int gameObjectID = 0;
+    private float alpha = 255.0f;
     private bool toLeft = false;
     private bool toRight = false;
 
@@ -48,9 +49,13 @@ public class TurnPage : MonoBehaviour
             else
             {
                 pages[gameObjectID].transform.Rotate(0.0f, -moveSpeed * Time.deltaTime, 0.0f);
-
+                //alpha -= Time.deltaTime * 100;
+                //pages[gameObjectID].GetComponent<CanvasRenderer>().SetAlpha(alpha);
+                //pages[gameObjectID].GetComponentInChildren<CanvasRenderer>().SetAlpha(alpha);
+                //if (pages[gameObjectID].GetComponent<CanvasRenderer>().GetAlpha() < 1f)
                 if (pages[gameObjectID].transform.rotation.y < -0.71f)
                 {
+                    //pages[gameObjectID].GetComponent<CanvasRenderer>().SetAlpha(0);
                     toLeft = false;
                     gameObjectID++;
                 }
@@ -65,10 +70,13 @@ public class TurnPage : MonoBehaviour
             else
             {
                 pages[gameObjectID - 1].transform.Rotate(0.0f, moveSpeed * Time.deltaTime, 0.0f);
-
+                //alpha += Time.deltaTime * 100;
+                //pages[gameObjectID-1].GetComponent<CanvasRenderer>().SetAlpha(alpha);
+                //if (pages[gameObjectID-1].GetComponent<CanvasRenderer>().GetAlpha() > 254f)
                 if (pages[gameObjectID - 1].transform.rotation.y > 0.0f)
                 {
                     pages[gameObjectID - 1].transform.rotation = new Quaternion();
+                    //pages[gameObjectID - 1].GetComponent<CanvasRenderer>().SetAlpha(255.0f);
                     toRight = false;
                     gameObjectID--;
                 }

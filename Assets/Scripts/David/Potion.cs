@@ -29,7 +29,7 @@ enum INGREDIENT
 struct Ingredient
 {
     public Image image;
-    public TMP_Text nom;
+    public TMP_Text name;
     public TMP_Text quantity;
 }
 enum RUNE
@@ -56,21 +56,15 @@ public class Potion : MonoBehaviour
 {
     [SerializeField] Image image;
     [SerializeField] TMP_Text name;
-    private string hideName;
+    [SerializeField] Image coin;
     [SerializeField] TMP_Text price;
-    private string hidePrice;
     [SerializeField] TMP_Text description;
-    private string hideDescription;
     [SerializeField] Image rune;
-    [SerializeField] GameObject recipe;
-    private Vector3 position;
-    [SerializeField] bool locked = true;
+    [SerializeField] List<Ingredient> ingredient;
+    [SerializeField] bool locked;
     private void Start()
     {
-        hideName = name.text;
-        hidePrice = price.text;
-        hideDescription = description.text;
-        position = recipe.transform.position;
+
     }
 
     private void Update()
@@ -86,20 +80,32 @@ public class Potion : MonoBehaviour
     }
     private void Unlocked()
     {
-        image.color = new Color(255.0f, 255.0f, 255.0f, image.color.a);
-        name.text = hideName;
-        price.text = hidePrice;
-        description.text = hideDescription;
-        rune.color = new Color(255.0f, 255.0f, 255.0f, 255.0f);
-        recipe.transform.position = position;
+        image.color = Color.white;
+        name.color = Color.white;
+        coin.color = Color.white;
+        price.color = Color.white;
+        description.color = Color.white;
+        rune.color = Color.white;
+        for (int i = 0; i < ingredient.Count; i++)
+        {
+            ingredient[i].image.color = Color.white;
+            ingredient[i].name.color = Color.white;
+            ingredient[i].quantity.color = Color.white;
+        }
     }
     private void Locked()
     {
-        image.color = new Color(0.0f, 0.0f, 0.0f, image.color.a);
-        name.text = "???";
-        price.text = "???";
-        description.text = "";
-        rune.color = new Color(0.0f, 0.0f, 0.0f, 0.0f);
-        recipe.transform.position = new Vector3(10000, 0, 0);
+        image.color = Color.black;
+        name.color = Color.clear;
+        coin.color = Color.clear;
+        price.color = Color.clear;
+        description.color = Color.clear;
+        rune.color = Color.clear;
+        for (int i = 0; i < ingredient.Count; i++)
+        {
+            ingredient[i].image.color = Color.clear;
+            ingredient[i].name.color = Color.clear;
+            ingredient[i].quantity.color = Color.clear;
+        }
     }
 }
