@@ -1,4 +1,5 @@
 using JetBrains.Annotations;
+using System;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
@@ -31,7 +32,7 @@ public class IngredientManager : MonoBehaviour
         Inventory inventory = other.GetComponent<Inventory>();
         inventory.ingredients.Add(item);
 
-        if (inventory.ingredients.Count == inventory.maxIngredient) inventory.CraftPotion();
+        if (inventory.ingredients.Count == inventory.maxIngredient) inventory.StartCraft();
         
         Destroy(gameObject);
     }

@@ -25,6 +25,7 @@ public class CraftingRecipe : ScriptableObject
                 return false;
             }
         }
+
         return true;
     }
 
