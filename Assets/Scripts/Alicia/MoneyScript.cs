@@ -6,7 +6,6 @@ using UnityEngine;
 public class MoneyScript : MonoBehaviour
 {
     private TextMeshProUGUI moneyValue;
-    GameManager gameManager;
 
     // Start is called before the first frame update
     void Start()
