@@ -14,6 +14,7 @@ public class CauldronScript :MonoBehaviour
 
     public bool UpgradeSpeed { get => upgradeSpeed; set => upgradeSpeed = value; }
     public bool UpgradeTime { get => upgradeTime; set => upgradeTime = value; }
+    public bool IsAvailable { get => isAvailable; set => isAvailable = value; }
 
     #region IsAvailableInGame
     public void CauldronIsAvailable()
