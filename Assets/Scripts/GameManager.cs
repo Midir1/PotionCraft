@@ -2,15 +2,32 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum PotionBp
+{
+    Clean,
+    Drunkard,
+    Relaxation,
+    Luminescence,
+    Spicy,
+    Horned,
+    Super,
+    Strawberry,
+    Gamer,
+    Graphic,
+    Toad,
+    Heart,
+    Sleep,
+    PotionBpNb
+}
 public class GameManager : MonoBehaviour
 {
     #region Attributes
 
-    [SerializeField] uint maxMoney = 999999;
-    [SerializeField] uint currentMoney = 1000;
-    public CauldronScript[] cauldron = {new CauldronScript(), new CauldronScript(), new CauldronScript()};
+    [SerializeField] uint maxMoney = 99999;
+    [SerializeField] uint currentMoney = 5000;
+    public CauldronScript[] cauldron = { new CauldronScript(), new CauldronScript(), new CauldronScript() };
     public TipBoxScript tipBox = new TipBoxScript();
-
+    public bool[] Bp = new bool[(int)PotionBp.PotionBpNb];
     #endregion
 
     #region getters/setters
@@ -32,6 +49,13 @@ public class GameManager : MonoBehaviour
         }
     }
     #endregion
+
+    private void Start()
+    {
+        cauldron[0].IsAvailable = true;
+        for(int i = 0; i < (int)PotionBp.PotionBpNb; i++)
+            Bp[i] = false;
+    }
 
     /// <summary>
     /// money to add to wallet

@@ -10,13 +10,13 @@ public class BuyButtonScript : MonoBehaviour
     {
         currentItemShop = GetComponentInParent<ItemShopScript>();
 
-        if (currentItemShop !=null)
+        if (currentItemShop != null)
         {
-            if(currentItemShop.BuyIt())
+
+            if (currentItemShop.BuyIt())
             {
-                Debug.Log("achat");
-                
-                switch(currentItemShop.Id)
+
+                switch (currentItemShop.Id)
                 {
                     case "cauldron2":
                         GameManager.Instance.cauldron[1].CauldronIsAvailable();
@@ -27,7 +27,47 @@ public class BuyButtonScript : MonoBehaviour
                     case "tipBox":
                         GameManager.Instance.tipBox.TipIsAvailable();
                         break;
-                    default : Debug.Log("unknow ItemShop.Id");
+                    case "Clean":
+                        GameManager.Instance.Bp[(int)PotionBp.Clean] = true;
+                            break;
+                    case "Drunkard":
+                        GameManager.Instance.Bp[(int)PotionBp.Drunkard] = true;
+                        break;
+                    case "Relaxation":
+                        GameManager.Instance.Bp[(int)PotionBp.Relaxation] = true;
+                        break;
+                    case "Luminescence":
+                        GameManager.Instance.Bp[(int)PotionBp.Luminescence] = true;
+                        break;
+                    case "Spicy":
+                        GameManager.Instance.Bp[(int)PotionBp.Spicy] = true;
+                        break;
+                    case "Horned":
+                        GameManager.Instance.Bp[(int)PotionBp.Horned] = true;
+                        break;
+                    case "Super":
+                        GameManager.Instance.Bp[(int)PotionBp.Super] = true;
+                        break;
+                    case "Strawberry":
+                        GameManager.Instance.Bp[(int)PotionBp.Strawberry] = true;
+                        break;
+                    case "Gamer":
+                        GameManager.Instance.Bp[(int)PotionBp.Gamer] = true;
+                        break;
+                    case "Graphic":
+                        GameManager.Instance.Bp[(int)PotionBp.Graphic] = true;
+                        break;
+                    case "Toad":
+                        GameManager.Instance.Bp[(int)PotionBp.Toad] = true;
+                        break;
+                    case "Heart":
+                        GameManager.Instance.Bp[(int)PotionBp.Heart] = true;
+                        break;
+                    case "Sleep":
+                        GameManager.Instance.Bp[(int)PotionBp.Sleep] = true;
+                        break;
+                    default:
+                        Debug.Log("unknow ItemShop.Id");
                         break;
                 }
             }
@@ -38,6 +78,6 @@ public class BuyButtonScript : MonoBehaviour
         }
     }
 
-  
+
 
 }

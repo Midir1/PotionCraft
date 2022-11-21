@@ -145,7 +145,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: 77684785b885840489bbffd0ad515115, type: 3}
     - target: {fileID: 4654529480731010115, guid: 09c21eb2f38eef6468a2499eb64f39e8, type: 3}
       propertyPath: id
-      value: Bp5
+      value: Spicy
       objectReference: {fileID: 0}
     - target: {fileID: 4654529480731010116, guid: 09c21eb2f38eef6468a2499eb64f39e8, type: 3}
       propertyPath: m_Pivot.x
@@ -261,7 +261,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: 77684785b885840489bbffd0ad515115, type: 3}
     - target: {fileID: 4654529480731010115, guid: 09c21eb2f38eef6468a2499eb64f39e8, type: 3}
       propertyPath: id
-      value: Bp3
+      value: Relaxation
       objectReference: {fileID: 0}
     - target: {fileID: 4654529480731010116, guid: 09c21eb2f38eef6468a2499eb64f39e8, type: 3}
       propertyPath: m_Pivot.x
@@ -377,7 +377,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: 77684785b885840489bbffd0ad515115, type: 3}
     - target: {fileID: 4654529480731010115, guid: 09c21eb2f38eef6468a2499eb64f39e8, type: 3}
       propertyPath: id
-      value: Bp4
+      value: Luminescence
       objectReference: {fileID: 0}
     - target: {fileID: 4654529480731010116, guid: 09c21eb2f38eef6468a2499eb64f39e8, type: 3}
       propertyPath: m_Pivot.x
@@ -611,7 +611,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: 77684785b885840489bbffd0ad515115, type: 3}
     - target: {fileID: 4654529480731010115, guid: 09c21eb2f38eef6468a2499eb64f39e8, type: 3}
       propertyPath: id
-      value: Bp2
+      value: Drunkard
       objectReference: {fileID: 0}
     - target: {fileID: 4654529480731010116, guid: 09c21eb2f38eef6468a2499eb64f39e8, type: 3}
       propertyPath: m_Pivot.x
@@ -805,7 +805,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: 77684785b885840489bbffd0ad515115, type: 3}
     - target: {fileID: 4654529480731010115, guid: 09c21eb2f38eef6468a2499eb64f39e8, type: 3}
       propertyPath: id
-      value: Bp8
+      value: Strawberry
       objectReference: {fileID: 0}
     - target: {fileID: 4654529480731010116, guid: 09c21eb2f38eef6468a2499eb64f39e8, type: 3}
       propertyPath: m_Pivot.x
@@ -921,7 +921,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: 77684785b885840489bbffd0ad515115, type: 3}
     - target: {fileID: 4654529480731010115, guid: 09c21eb2f38eef6468a2499eb64f39e8, type: 3}
       propertyPath: id
-      value: Bp7
+      value: Super
       objectReference: {fileID: 0}
     - target: {fileID: 4654529480731010116, guid: 09c21eb2f38eef6468a2499eb64f39e8, type: 3}
       propertyPath: m_Pivot.x
@@ -1435,8 +1435,16 @@ PrefabInstance:
       value: cauldron3
       objectReference: {fileID: 0}
     - target: {fileID: 5519361186030637781, guid: 578395ee549e9534eb4264f224d4325b, type: 3}
+      propertyPath: price
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 5519361186030637781, guid: 578395ee549e9534eb4264f224d4325b, type: 3}
       propertyPath: buyButton
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7753764958714118189, guid: 578395ee549e9534eb4264f224d4325b, type: 3}
+      propertyPath: m_VerticalAlignment
+      value: 512
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
@@ -1831,7 +1839,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: 77684785b885840489bbffd0ad515115, type: 3}
     - target: {fileID: 4654529480731010115, guid: 09c21eb2f38eef6468a2499eb64f39e8, type: 3}
       propertyPath: id
-      value: Bp6
+      value: Horned
       objectReference: {fileID: 0}
     - target: {fileID: 4654529480731010116, guid: 09c21eb2f38eef6468a2499eb64f39e8, type: 3}
       propertyPath: m_Pivot.x
@@ -2086,8 +2094,16 @@ PrefabInstance:
       value: cauldron2
       objectReference: {fileID: 0}
     - target: {fileID: 5519361186030637781, guid: 578395ee549e9534eb4264f224d4325b, type: 3}
+      propertyPath: price
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 5519361186030637781, guid: 578395ee549e9534eb4264f224d4325b, type: 3}
       propertyPath: buyButton
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7753764958714118189, guid: 578395ee549e9534eb4264f224d4325b, type: 3}
+      propertyPath: m_VerticalAlignment
+      value: 512
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
@@ -2382,8 +2398,16 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5519361186030637781, guid: 578395ee549e9534eb4264f224d4325b, type: 3}
+      propertyPath: price
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 5519361186030637781, guid: 578395ee549e9534eb4264f224d4325b, type: 3}
       propertyPath: buyButton
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7753764958714118189, guid: 578395ee549e9534eb4264f224d4325b, type: 3}
+      propertyPath: m_VerticalAlignment
+      value: 512
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
@@ -2408,6 +2432,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 77684785b885840489bbffd0ad515115, type: 3}
+    - target: {fileID: 4654529480731010115, guid: 09c21eb2f38eef6468a2499eb64f39e8, type: 3}
+      propertyPath: id
+      value: Clean
+      objectReference: {fileID: 0}
     - target: {fileID: 4654529480731010116, guid: 09c21eb2f38eef6468a2499eb64f39e8, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
