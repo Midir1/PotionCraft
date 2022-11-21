@@ -22,9 +22,9 @@ public class Inventory : MonoBehaviour
             
             for (var index = 0; index < recipe.ingredients.Count; index++)
             {
-                if (ingredients[0] == recipeIngredient1) recipeIngredient1 = null;
-                else if (ingredients[1] == recipeIngredient2) recipeIngredient2 = null;
-                else if (ingredients[2] == recipeIngredient3) recipeIngredient3 = null;
+                if (ingredients[index] == recipeIngredient1) recipeIngredient1 = null;
+                else if (ingredients[index] == recipeIngredient2) recipeIngredient2 = null;
+                else if (ingredients[index] == recipeIngredient3) recipeIngredient3 = null;
                 else break;
 
                 if (index == recipe.ingredients.Count - 1)
