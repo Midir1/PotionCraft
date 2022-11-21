@@ -27,9 +27,11 @@ public class IngredientManager : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D other)
     {
-        if (!other.CompareTag("Cauldron") || isDragged) return;
-
         Inventory inventory = other.GetComponent<Inventory>();
+
+        if (!other.CompareTag("Cauldron") || isDragged || inventory.ingredients.Count == 3) return;
+
+        
         inventory.ingredients.Add(item);
 
         if (inventory.ingredients.Count == inventory.maxIngredient) inventory.StartCraft();
