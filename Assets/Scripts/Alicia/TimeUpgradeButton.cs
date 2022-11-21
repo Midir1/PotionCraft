@@ -1,19 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using TMPro;
 
 public class TimeUpgradeButton : MonoBehaviour
 {
     [SerializeField] uint price;
     bool availablePurchase = true;
-    private TextMeshProUGUI priceValue;
-
-    void Start()
-    {
-        priceValue = gameObject.GetComponentInChildren<TextMeshProUGUI>();
-        priceValue.text = price.ToString();
-    }
     void OnMouseDown()
     {
         if (availablePurchase && GameManager.Instance.CurrentMoney > price && transform.position.y < 3.0f && transform.position.y > -3.3f)

@@ -10,11 +10,13 @@ public class BuyButtonScript : MonoBehaviour
     {
         currentItemShop = GetComponentInParent<ItemShopScript>();
 
-        if (currentItemShop != null)
+        if (currentItemShop !=null)
         {
-            if (currentItemShop.BuyIt())
+            if(currentItemShop.BuyIt())
             {
-                switch (currentItemShop.Id)
+                Debug.Log("achat");
+                
+                switch(currentItemShop.Id)
                 {
                     case "cauldron2":
                         GameManager.Instance.cauldron[1].CauldronIsAvailable();
@@ -25,20 +27,7 @@ public class BuyButtonScript : MonoBehaviour
                     case "tipBox":
                         GameManager.Instance.tipBox.TipIsAvailable();
                         break;
-                    case "Bp1":
-                        GameManager.Instance.potionBp[0] = true;
-                        break;
-                    case "Bp2":
-                            GameManager.Instance.potionBp[1] = true;
-                        break;
-                    case "Bp3":
-                            GameManager.Instance.potionBp[2] = true;
-                        break;
-                    case "Bp4":
-                            GameManager.Instance.potionBp[3] = true;
-                        break;
-                    default:
-                        Debug.Log("unknow ItemShop.Id");
+                    default : Debug.Log("unknow ItemShop.Id");
                         break;
                 }
             }
@@ -49,6 +38,6 @@ public class BuyButtonScript : MonoBehaviour
         }
     }
 
-
+  
 
 }

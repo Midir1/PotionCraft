@@ -12,11 +12,8 @@ public class CauldronScript :MonoBehaviour
 
     #endregion
 
-    #region Getter/Setter
     public bool UpgradeSpeed { get => upgradeSpeed; set => upgradeSpeed = value; }
     public bool UpgradeTime { get => upgradeTime; set => upgradeTime = value; }
-    public bool IsAvailable { get => isAvailable; set => isAvailable = value; }
-    #endregion
 
     #region IsAvailableInGame
     public void CauldronIsAvailable()
@@ -32,13 +29,4 @@ public class CauldronScript :MonoBehaviour
         upgradeTime = true;
     }
     #endregion
-
-    private void Update()
-    {
-        if(GameManager.Instance.currentState == State.Shop)
-        {
-
-        }
-    }
-
 }

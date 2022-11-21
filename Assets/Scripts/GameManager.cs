@@ -2,26 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum State
-{
-    Shop,
-    Grimoire,
-    Game,
-}
-
 public class GameManager : MonoBehaviour
 {
     #region Attributes
 
     [SerializeField] uint maxMoney = 999999;
     [SerializeField] uint currentMoney = 1000;
-    public CauldronScript[] cauldron = { new CauldronScript(), new CauldronScript(), new CauldronScript() };
+    public CauldronScript[] cauldron = {new CauldronScript(), new CauldronScript(), new CauldronScript()};
     public TipBoxScript tipBox = new TipBoxScript();
-    public bool[] potionBp = { false, false, false, false };
-    public State currentState = State.Shop;
 
     #endregion
-
 
     #region getters/setters
     public uint CurrentMoney { get => currentMoney; }
