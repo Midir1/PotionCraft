@@ -40,7 +40,7 @@ public class RuneDrawLine : MonoBehaviour
     {
 
         lr.positionCount = lr.positionCount + 1;
-        lr.SetPosition(length, _pos);
+        lr.SetPosition(length, _pos + (Vector2)transform.position);
         length++;
     }
 }
