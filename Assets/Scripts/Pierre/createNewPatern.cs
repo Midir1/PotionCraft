@@ -29,19 +29,19 @@ public class createNewPatern : MonoBehaviour
     Vector2 []arrTemp = {  new Vector2(3f, 3f ), new Vector2(3f, 3f) };
     List<Vector2> patern1;
 
+
     void Start()
     {
         patern1 = new List<Vector2>(arrTemp);
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (Input.touchCount > 0)
         {
             touch = Input.GetTouch(0);
 
-
+            pos = Camera.main.ScreenToWorldPoint(touch.position) - transform.position;
             if (touch.phase == TouchPhase.Began)
             {
                 //clear the last path
@@ -50,18 +50,16 @@ public class createNewPatern : MonoBehaviour
                 path.Clear();
                 //prepare for the new path
                 actualDistBTWpoint = distBTWpoint;
-                pos = Camera.main.ScreenToWorldPoint(touch.position);
                 posLastPoint = pos;
             }
 
             if (touch.phase == TouchPhase.Moved)
-            {
-                pos = Camera.main.ScreenToWorldPoint(touch.position);
+            {   
                 float distance = (posLastPoint.x - pos.x) * (posLastPoint.x - pos.x) + (posLastPoint.y - pos.y) * (posLastPoint.y - pos.y);
                 
                 if (distance > actualDistBTWpoint)
                 {
-                    Object circleCopy = Instantiate(point, pos, Quaternion.identity, canva.transform);
+                    Object circleCopy = Instantiate(point, new Vector2(transform.position.x + pos.x , transform.position.y + pos.y), Quaternion.identity, canva.transform);
                     arrPoint.Add(circleCopy);
                     path.Add(pos);
                     posLastPoint = pos;

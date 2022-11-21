@@ -44,7 +44,7 @@ public class InputPaternRecognition : MonoBehaviour
 
         foreach (Vector2 pos in rune)
         {
-            Object circleCopy = Instantiate(pointToInstantiate, pos, Quaternion.identity, parentTransform);
+            Object circleCopy = Instantiate(pointToInstantiate, pos + (Vector2)transform.position, Quaternion.identity, parentTransform);
             arrPointRune.Add(circleCopy);
         }
 
@@ -78,11 +78,11 @@ public class InputPaternRecognition : MonoBehaviour
     void DrawLine()
     {
         Touch touch = Input.GetTouch(0);
-        Vector2 fingerPos = Camera.main.ScreenToWorldPoint(touch.position);
+        Vector2 fingerPos = Camera.main.ScreenToWorldPoint(touch.position) - transform.position;
 
         if (arrPointLine.Count == 0)
         {
-            line = Instantiate(lineToInstantiate);
+            line = Instantiate(lineToInstantiate, gameObject.transform);
             runeDrawLine = line.GetComponent<RuneDrawLine>();
 
             arrPointLine.Add(fingerPos);
@@ -126,6 +126,7 @@ public class InputPaternRecognition : MonoBehaviour
         //Test in 2 part
         //1 - collision finger/ point
         //2 - angle fingerFoward / pointFoward
+
         Touch touch = Input.GetTouch(0);
         Vector2 fingerPos = Camera.main.ScreenToWorldPoint(touch.position);
 
@@ -211,7 +212,7 @@ public class InputPaternRecognition : MonoBehaviour
         //recrate arrPoint 
         foreach (Vector2 pos in rune)
         {
-            Object circleCopy = Instantiate(pointToInstantiate, pos, Quaternion.identity, parentTransform);
+            Object circleCopy = Instantiate(pointToInstantiate, pos + (Vector2)transform.position, Quaternion.identity, parentTransform);
             arrPointRune.Add(circleCopy);
         }
     }
@@ -228,7 +229,7 @@ public class InputPaternRecognition : MonoBehaviour
 
         foreach (Vector2 pos in rune)
         {
-            Object circleCopy = Instantiate(pointToInstantiate, pos, Quaternion.identity, parentTransform);
+            Object circleCopy = Instantiate(pointToInstantiate, pos + (Vector2)transform.position, Quaternion.identity, parentTransform);
             arrPointRune.Add(circleCopy);
         }
     }
