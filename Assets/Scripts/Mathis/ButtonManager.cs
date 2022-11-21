@@ -7,6 +7,8 @@ using UnityEngine;
 
 public class ButtonManager : MonoBehaviour
 {
+
+    [SerializeField] Transform customerParent;
     CustomerClass customer;
     List<CustomerClass> customerTab = new List<CustomerClass>();
     CustomerClass pickedCustomer;
@@ -97,14 +99,14 @@ public class ButtonManager : MonoBehaviour
         //}
     }
 
-    public void test()
+    public void SpawnCustomer()
     {
         if (customerTab.Count < 3)
         {
             // ajout
             customer = new CustomerClass();
             customerTab.Add(customer);
-            customer.DisplayCustomer();
+            customer.DisplayCustomer(customerParent);
             CustomerMove();
             //for (int i = 0; i < 4; i++)
             //{

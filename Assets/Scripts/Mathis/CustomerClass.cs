@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine.UI;
 using UnityEngine.U2D;
 using System.IO;
+using System;
 
 enum RACE
 {
@@ -76,7 +77,6 @@ public class CustomerClass
 	private RACE race;
 	public HERO hero;
 	public int nbPart;
-    Canvas canvas;
 
 
     private bool isAngry;
@@ -85,15 +85,13 @@ public class CustomerClass
 
 	public CustomerClass ()
 	{
-
-        canvas = GameObject.FindObjectOfType<Canvas>();
         isAngry = false;
 
 		askedPotion_Customer = new Potion_Customer();
 
-        askedPotion_Customer.name = (POTION_NAME)Random.Range(0, (int)POTION_NAME.NBPOTION);
+        askedPotion_Customer.name = (POTION_NAME)UnityEngine.Random.Range(0, (int)POTION_NAME.NBPOTION);
 
-        int Potion_CustomerSize = Random.Range(1, 4);
+        int Potion_CustomerSize = UnityEngine.Random.Range(1, 4);
 
 		timerMax = 4 * Potion_CustomerSize;
 		timer = timerMax;
@@ -101,10 +99,10 @@ public class CustomerClass
 
         for (int i = 0; i < Potion_CustomerSize; i++)
 		{
-			askedPotion_Customer.ing.Add((INGREDIENT_CUSTOMER)Random.Range(0, (int)INGREDIENT_CUSTOMER.INGREDIENT_CUSTOMERNB));
+			askedPotion_Customer.ing.Add((INGREDIENT_CUSTOMER)UnityEngine.Random.Range(0, (int)INGREDIENT_CUSTOMER.INGREDIENT_CUSTOMERNB));
 		}
 
-		askedPotion_Customer.rune = (RUNES)Random.Range(0, (int)RUNES.RUNENB);
+		askedPotion_Customer.rune = (RUNES)UnityEngine.Random.Range(0, (int)RUNES.RUNENB);
 
         secondPath = new string[5];
 
@@ -116,14 +114,14 @@ public class CustomerClass
 
 
         askedPotion_Customer.price = 100 + 10 * Potion_CustomerSize + 10 * (int)askedPotion_Customer.rune;
-        if (Random.Range(1, 11) == 1)
+        if (UnityEngine.Random.Range(1, 11) == 1)
         {
-            hero = (HERO)Random.Range(0, (int)HERO.HERONB);
+            hero = (HERO)UnityEngine.Random.Range(0, (int)HERO.HERONB);
             race = RACE.RACENB;
         }
         else
         {
-            race = (RACE)Random.Range(0, (int)RACE.RACENB);
+            race = (RACE)UnityEngine.Random.Range(0, (int)RACE.RACENB);
             hero = HERO.HERONB;
         }
     }
@@ -252,7 +250,7 @@ public class CustomerClass
     //}
 
 
-    public void DisplayCustomer()
+    public void DisplayCustomer(Transform customerParent)
 	{
 		string path;
 
@@ -304,7 +302,7 @@ public class CustomerClass
 
             for (int i = 0; i < nbPart; i++)
             {
-                part[i] = Random.Range(1, 5);
+                part[i] = UnityEngine.Random.Range(1, 5);
             }
 
         }
@@ -312,8 +310,8 @@ public class CustomerClass
         
         parent = new GameObject("Customer", typeof(RectTransform));
         parent.GetComponent<RectTransform>().anchoredPosition = new Vector2(0, 1.8f);
-        parent.GetComponent<RectTransform>().SetParent(canvas.transform);
-
+        parent.GetComponent<RectTransform>().SetParent(customerParent);
+        parent.transform.SetSiblingIndex(0);
         for (int i = 0; i < nbPart; i++)
         {
 
@@ -373,29 +371,29 @@ public class CustomerClass
                 default:
                     break;
             }
-            GameObject bulle = new GameObject("parcho", typeof(RectTransform));
-            GameObject potion = new GameObject("askedPotion", typeof(RectTransform));
-            Image bulleRenderer = bulle.AddComponent<Image>();
-            Image potionRenderer = potion.AddComponent<Image>();
-            Sprite bulleSprite = Resources.Load<Sprite>("UI/Parcho");
-            Sprite potionSprite = Resources.Load<Sprite>(potionPath);
+            //GameObject bulle = new GameObject("parcho", typeof(RectTransform));
+            //GameObject potion = new GameObject("askedPotion", typeof(RectTransform));
+            //Image bulleRenderer = bulle.AddComponent<Image>();
+            //Image potionRenderer = potion.AddComponent<Image>();
+            //Sprite bulleSprite = Resources.Load<Sprite>("UI/Parcho");
+            //Sprite potionSprite = Resources.Load<Sprite>(potionPath);
 
 
 
-            bulleRenderer.sprite = bulleSprite;
-            potionRenderer.sprite = potionSprite;
+            //bulleRenderer.sprite = bulleSprite;
+            //potionRenderer.sprite = potionSprite;
 
-            Vector2 size = bulleSprite.bounds.size;
-            bulle.GetComponent<RectTransform>().sizeDelta = size;
+            //Vector2 size = bulleSprite.bounds.size;
+            //bulle.GetComponent<RectTransform>().sizeDelta = size;
 
-            size = potionSprite.bounds.size;
-            potion.GetComponent<RectTransform>().sizeDelta = size;
+            //size = potionSprite.bounds.size;
+            //potion.GetComponent<RectTransform>().sizeDelta = size;
    
-            bulle.GetComponent<RectTransform>().anchoredPosition = new Vector2(-0.5f, 2);
-            potion.GetComponent<RectTransform>().anchoredPosition = new Vector2(-0.5f, 2);
+            //bulle.GetComponent<RectTransform>().anchoredPosition = new Vector2(-0.5f, 2);
+            //potion.GetComponent<RectTransform>().anchoredPosition = new Vector2(-0.5f, 2);
 
-            bulle.transform.SetParent(parent.transform);
-            potion.transform.SetParent(parent.transform);
+            //bulle.transform.SetParent(parent.transform);
+            //potion.transform.SetParent(parent.transform);
 
 
         }
