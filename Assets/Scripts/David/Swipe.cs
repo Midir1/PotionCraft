@@ -21,10 +21,11 @@ public class Swipe : MonoBehaviour
 
     void Update()
     {
+
         int size = cauldronsObject.Count - 1;
         if (!toLeft && !toRight && Input.touchCount > 0)
         {
-            if (Input.GetTouch(0).position.y < Screen.height / 2)
+            if (Input.GetTouch(0).position.y < Screen.width/2)
             {
                 if (Input.GetTouch(0).phase == TouchPhase.Began)
                 {
@@ -45,10 +46,10 @@ public class Swipe : MonoBehaviour
                         toRight = true;
                     }
                 }
-
+                Debug.Log(toLeft);
                 if (Input.GetMouseButton(0))
                 {
-                    cauldronsObject[gameObjectID].transform.position = new Vector3(Screen.width / 2 + Input.GetTouch(0).position.x - offsetX, cauldronsObject[gameObjectID].transform.position.y, 0f);
+                    cauldronsObject[gameObjectID].transform.position = new Vector3(0 + Input.GetTouch(0).position.x - offsetX, cauldronsObject[gameObjectID].transform.position.y, 0f);
                 }
             }
         }
@@ -58,16 +59,16 @@ public class Swipe : MonoBehaviour
             for (int i = size; i >= 0; i--)
             {
                 cauldronsObject[i].transform.Translate(-moveSpeed * Time.deltaTime, 0, 0);
-                if (cauldronsObject[(gameObjectID + 1) % cauldronsObject.Count].transform.position.x < Screen.width / 2)
+                if (cauldronsObject[(gameObjectID + 1) % cauldronsObject.Count].transform.position.x < 0)
                 {
                     toLeft = false;
 
-                    cauldronsObject[gameObjectID].transform.position = new Vector3(Screen.width / 2 - 1080, cauldronsObject[gameObjectID].transform.position.y, 0);
-                    cauldronsObject[(gameObjectID + cauldronsObject.Count - 1) % cauldronsObject.Count].transform.position = new Vector3(Screen.width / 2 + 1080, cauldronsObject[(gameObjectID + cauldronsObject.Count - 1) % cauldronsObject.Count].transform.position.y, 0);
+                    cauldronsObject[gameObjectID].transform.position = new Vector3(-0.2f, cauldronsObject[gameObjectID].transform.position.y, 0);
+                    cauldronsObject[(gameObjectID + cauldronsObject.Count - 1) % cauldronsObject.Count].transform.position = new Vector3(0 + 5, cauldronsObject[(gameObjectID + cauldronsObject.Count - 1) % cauldronsObject.Count].transform.position.y, 0);
 
-                    clocksObject[(gameObjectID + cauldronsObject.Count - 1) % cauldronsObject.Count].transform.position = new Vector3(Screen.width / 2 + 400, Screen.height / 2 - 200, 0);
-                    clocksObject[gameObjectID].transform.position = new Vector3(Screen.width / 2 - 400, Screen.height / 2 - 200, 0);
-                    clocksObject[(gameObjectID + 1) % cauldronsObject.Count].transform.position = new Vector3(Screen.width / 2, Screen.height / 2 - 200, 0);
+                    clocksObject[(gameObjectID + cauldronsObject.Count - 1) % cauldronsObject.Count].transform.position = new Vector3(0 + 2, 0 - 1, 0);
+                    clocksObject[gameObjectID].transform.position = new Vector3(0 - 2, 0 - 1, 0);
+                    clocksObject[(gameObjectID + 1) % cauldronsObject.Count].transform.position = new Vector3(0, 0 - 1, 0);
 
                     gameObjectID++;
                     if (gameObjectID > size)
@@ -77,9 +78,9 @@ public class Swipe : MonoBehaviour
                     cauldron = cauldronsObject[gameObjectID];
                 }
                 clocksObject[i].transform.Translate(-moveSpeed * 0.37f * Time.deltaTime, 0, 0);
-                if (clocksObject[i].transform.position.x < Screen.width / 2 - 600)
+                if (clocksObject[i].transform.position.x < 0 - 3)
                 {
-                    clocksObject[i].transform.position = new Vector3(Screen.width / 2 + 600, clocksObject[i].transform.position.y, 0);
+                    clocksObject[i].transform.position = new Vector3(0 + 3, clocksObject[i].transform.position.y, 0);
                 }
             }
         }
@@ -88,16 +89,16 @@ public class Swipe : MonoBehaviour
             for (int i = 0; i <= size; i++)
             {
                 cauldronsObject[i].transform.Translate(moveSpeed * Time.deltaTime, 0, 0);
-                if (Screen.width / 2 < cauldronsObject[(gameObjectID + cauldronsObject.Count - 1) % cauldronsObject.Count].transform.position.x)
+                if (0 < cauldronsObject[(gameObjectID + cauldronsObject.Count - 1) % cauldronsObject.Count].transform.position.x)
                 {
                     toRight = false;
 
-                    cauldronsObject[(gameObjectID + 1) % cauldronsObject.Count].transform.position = new Vector3(Screen.width / 2 - 1080, cauldronsObject[(gameObjectID + 1) % cauldronsObject.Count].transform.position.y, 0);
-                    cauldronsObject[gameObjectID].transform.position = new Vector3(Screen.width / 2 + 1080, cauldronsObject[gameObjectID].transform.position.y, 0);
+                    cauldronsObject[(gameObjectID + 1) % cauldronsObject.Count].transform.position = new Vector3(0 - 5, cauldronsObject[(gameObjectID + 1) % cauldronsObject.Count].transform.position.y, 0);
+                    cauldronsObject[gameObjectID].transform.position = new Vector3(0 + 5, cauldronsObject[gameObjectID].transform.position.y, 0);
 
-                    clocksObject[(gameObjectID + cauldronsObject.Count - 1) % cauldronsObject.Count].transform.position = new Vector3(Screen.width / 2, Screen.height / 2 - 200, 0);
-                    clocksObject[gameObjectID].transform.position = new Vector3(Screen.width / 2 + 400, Screen.height / 2 - 200, 0);
-                    clocksObject[(gameObjectID + 1) % cauldronsObject.Count].transform.position = new Vector3(Screen.width / 2 - 400, Screen.height / 2 - 200, 0);
+                    clocksObject[(gameObjectID + cauldronsObject.Count - 1) % cauldronsObject.Count].transform.position = new Vector3(0, 0 - 1, 0);
+                    clocksObject[gameObjectID].transform.position = new Vector3(0 + 2, 0 - 1, 0);
+                    clocksObject[(gameObjectID + 1) % cauldronsObject.Count].transform.position = new Vector3(0 - 2, 0 - 1, 0);
 
                     gameObjectID--;
                     if (gameObjectID < 0)
@@ -107,9 +108,9 @@ public class Swipe : MonoBehaviour
                     cauldron = cauldronsObject[gameObjectID % cauldronsObject.Count];
                 }
                 clocksObject[i].transform.Translate(moveSpeed * 0.37f * Time.deltaTime, 0, 0);
-                if (clocksObject[i].transform.position.x > Screen.width / 2 + 600)
+                if (clocksObject[i].transform.position.x > 0 + 3)
                 {
-                    clocksObject[i].transform.position = new Vector3(Screen.width / 2 - 600, clocksObject[i].transform.position.y, 0);
+                    clocksObject[i].transform.position = new Vector3(0 - 3, clocksObject[i].transform.position.y, 0);
                 }
             }
         }
