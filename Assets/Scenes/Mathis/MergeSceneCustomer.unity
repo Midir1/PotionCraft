@@ -3334,7 +3334,7 @@ RectTransform:
   m_GameObject: {fileID: 1366774179}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 6, y: 6, z: 6}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1079619760}
@@ -4241,6 +4241,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 9b38acc30cc79f2498d267be2f3c8df6, type: 2}
   potions:
   - {fileID: 6556714241950178428, guid: 820f8d50fbe49124f8261bd43dd1226e, type: 3}
+  - {fileID: 6556714241950178428, guid: 157aa2246d503f349a542f1d9021e447, type: 3}
   potionParent: {fileID: 1366774180}
   drawPanel: {fileID: 1863211342}
   inputManager: {fileID: 2169014484708949150}
@@ -6843,7 +6844,7 @@ GameObject:
   - component: {fileID: 1319380534611608041}
   - component: {fileID: 1319380534611608040}
   m_Layer: 5
-  m_Name: Forground
+  m_Name: Foreground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
