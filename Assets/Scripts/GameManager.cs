@@ -19,13 +19,20 @@ public enum PotionBp
     Sleep,
     PotionBpNb
 }
+
+public struct CauldronShop
+{
+    public bool isAvailable ;
+    public bool upgradeSpeed;
+    public bool upgradeTime;
+}
 public class GameManager : MonoBehaviour
 {
     #region Attributes
 
     [SerializeField] uint maxMoney = 99999;
     [SerializeField] uint currentMoney = 5000;
-    public CauldronScript[] cauldron = { new CauldronScript(), new CauldronScript(), new CauldronScript() };
+    public CauldronShop[] cauldron = new CauldronShop[3];
     public TipBoxScript tipBox = new TipBoxScript();
     public bool[] Bp = new bool[(int)PotionBp.PotionBpNb];
     #endregion
@@ -52,9 +59,16 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
-        cauldron[0].IsAvailable = true;
-        for(int i = 0; i < (int)PotionBp.PotionBpNb; i++)
+        for(int i = 0; i < 3; i++)
+        {
+            cauldron[i].isAvailable = false;
+            cauldron[i].upgradeSpeed = false;
+            cauldron[i].upgradeTime = false;
+        }
+        cauldron[0].isAvailable = true;
+        for (int i = 0; i < (int)PotionBp.PotionBpNb; i++)
             Bp[i] = false;
+
     }
 
     /// <summary>

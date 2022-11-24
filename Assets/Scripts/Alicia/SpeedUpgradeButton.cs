@@ -25,13 +25,13 @@ public class SpeedUpgradeButton : MonoBehaviour
             switch (GetComponentInParent<ItemShopScript>().Id)
             {
                 case "cauldron1":
-                    GameManager.Instance.cauldron[0].SpeedUpgradeIsAvailable();
+                    GameManager.Instance.cauldron[0].upgradeSpeed = true;
                     break;
                 case "cauldron2":
-                    GameManager.Instance.cauldron[1].SpeedUpgradeIsAvailable();
+                    GameManager.Instance.cauldron[1].upgradeSpeed = true;
                     break;
                 case "cauldron3":
-                    GameManager.Instance.cauldron[2].SpeedUpgradeIsAvailable();
+                    GameManager.Instance.cauldron[2].upgradeSpeed = true;
                     break;
                 default:
                     Debug.Log("unknow ItemShop.Id");

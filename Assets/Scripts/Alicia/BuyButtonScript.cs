@@ -19,10 +19,10 @@ public class BuyButtonScript : MonoBehaviour
                 switch (currentItemShop.Id)
                 {
                     case "cauldron2":
-                        GameManager.Instance.cauldron[1].CauldronIsAvailable();
+                        GameManager.Instance.cauldron[1].isAvailable = true;
                         break;
                     case "cauldron3":
-                        GameManager.Instance.cauldron[2].CauldronIsAvailable();
+                        GameManager.Instance.cauldron[2].isAvailable = true;
                         break;
                     case "tipBox":
                         GameManager.Instance.tipBox.TipIsAvailable();

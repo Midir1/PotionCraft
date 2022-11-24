@@ -12,8 +12,8 @@ public class DipslayCaudronScript : MonoBehaviour
     private void Update()
     {
 
-        if ((!GameManager.Instance.cauldron[1].IsAvailable && currentItemShop.Id == "cauldron2")
-            || (!GameManager.Instance.cauldron[2].IsAvailable && currentItemShop.Id == "cauldron3"))
+        if ((!GameManager.Instance.cauldron[1].isAvailable && currentItemShop.Id == "cauldron2")
+            || (!GameManager.Instance.cauldron[2].isAvailable && currentItemShop.Id == "cauldron3"))
         {
             foreach (Transform child in transform)
             {
@@ -31,9 +31,9 @@ public class DipslayCaudronScript : MonoBehaviour
             }
         }
 
-        if ((GameManager.Instance.cauldron[1].UpgradeSpeed && currentItemShop.Id == "cauldron2")
-           || (GameManager.Instance.cauldron[2].UpgradeSpeed && currentItemShop.Id == "cauldron3")
-           || (GameManager.Instance.cauldron[0].UpgradeSpeed && currentItemShop.Id == "cauldron1"))
+        if ((GameManager.Instance.cauldron[1].upgradeSpeed && currentItemShop.Id == "cauldron2")
+           || (GameManager.Instance.cauldron[2].upgradeSpeed && currentItemShop.Id == "cauldron3")
+           || (GameManager.Instance.cauldron[0].upgradeSpeed && currentItemShop.Id == "cauldron1"))
         {
             foreach (Transform child in transform)
             {
@@ -45,9 +45,9 @@ public class DipslayCaudronScript : MonoBehaviour
             }
         }
 
-        if ((GameManager.Instance.cauldron[1].UpgradeTime && currentItemShop.Id == "cauldron2")
-           || (GameManager.Instance.cauldron[2].UpgradeTime && currentItemShop.Id == "cauldron3")
-           || (GameManager.Instance.cauldron[0].UpgradeTime && currentItemShop.Id == "cauldron1"))
+        if ((GameManager.Instance.cauldron[1].upgradeTime && currentItemShop.Id == "cauldron2")
+           || (GameManager.Instance.cauldron[2].upgradeTime && currentItemShop.Id == "cauldron3")
+           || (GameManager.Instance.cauldron[0].upgradeTime && currentItemShop.Id == "cauldron1"))
         {
             foreach (Transform child in transform)
             {

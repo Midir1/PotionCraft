@@ -27,13 +27,13 @@ public class TimeUpgradeButton : MonoBehaviour
             switch (GetComponentInParent<ItemShopScript>().Id)
             {
                 case "cauldron1":
-                    GameManager.Instance.cauldron[0].TimeUpgradeIsAvailable();
+                    GameManager.Instance.cauldron[0].upgradeTime = true;
                     break;
                 case "cauldron2":
-                    GameManager.Instance.cauldron[1].TimeUpgradeIsAvailable();
+                    GameManager.Instance.cauldron[1].upgradeTime = true;
                     break;
                 case "cauldron3":
-                    GameManager.Instance.cauldron[2].TimeUpgradeIsAvailable();
+                    GameManager.Instance.cauldron[2].upgradeTime = true;
                     break;
                 default:
                     Debug.Log("unknow ItemShop.Id");
