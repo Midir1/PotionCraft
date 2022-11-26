@@ -17,7 +17,9 @@ public class Inventory : MonoBehaviour
     private long startTime;
     private long endTime;
     private long now;
-    public bool isBrewing = false;
+    public bool isBrewing;
+
+    private int potionIndex;
 
     private void Update()
     {
@@ -57,12 +59,14 @@ public class Inventory : MonoBehaviour
     //Recipes and Potions Needs to be in the same order in the inspector to give the provided result
     public void CraftPotion()
     {
-        foreach (var recipe in recipes)
+        for (var i = 0; i < recipes.Count; i++)
         {
+            var recipe = recipes[i];
+            
             Item recipeIngredient1 = recipe.ingredients[0];
             Item recipeIngredient2 = recipe.ingredients[1];
             Item recipeIngredient3 = recipe.ingredients[2];
-            
+
             for (var index = 0; index < recipe.ingredients.Count; index++)
             {
                 if (ingredients[index] == recipeIngredient1) recipeIngredient1 = null;
@@ -70,7 +74,7 @@ public class Inventory : MonoBehaviour
                 else if (ingredients[index] == recipeIngredient3) recipeIngredient3 = null;
                 else break;
 
-                now = DateTime.Now.Ticks/ TimeSpan.TicksPerSecond;
+                now = DateTime.Now.Ticks / TimeSpan.TicksPerSecond;
 
                 if (index == recipe.ingredients.Count - 1)
                 {
@@ -78,6 +82,8 @@ public class Inventory : MonoBehaviour
                     {
                         drawPanel.SetActive(true);
                         inputManager.SetActive(true);
+
+                        potionIndex = i;
                         
                         return;
                     }
@@ -92,8 +98,7 @@ public class Inventory : MonoBehaviour
         inputManager.SetActive(false);
         
         ingredients.Clear();
-        //Instantiate(potions[i], potionParent);
-        Instantiate(potions[0], potionParent);
+        Instantiate(potions[potionIndex], potionParent);
 
         isBrewing = false;
     }
