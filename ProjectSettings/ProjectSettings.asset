@@ -824,11 +824,11 @@ PlayerSettings:
     m_VersionName: 
   apiCompatibilityLevel: 6
   activeInputHandler: 0
-  cloudProjectId: 
+  cloudProjectId: ae1f1a8c-5262-4883-8cd1-65d9a8aa38bf
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
-  projectName: 
-  organizationId: 
+  projectName: Croissant
+  organizationId: finalzer00
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0
   playerDataPath: 

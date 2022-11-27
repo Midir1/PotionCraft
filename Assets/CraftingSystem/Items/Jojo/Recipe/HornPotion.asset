@@ -17,3 +17,4 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 7f58031e1425d3741a304364fffdb6c5, type: 2}
   - {fileID: 11400000, guid: 782531ee8dd19654abba4b5575e8674c, type: 2}
   result: {fileID: 11400000, guid: b3a87fd2911720d48afd6ee9eeb42155, type: 2}
+  timeToWait: 5

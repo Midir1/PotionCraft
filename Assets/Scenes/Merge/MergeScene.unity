@@ -202,7 +202,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc113015df4ad5f45b764bff64c06e67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canvas: {fileID: 1782130078}
   item: {fileID: 11400000, guid: 6725414d0c904874394f9b0083fcf4e7, type: 2}
 --- !u!114 &55332173
 MonoBehaviour:
@@ -366,7 +365,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc113015df4ad5f45b764bff64c06e67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canvas: {fileID: 1782130078}
   item: {fileID: 11400000, guid: 6725414d0c904874394f9b0083fcf4e7, type: 2}
 --- !u!114 &68907595
 MonoBehaviour:
@@ -607,7 +605,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc113015df4ad5f45b764bff64c06e67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canvas: {fileID: 1782130078}
   item: {fileID: 11400000, guid: b4b16b84e1d2ede49a95af63a5589f0d, type: 2}
 --- !u!114 &159757843
 MonoBehaviour:
@@ -771,7 +768,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc113015df4ad5f45b764bff64c06e67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canvas: {fileID: 1782130078}
   item: {fileID: 11400000, guid: 37e9b07bc5914a04f932b3c291caf26b, type: 2}
 --- !u!114 &187341970
 MonoBehaviour:
@@ -935,7 +931,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc113015df4ad5f45b764bff64c06e67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canvas: {fileID: 1782130078}
   item: {fileID: 11400000, guid: 37e9b07bc5914a04f932b3c291caf26b, type: 2}
 --- !u!114 &193944752
 MonoBehaviour:
@@ -1099,7 +1094,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc113015df4ad5f45b764bff64c06e67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canvas: {fileID: 1782130078}
   item: {fileID: 11400000, guid: 7f58031e1425d3741a304364fffdb6c5, type: 2}
 --- !u!114 &211570839
 MonoBehaviour:
@@ -1263,7 +1257,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc113015df4ad5f45b764bff64c06e67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canvas: {fileID: 1782130078}
   item: {fileID: 11400000, guid: 782531ee8dd19654abba4b5575e8674c, type: 2}
 --- !u!114 &223525963
 MonoBehaviour:
@@ -1427,7 +1420,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc113015df4ad5f45b764bff64c06e67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canvas: {fileID: 1782130078}
   item: {fileID: 11400000, guid: b4b16b84e1d2ede49a95af63a5589f0d, type: 2}
 --- !u!114 &288195584
 MonoBehaviour:
@@ -1591,7 +1583,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc113015df4ad5f45b764bff64c06e67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canvas: {fileID: 1782130078}
   item: {fileID: 11400000, guid: 7f58031e1425d3741a304364fffdb6c5, type: 2}
 --- !u!114 &332856887
 MonoBehaviour:
@@ -1889,7 +1880,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc113015df4ad5f45b764bff64c06e67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canvas: {fileID: 1782130078}
   item: {fileID: 11400000, guid: b4b16b84e1d2ede49a95af63a5589f0d, type: 2}
 --- !u!114 &587582102
 MonoBehaviour:
@@ -2053,7 +2043,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc113015df4ad5f45b764bff64c06e67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canvas: {fileID: 1782130078}
   item: {fileID: 11400000, guid: 6725414d0c904874394f9b0083fcf4e7, type: 2}
 --- !u!114 &659496057
 MonoBehaviour:
@@ -2229,7 +2218,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc113015df4ad5f45b764bff64c06e67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canvas: {fileID: 1782130078}
   item: {fileID: 11400000, guid: 7f58031e1425d3741a304364fffdb6c5, type: 2}
 --- !u!114 &710352963
 MonoBehaviour:
@@ -2393,7 +2381,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc113015df4ad5f45b764bff64c06e67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canvas: {fileID: 1782130078}
   item: {fileID: 11400000, guid: 6725414d0c904874394f9b0083fcf4e7, type: 2}
 --- !u!114 &732788300
 MonoBehaviour:
@@ -2757,7 +2744,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc113015df4ad5f45b764bff64c06e67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canvas: {fileID: 1782130078}
   item: {fileID: 11400000, guid: 782531ee8dd19654abba4b5575e8674c, type: 2}
 --- !u!114 &834886623
 MonoBehaviour:
@@ -2921,7 +2907,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc113015df4ad5f45b764bff64c06e67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canvas: {fileID: 1782130078}
   item: {fileID: 11400000, guid: 7f58031e1425d3741a304364fffdb6c5, type: 2}
 --- !u!114 &935793422
 MonoBehaviour:
@@ -3085,7 +3070,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc113015df4ad5f45b764bff64c06e67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canvas: {fileID: 1782130078}
   item: {fileID: 11400000, guid: b4b16b84e1d2ede49a95af63a5589f0d, type: 2}
 --- !u!114 &974856069
 MonoBehaviour:
@@ -3424,7 +3408,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc113015df4ad5f45b764bff64c06e67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canvas: {fileID: 1782130078}
   item: {fileID: 11400000, guid: 37e9b07bc5914a04f932b3c291caf26b, type: 2}
 --- !u!114 &1415157038
 MonoBehaviour:
@@ -3684,7 +3667,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc113015df4ad5f45b764bff64c06e67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canvas: {fileID: 1782130078}
   item: {fileID: 11400000, guid: 37e9b07bc5914a04f932b3c291caf26b, type: 2}
 --- !u!114 &1430818188
 MonoBehaviour:
@@ -3836,7 +3818,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc113015df4ad5f45b764bff64c06e67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canvas: {fileID: 1782130078}
   item: {fileID: 11400000, guid: 782531ee8dd19654abba4b5575e8674c, type: 2}
 --- !u!114 &1476377283
 MonoBehaviour:
@@ -4000,7 +3981,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc113015df4ad5f45b764bff64c06e67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canvas: {fileID: 1782130078}
   item: {fileID: 11400000, guid: 782531ee8dd19654abba4b5575e8674c, type: 2}
 --- !u!114 &1489589174
 MonoBehaviour:
@@ -4223,8 +4203,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d0a2fda46a5aa6b4f8f823f29248a047, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxIngredient: 3
+  maxIngredients: 3
   ingredients: []
+  isBrewing: 0
   recipes:
   - {fileID: 11400000, guid: 0a0943d0e1e7c1f469cebd8b976d18e8, type: 2}
   - {fileID: 11400000, guid: ecfca48ad80cc504ea43d012b28038b6, type: 2}
@@ -4241,10 +4222,21 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 9b38acc30cc79f2498d267be2f3c8df6, type: 2}
   potions:
   - {fileID: 6556714241950178428, guid: 820f8d50fbe49124f8261bd43dd1226e, type: 3}
+  - {fileID: 8388688229656676675, guid: de5867473570d91408ed03d33b10a004, type: 3}
+  - {fileID: 6258459352089946643, guid: eb3b62198fc93684d8ae5b76e6199737, type: 3}
+  - {fileID: 8258016585138199625, guid: e1fc84f2a51112e4884eaba60ce310a6, type: 3}
+  - {fileID: 5162313755948329815, guid: 8ec3a81d077a58445abd9fd2d8fec7db, type: 3}
+  - {fileID: 5391318313499728328, guid: cbd38cde02197864eadc74278790764f, type: 3}
+  - {fileID: 7711051487721346884, guid: 16c65c59042c14c4790b361746237e89, type: 3}
+  - {fileID: 5904504670169965503, guid: c021d11959f02404594caa61d0eb2e96, type: 3}
+  - {fileID: 3479103871059871267, guid: 5767b810d4f194b44b3cc34e293afa96, type: 3}
+  - {fileID: 5315556375221457252, guid: 1950a18218ae01841b99a6ee2300c858, type: 3}
+  - {fileID: 1530094998207969664, guid: 1498594e84453ee46a8ac31a6e89d4c3, type: 3}
+  - {fileID: 3141039027797782176, guid: ff6baf0afd7a0ff4e98af51f312805ad, type: 3}
+  - {fileID: 3389303494866882915, guid: fd7fd4b05e90db04286fcde99a58afde, type: 3}
   potionParent: {fileID: 1366774180}
   drawPanel: {fileID: 1863211342}
   inputManager: {fileID: 2169014484708949150}
-  isBrewing: 0
 --- !u!1 &1598858282
 GameObject:
   m_ObjectHideFlags: 0
@@ -4570,7 +4562,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc113015df4ad5f45b764bff64c06e67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canvas: {fileID: 1782130078}
   item: {fileID: 11400000, guid: 37e9b07bc5914a04f932b3c291caf26b, type: 2}
 --- !u!114 &1793962659
 MonoBehaviour:
@@ -4734,7 +4725,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc113015df4ad5f45b764bff64c06e67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canvas: {fileID: 1782130078}
   item: {fileID: 11400000, guid: 7f58031e1425d3741a304364fffdb6c5, type: 2}
 --- !u!114 &1855569370
 MonoBehaviour:
@@ -5031,7 +5021,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc113015df4ad5f45b764bff64c06e67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canvas: {fileID: 1782130078}
   item: {fileID: 11400000, guid: b4b16b84e1d2ede49a95af63a5589f0d, type: 2}
 --- !u!114 &1966171477
 MonoBehaviour:
@@ -5195,7 +5184,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc113015df4ad5f45b764bff64c06e67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canvas: {fileID: 1782130078}
   item: {fileID: 11400000, guid: 782531ee8dd19654abba4b5575e8674c, type: 2}
 --- !u!114 &2055172256
 MonoBehaviour:
@@ -7606,12 +7594,12 @@ MonoBehaviour:
   pointToInstantiate: {fileID: 6438192550246423890, guid: aad796938a852f34f99c70dfad033597, type: 3}
   lineToInstantiate: {fileID: 8524689591320302899, guid: 6554f5b0d892d0d4d9de628e463668b2, type: 3}
   runeList: {fileID: 2169014484708949858}
-  patern: 8
+  patern: 1
   parentTransform: {fileID: 1863211343}
-  numPtc: 4
-  radiusCollision: 0.4
+  numPtc: 8
+  radiusCollision: 0.8
   distBTWpoint: 0.1
-  angleLimit: 90
+  angleLimit: 180
 --- !u!1 &2205035837404942835
 GameObject:
   m_ObjectHideFlags: 0

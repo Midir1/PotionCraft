@@ -236,7 +236,7 @@ public class InputPaternRecognition : MonoBehaviour
 
     void Success()
     {
-        inventory.ClearIngredients();
+        inventory.BeginPotionCraft();
         
         runeDrawLine.Braval();
         ClearPath();

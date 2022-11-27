@@ -1,12 +1,13 @@
-using System;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class Inventory : MonoBehaviour
 {
-    [HideInInspector] public int maxIngredient;
+    public int maxIngredients;
     
     public List<Item> ingredients;
+    
+    public bool isBrewing;
     
     [SerializeField] private List<Recipe> recipes;
     [SerializeField] private List<GameObject> potions;
@@ -14,25 +15,25 @@ public class Inventory : MonoBehaviour
     [SerializeField] private GameObject drawPanel;
     [SerializeField] private GameObject inputManager;
 
-    private long startTime;
-    private long endTime;
-    private long now;
-    public bool isBrewing;
+    private int potionIndex = -1;
 
-    private int potionIndex;
+    private float timer;
 
     private void Update()
     {
-        if (isBrewing && ingredients.Count == maxIngredient)
-        {
-            CraftPotion();
-        }
+        if (potionIndex == -1 || !isBrewing) return;
+        
+        timer += Time.deltaTime;
+        if (timer > recipes[potionIndex].timeToWait) CraftPotion();
     }
 
-    public void StartCraft()
+    //Recipes and Potions Needs to be in the same order in the inspector to give the provided result
+    public void BeginPotionCraft()
     {
-        foreach (var recipe in recipes)
+        for (var i = 0; i < recipes.Count; i++)
         {
+            var recipe = recipes[i];
+            
             Item recipeIngredient1 = recipe.ingredients[0];
             Item recipeIngredient2 = recipe.ingredients[1];
             Item recipeIngredient3 = recipe.ingredients[2];
@@ -46,60 +47,35 @@ public class Inventory : MonoBehaviour
 
                 if (index == recipe.ingredients.Count - 1)
                 {
-                   startTime = DateTime.Now.Ticks/ TimeSpan.TicksPerSecond;
-                    endTime = startTime + recipe.timeToWait;
+                    drawPanel.SetActive(false);
+                    inputManager.SetActive(false);
+                    
                     isBrewing = true;
+
+                    potionIndex = i;
+
                     return;
                 }
             }
         }
-        if (!isBrewing) ingredients.Clear();
-    }
-    
-    //Recipes and Potions Needs to be in the same order in the inspector to give the provided result
-    public void CraftPotion()
-    {
-        for (var i = 0; i < recipes.Count; i++)
-        {
-            var recipe = recipes[i];
-            
-            Item recipeIngredient1 = recipe.ingredients[0];
-            Item recipeIngredient2 = recipe.ingredients[1];
-            Item recipeIngredient3 = recipe.ingredients[2];
 
-            for (var index = 0; index < recipe.ingredients.Count; index++)
-            {
-                if (ingredients[index] == recipeIngredient1) recipeIngredient1 = null;
-                else if (ingredients[index] == recipeIngredient2) recipeIngredient2 = null;
-                else if (ingredients[index] == recipeIngredient3) recipeIngredient3 = null;
-                else break;
-
-                now = DateTime.Now.Ticks / TimeSpan.TicksPerSecond;
-
-                if (index == recipe.ingredients.Count - 1)
-                {
-                    if (now > endTime)
-                    {
-                        drawPanel.SetActive(true);
-                        inputManager.SetActive(true);
-
-                        potionIndex = i;
-                        
-                        return;
-                    }
-                }
-            }
-        }
+        ingredients.Clear();
     }
 
-    public void ClearIngredients()
+    public void ShowDrawPanel()
     {
-        drawPanel.SetActive(false);
-        inputManager.SetActive(false);
-        
+        drawPanel.SetActive(true);
+        inputManager.SetActive(true);
+    }
+
+    private void CraftPotion()
+    {
+        isBrewing = false;
+        timer = 0f;
+
         ingredients.Clear();
         Instantiate(potions[potionIndex], potionParent);
 
-        isBrewing = false;
+        potionIndex = -1;
     }
 }

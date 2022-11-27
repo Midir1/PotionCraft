@@ -1,14 +1,19 @@
 using JetBrains.Annotations;
-using System;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
 public class IngredientManager : MonoBehaviour
 {
-    [SerializeField] private Canvas canvas;
     [SerializeField] private Item item;
 
+    private Canvas canvas;
+    
     private bool isDragged;
+
+    private void Start()
+    {
+        canvas = GetComponentInParent<Canvas>();
+    }
 
     [UsedImplicitly]
     public void DragHandler(BaseEventData data)
@@ -27,14 +32,14 @@ public class IngredientManager : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D other)
     {
+        if (!other.CompareTag("Cauldron") || isDragged) return;
+        
         Inventory inventory = other.GetComponent<Inventory>();
 
-        if (!other.CompareTag("Cauldron") || isDragged || inventory.ingredients.Count == 3) return;
-
-        
+        if (inventory.isBrewing) return;
+         
         inventory.ingredients.Add(item);
-
-        if (inventory.ingredients.Count == inventory.maxIngredient) inventory.StartCraft();
+        if (inventory.ingredients.Count == inventory.maxIngredients) inventory.ShowDrawPanel();
         
         Destroy(gameObject);
     }
