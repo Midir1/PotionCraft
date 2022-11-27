@@ -28,7 +28,7 @@ public class Inventory : MonoBehaviour
     }
 
     //Recipes and Potions Needs to be in the same order in the inspector to give the provided result
-    public void BeginPotionCraft()
+    public void CheckPotionExist()
     {
         for (var i = 0; i < recipes.Count; i++)
         {
@@ -40,17 +40,15 @@ public class Inventory : MonoBehaviour
 
             for (var index = 0; index < recipe.ingredients.Count; index++)
             {
-                if (ingredients[0] == recipeIngredient1) recipeIngredient1 = null;
-                else if (ingredients[1] == recipeIngredient2) recipeIngredient2 = null;
-                else if (ingredients[2] == recipeIngredient3) recipeIngredient3 = null;
+                if (ingredients[index] == recipeIngredient1) recipeIngredient1 = null;
+                else if (ingredients[index] == recipeIngredient2) recipeIngredient2 = null;
+                else if (ingredients[index] == recipeIngredient3) recipeIngredient3 = null;
                 else break;
 
                 if (index == recipe.ingredients.Count - 1)
                 {
-                    drawPanel.SetActive(false);
-                    inputManager.SetActive(false);
-                    
-                    isBrewing = true;
+                    drawPanel.SetActive(true);
+                    inputManager.SetActive(true);
 
                     potionIndex = i;
 
@@ -58,14 +56,16 @@ public class Inventory : MonoBehaviour
                 }
             }
         }
-
+        
         ingredients.Clear();
     }
 
-    public void ShowDrawPanel()
+    public void BeginCraftPotion()
     {
-        drawPanel.SetActive(true);
-        inputManager.SetActive(true);
+        drawPanel.SetActive(false);
+        inputManager.SetActive(false);
+        
+        isBrewing = true;
     }
 
     private void CraftPotion()
