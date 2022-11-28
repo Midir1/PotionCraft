@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{F5738D91-CD7D-4440-8C7E-1062FD326D18}" SchemaVersion="110">
+	<Events>
+		<WorkUnit Name="Default Work Unit" ID="{F5738D91-CD7D-4440-8C7E-1062FD326D18}" PersistMode="Standalone">
+			<ChildrenList>
+				<Event Name="Test" ID="{A9B65359-30C0-42DB-A454-F7C534B11957}">
+					<ChildrenList>
+						<Action Name="" ID="{56CE9D8C-5AF4-45C4-B6DB-9A8243383E34}" ShortID="109623992">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="wood_solid_impact_soft3" ID="{865C96B6-5EA0-4D36-A28A-6B8FA6576D1F}" WorkUnitID="{60663385-4D13-493E-8D95-6DE1001CC0EA}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>
