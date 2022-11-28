@@ -24,8 +24,11 @@ public class BuyButtonScript : MonoBehaviour
                     case "cauldron3":
                         GameManager.Instance.cauldron[2].isAvailable = true;
                         break;
-                    case "tipBox":
-                        GameManager.Instance.tipBox.TipIsAvailable();
+                    case "Tip":
+                        GameManager.Instance.tipIsAvailable = true;
+                        break;
+                    case "Bell":
+                        GameManager.Instance.bellIsAvailable = true;
                         break;
                     case "Clean":
                         GameManager.Instance.Bp[(int)PotionBp.Clean] = true;
