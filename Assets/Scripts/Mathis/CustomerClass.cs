@@ -312,7 +312,7 @@ public class CustomerClass
         parent = new GameObject("Customer", typeof(RectTransform));
         parent.GetComponent<RectTransform>().anchoredPosition = new Vector2(0, 1.8f);
         parent.GetComponent<RectTransform>().SetParent(customerParent);
-       
+       parent.AddComponent<Animator>();
         parent.transform.SetSiblingIndex(0);
         for (int i = 0; i < nbPart; i++)
         {
