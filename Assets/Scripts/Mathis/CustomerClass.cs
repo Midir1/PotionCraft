@@ -45,10 +45,19 @@ public enum RUNES
 
 public enum POTION_NAME
 {
-    CHAMP,
+    HORN,
     LOVE,
-    HEXA,
-    SEA,
+    CLEAN,
+    DRUNK,
+    GAMER,
+    GRAPH,
+    LUM,
+    CHILL,
+    SLEEP,
+    SPICE,
+    BERRY,
+    SUPER,
+    TOAD,
     NBPOTION
 }
 
@@ -103,14 +112,6 @@ public class CustomerClass
 		}
 
 		askedPotion_Customer.rune = (RUNES)UnityEngine.Random.Range(0, (int)RUNES.RUNENB);
-
-        secondPath = new string[5];
-
-        secondPath[0] = "cloth/tenu";
-        secondPath[1] = "hair/cheveux";
-        secondPath[2] = "face/tete";
-        secondPath[3] = "eye/yeux";
-        secondPath[4] = "mouth/bouche";
 
 
         askedPotion_Customer.price = 100 + 10 * Potion_CustomerSize + 10 * (int)askedPotion_Customer.rune;
@@ -311,14 +312,17 @@ public class CustomerClass
         parent = new GameObject("Customer", typeof(RectTransform));
         parent.GetComponent<RectTransform>().anchoredPosition = new Vector2(0, 1.8f);
         parent.GetComponent<RectTransform>().SetParent(customerParent);
+       
         parent.transform.SetSiblingIndex(0);
         for (int i = 0; i < nbPart; i++)
         {
 
             pos = new Vector2(1, 2);
             partDisplay[i] = new GameObject("part" + i, typeof(RectTransform));
+            partDisplay[i].AddComponent<Rigidbody2D>().isKinematic = true;
             Image image = partDisplay[i].AddComponent<Image>();
             BoxCollider2D collide = partDisplay[i].AddComponent<BoxCollider2D>();
+            collide.isTrigger = true;
             if (nbPart == 1)
             {
                 if (hero == HERO.MERCHANT)
@@ -356,44 +360,74 @@ public class CustomerClass
             string potionPath = "Potions/";
             switch (askedPotion_Customer.name)
             {
-                case POTION_NAME.CHAMP:
-                    potionPath += "Champotion";
+                case POTION_NAME.HORN:
+                    potionPath += "Horny_potion";
                     break;
                 case POTION_NAME.LOVE:
-                    potionPath += "LovePotion";
+                    potionPath += "Love_potion";
                     break;
-                case POTION_NAME.HEXA:
-                    potionPath += "Hexa_potion";
+                case POTION_NAME.CLEAN:
+                    potionPath += "Clean_potion";
                     break;
-                case POTION_NAME.SEA:
-                    potionPath += "SeaPotion";
+                case POTION_NAME.DRUNK:
+                    potionPath += "Alcoolic_potion_300";
+                    break;
+                case POTION_NAME.GAMER:
+                    potionPath += "Gamer_potion";
+                    break;
+                case POTION_NAME.GRAPH:
+                    potionPath += "Graph_Potion";
+                    break;
+                case POTION_NAME.LUM:
+                    potionPath += "Luminescent_potion";
+                    break;
+                case POTION_NAME.CHILL:
+                    potionPath += "Sea_Potion";
+                    break;
+                case POTION_NAME.SLEEP:
+                    potionPath += "Sleep_potion";
+                    break;
+                case POTION_NAME.SPICE:
+                    potionPath += "Spicy_potion";
+                    break;
+                case POTION_NAME.BERRY:
+                    potionPath += "Berry_potion";
+                    break;
+                case POTION_NAME.SUPER:
+                    potionPath += "Champotion";
+                    break;
+                case POTION_NAME.TOAD:
+                    potionPath += "Toad_potion";
                     break;
                 default:
                     break;
             }
-            //GameObject bulle = new GameObject("parcho", typeof(RectTransform));
-            //GameObject potion = new GameObject("askedPotion", typeof(RectTransform));
-            //Image bulleRenderer = bulle.AddComponent<Image>();
-            //Image potionRenderer = potion.AddComponent<Image>();
-            //Sprite bulleSprite = Resources.Load<Sprite>("UI/Parcho");
-            //Sprite potionSprite = Resources.Load<Sprite>(potionPath);
+            GameObject bulle = new GameObject("parcho", typeof(RectTransform));
+            GameObject potion = new GameObject("askedPotion", typeof(RectTransform));
+            Image bulleRenderer = bulle.AddComponent<Image>();
+            Image potionRenderer = potion.AddComponent<Image>();
+            Sprite bulleSprite = Resources.Load<Sprite>("UI/Parcho");
+            Sprite potionSprite = Resources.Load<Sprite>(potionPath);
 
 
 
-            //bulleRenderer.sprite = bulleSprite;
-            //potionRenderer.sprite = potionSprite;
+            bulleRenderer.sprite = bulleSprite;
+            potionRenderer.sprite = potionSprite;
 
-            //Vector2 size = bulleSprite.bounds.size;
-            //bulle.GetComponent<RectTransform>().sizeDelta = size;
+            Vector2 size = bulleSprite.bounds.size;
+            bulle.GetComponent<RectTransform>().sizeDelta = size;
 
-            //size = potionSprite.bounds.size;
-            //potion.GetComponent<RectTransform>().sizeDelta = size;
-   
-            //bulle.GetComponent<RectTransform>().anchoredPosition = new Vector2(-0.5f, 2);
-            //potion.GetComponent<RectTransform>().anchoredPosition = new Vector2(-0.5f, 2);
+            size = potionSprite.bounds.size;
+            potion.GetComponent<RectTransform>().sizeDelta = size;
 
-            //bulle.transform.SetParent(parent.transform);
-            //potion.transform.SetParent(parent.transform);
+            bulle.GetComponent<RectTransform>().anchoredPosition = new Vector2(-0.5f, 2);
+            potion.GetComponent<RectTransform>().anchoredPosition = new Vector2(-0.5f, 2);
+
+
+            potion.GetComponent<RectTransform>().localScale = new Vector3(0.3f,0.3f, 0.3f);
+
+            bulle.transform.SetParent(parent.transform);
+            potion.transform.SetParent(parent.transform);
 
 
         }
@@ -402,7 +436,7 @@ public class CustomerClass
     public void Angry()
     {
         string eye;
-
+        int posEye = 3;
         string path;
 
 
@@ -439,6 +473,7 @@ public class CustomerClass
                     break;
                 case RACE.SKELETON:
                     path = "skeleton/";
+                    posEye = 2;
                     break;
                 default:
                     path = "";
@@ -446,12 +481,12 @@ public class CustomerClass
             }
 
             path += "eye/yeux_mechant";
-            eye = partDisplay[3].GetComponent<Image>().sprite.name;
+            eye = partDisplay[posEye].GetComponent<Image>().sprite.name;
             path += eye[eye.Length - 1];
 
             Sprite s = Resources.Load<Sprite>(path);
 
-            partDisplay[3].GetComponent<Image>().sprite = s;
+            partDisplay[posEye].GetComponent<Image>().sprite = s;
 
             if (race == RACE.PUMPKIN)
             {
@@ -474,6 +509,13 @@ public class CustomerClass
         nbPart = 4;
         partDisplay = new GameObject[nbPart];
 
+        secondPath = new string[nbPart];
+
+        secondPath[0] = "cloth/tenu";
+        secondPath[1] = "face/tete";
+        secondPath[2] = "eye/yeux";
+        secondPath[3] = "hair/cheveux";
+
         part = new int[nbPart];
         return path;
     }
@@ -485,6 +527,14 @@ public class CustomerClass
         nbPart = 5;
         partDisplay = new GameObject[nbPart];
 
+        secondPath = new string[nbPart];
+
+        secondPath[0] = "cloth/tenu";
+        secondPath[1] = "hair/cheveux";
+        secondPath[2] = "face/tete";
+        secondPath[3] = "eye/yeux";
+        secondPath[4] = "mouth/bouche";
+
         part = new int[nbPart];
         return path;
     }
@@ -495,6 +545,13 @@ public class CustomerClass
 
         nbPart = 4;
         partDisplay = new GameObject[nbPart];
+
+        secondPath = new string[nbPart];
+
+        secondPath[0] = "hair/cheveux";
+        secondPath[1] = "cloth/tenu";
+        secondPath[2] = "face/tete";
+        secondPath[3] = "eye/yeux";
 
         part = new int[nbPart];
         return path;
