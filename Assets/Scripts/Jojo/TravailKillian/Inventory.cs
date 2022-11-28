@@ -79,6 +79,7 @@ public class Inventory : MonoBehaviour
         timer = 0f;
 
         ingredients.Clear();
+        potions[potionIndex].GetComponent<BoxCollider2D>().size = new Vector2(100, 100);
         Instantiate(potions[potionIndex], potionParent);
 
         potionIndex = -1;

@@ -40,38 +40,6 @@ public class ButtonManager : MonoBehaviour
         //    customerTab3[i].Update();
         //}
 
-        // suppression
-        if (Input.GetMouseButtonDown(0))
-        {
-            Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            Vector2 mousePos2D = new Vector2(mousePos.x, mousePos.y);
-            int nb = 0;
-            RaycastHit2D hit = Physics2D.Raycast(mousePos2D, Vector2.zero);
-            if (hit.collider && hit.collider.gameObject.name.Contains("part"))
-            {
-                for (int i = 0; i < customerTab.Count; i++)
-                {
-                    if (hit.collider.gameObject.transform.parent == customerTab[i].partDisplay[0].transform.parent)
-                    {
-                        pickedCustomer = customerTab[i];
-                        nb = i;
-                    }
-                  
-                }
-
-                Debug.Log(pickedCustomer.Paiement());
-
-                for (int i = 0; i < pickedCustomer.nbPart; i++)
-                {
-                    Destroy(pickedCustomer.partDisplay[i]);
-                }
-                Destroy(hit.collider.transform.parent.gameObject);
-                customerTab.RemoveAt(nb);
-                CustomerMove();
-            }
-        }
-
-
         //deplacement des clients
         //for (int i = 0; i < customerTab.Count; i++)
         //{
@@ -160,9 +128,49 @@ public class ButtonManager : MonoBehaviour
                 {
                     customerTab[i].pos.x = -(i - 0.7f + i * 1.5f);
                     customerTab[i].parent.transform.position = new Vector3(customerTab[i].pos.x, customerTab[i].pos.y);
+                    customerTab[i].parent.GetComponent<RectTransform>().localScale = new Vector3(296 * Mathf.Cos(i), 296 * Mathf.Cos(i));
                 }
             //}
         }
     }
+
+    public void EraseCustomer(Transform parent, int potionIndex)
+    {
+
+        int nb = 0;
+
+        for (int i = 0; i < customerTab.Count; i++)
+        {
+            if (parent == customerTab[i].partDisplay[0].transform.parent)
+            {
+                pickedCustomer = customerTab[i];
+                nb = i;
+            }
+
+        }
+
+
+
+        if (potionIndex == (int)pickedCustomer.askedPotion_Customer.name)
+        {
+            Debug.Log(pickedCustomer.Paiement());
+        }
+        else
+        {
+            Debug.Log(0);
+        }
+
+
+        for (int i = 0; i < pickedCustomer.nbPart; i++)
+        {
+            Destroy(pickedCustomer.partDisplay[i]);
+        }
+        Destroy(parent.gameObject);
+        customerTab.RemoveAt(nb);
+        CustomerMove();
+    }
+        
+    
+
 }
 

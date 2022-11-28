@@ -161,7 +161,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 384, y: -206}
+  m_AnchoredPosition: {x: 384, y: 455}
   m_SizeDelta: {x: 250, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!61 &55332171
@@ -202,7 +202,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc113015df4ad5f45b764bff64c06e67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canvas: {fileID: 1782130078}
   item: {fileID: 11400000, guid: 6725414d0c904874394f9b0083fcf4e7, type: 2}
 --- !u!114 &55332173
 MonoBehaviour:
@@ -325,7 +324,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -48, y: -206}
+  m_AnchoredPosition: {x: -48, y: 455}
   m_SizeDelta: {x: 250, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!61 &68907593
@@ -366,7 +365,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc113015df4ad5f45b764bff64c06e67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canvas: {fileID: 1782130078}
   item: {fileID: 11400000, guid: 6725414d0c904874394f9b0083fcf4e7, type: 2}
 --- !u!114 &68907595
 MonoBehaviour:
@@ -607,7 +605,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc113015df4ad5f45b764bff64c06e67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canvas: {fileID: 1782130078}
   item: {fileID: 11400000, guid: b4b16b84e1d2ede49a95af63a5589f0d, type: 2}
 --- !u!114 &159757843
 MonoBehaviour:
@@ -730,7 +727,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 228, y: -266.00006}
+  m_AnchoredPosition: {x: 228, y: 681}
   m_SizeDelta: {x: 250, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!61 &187341968
@@ -771,7 +768,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc113015df4ad5f45b764bff64c06e67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canvas: {fileID: 1782130078}
   item: {fileID: 11400000, guid: 37e9b07bc5914a04f932b3c291caf26b, type: 2}
 --- !u!114 &187341970
 MonoBehaviour:
@@ -894,7 +890,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -156, y: -266.00006}
+  m_AnchoredPosition: {x: -156, y: 681}
   m_SizeDelta: {x: 250, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!61 &193944750
@@ -935,7 +931,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc113015df4ad5f45b764bff64c06e67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canvas: {fileID: 1782130078}
   item: {fileID: 11400000, guid: 37e9b07bc5914a04f932b3c291caf26b, type: 2}
 --- !u!114 &193944752
 MonoBehaviour:
@@ -1058,7 +1053,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -132, y: -47.00003}
+  m_AnchoredPosition: {x: -132, y: 263}
   m_SizeDelta: {x: 250, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!61 &211570837
@@ -1099,7 +1094,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc113015df4ad5f45b764bff64c06e67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canvas: {fileID: 1782130078}
   item: {fileID: 11400000, guid: 7f58031e1425d3741a304364fffdb6c5, type: 2}
 --- !u!114 &211570839
 MonoBehaviour:
@@ -1263,7 +1257,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc113015df4ad5f45b764bff64c06e67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canvas: {fileID: 1782130078}
   item: {fileID: 11400000, guid: 782531ee8dd19654abba4b5575e8674c, type: 2}
 --- !u!114 &223525963
 MonoBehaviour:
@@ -1427,7 +1420,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc113015df4ad5f45b764bff64c06e67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canvas: {fileID: 1782130078}
   item: {fileID: 11400000, guid: b4b16b84e1d2ede49a95af63a5589f0d, type: 2}
 --- !u!114 &288195584
 MonoBehaviour:
@@ -1550,7 +1542,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 348, y: -47.00003}
+  m_AnchoredPosition: {x: 348, y: 263}
   m_SizeDelta: {x: 250, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!61 &332856885
@@ -1591,7 +1583,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc113015df4ad5f45b764bff64c06e67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canvas: {fileID: 1782130078}
   item: {fileID: 11400000, guid: 7f58031e1425d3741a304364fffdb6c5, type: 2}
 --- !u!114 &332856887
 MonoBehaviour:
@@ -1889,7 +1880,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc113015df4ad5f45b764bff64c06e67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canvas: {fileID: 1782130078}
   item: {fileID: 11400000, guid: b4b16b84e1d2ede49a95af63a5589f0d, type: 2}
 --- !u!114 &587582102
 MonoBehaviour:
@@ -2012,7 +2002,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 192, y: -206}
+  m_AnchoredPosition: {x: 192, y: 455}
   m_SizeDelta: {x: 250, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!61 &659496055
@@ -2053,7 +2043,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc113015df4ad5f45b764bff64c06e67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canvas: {fileID: 1782130078}
   item: {fileID: 11400000, guid: 6725414d0c904874394f9b0083fcf4e7, type: 2}
 --- !u!114 &659496057
 MonoBehaviour:
@@ -2176,7 +2165,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -372, y: -47}
+  m_AnchoredPosition: {x: -372, y: 263}
   m_SizeDelta: {x: 250, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &710352960
@@ -2229,7 +2218,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc113015df4ad5f45b764bff64c06e67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canvas: {fileID: 1782130078}
   item: {fileID: 11400000, guid: 7f58031e1425d3741a304364fffdb6c5, type: 2}
 --- !u!114 &710352963
 MonoBehaviour:
@@ -2340,7 +2328,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -288, y: -206}
+  m_AnchoredPosition: {x: -288, y: 455}
   m_SizeDelta: {x: 250, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &732788297
@@ -2393,7 +2381,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc113015df4ad5f45b764bff64c06e67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canvas: {fileID: 1782130078}
   item: {fileID: 11400000, guid: 6725414d0c904874394f9b0083fcf4e7, type: 2}
 --- !u!114 &732788300
 MonoBehaviour:
@@ -2757,7 +2744,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc113015df4ad5f45b764bff64c06e67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canvas: {fileID: 1782130078}
   item: {fileID: 11400000, guid: 782531ee8dd19654abba4b5575e8674c, type: 2}
 --- !u!114 &834886623
 MonoBehaviour:
@@ -2880,7 +2866,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 348, y: -47.00003}
+  m_AnchoredPosition: {x: 348, y: 263}
   m_SizeDelta: {x: 250, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!61 &935793420
@@ -2921,7 +2907,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc113015df4ad5f45b764bff64c06e67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canvas: {fileID: 1782130078}
   item: {fileID: 11400000, guid: 7f58031e1425d3741a304364fffdb6c5, type: 2}
 --- !u!114 &935793422
 MonoBehaviour:
@@ -3085,7 +3070,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc113015df4ad5f45b764bff64c06e67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canvas: {fileID: 1782130078}
   item: {fileID: 11400000, guid: b4b16b84e1d2ede49a95af63a5589f0d, type: 2}
 --- !u!114 &974856069
 MonoBehaviour:
@@ -3196,7 +3180,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1079619759}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 20304}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -3278,25 +3262,25 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1430818184}
+  - {fileID: 732788296}
+  - {fileID: 710352959}
+  - {fileID: 1966171473}
+  - {fileID: 2055172252}
   - {fileID: 193944749}
   - {fileID: 1415157035}
   - {fileID: 187341967}
   - {fileID: 1793962656}
-  - {fileID: 732788296}
   - {fileID: 68907592}
   - {fileID: 659496054}
   - {fileID: 55332170}
-  - {fileID: 710352959}
   - {fileID: 211570836}
   - {fileID: 1855569367}
   - {fileID: 332856884}
   - {fileID: 935793419}
-  - {fileID: 1966171473}
   - {fileID: 974856066}
   - {fileID: 288195581}
   - {fileID: 159757840}
   - {fileID: 587582099}
-  - {fileID: 2055172252}
   - {fileID: 834886620}
   - {fileID: 223525960}
   - {fileID: 1476377280}
@@ -3334,7 +3318,7 @@ RectTransform:
   m_GameObject: {fileID: 1366774179}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 6, y: 6, z: 6}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1079619760}
@@ -3383,7 +3367,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 36, y: -266.00006}
+  m_AnchoredPosition: {x: 36, y: 681}
   m_SizeDelta: {x: 250, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!61 &1415157036
@@ -3424,7 +3408,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc113015df4ad5f45b764bff64c06e67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canvas: {fileID: 1782130078}
   item: {fileID: 11400000, guid: 37e9b07bc5914a04f932b3c291caf26b, type: 2}
 --- !u!114 &1415157038
 MonoBehaviour:
@@ -3631,7 +3614,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -300, y: -266}
+  m_AnchoredPosition: {x: -300, y: 681}
   m_SizeDelta: {x: 250, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1430818185
@@ -3684,7 +3667,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc113015df4ad5f45b764bff64c06e67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canvas: {fileID: 1782130078}
   item: {fileID: 11400000, guid: 37e9b07bc5914a04f932b3c291caf26b, type: 2}
 --- !u!114 &1430818188
 MonoBehaviour:
@@ -3836,7 +3818,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc113015df4ad5f45b764bff64c06e67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canvas: {fileID: 1782130078}
   item: {fileID: 11400000, guid: 782531ee8dd19654abba4b5575e8674c, type: 2}
 --- !u!114 &1476377283
 MonoBehaviour:
@@ -4000,7 +3981,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc113015df4ad5f45b764bff64c06e67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canvas: {fileID: 1782130078}
   item: {fileID: 11400000, guid: 782531ee8dd19654abba4b5575e8674c, type: 2}
 --- !u!114 &1489589174
 MonoBehaviour:
@@ -4223,8 +4203,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d0a2fda46a5aa6b4f8f823f29248a047, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxIngredient: 3
+  maxIngredients: 3
   ingredients: []
+  isBrewing: 0
   recipes:
   - {fileID: 11400000, guid: 0a0943d0e1e7c1f469cebd8b976d18e8, type: 2}
   - {fileID: 11400000, guid: ecfca48ad80cc504ea43d012b28038b6, type: 2}
@@ -4241,11 +4222,21 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 9b38acc30cc79f2498d267be2f3c8df6, type: 2}
   potions:
   - {fileID: 6556714241950178428, guid: 820f8d50fbe49124f8261bd43dd1226e, type: 3}
-  - {fileID: 6556714241950178428, guid: 157aa2246d503f349a542f1d9021e447, type: 3}
+  - {fileID: 8388688229656676675, guid: de5867473570d91408ed03d33b10a004, type: 3}
+  - {fileID: 6258459352089946643, guid: eb3b62198fc93684d8ae5b76e6199737, type: 3}
+  - {fileID: 8258016585138199625, guid: e1fc84f2a51112e4884eaba60ce310a6, type: 3}
+  - {fileID: 5162313755948329815, guid: 8ec3a81d077a58445abd9fd2d8fec7db, type: 3}
+  - {fileID: 5391318313499728328, guid: cbd38cde02197864eadc74278790764f, type: 3}
+  - {fileID: 7711051487721346884, guid: 16c65c59042c14c4790b361746237e89, type: 3}
+  - {fileID: 5904504670169965503, guid: c021d11959f02404594caa61d0eb2e96, type: 3}
+  - {fileID: 3479103871059871267, guid: 5767b810d4f194b44b3cc34e293afa96, type: 3}
+  - {fileID: 5315556375221457252, guid: 1950a18218ae01841b99a6ee2300c858, type: 3}
+  - {fileID: 1530094998207969664, guid: 1498594e84453ee46a8ac31a6e89d4c3, type: 3}
+  - {fileID: 3141039027797782176, guid: ff6baf0afd7a0ff4e98af51f312805ad, type: 3}
+  - {fileID: 3389303494866882915, guid: fd7fd4b05e90db04286fcde99a58afde, type: 3}
   potionParent: {fileID: 1366774180}
   drawPanel: {fileID: 1863211342}
   inputManager: {fileID: 2169014484708949150}
-  isBrewing: 0
 --- !u!1 &1598858282
 GameObject:
   m_ObjectHideFlags: 0
@@ -4530,7 +4521,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 372, y: -266.00006}
+  m_AnchoredPosition: {x: 372, y: 681}
   m_SizeDelta: {x: 250, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!61 &1793962657
@@ -4571,7 +4562,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc113015df4ad5f45b764bff64c06e67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canvas: {fileID: 1782130078}
   item: {fileID: 11400000, guid: 37e9b07bc5914a04f932b3c291caf26b, type: 2}
 --- !u!114 &1793962659
 MonoBehaviour:
@@ -4694,7 +4684,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 108, y: -47.00003}
+  m_AnchoredPosition: {x: 108, y: 263}
   m_SizeDelta: {x: 250, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!61 &1855569368
@@ -4735,7 +4725,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc113015df4ad5f45b764bff64c06e67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canvas: {fileID: 1782130078}
   item: {fileID: 11400000, guid: 7f58031e1425d3741a304364fffdb6c5, type: 2}
 --- !u!114 &1855569370
 MonoBehaviour:
@@ -5032,7 +5021,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc113015df4ad5f45b764bff64c06e67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canvas: {fileID: 1782130078}
   item: {fileID: 11400000, guid: b4b16b84e1d2ede49a95af63a5589f0d, type: 2}
 --- !u!114 &1966171477
 MonoBehaviour:
@@ -5196,7 +5184,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc113015df4ad5f45b764bff64c06e67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canvas: {fileID: 1782130078}
   item: {fileID: 11400000, guid: 782531ee8dd19654abba4b5575e8674c, type: 2}
 --- !u!114 &2055172256
 MonoBehaviour:
@@ -5571,7 +5558,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: af3a6990a58f6db4aa09e59c5239519b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 14f310ea8cea5994f8567e12dea89ee9, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -5601,7 +5588,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 87ad7ed491f181040849f2252bdc5f8a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c8620d07ac0d55f4980d2cb68ae1365b, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -5631,7 +5618,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 92ae8928cdee4204a9b2d932ed9a654c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: cf660160da2269b4080bae04d751bcf3, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -5661,7 +5648,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 19f838ea0c4e8d047b9547753801c4ed, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 92ae8928cdee4204a9b2d932ed9a654c, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -5691,7 +5678,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 3311bf4e7b65f4a4f880f15c638b71b0, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4c5c19cca6e39f1478d209ea1b385814, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -5751,7 +5738,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: b5998735684cae446b6ce2581a0adf04, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d0c6e9d9c4e60834d8dad8e5cb7f9635, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -6844,7 +6831,7 @@ GameObject:
   - component: {fileID: 1319380534611608041}
   - component: {fileID: 1319380534611608040}
   m_Layer: 5
-  m_Name: Foreground
+  m_Name: Forground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7607,12 +7594,12 @@ MonoBehaviour:
   pointToInstantiate: {fileID: 6438192550246423890, guid: aad796938a852f34f99c70dfad033597, type: 3}
   lineToInstantiate: {fileID: 8524689591320302899, guid: 6554f5b0d892d0d4d9de628e463668b2, type: 3}
   runeList: {fileID: 2169014484708949858}
-  patern: 8
+  patern: 1
   parentTransform: {fileID: 1863211343}
   numPtc: 8
-  radiusCollision: 0.4
+  radiusCollision: 0.8
   distBTWpoint: 0.1
-  angleLimit: 90
+  angleLimit: 180
 --- !u!1 &2205035837404942835
 GameObject:
   m_ObjectHideFlags: 0
@@ -11185,7 +11172,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 4c5c19cca6e39f1478d209ea1b385814, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 93a3ba8678edc7c4895ef1f540a9a09d, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
