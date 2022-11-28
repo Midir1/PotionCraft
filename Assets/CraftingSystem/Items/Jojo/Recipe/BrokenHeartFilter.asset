@@ -17,5 +17,5 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 37e9b07bc5914a04f932b3c291caf26b, type: 2}
   - {fileID: 11400000, guid: b4b16b84e1d2ede49a95af63a5589f0d, type: 2}
   result: {fileID: 11400000, guid: ae97af194d1b8ba4997a4cdbaa7a376c, type: 2}
-  timeToWait: 15
+  timeToWait: 10
   rune: 2

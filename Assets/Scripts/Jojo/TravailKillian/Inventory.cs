@@ -16,6 +16,7 @@ public class Inventory : MonoBehaviour
     [SerializeField] private Transform potionParent;
     [SerializeField] private GameObject drawPanel;
     [SerializeField] private GameObject inputManager;
+    [SerializeField] private float UpgradeBrewingSpeedInSeconds;
 
     private int potionIndex = -1;
     private float timer;
@@ -36,9 +37,8 @@ public class Inventory : MonoBehaviour
         if (potionIndex == -1 || !isBrewing) return;
         
         timer += Time.deltaTime;
-        Debug.Log("Timer : " + timer);
-        Debug.Log(recipes[potionIndex].timeToWait - 5 * Convert.ToInt32(GameManager.Instance.cauldron[cauldronIndex].upgradeTime));
-        if (timer > (recipes[potionIndex].timeToWait - 5 * Convert.ToInt32(GameManager.Instance.cauldron[cauldronIndex].upgradeTime))) CraftPotion();
+        
+        if (timer > (recipes[potionIndex].timeToWait - UpgradeBrewingSpeedInSeconds * Convert.ToInt32(GameManager.Instance.cauldron[cauldronIndex].upgradeTime))) CraftPotion();
     }
 
     //Recipes and Potions Needs to be in the same order in the inspector to give the provided result

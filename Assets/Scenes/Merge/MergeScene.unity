@@ -7757,6 +7757,7 @@ MonoBehaviour:
   potionParent: {fileID: 1366774180}
   drawPanel: {fileID: 1863211342}
   inputManager: {fileID: 2169014484708949150}
+  UpgradeBrewingSpeedInSeconds: 5
 --- !u!50 &5042596509059252249
 Rigidbody2D:
   serializedVersion: 4
@@ -8457,6 +8458,7 @@ MonoBehaviour:
   potionParent: {fileID: 1366774180}
   drawPanel: {fileID: 1863211342}
   inputManager: {fileID: 2169014484708949150}
+  UpgradeBrewingSpeedInSeconds: 5
 --- !u!50 &5767409982852965793
 Rigidbody2D:
   serializedVersion: 4
@@ -11144,6 +11146,7 @@ MonoBehaviour:
   potionParent: {fileID: 1366774180}
   drawPanel: {fileID: 1863211342}
   inputManager: {fileID: 2169014484708949150}
+  UpgradeBrewingSpeedInSeconds: 5
 --- !u!50 &8449247379981402216
 Rigidbody2D:
   serializedVersion: 4
