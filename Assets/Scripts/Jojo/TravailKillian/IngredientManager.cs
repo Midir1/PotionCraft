@@ -13,7 +13,7 @@ public class IngredientManager : Drag
         {
             hasBeenDragged = true;
         }
-
+        
         if (hasBeenDragged && !isDragged && !inCauldron)
         {
             Destroy(gameObject);
@@ -22,6 +22,7 @@ public class IngredientManager : Drag
 
     private void OnTriggerStay2D(Collider2D other)
     {
+        Debug.Log("ui");
         inCauldron = true;
 
         if (!other.CompareTag("Cauldron") || isDragged) return;

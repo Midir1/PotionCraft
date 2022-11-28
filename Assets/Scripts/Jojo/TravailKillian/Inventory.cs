@@ -49,7 +49,11 @@ public class Inventory : MonoBehaviour
                 {
                     drawPanel.SetActive(true);
                     inputManager.SetActive(true);
-                    inputManager.GetComponent<InputPaternRecognition>().SetPatern(recipe.rune);
+                    
+                    InputPaternRecognition inputPaternRecognition = inputManager.GetComponent<InputPaternRecognition>();
+                    inputPaternRecognition.SetPatern(recipe.rune);
+
+                    inputPaternRecognition.inventory = this;
 
                     potionIndex = i;
 

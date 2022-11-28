@@ -36,7 +36,7 @@ public class InputPaternRecognition : MonoBehaviour
 
     bool flag = false;
 
-    private Inventory inventory;
+    [HideInInspector] public Inventory inventory;
 
     void Start()
     {
@@ -53,8 +53,7 @@ public class InputPaternRecognition : MonoBehaviour
             }
             arrPointRune.Add(circleCopy);
         }
-
-        inventory = FindObjectOfType<Inventory>();
+        
     }
 
     void Update()
