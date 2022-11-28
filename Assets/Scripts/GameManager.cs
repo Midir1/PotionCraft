@@ -76,7 +76,8 @@ public class GameManager : MonoBehaviour
         cauldron[0].isAvailable = true;
         for (int i = 0; i < (int)PotionBp.PotionBpNb; i++)
             Bp[i] = false;
-
+        Bp[(int)PotionBp.Heart] = true;
+        Bp[(int)PotionBp.Sleep] = true;
     }
 
     /// <summary>

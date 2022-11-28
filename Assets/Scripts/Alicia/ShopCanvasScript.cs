@@ -4,37 +4,28 @@ using UnityEngine;
 
 public class ShopCanvasScript : MonoBehaviour
 {
-    [SerializeField] ShopState shopState;
+
     void Update()
     {
-        if (shopState == ShopState.SHOP)
+        if (GameManager.Instance.shopState == ShopState.SHOP)
         {
             foreach (Transform child in transform)
             {
-                if (child.name == "ContentShop")
-                {
-                    if (GameManager.Instance.shopState == shopState)
-                        child.gameObject.SetActive(true);
-                    else
-                        child.gameObject.SetActive(false);
-                }
-
+                if (child.name == "ScrollShop")
+                    child.gameObject.SetActive(true);
+                if (child.name == "ScrollBank")
+                    child.gameObject.SetActive(false);
             }
         }
-        else if (shopState == ShopState.BANK)
+        else if(GameManager.Instance.shopState == ShopState.BANK)
         {
             foreach (Transform child in transform)
             {
-                if (child.name == "ContentBank")
-                {
-                    if (GameManager.Instance.shopState == shopState)
-                        child.gameObject.SetActive(true);
-                    else
-                        child.gameObject.SetActive(false);
-                }
+                if (child.name == "ScrollShop")
+                    child.gameObject.SetActive(false);
+                if (child.name == "ScrollBank")
+                    child.gameObject.SetActive(true);
             }
         }
-
-
     }
 }
