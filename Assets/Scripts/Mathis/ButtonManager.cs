@@ -27,7 +27,7 @@ public class ButtonManager : MonoBehaviour
 
         for (int i = 0; i < customerTab.Count; i++)
         {
-            customerTab[i].Update();
+            customerTab[i].Update(i);
         }
 
         //for (int i = 0; i < customerTab2.Count; i++)
@@ -129,7 +129,9 @@ public class ButtonManager : MonoBehaviour
                     customerTab[i].pos.x = -(i - 0.7f + i * 1.5f);
                     customerTab[i].parent.transform.position = new Vector3(customerTab[i].pos.x, customerTab[i].pos.y);
                     customerTab[i].parent.GetComponent<RectTransform>().localScale = new Vector3(296 * Mathf.Cos(i), 296 * Mathf.Cos(i));
-                }
+                    customerTab[i].anim.SetInteger("Pos", i);
+                    Debug.Log(i);
+            }
             //}
         }
     }

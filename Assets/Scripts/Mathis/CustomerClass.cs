@@ -5,7 +5,6 @@ using UnityEngine.UI;
 using UnityEngine.U2D;
 using System.IO;
 using System;
-
 enum RACE
 {
 	PUMPKIN,
@@ -86,7 +85,7 @@ public class CustomerClass
 	private RACE race;
 	public HERO hero;
 	public int nbPart;
-
+    public Animator anim;
 
     private bool isAngry;
     
@@ -312,7 +311,10 @@ public class CustomerClass
         parent = new GameObject("Customer", typeof(RectTransform));
         parent.GetComponent<RectTransform>().anchoredPosition = new Vector2(0, 1.8f);
         parent.GetComponent<RectTransform>().SetParent(customerParent);
-       parent.AddComponent<Animator>();
+        anim = parent.AddComponent<Animator>();
+        anim.runtimeAnimatorController = Resources.Load("AnimationController/Customer") as RuntimeAnimatorController; ;
+        anim.SetInteger("Race", (int)race);
+
         parent.transform.SetSiblingIndex(0);
         for (int i = 0; i < nbPart; i++)
         {
@@ -557,13 +559,14 @@ public class CustomerClass
         return path;
     }
 
-    public void Update()
+    public void Update(int pos)
 	{
 		timer -= Time.deltaTime;
         if (timer < timerMax*0.5 && !isAngry)
         {
             Angry();
-        } 
+        }
+        
     }
 
 	#endregion

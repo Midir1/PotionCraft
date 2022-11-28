@@ -22,7 +22,7 @@ public class IngredientManager : Drag
 
     private void OnTriggerStay2D(Collider2D other)
     {
-        Debug.Log("ui");
+        //Debug.Log("ui");
         inCauldron = true;
 
         if (!other.CompareTag("Cauldron") || isDragged) return;
