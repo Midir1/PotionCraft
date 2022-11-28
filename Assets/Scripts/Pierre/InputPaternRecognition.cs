@@ -215,7 +215,7 @@ public class InputPaternRecognition : MonoBehaviour
     }
 
 
-    void SetPatern(Patern _patern)
+    public void SetPatern(Patern _patern)
     {
         patern = _patern;
 
@@ -224,9 +224,15 @@ public class InputPaternRecognition : MonoBehaviour
 
         rune = runeList.GetRune(patern);
 
+        bool firstPoint = true;
         foreach (Vector2 pos in rune)
         {
             Object circleCopy = Instantiate(pointToInstantiate, pos + (Vector2)transform.position, Quaternion.identity, parentTransform);
+            if (firstPoint)
+            {
+                circleCopy.GetComponent<CanvasRenderer>().SetColor(UnityEngine.Color.red);
+                firstPoint = false;
+            }
             arrPointRune.Add(circleCopy);
         }
     }
