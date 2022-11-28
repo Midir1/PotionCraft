@@ -20,9 +20,15 @@ public enum PotionBp
     PotionBpNb
 }
 
+public enum ShopState
+{
+    BANK,
+    SHOP
+}
+
 public struct CauldronShop
 {
-    public bool isAvailable ;
+    public bool isAvailable;
     public bool upgradeSpeed;
     public bool upgradeTime;
 }
@@ -33,7 +39,9 @@ public class GameManager : MonoBehaviour
     [SerializeField] uint maxMoney = 99999;
     [SerializeField] uint currentMoney = 5000;
     public CauldronShop[] cauldron = new CauldronShop[3];
-    public TipBoxScript tipBox = new TipBoxScript();
+    public ShopState shopState = ShopState.SHOP;
+    public bool tipIsAvailable = false;
+    public bool bellIsAvailable = false;
     public bool[] Bp = new bool[(int)PotionBp.PotionBpNb];
     #endregion
 
@@ -59,7 +67,7 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
-        for(int i = 0; i < 3; i++)
+        for (int i = 0; i < 3; i++)
         {
             cauldron[i].isAvailable = false;
             cauldron[i].upgradeSpeed = false;
