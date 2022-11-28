@@ -42,9 +42,15 @@ public class InputPaternRecognition : MonoBehaviour
     {
         rune = runeList.GetRune(patern);
 
+        bool firstPoint = true;
         foreach (Vector2 pos in rune)
         {
             Object circleCopy = Instantiate(pointToInstantiate, pos + (Vector2)transform.position, Quaternion.identity, parentTransform);
+            if (firstPoint)
+            {
+                circleCopy.GetComponent<CanvasRenderer>().SetColor(UnityEngine.Color.red);
+                firstPoint= false;
+            }
             arrPointRune.Add(circleCopy);
         }
 
@@ -118,7 +124,6 @@ public class InputPaternRecognition : MonoBehaviour
         }
         if (!(Vector2.Distance(arrPointLine[0], rune[0]) < radiusCollision))
         {
-            Debug.Log("premier point return");
             Failure();
             return;
         }
@@ -143,12 +148,10 @@ public class InputPaternRecognition : MonoBehaviour
             {
                 if (ii < 0)
                 {
-                    Debug.Log("ii-");
                     ii = 1;
                 }
                 else if (ii >= rune.Length)
                 {
-                    Debug.Log("ii+");
                     break;
                 }
 
@@ -160,12 +163,10 @@ public class InputPaternRecognition : MonoBehaviour
                     {
                         furthestPointTutched = ii;
                     }
-                    Debug.Log("test collision");
                     //2 - angle fingerFoward / pointFoward
                     //last Rune point
                     if (ii >= rune.Length -1 )
                     {
-                        Debug.Log("flag last Rune Point");
                         flag = true;
                         Success();
                         return;
@@ -173,7 +174,6 @@ public class InputPaternRecognition : MonoBehaviour
                     //first line point
                     if (i < 1)
                     {
-                        Debug.Log("flag First line point");
                         flag = true;
                         break;
                     }
@@ -184,20 +184,17 @@ public class InputPaternRecognition : MonoBehaviour
                     if (angleRuneLine < angleLimit)
                     {
                         flag = true;
-                        Debug.Log("flag Angle");
                     }
                 }
             }
             //you fail
             if (!flag)
             {
-                Debug.Log("end");
                 Failure();
             }
             flag = false;
         }
         //you fail if you dont win
-        Debug.Log("you fail if you dont win");
         Failure();
     }
 
@@ -218,7 +215,7 @@ public class InputPaternRecognition : MonoBehaviour
     }
 
 
-    void SetPatern(Patern _patern)
+    public void SetPatern(Patern _patern)
     {
         patern = _patern;
 
@@ -227,9 +224,15 @@ public class InputPaternRecognition : MonoBehaviour
 
         rune = runeList.GetRune(patern);
 
+        bool firstPoint = true;
         foreach (Vector2 pos in rune)
         {
             Object circleCopy = Instantiate(pointToInstantiate, pos + (Vector2)transform.position, Quaternion.identity, parentTransform);
+            if (firstPoint)
+            {
+                circleCopy.GetComponent<CanvasRenderer>().SetColor(UnityEngine.Color.red);
+                firstPoint = false;
+            }
             arrPointRune.Add(circleCopy);
         }
     }

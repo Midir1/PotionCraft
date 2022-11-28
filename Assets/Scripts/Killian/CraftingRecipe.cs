@@ -16,6 +16,7 @@ public class CraftingRecipe : ScriptableObject
     public List<ItemAmount> Materials;
     public List<ItemAmount> Results;
 
+
     public bool CanCraft(CauldronInventory cauldronInventory)
     {
         foreach (ItemAmount itemAmount in Materials)
