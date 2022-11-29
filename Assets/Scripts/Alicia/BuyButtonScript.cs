@@ -6,6 +6,8 @@ public class BuyButtonScript : MonoBehaviour
 {
     ItemShopScript currentItemShop;
 
+    [SerializeField] private List<Recipe> recipes;
+
     void OnMouseDown()
     {
         currentItemShop = GetComponentInParent<ItemShopScript>();
@@ -15,7 +17,6 @@ public class BuyButtonScript : MonoBehaviour
 
             if (currentItemShop.BuyIt())
             {
-
                 switch (currentItemShop.Id)
                 {
                     case "cauldron2":
@@ -32,42 +33,55 @@ public class BuyButtonScript : MonoBehaviour
                         break;
                     case "Clean":
                         GameManager.Instance.Bp[(int)PotionBp.Clean] = true;
+                        SetRecipeActive("CleanlinessPotion");
                             break;
                     case "Drunkard":
                         GameManager.Instance.Bp[(int)PotionBp.Drunkard] = true;
+                        SetRecipeActive("DrunkardElixir");
                         break;
                     case "Relaxation":
                         GameManager.Instance.Bp[(int)PotionBp.Relaxation] = true;
+                        SetRecipeActive("ChillPotion");
                         break;
                     case "Luminescence":
                         GameManager.Instance.Bp[(int)PotionBp.Luminescence] = true;
+                        SetRecipeActive("LuminescencePotion");
                         break;
                     case "Spicy":
                         GameManager.Instance.Bp[(int)PotionBp.Spicy] = true;
+                        SetRecipeActive("SpiceyPotion");
                         break;
                     case "Horned":
                         GameManager.Instance.Bp[(int)PotionBp.Horned] = true;
+                        SetRecipeActive("HornPotion");
                         break;
                     case "Super":
                         GameManager.Instance.Bp[(int)PotionBp.Super] = true;
+                        SetRecipeActive("SuperElixir");
                         break;
                     case "Strawberry":
                         GameManager.Instance.Bp[(int)PotionBp.Strawberry] = true;
+                        SetRecipeActive("StrawberryPotion");
                         break;
                     case "Gamer":
                         GameManager.Instance.Bp[(int)PotionBp.Gamer] = true;
+                        SetRecipeActive("GamerPotion");
                         break;
                     case "Graphic":
                         GameManager.Instance.Bp[(int)PotionBp.Graphic] = true;
+                        SetRecipeActive("GraphistPotion");
                         break;
                     case "Toad":
                         GameManager.Instance.Bp[(int)PotionBp.Toad] = true;
+                        SetRecipeActive("ToadFilter");
                         break;
                     case "Heart":
                         GameManager.Instance.Bp[(int)PotionBp.Heart] = true;
+                        SetRecipeActive("BrokenHeartFilter");
                         break;
                     case "Sleep":
                         GameManager.Instance.Bp[(int)PotionBp.Sleep] = true;
+                        SetRecipeActive("SleepElixir");
                         break;
                     default:
                         Debug.Log("unknow ItemShop.Id");
@@ -81,6 +95,17 @@ public class BuyButtonScript : MonoBehaviour
         }
     }
 
+    private void SetRecipeActive(string _potionName)
+    {
+        for (int i = 0; i < recipes.Count; i++)
+        {
+            var recipe = recipes[i];
 
-
+            if (recipe.name == _potionName)
+            {
+                recipe.isActive = true;
+                return;
+            }
+        }
+    }
 }

@@ -7,6 +7,7 @@ public class Recipe : ScriptableObject
 {
     public List<Item> ingredients;
     [UsedImplicitly] public Item result;
+    public bool isActive;
     public float timeToWait;
     public RuneList.Patern rune = RuneList.Patern.NotInitialized;
 }

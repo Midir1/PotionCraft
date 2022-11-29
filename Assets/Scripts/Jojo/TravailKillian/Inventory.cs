@@ -30,6 +30,18 @@ public class Inventory : MonoBehaviour
             case "Blue Cauldron": cauldronIndex = 1; break;
             case "Green Cauldron": cauldronIndex = 2; break;
         }
+
+        //Reset craft potion
+        for (int i = 0; i < recipes.Count; i++)
+        {
+            recipes[i].isActive = false;
+        }
+
+        SetRecipeActive("GamerPotion");
+        SetRecipeActive("GraphistPotion");
+        SetRecipeActive("ToadFilter");
+        SetRecipeActive("BrokenHeartFilter");
+        SetRecipeActive("SleepElixir");
     }
 
     private void Update()
@@ -38,8 +50,7 @@ public class Inventory : MonoBehaviour
         
         timer += Time.deltaTime;
 
-        //if (timer > (recipes[potionIndex].timeToWait - UpgradeBrewingSpeedInSeconds * Convert.ToInt32(GameManager.Instance.cauldron[cauldronIndex].upgradeTime))) CraftPotion();
-        if (timer > recipes[potionIndex].timeToWait) CraftPotion();
+        if (timer > (recipes[potionIndex].timeToWait - UpgradeBrewingSpeedInSeconds * Convert.ToInt32(GameManager.Instance.cauldron[cauldronIndex].upgradeTime))) CraftPotion();
     }
 
     //Recipes and Potions Needs to be in the same order in the inspector to give the provided result
@@ -59,6 +70,8 @@ public class Inventory : MonoBehaviour
                 else if (ingredients[index] == recipeIngredient2) recipeIngredient2 = null;
                 else if (ingredients[index] == recipeIngredient3) recipeIngredient3 = null;
                 else break;
+
+                if (!(recipe.isActive)) break;
 
                 if (index == recipe.ingredients.Count - 1)
                 {
@@ -98,5 +111,19 @@ public class Inventory : MonoBehaviour
         Instantiate(potions[potionIndex], potionParent);
 
         potionIndex = -1;
+    }
+
+    private void SetRecipeActive(string _potionName)
+    {
+        for (int i = 0; i < recipes.Count; i++)
+        {
+            var recipe = recipes[i];
+
+            if (recipe.name == _potionName)
+            {
+                recipe.isActive = true;
+                return;
+            }
+        }
     }
 }
