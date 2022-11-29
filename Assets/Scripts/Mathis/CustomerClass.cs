@@ -311,11 +311,14 @@ public class CustomerClass
         parent = new GameObject("Customer", typeof(RectTransform));
         parent.GetComponent<RectTransform>().anchoredPosition = new Vector2(0, 1.8f);
         parent.GetComponent<RectTransform>().SetParent(customerParent);
-        anim = parent.AddComponent<Animator>();
-        anim.runtimeAnimatorController = Resources.Load("AnimationController/Customer") as RuntimeAnimatorController; ;
-        anim.SetInteger("Race", (int)race);
+        //anim = parent.AddComponent<Animator>();
+        //anim.runtimeAnimatorController = Resources.Load("AnimationController/Customer") as RuntimeAnimatorController; ;
+        //anim.SetInteger("Race", (int)race);
 
+        float ratioH = 1920 / (float)Screen.height;
+        parent.transform.localScale *= ratioH; 
         parent.transform.SetSiblingIndex(0);
+
         for (int i = 0; i < nbPart; i++)
         {
 
@@ -346,6 +349,7 @@ public class CustomerClass
             image.sprite = sprite;
             Vector2 size = image.sprite.bounds.size;
             collide.size = size;
+    
             partDisplay[i].GetComponent<RectTransform>().sizeDelta = size;
             Vector2 pivot = new Vector2(sprite.pivot.x / (size.x* sprite.pixelsPerUnit), sprite.pivot.y / (size.y* sprite.pixelsPerUnit));
 

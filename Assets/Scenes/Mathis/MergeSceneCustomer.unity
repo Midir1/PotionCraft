@@ -235,7 +235,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -450, y: -95}
+  m_AnchoredPosition: {x: -438, y: -94}
   m_SizeDelta: {x: 250, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &122748032
@@ -958,7 +958,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -17, y: -89}
+  m_AnchoredPosition: {x: 35, y: -84}
   m_SizeDelta: {x: 250, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &848124644
@@ -1009,7 +1009,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 184, y: -70}
+  m_AnchoredPosition: {x: 281, y: -70}
   m_SizeDelta: {x: 250, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &915619338
@@ -1060,7 +1060,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 406, y: -85}
+  m_AnchoredPosition: {x: 482, y: -99}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &916490154
@@ -1231,7 +1231,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -234, y: -96}
+  m_AnchoredPosition: {x: -219, y: -96}
   m_SizeDelta: {x: 250, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1358305656
@@ -1702,6 +1702,7 @@ MonoBehaviour:
   potionParent: {fileID: 1366774180}
   drawPanel: {fileID: 1863211342}
   inputManager: {fileID: 2169014484708949150}
+  UpgradeBrewingSpeedInSeconds: 0
 --- !u!1 &1598858282
 GameObject:
   m_ObjectHideFlags: 0
@@ -3969,6 +3970,13 @@ MonoBehaviour:
   - {fileID: 783265185}
   - {fileID: 1319380534651167601}
   - {fileID: 121761724}
+  resizable:
+  - {fileID: 1546796563}
+  - {fileID: 916490153}
+  - {fileID: 915619337}
+  - {fileID: 1358305655}
+  - {fileID: 848124643}
+  - {fileID: 122748031}
   defaultResolution: {x: 1080, y: 1920}
   swipeTolerance: 0.2
 --- !u!114 &1319380534289054655

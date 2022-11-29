@@ -7,6 +7,7 @@ public class GameBackgrounds : MonoBehaviour, IBeginDragHandler, IEndDragHandler
 {
     [SerializeField] private float lerpSpeed;
     [SerializeField] private List<RectTransform> backgroundsRectTransform;
+    [SerializeField] private List<RectTransform> resizable;
     [SerializeField] private Vector2 defaultResolution;
     [SerializeField] private float swipeTolerance;
 
@@ -104,6 +105,17 @@ public class GameBackgrounds : MonoBehaviour, IBeginDragHandler, IEndDragHandler
 
             backgroundRectTransform.anchoredPosition = new Vector2(0f, Screen.height * i);
             backgroundRectTransform.sizeDelta = new Vector2(Screen.width, Screen.height);
+        }
+
+        for (int i = 0; i < resizable.Count; i++)
+        {
+            RectTransform rect = resizable[i];
+
+            float ratioW = defaultResolution.x / (float)Screen.width;
+            float ratioH = defaultResolution.y / (float)Screen.height;
+
+            rect.anchoredPosition = new Vector2(rect.anchoredPosition.x / ratioW, rect.anchoredPosition.y / ratioH); 
+            rect.sizeDelta = new Vector2(rect.sizeDelta.x / ratioW, rect.sizeDelta.y / ratioH);
         }
     }
 
