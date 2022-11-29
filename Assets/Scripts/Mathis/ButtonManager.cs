@@ -34,7 +34,7 @@ public class ButtonManager : MonoBehaviour
         }
 
         timer += Time.deltaTime;
-        Debug.Log(timer  + "   " + startDay);
+        //Debug.Log(timer  + "   " + startDay);
         if (startDay)
         {
             SpawnCustomer();

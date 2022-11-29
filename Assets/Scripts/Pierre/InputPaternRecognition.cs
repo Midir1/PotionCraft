@@ -41,19 +41,7 @@ public class InputPaternRecognition : MonoBehaviour
     void Start()
     {
         rune = runeList.GetRune(patern);
-
-        bool firstPoint = true;
-        foreach (Vector2 pos in rune)
-        {
-            Object circleCopy = Instantiate(pointToInstantiate, pos + (Vector2)transform.position, Quaternion.identity, parentTransform);
-            if (firstPoint)
-            {
-                circleCopy.GetComponent<CanvasRenderer>().SetColor(UnityEngine.Color.red);
-                firstPoint= false;
-            }
-            arrPointRune.Add(circleCopy);
-        }
-        
+        InitRuneDisplay();
     }
 
     void Update()
@@ -202,22 +190,33 @@ public class InputPaternRecognition : MonoBehaviour
     {
         //clear the last path
         line = null;
-        arrPointRune.ForEach(Destroy);
-        arrPointRune.Clear();
         arrPointLine.Clear();
-        //recrate arrPoint 
-        foreach (Vector2 pos in rune)
-        {
-            Object circleCopy = Instantiate(pointToInstantiate, pos + (Vector2)transform.position, Quaternion.identity, parentTransform);
-            arrPointRune.Add(circleCopy);
-        }
+       
     }
 
 
     public void SetPatern(Patern _patern)
     {
         patern = _patern;
+        InitRuneDisplay();
+    }
 
+    void Success()
+    {
+        inventory.BeginCraftPotion();
+        
+        runeDrawLine.Braval();
+        ClearPath();
+    }
+
+    void Failure()
+    {
+        runeDrawLine.Fail();
+        ClearPath();
+    }
+
+    void InitRuneDisplay()
+    {
         arrPointRune.ForEach(Destroy);
         arrPointRune.Clear();
 
@@ -236,19 +235,5 @@ public class InputPaternRecognition : MonoBehaviour
         }
     }
 
-    void Success()
-    {
-        inventory.BeginCraftPotion();
-        
-        runeDrawLine.Braval();
-        ClearPath();
-    }
-
-    void Failure()
-    {
-        runeDrawLine.Fail();
-        ClearPath();
-    }
-
-
+    
 }
