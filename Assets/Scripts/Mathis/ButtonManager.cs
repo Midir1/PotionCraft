@@ -15,6 +15,9 @@ public class ButtonManager : MonoBehaviour
     //List<CustomerClass> customerTab2 = new List<CustomerClass>();
     //List<CustomerClass> customerTab3 = new List<CustomerClass>();
     // Start is called before the first frame update
+    float timer = 8f;
+    bool startDay = false;
+
 
     void Start()
     {
@@ -28,6 +31,13 @@ public class ButtonManager : MonoBehaviour
         for (int i = 0; i < customerTab.Count; i++)
         {
             customerTab[i].Update(i);
+        }
+
+        timer += Time.deltaTime;
+        Debug.Log(timer  + "   " + startDay);
+        if (startDay)
+        {
+            SpawnCustomer();
         }
 
         //for (int i = 0; i < customerTab2.Count; i++)
@@ -67,41 +77,50 @@ public class ButtonManager : MonoBehaviour
         //}
     }
 
+    public void OpenShop()
+    {
+        startDay = !startDay;
+    }
+
     public void SpawnCustomer()
     {
-        if (customerTab.Count < 3)
+        if (timer > 8.0f)
         {
-            // ajout
-            customer = new CustomerClass();
-            customerTab.Add(customer);
-            customer.DisplayCustomer(customerParent);
-            CustomerMove();
-            //for (int i = 0; i < 4; i++)
-            //{
-            //    for (int j = 0; j < 4; j++)
-            //    {
-            //        for (int k = 0; k < 4; k++)
-            //        {
-            //            for (int l = 0; l < 4; l++)
-            //            {
-            //                customer = new CustomerClass();
-            //                customerTab.Add(customer);
-            //                customer.DiplayDemon(i + 1, j + 1, k + 1, l + 1);
+            timer = 0f;
+            if (customerTab.Count < 3)
+            {
+                // ajout
+                customer = new CustomerClass();
+                customerTab.Add(customer);
+                customer.DisplayCustomer(customerParent);
+                CustomerMove();
+                //for (int i = 0; i < 4; i++)
+                //{
+                //    for (int j = 0; j < 4; j++)
+                //    {
+                //        for (int k = 0; k < 4; k++)
+                //        {
+                //            for (int l = 0; l < 4; l++)
+                //            {
+                //                customer = new CustomerClass();
+                //                customerTab.Add(customer);
+                //                customer.DiplayDemon(i + 1, j + 1, k + 1, l + 1);
 
-            //                customer = new CustomerClass();
-            //                customerTab3.Add(customer);
-            //                customer.DiplaySkeleton(i + 1, j + 1, k + 1, l + 1);
+                //                customer = new CustomerClass();
+                //                customerTab3.Add(customer);
+                //                customer.DiplaySkeleton(i + 1, j + 1, k + 1, l + 1);
 
-            //                for (int m = 0; m < 4; m++)
-            //                {
-            //                    customer = new CustomerClass();
-            //                    customerTab2.Add(customer);
-            //                    customer.DiplayPumpkin(i + 1, j + 1, k + 1, l + 1, m + 1);
-            //                }
-            //            }
-            //        }
-            //    }
-            //}
+                //                for (int m = 0; m < 4; m++)
+                //                {
+                //                    customer = new CustomerClass();
+                //                    customerTab2.Add(customer);
+                //                    customer.DiplayPumpkin(i + 1, j + 1, k + 1, l + 1, m + 1);
+                //                }
+                //            }
+                //        }
+                //    }
+                //}
+            }
         }
     }
 
@@ -129,8 +148,9 @@ public class ButtonManager : MonoBehaviour
                     customerTab[i].pos.x = -(i - 0.7f + i * 1.5f);
                     customerTab[i].parent.transform.position = new Vector3(customerTab[i].pos.x, customerTab[i].pos.y);
                     customerTab[i].parent.GetComponent<RectTransform>().localScale = new Vector3(296 * Mathf.Cos(i), 296 * Mathf.Cos(i));
-                    //customerTab[i].anim.SetInteger("Pos", i);
-            }
+                    customerTab[i].anim.SetInteger("Pos", i);
+
+                }
             //}
         }
     }

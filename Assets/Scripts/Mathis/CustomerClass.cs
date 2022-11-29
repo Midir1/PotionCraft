@@ -311,11 +311,11 @@ public class CustomerClass
         parent = new GameObject("Customer", typeof(RectTransform));
         parent.GetComponent<RectTransform>().anchoredPosition = new Vector2(0, 1.8f);
         parent.GetComponent<RectTransform>().SetParent(customerParent);
-        //anim = parent.AddComponent<Animator>();
-        //anim.runtimeAnimatorController = Resources.Load("AnimationController/Customer") as RuntimeAnimatorController; ;
-        //anim.SetInteger("Race", (int)race);
+        anim = parent.AddComponent<Animator>();
+        anim.runtimeAnimatorController = Resources.Load("AnimationController/Customer") as RuntimeAnimatorController; ;
+        anim.SetInteger("Race", (int)race);
 
-        float ratioH = 1920 / (float)Screen.height;
+        float ratioH = (1920 / (float)Screen.height)* 1.5f;
         parent.transform.localScale *= ratioH; 
         parent.transform.SetSiblingIndex(0);
 
@@ -415,10 +415,10 @@ public class CustomerClass
             Sprite bulleSprite = Resources.Load<Sprite>("UI/Parcho");
             Sprite potionSprite = Resources.Load<Sprite>(potionPath);
 
-
-
             bulleRenderer.sprite = bulleSprite;
             potionRenderer.sprite = potionSprite;
+
+      
 
             Vector2 size = bulleSprite.bounds.size;
             bulle.GetComponent<RectTransform>().sizeDelta = size;
@@ -426,16 +426,15 @@ public class CustomerClass
             size = potionSprite.bounds.size;
             potion.GetComponent<RectTransform>().sizeDelta = size;
 
-            bulle.GetComponent<RectTransform>().anchoredPosition = new Vector2(-0.5f, 2);
-            potion.GetComponent<RectTransform>().anchoredPosition = new Vector2(-0.5f, 2);
-
+     
 
             potion.GetComponent<RectTransform>().localScale = new Vector3(0.3f,0.3f, 0.3f);
 
             bulle.transform.SetParent(parent.transform);
             potion.transform.SetParent(parent.transform);
 
-
+            bulle.transform.position = new Vector2(0, 3.2f);
+            potion.transform.position = new Vector2(0, 3.2f);
         }
     }
 
