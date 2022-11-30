@@ -23,6 +23,10 @@ public class SwipeCauldron : MonoBehaviour, IBeginDragHandler, IEndDragHandler
     private Vector2 startLerpPos;
     private float lerpTimer;
 
+    private GameManager gameManager;
+
+    private bool cauldron2Unlocked, cauldron3Unlocked;
+
     private bool IsLerping
     {
         get => isLerping;
@@ -39,6 +43,7 @@ public class SwipeCauldron : MonoBehaviour, IBeginDragHandler, IEndDragHandler
         rectTransform = GetComponent<RectTransform>();
         scrollRect = GetComponent<ScrollRect>();
         
+        
         targetRectPos = rectTransform.anchoredPosition;
 
         float cauldronHeight = 600f * Screen.height / 1080f;
@@ -54,8 +59,14 @@ public class SwipeCauldron : MonoBehaviour, IBeginDragHandler, IEndDragHandler
 
     private void Update()
     {
+        if (gameManager == null)
+        {
+            gameManager = FindObjectOfType<GameManager>();
+        }
+        
         ScrollBetweenCauldrons();
         ClampScroll();
+        CauldronUnlock();
     }
     
     public void OnBeginDrag(PointerEventData data)
@@ -69,44 +80,123 @@ public class SwipeCauldron : MonoBehaviour, IBeginDragHandler, IEndDragHandler
         
         float deltaX = rectTransform.anchoredPosition.x - startPosX;
 
-        if (isLeft && deltaX > 0f)
+        if (gameManager.cauldron[1].isAvailable && gameManager.cauldron[2].isAvailable)
         {
-            targetRectPos = new Vector2(0f, 0f);
-            IsLerping = true;
-            isLeft = false;
-            startLerpPos = rectTransform.anchoredPosition;
-        }
-        else if (deltaX > 0f)
-        {
-            targetRectPos = new Vector2(Screen.width, 0f);
-            IsLerping = true;
-            isRight = true;
-            startLerpPos = rectTransform.anchoredPosition;
-        }
+            if (isLeft && deltaX > 0f)
+            {
+                targetRectPos = new Vector2(0f, 0f);
+                IsLerping = true;
+                isLeft = false;
+                startLerpPos = rectTransform.anchoredPosition;
+            }
+            else if (deltaX > 0f)
+            {
+                targetRectPos = new Vector2(Screen.width, 0f);
+                IsLerping = true;
+                isRight = true;
+                startLerpPos = rectTransform.anchoredPosition;
+            }
         
-        if (isRight && deltaX < 0f)
-        {
-            targetRectPos = new Vector2(0f, 0f);
-            IsLerping = true;
-            isRight = false;
-            startLerpPos = rectTransform.anchoredPosition;
+            if (isRight && deltaX < 0f)
+            {
+                targetRectPos = new Vector2(0f, 0f);
+                IsLerping = true;
+                isRight = false;
+                startLerpPos = rectTransform.anchoredPosition;
+            }
+            else if (deltaX < 0f)
+            {
+                targetRectPos = new Vector2(-Screen.width, 0f);
+                IsLerping = true;
+                isLeft = true;
+                startLerpPos = rectTransform.anchoredPosition;
+            }
+            
         }
-        else if (deltaX < 0f)
+        else if (gameManager.cauldron[1].isAvailable)
         {
-            targetRectPos = new Vector2(-Screen.width, 0f);
-            IsLerping = true;
-            isLeft = true;
-            startLerpPos = rectTransform.anchoredPosition;
+            if (deltaX > 0f)
+            {
+                targetRectPos = new Vector2(Screen.width, 0f);
+                IsLerping = true;
+                isRight = true;
+                startLerpPos = rectTransform.anchoredPosition;
+            }
+        
+            if (isRight && deltaX < 0f)
+            {
+                targetRectPos = new Vector2(0f, 0f);
+                IsLerping = true;
+                isRight = false;
+                startLerpPos = rectTransform.anchoredPosition;
+            }
+        }
+        else if (gameManager.cauldron[2].isAvailable)
+        {
+            if (isLeft && deltaX > 0f)
+            {
+                targetRectPos = new Vector2(0f, 0f);
+                IsLerping = true;
+                isLeft = false;
+                startLerpPos = rectTransform.anchoredPosition;
+            }
+
+            if (deltaX < 0f)
+            {
+                targetRectPos = new Vector2(-Screen.width, 0f);
+                IsLerping = true;
+                isLeft = true;
+                startLerpPos = rectTransform.anchoredPosition;
+            }
+        }
+
+        
+    }
+
+    private void CauldronUnlock()
+    {
+        if(!cauldron2Unlocked && gameManager.cauldron[1].isAvailable)
+        {
+            cauldron2Unlocked = true;
+            cauldron2.gameObject.SetActive(true);
+        }
+        else if (!cauldron3Unlocked && gameManager.cauldron[2].isAvailable)
+        {
+            cauldron3Unlocked = true;
+            cauldron3.gameObject.SetActive(true);
         }
     }
 
     private void ClampScroll()
     {
-        if (rectTransform.anchoredPosition.x > Screen.width)
-            rectTransform.anchoredPosition = new Vector2(Screen.width, 0f);
+        if (cauldron2Unlocked && cauldron3Unlocked)
+        {
+            if (rectTransform.anchoredPosition.x > Screen.width)
+                rectTransform.anchoredPosition = new Vector2(Screen.width, 0f);
 
-        if (rectTransform.anchoredPosition.x < -Screen.width)
-            rectTransform.anchoredPosition = new Vector2(-Screen.width, 0f);
+            if (rectTransform.anchoredPosition.x < -Screen.width)
+                rectTransform.anchoredPosition = new Vector2(-Screen.width, 0f);
+        }
+        else if (cauldron2Unlocked)
+        {
+            if (rectTransform.anchoredPosition.x > Screen.width)
+                rectTransform.anchoredPosition = new Vector2(Screen.width, 0f);
+
+            if (rectTransform.anchoredPosition.x < 0f)
+                rectTransform.anchoredPosition = new Vector2(0f, 0f);
+        }
+        else if (cauldron3Unlocked)
+        {
+            if (rectTransform.anchoredPosition.x > 0f)
+                rectTransform.anchoredPosition = new Vector2(0f, 0f);
+
+            if (rectTransform.anchoredPosition.x < -Screen.width)
+                rectTransform.anchoredPosition = new Vector2(-Screen.width, 0f);
+        }
+        else
+        {
+            rectTransform.anchoredPosition = new Vector2(0f, 0f);
+        }
     }
     
     private void ScrollBetweenCauldrons()
