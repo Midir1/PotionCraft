@@ -38,8 +38,6 @@ public class Inventory : MonoBehaviour
         }
 
         SetRecipeActive("GamerPotion");
-        SetRecipeActive("GraphistPotion");
-        SetRecipeActive("ToadFilter");
         SetRecipeActive("BrokenHeartFilter");
         SetRecipeActive("SleepElixir");
     }

@@ -34,7 +34,7 @@ public class BuyButtonScript : MonoBehaviour
                     case "Clean":
                         GameManager.Instance.Bp[(int)PotionBp.Clean] = true;
                         SetRecipeActive("CleanlinessPotion");
-                            break;
+                        break;
                     case "Drunkard":
                         GameManager.Instance.Bp[(int)PotionBp.Drunkard] = true;
                         SetRecipeActive("DrunkardElixir");
