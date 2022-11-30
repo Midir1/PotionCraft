@@ -955,7 +955,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dca0ab88d3c55a04fa0cfc521fc7399a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lerpSpeed: 200
+  lerpSpeed: 0.45
   cauldron1: {fileID: 5767409982852965791}
   cauldron2: {fileID: 8449247379981402213}
   cauldron3: {fileID: 5042596509059252247}
@@ -3459,7 +3459,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Content: {fileID: 1319380534289054641}
   m_Horizontal: 0
-  m_Vertical: 0
+  m_Vertical: 1
   m_MovementType: 1
   m_Elasticity: 1
   m_Inertia: 1
@@ -3487,7 +3487,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4dd666d084b66dd43857e66228f2f6bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lerpSpeed: 25
+  lerpSpeed: 1.35
   backgroundsRectTransform:
   - {fileID: 783265185}
   - {fileID: 1319380534651167601}

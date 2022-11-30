@@ -17,10 +17,11 @@ public class SwipeCauldron : MonoBehaviour, IBeginDragHandler, IEndDragHandler
     private float startPosX;
 
     private bool isRight, isLeft;
-    
-    private readonly float lerpTolerance = Screen.width / 100f;
-    
+
     private bool isLerping;
+    
+    private Vector2 startLerpPos;
+    private float lerpTimer;
 
     private bool IsLerping
     {
@@ -29,7 +30,7 @@ public class SwipeCauldron : MonoBehaviour, IBeginDragHandler, IEndDragHandler
         {
             isLerping = value;
 
-            scrollRect.horizontal = !isLerping;
+            scrollRect.movementType = isLerping ? ScrollRect.MovementType.Clamped : ScrollRect.MovementType.Elastic;
         }
     }
 
@@ -64,6 +65,8 @@ public class SwipeCauldron : MonoBehaviour, IBeginDragHandler, IEndDragHandler
     
     public void OnEndDrag(PointerEventData data)
     {
+        if (isLerping) return;
+        
         float deltaX = rectTransform.anchoredPosition.x - startPosX;
 
         if (isLeft && deltaX > 0f)
@@ -71,12 +74,14 @@ public class SwipeCauldron : MonoBehaviour, IBeginDragHandler, IEndDragHandler
             targetRectPos = new Vector2(0f, 0f);
             IsLerping = true;
             isLeft = false;
+            startLerpPos = rectTransform.anchoredPosition;
         }
         else if (deltaX > 0f)
         {
             targetRectPos = new Vector2(Screen.width, 0f);
             IsLerping = true;
             isRight = true;
+            startLerpPos = rectTransform.anchoredPosition;
         }
         
         if (isRight && deltaX < 0f)
@@ -84,12 +89,14 @@ public class SwipeCauldron : MonoBehaviour, IBeginDragHandler, IEndDragHandler
             targetRectPos = new Vector2(0f, 0f);
             IsLerping = true;
             isRight = false;
+            startLerpPos = rectTransform.anchoredPosition;
         }
         else if (deltaX < 0f)
         {
             targetRectPos = new Vector2(-Screen.width, 0f);
             IsLerping = true;
             isLeft = true;
+            startLerpPos = rectTransform.anchoredPosition;
         }
     }
 
@@ -106,14 +113,12 @@ public class SwipeCauldron : MonoBehaviour, IBeginDragHandler, IEndDragHandler
     {
         if(IsLerping)
         {
-            if (Mathf.Abs(rectTransform.anchoredPosition.x - targetRectPos.x) > lerpTolerance)
-            {
-                rectTransform.anchoredPosition = Vector3.Lerp(rectTransform.anchoredPosition, targetRectPos, 1 - Mathf.Pow(1 - lerpSpeed / 1000f, Time.deltaTime * 60));
-            }
-            else
-            {
-                rectTransform.anchoredPosition = targetRectPos;
+            lerpTimer += Time.deltaTime / lerpSpeed;
+            rectTransform.anchoredPosition = Vector3.Lerp(startLerpPos, targetRectPos, lerpTimer);
 
+            if (lerpTimer >= 1f)
+            {
+                lerpTimer = 0f;
                 IsLerping = false;
             }
         }

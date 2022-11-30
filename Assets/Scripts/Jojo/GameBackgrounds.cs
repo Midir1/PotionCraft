@@ -19,7 +19,6 @@ public class GameBackgrounds : MonoBehaviour, IBeginDragHandler, IEndDragHandler
 
     private readonly float swipeUpPos = -Screen.height / 40f;
     private readonly float swipeDownPos = -Screen.height * 2f + Screen.height / 40f;
-    private readonly float lerpTolerance = Screen.height / 200f;
 
     private ScrollRect scrollRect;
 
@@ -27,14 +26,17 @@ public class GameBackgrounds : MonoBehaviour, IBeginDragHandler, IEndDragHandler
 
     private float startPosY;
 
+    private Vector2 startLerpPos;
+    private float lerpTimer;
+
     private bool IsLerping
     {
         get => isLerping;
         set
         {
             isLerping = value;
-
-            scrollRect.vertical = !isLerping;
+            
+            scrollRect.enabled = !isLerping;
         }
     }
 
@@ -52,7 +54,7 @@ public class GameBackgrounds : MonoBehaviour, IBeginDragHandler, IEndDragHandler
     private void Update()
     {
         ScrollBetweenFloors();
-        ScrollBetweenTransition();
+        //ScrollBetweenTransition();
         ClampScroll();
     }
 
@@ -71,19 +73,23 @@ public class GameBackgrounds : MonoBehaviour, IBeginDragHandler, IEndDragHandler
                 targetRectPos = new Vector2(0f, -Screen.height * 2f);
                 IsLerping = true;
                 isDownstairs = false;
+                startLerpPos = rectTransform.anchoredPosition;
                 break;
             case false when rectTransform.anchoredPosition.y > swipeDownPos && deltaY > 0f:
                 targetRectPos = new Vector2(0f, 0f);
                 IsLerping = true;
                 isDownstairs = true;
+                startLerpPos = rectTransform.anchoredPosition;
                 break;
             case true:
                 targetRectPos = new Vector2(0f, 0f);
                 IsLerping = true;
+                startLerpPos = rectTransform.anchoredPosition;
                 break;
             case false:
                 targetRectPos = new Vector2(0f, -Screen.height * 2f);
                 IsLerping = true;
+                startLerpPos = rectTransform.anchoredPosition;
                 break;
         }
     }
@@ -136,12 +142,12 @@ public class GameBackgrounds : MonoBehaviour, IBeginDragHandler, IEndDragHandler
     {
         if(IsLerping)
         {
-            if (Mathf.Abs(rectTransform.anchoredPosition.y - targetRectPos.y) > lerpTolerance)
-                rectTransform.anchoredPosition = Vector3.Lerp(rectTransform.anchoredPosition, targetRectPos, 1 - Mathf.Pow(1 - lerpSpeed / 1000f, Time.deltaTime * 60));
-            else
-            {
-                rectTransform.anchoredPosition = targetRectPos;
+            lerpTimer += Time.deltaTime / lerpSpeed;
+            rectTransform.anchoredPosition = Vector3.Lerp(startLerpPos, targetRectPos, lerpTimer);
 
+            if (lerpTimer >= 1f)
+            {
+                lerpTimer = 0f;
                 IsLerping = false;
             }
         }
