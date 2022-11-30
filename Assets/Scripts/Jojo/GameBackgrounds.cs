@@ -114,8 +114,21 @@ public class GameBackgrounds : MonoBehaviour, IBeginDragHandler, IEndDragHandler
             float ratioW = defaultResolution.x / (float)Screen.width;
             float ratioH = defaultResolution.y / (float)Screen.height;
 
-            rect.anchoredPosition = new Vector2(rect.anchoredPosition.x / ratioW, rect.anchoredPosition.y / ratioH); 
-            rect.sizeDelta = new Vector2(rect.sizeDelta.x / ratioW, rect.sizeDelta.y / ratioH);
+            Debug.Log(ratioW);
+
+            if (rect.gameObject.name.Contains("Spawner"))
+            {
+                rect.anchoredPosition = new Vector2(rect.anchoredPosition.x / ratioW, rect.anchoredPosition.y / ratioH);
+                rect.sizeDelta = new Vector2(rect.sizeDelta.x / ratioW, rect.sizeDelta.y / ratioH);
+            }
+
+            if (rect.gameObject.name.Contains("Cauldron"))
+            {
+                rect.sizeDelta = new Vector2(rect.sizeDelta.x / ratioW, rect.sizeDelta.y / ratioH);
+                rect.anchoredPosition = new Vector2(rect.anchoredPosition.x, rect.anchoredPosition.y / ratioH);
+                rect.gameObject.GetComponent<BoxCollider2D>().size = new Vector2(rect.sizeDelta.x, rect.sizeDelta.y * 0.5f);
+            }
+
         }
     }
 

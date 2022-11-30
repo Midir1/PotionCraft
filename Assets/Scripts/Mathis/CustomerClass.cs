@@ -311,9 +311,9 @@ public class CustomerClass
         parent = new GameObject("Customer", typeof(RectTransform));
         parent.GetComponent<RectTransform>().anchoredPosition = new Vector2(0, 1.8f);
         parent.GetComponent<RectTransform>().SetParent(customerParent);
-        anim = parent.AddComponent<Animator>();
-        anim.runtimeAnimatorController = Resources.Load("AnimationController/Customer") as RuntimeAnimatorController; ;
-        anim.SetInteger("Race", (int)race);
+        //anim = parent.AddComponent<Animator>();
+        //anim.runtimeAnimatorController = Resources.Load("AnimationController/Customer") as RuntimeAnimatorController; ;
+        //anim.SetInteger("Race", (int)race);
 
         float ratioH = (1920 / (float)Screen.height)* 1.5f;
         parent.transform.localScale *= ratioH; 
