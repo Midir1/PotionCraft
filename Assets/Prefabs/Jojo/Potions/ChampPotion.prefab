@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 5299117955770490151}
   - component: {fileID: -7606568586147220841}
   m_Layer: 5
-  m_Name: ChillPotion
+  m_Name: ChampPotion
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -162,4 +162,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb928464a205c69419e9467d68a604e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  potionIndex: 7
+  potionIndex: 1

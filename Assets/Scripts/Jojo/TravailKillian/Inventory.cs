@@ -22,6 +22,8 @@ public class Inventory : MonoBehaviour
     private float timer;
     private int cauldronIndex = -1;
 
+    private GameManager manager;
+
     private void Start()
     {
         switch (this.name)
@@ -31,15 +33,13 @@ public class Inventory : MonoBehaviour
             case "Green Cauldron": cauldronIndex = 2; break;
         }
 
+        manager = GameManager.Instance;
+        Debug.Log("Inventory");
         //Reset craft potion
         for (int i = 0; i < recipes.Count; i++)
         {
-            recipes[i].isActive = false;
+            recipes[i].isActive = manager.Bp[i];
         }
-
-        SetRecipeActive("GamerPotion");
-        SetRecipeActive("BrokenHeartFilter");
-        SetRecipeActive("SleepElixir");
     }
 
     private void Update()

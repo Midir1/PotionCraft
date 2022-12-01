@@ -4,19 +4,19 @@ using UnityEngine;
 
 public enum PotionBp
 {
+    Heart,
+    Champ,
     Clean,
     Drunkard,
-    Relaxation,
-    Luminescence,
-    Spicy,
-    Horned,
-    Super,
-    Strawberry,
     Gamer,
     Graphic,
-    Toad,
-    Heart,
+    Horned,
+    Luminescence,
     Sleep,
+    Spicy,
+    Strawberry,
+    Sea,
+    Toad,
     PotionBpNb
 }
 
@@ -64,8 +64,8 @@ public class GameManager : MonoBehaviour
         }
     }
     #endregion
-
-    private void Start()
+    
+    private void Awake()
     {
         for (int i = 0; i < 3; i++)
         {
@@ -78,6 +78,7 @@ public class GameManager : MonoBehaviour
             Bp[i] = false;
         Bp[(int)PotionBp.Heart] = true;
         Bp[(int)PotionBp.Sleep] = true;
+        Debug.Log("Manager");
     }
 
     /// <summary>

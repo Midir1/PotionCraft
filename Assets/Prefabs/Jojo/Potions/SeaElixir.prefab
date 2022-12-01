@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: -3863410408886788754}
   - component: {fileID: -3440999654572563970}
   m_Layer: 5
-  m_Name: SuperElixir
+  m_Name: SeaElixir
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

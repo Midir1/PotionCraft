@@ -120,7 +120,7 @@ public class GameBackgrounds : MonoBehaviour, IBeginDragHandler, IEndDragHandler
             float ratioW = defaultResolution.x / (float)Screen.width;
             float ratioH = defaultResolution.y / (float)Screen.height;
 
-            Debug.Log(ratioW);
+            //Debug.Log(ratioW);
 
             if (rect.gameObject.name.Contains("Spawner"))
             {

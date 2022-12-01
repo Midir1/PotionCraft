@@ -40,8 +40,8 @@ public class BuyButtonScript : MonoBehaviour
                         SetRecipeActive("DrunkardElixir");
                         break;
                     case "Relaxation":
-                        GameManager.Instance.Bp[(int)PotionBp.Relaxation] = true;
-                        SetRecipeActive("ChillPotion");
+                        GameManager.Instance.Bp[(int)PotionBp.Champ] = true;
+                        SetRecipeActive("ChampPotion");
                         break;
                     case "Luminescence":
                         GameManager.Instance.Bp[(int)PotionBp.Luminescence] = true;
@@ -56,8 +56,8 @@ public class BuyButtonScript : MonoBehaviour
                         SetRecipeActive("HornPotion");
                         break;
                     case "Super":
-                        GameManager.Instance.Bp[(int)PotionBp.Super] = true;
-                        SetRecipeActive("SuperElixir");
+                        GameManager.Instance.Bp[(int)PotionBp.Sea] = true;
+                        SetRecipeActive("SeaElixir");
                         break;
                     case "Strawberry":
                         GameManager.Instance.Bp[(int)PotionBp.Strawberry] = true;

@@ -42,30 +42,12 @@ public enum RUNES
 	RUNENB
 }
 
-public enum POTION_NAME
-{
-    HORN,
-    LOVE,
-    CLEAN,
-    DRUNK,
-    GAMER,
-    GRAPH,
-    LUM,
-    CHILL,
-    SLEEP,
-    SPICE,
-    BERRY,
-    SUPER,
-    TOAD,
-    NBPOTION
-}
-
 public struct Potion_Customer
 {
 	public List<INGREDIENT_CUSTOMER> ing;
     public RUNES rune;
     public int price;
-    public POTION_NAME name;
+    public PotionBp name;
 }
 
 public class CustomerClass 
@@ -73,7 +55,7 @@ public class CustomerClass
     #region Fields
     private float timerMax;
 	public float timer;
-	public Potion_Customer askedPotion_Customer;
+	public Potion_Customer[] askedPotion_Customer;
 	
 	//Skin random du perso
 	private int[] part;
@@ -86,37 +68,33 @@ public class CustomerClass
 	public HERO hero;
 	public int nbPart;
     public Animator anim;
+    private GameManager manager;
+    public bool isAngry;
+    public bool potionCanFall;
+    public List<GameObject> potionGo;
+    public List<GameObject> parchemin;
+    public int nbPotion;
 
-    private bool isAngry;
-    
-	#endregion
+    #endregion
 
-	public CustomerClass ()
+    public CustomerClass ()
 	{
+        manager = GameManager.Instance;
+
         isAngry = false;
+        potionCanFall = false;
+       
 
-		askedPotion_Customer = new Potion_Customer();
-
-        askedPotion_Customer.name = (POTION_NAME)UnityEngine.Random.Range(0, (int)POTION_NAME.NBPOTION);
 
         int Potion_CustomerSize = UnityEngine.Random.Range(1, 4);
 
 		timerMax = 4 * Potion_CustomerSize;
 		timer = timerMax;
-		askedPotion_Customer.ing = new List<INGREDIENT_CUSTOMER>();
 
-        for (int i = 0; i < Potion_CustomerSize; i++)
-		{
-			askedPotion_Customer.ing.Add((INGREDIENT_CUSTOMER)UnityEngine.Random.Range(0, (int)INGREDIENT_CUSTOMER.INGREDIENT_CUSTOMERNB));
-		}
-
-		askedPotion_Customer.rune = (RUNES)UnityEngine.Random.Range(0, (int)RUNES.RUNENB);
-
-
-        askedPotion_Customer.price = 100 + 10 * Potion_CustomerSize + 10 * (int)askedPotion_Customer.rune;
-        if (UnityEngine.Random.Range(1, 11) == 1)
+        if (/*UnityEngine.Random.Range(1, 11) == 1*/true)
         {
             hero = (HERO)UnityEngine.Random.Range(0, (int)HERO.HERONB);
+            hero = HERO.MERCHANT;
             race = RACE.RACENB;
         }
         else
@@ -124,131 +102,63 @@ public class CustomerClass
             race = (RACE)UnityEngine.Random.Range(0, (int)RACE.RACENB);
             hero = HERO.HERONB;
         }
+
+        nbPotion = 1;
+
+        if (hero == HERO.MERCHANT)
+            nbPotion = 3;
+
+        askedPotion_Customer = new Potion_Customer[nbPotion];
+
+        for (int i = 0; i < nbPotion; i++)
+        {
+            askedPotion_Customer[i] = new Potion_Customer();
+            int rng = 0;
+            do
+            {
+                rng = UnityEngine.Random.Range(0, (int)PotionBp.PotionBpNb);
+                askedPotion_Customer[i].name = (PotionBp)rng;
+            } while (manager.Bp[rng] == false);
+
+            askedPotion_Customer[i].ing = new List<INGREDIENT_CUSTOMER>();
+
+            for (int j = 0; j < Potion_CustomerSize; j++)
+            {
+                askedPotion_Customer[i].ing.Add((INGREDIENT_CUSTOMER)UnityEngine.Random.Range(0, (int)INGREDIENT_CUSTOMER.INGREDIENT_CUSTOMERNB));
+            }
+
+            askedPotion_Customer[i].rune = (RUNES)UnityEngine.Random.Range(0, (int)RUNES.RUNENB);
+
+
+            askedPotion_Customer[i].price = 100 + 10 * Potion_CustomerSize + 10 * (int)askedPotion_Customer[i].rune;
+        }
+       
+
     }
 
 
 	#region Methods
 	public int Paiement()
 	{
-		//renvoie le prix d'acar de la Potion_Customer confectionné
+        int result= 0;
+        //renvoie le prix d'acar de la Potion_Customer confectionné
+        for (int i = 0; i < nbPotion; i++)
+        {
+            float timePrice = (float)askedPotion_Customer[i].price * 0.4f;
 
-		float timePrice = (float)askedPotion_Customer.price * 0.4f;
+            float timeLeft = timer / timerMax;
 
-		float timeLeft = timer / timerMax;
+            timePrice = timePrice * timeLeft;
 
-		timePrice = timePrice * timeLeft;
+            float priceLeft = (float)askedPotion_Customer[i].price * 0.3f;
+            //compare Potion_Customer créer et demander
+
+            result += (int)timePrice + (int)priceLeft * 2;
+        }
 		
-		float priceLeft = (float)askedPotion_Customer.price * 0.3f;
-		//compare Potion_Customer créer et demander
-
-		int result = (int)timePrice + (int)priceLeft * 2;
         
 		return result;
 	}
-
-
-    //public void DisplayDemon(int p0, int p1, int p2, int p3)
-    //{
-    //    string path = Devil();
-
-    //    part[0] = p0;
-    //    part[1] = p1;
-    //    part[2] = p2;
-    //    part[3] = p3;
-
-    //    GameObject parent = new GameObject();
-    //    parent.transform.position = new Vector2(pos.x, pos.y);
-    //    parent.name = "Customer";
-
-    //    for (int i = 0; i < nbPart; i++)
-    //    {
-    //        pos.x = 0;
-    //        pos.y = 0;
-    //        partDisplay[i] = new GameObject("part" + i);
-    //        SpriteRenderer spriteRenderer = partDisplay[i].AddComponent<SpriteRenderer>();
-    //        BoxCollider2D collide = partDisplay[i].AddComponent<BoxCollider2D>();
-
-    //        sprite = Resources.Load<Sprite>(string.Concat(path, secondPath[i], part[i]));
-    //        partDisplay[i].transform.position = new Vector2(pos.x, pos.y);
-    //        spriteRenderer.sprite = sprite;
-
-    //        Vector2 S = spriteRenderer.sprite.bounds.size;
-    //        collide.size = S;
-
-    //        partDisplay[i].transform.parent = parent.transform;
-
-    //    }
-    //}
-
-
-    //public void DisplaySkeleton(int p0, int p1, int p2, int p3)
-    //{
-    //    string path = Skeleton();
-
-    //    part[0] = p0;
-    //    part[1] = p1;
-    //    part[2] = p2;
-    //    part[3] = p3;
-
-    //    GameObject parent = new GameObject();
-    //    parent.transform.position = new Vector2(pos.x, pos.y);
-    //    parent.name = "Customer";
-
-    //    for (int i = 0; i < nbPart; i++)
-    //    {
-    //        pos.x = 0;
-    //        pos.y = -5;
-    //        partDisplay[i] = new GameObject("part" + i);
-    //        SpriteRenderer spriteRenderer = partDisplay[i].AddComponent<SpriteRenderer>();
-    //        BoxCollider2D collide = partDisplay[i].AddComponent<BoxCollider2D>();
-
-    //        sprite = Resources.Load<Sprite>(string.Concat(path, secondPath[i], part[i]));
-    //        partDisplay[i].transform.position = new Vector2(pos.x, pos.y);
-    //        spriteRenderer.sprite = sprite;
-
-    //        Vector2 S = spriteRenderer.sprite.bounds.size;
-    //        collide.size = S;
-
-    //        partDisplay[i].transform.parent = parent.transform;
-
-    //    }
-    //}
-
-    //public void DisplayPumpkin(int p0, int p1, int p2, int p3, int p4)
-    //{
-    //    string path = Pumpkin();
-
-    //    part[0] = p0;
-    //    part[1] = p1;
-    //    part[2] = p2;
-    //    part[3] = p3;
-    //    part[4] = p4;
-
-    //    GameObject parent = new GameObject();
-    //    parent.transform.position = new Vector2(pos.x, pos.y);
-    //    parent.name = "Customer";
-
-    //    for (int i = 0; i < nbPart; i++)
-    //    {
-    //        pos.x = 0;
-    //        pos.y = 5;
-    //        partDisplay[i] = new GameObject("part" + i);
-    //        SpriteRenderer spriteRenderer = partDisplay[i].AddComponent<SpriteRenderer>();
-    //        BoxCollider2D collide = partDisplay[i].AddComponent<BoxCollider2D>();
-
-    //        sprite = Resources.Load<Sprite>(string.Concat(path, secondPath[i], part[i]));
-    //        partDisplay[i].transform.position = new Vector2(pos.x, pos.y);
-    //        spriteRenderer.sprite = sprite;
-
-    //        Vector2 S = spriteRenderer.sprite.bounds.size;
-    //        collide.size = S;
-
-    //        partDisplay[i].transform.parent = parent.transform;
-
-    //    }
-
-    //}
-
 
     public void DisplayCustomer(Transform customerParent)
 	{
@@ -266,6 +176,7 @@ public class CustomerClass
                     break;
                 case HERO.SUCCUBUS:
                     path = "OC/tenu2";
+                    potionCanFall = true;
                     break;
                 default:
                     path = "";
@@ -360,82 +271,87 @@ public class CustomerClass
 
         }
         //Diplay potion
-
-        if (hero != HERO.MERCHANT)
+        for (int i = 0; i < nbPotion; i++)
         {
-            string potionPath = "Potions/";
-            switch (askedPotion_Customer.name)
-            {
-                case POTION_NAME.HORN:
-                    potionPath += "Horny_potion";
-                    break;
-                case POTION_NAME.LOVE:
-                    potionPath += "Love_potion";
-                    break;
-                case POTION_NAME.CLEAN:
-                    potionPath += "Clean_potion";
-                    break;
-                case POTION_NAME.DRUNK:
-                    potionPath += "Alcoolic_potion_300";
-                    break;
-                case POTION_NAME.GAMER:
-                    potionPath += "Gamer_potion";
-                    break;
-                case POTION_NAME.GRAPH:
-                    potionPath += "Graph_Potion";
-                    break;
-                case POTION_NAME.LUM:
-                    potionPath += "Luminescent_potion";
-                    break;
-                case POTION_NAME.CHILL:
-                    potionPath += "Sea_Potion";
-                    break;
-                case POTION_NAME.SLEEP:
-                    potionPath += "Sleep_potion";
-                    break;
-                case POTION_NAME.SPICE:
-                    potionPath += "Spicy_potion";
-                    break;
-                case POTION_NAME.BERRY:
-                    potionPath += "Berry_potion";
-                    break;
-                case POTION_NAME.SUPER:
-                    potionPath += "Champotion";
-                    break;
-                case POTION_NAME.TOAD:
-                    potionPath += "Toad_potion";
-                    break;
-                default:
-                    break;
-            }
-            GameObject bulle = new GameObject("parcho", typeof(RectTransform));
-            GameObject potion = new GameObject("askedPotion", typeof(RectTransform));
-            Image bulleRenderer = bulle.AddComponent<Image>();
-            Image potionRenderer = potion.AddComponent<Image>();
+            path = PathToPotion(i);
+            parchemin.Add(new GameObject("parcho", typeof(RectTransform)));
+            potionGo.Add(new GameObject("askedPotion", typeof(RectTransform)));
+            Image bulleImage = parchemin[i].AddComponent<Image>();
+            Image potionImage = potionGo[i].AddComponent<Image>();
             Sprite bulleSprite = Resources.Load<Sprite>("UI/Parcho");
-            Sprite potionSprite = Resources.Load<Sprite>(potionPath);
+            Sprite potionSprite = Resources.Load<Sprite>(path);
 
-            bulleRenderer.sprite = bulleSprite;
-            potionRenderer.sprite = potionSprite;
+            bulleImage.sprite = bulleSprite;
+            potionImage.sprite = potionSprite;
 
-      
+
 
             Vector2 size = bulleSprite.bounds.size;
-            bulle.GetComponent<RectTransform>().sizeDelta = size;
+            parchemin[i].GetComponent<RectTransform>().sizeDelta = size;
 
             size = potionSprite.bounds.size;
-            potion.GetComponent<RectTransform>().sizeDelta = size;
+            potionGo[i].GetComponent<RectTransform>().sizeDelta = size;
 
-     
 
-            potion.GetComponent<RectTransform>().localScale = new Vector3(0.3f,0.3f, 0.3f);
 
-            bulle.transform.SetParent(parent.transform);
-            potion.transform.SetParent(parent.transform);
+            potionGo[i].GetComponent<RectTransform>().localScale = new Vector3(0.3f, 0.3f, 0.3f);
 
-            bulle.transform.position = new Vector2(0, 3.2f);
-            potion.transform.position = new Vector2(0, 3.2f);
+            parchemin[i].transform.SetParent(parent.transform);
+            potionGo[i].transform.SetParent(parent.transform);
+
+            parchemin[i].transform.position = new Vector2(0 - nbPotion * 0.8f , 3.2f-i);
+            potionGo[i].transform.position = new Vector2(0 - nbPotion * 0.8f, 3.2f-i);
+        }   
+    }
+
+    private string PathToPotion(int i)
+    {
+        string potionPath = "Potions/";
+        switch (askedPotion_Customer[i].name)
+        {
+            case PotionBp.Horned:
+                potionPath += "Horny_potion";
+                break;
+            case PotionBp.Heart:
+                potionPath += "Love_potion";
+                break;
+            case PotionBp.Clean:
+                potionPath += "Clean_potion";
+                break;
+            case PotionBp.Drunkard:
+                potionPath += "Alcoolic_potion_300";
+                break;
+            case PotionBp.Gamer:
+                potionPath += "Gamer_potion";
+                break;
+            case PotionBp.Graphic:
+                potionPath += "Graph_Potion";
+                break;
+            case PotionBp.Luminescence:
+                potionPath += "Luminescent_potion";
+                break;
+            case PotionBp.Champ:
+                potionPath += "Sea_Potion";
+                break;
+            case PotionBp.Sleep:
+                potionPath += "Sleep_potion";
+                break;
+            case PotionBp.Spicy:
+                potionPath += "Spicy_potion";
+                break;
+            case PotionBp.Strawberry:
+                potionPath += "Berry_potion";
+                break;
+            case PotionBp.Sea:
+                potionPath += "Champotion";
+                break;
+            case PotionBp.Toad:
+                potionPath += "Toad_potion";
+                break;
+            default:
+                break;
         }
+        return potionPath;
     }
 
     public void Angry()
@@ -447,6 +363,9 @@ public class CustomerClass
 
         if (race == RACE.RACENB)
         {
+            Potion_Customer tempPot;
+            int rng = 0;
+            string pathPot;
             switch (hero)
             {
                 case HERO.MERCHANT:
@@ -454,6 +373,18 @@ public class CustomerClass
                     break;
                 case HERO.WARIOR:
                     path = "OC/tenu_mechant1-tourner";
+
+                    tempPot = askedPotion_Customer[0];
+                    do
+                    {
+                        rng = UnityEngine.Random.Range(0, (int)PotionBp.PotionBpNb);
+                        askedPotion_Customer[0].name = (PotionBp)rng;
+                    } while (manager.Bp[rng] == false || askedPotion_Customer[0].name == tempPot.name);
+
+                    pathPot = PathToPotion(0);
+
+                    potionGo[0].GetComponent<Image>().sprite = Resources.Load<Sprite>(pathPot);
+
                     break;
                 case HERO.SUCCUBUS:
                     path = "OC/tenu_mechant2";
