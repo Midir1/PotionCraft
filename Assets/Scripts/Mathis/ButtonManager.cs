@@ -110,17 +110,16 @@ public class ButtonManager : MonoBehaviour
         {
             bool wrongPot = true;
 
-            for (int i = 0; i < pickedCustomer.nbPotion; i++)
+            for (int i = 0; i < pickedCustomer.parchemin.Count; i++)
             {
                 
                 if (potionIndex == (int)pickedCustomer.askedPotion_Customer[i].name)
                 {
-                    Debug.Log(pickedCustomer.Paiement());
-                    pickedCustomer.parchemin.RemoveAt(i);
-                    pickedCustomer.potionGo.RemoveAt(i);
+                    Debug.Log("Bonne potion");
                     Destroy(pickedCustomer.parchemin[i]);
                     Destroy(pickedCustomer.potionGo[i]);
-                    pickedCustomer.nbPotion--;
+                    pickedCustomer.parchemin.RemoveAt(i);
+                    pickedCustomer.potionGo.RemoveAt(i);
                     wrongPot = false;
                     break;
                 }             
@@ -132,7 +131,7 @@ public class ButtonManager : MonoBehaviour
                 pickedCustomer.isAngry = true;
             }
 
-            if (pickedCustomer.nbPotion <= 0)
+            if (pickedCustomer.potionGo.Count == 0 || wrongPot)
             {
                 for (int i = 0; i < pickedCustomer.nbPart; i++)
                 {

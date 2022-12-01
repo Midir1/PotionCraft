@@ -91,10 +91,9 @@ public class CustomerClass
 		timerMax = 4 * Potion_CustomerSize;
 		timer = timerMax;
 
-        if (/*UnityEngine.Random.Range(1, 11) == 1*/true)
+        if (UnityEngine.Random.Range(1, 11) == 1)
         {
             hero = (HERO)UnityEngine.Random.Range(0, (int)HERO.HERONB);
-            hero = HERO.MERCHANT;
             race = RACE.RACENB;
         }
         else
@@ -270,6 +269,10 @@ public class CustomerClass
             partDisplay[i].GetComponent<RectTransform>().SetParent(parent.transform); 
 
         }
+
+        parchemin = new List<GameObject>();
+        potionGo = new List<GameObject>();
+
         //Diplay potion
         for (int i = 0; i < nbPotion; i++)
         {
