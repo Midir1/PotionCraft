@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{2917357C-9B5B-47C0-9F0A-D8C0D827D3C1}" SchemaVersion="110">
+	<Events>
+		<WorkUnit Name="Default Work Unit" ID="{2917357C-9B5B-47C0-9F0A-D8C0D827D3C1}" PersistMode="Standalone">
+			<ChildrenList>
+				<Event Name="RuneCompleted" ID="{5046C600-7173-426B-A594-7B6F31D01345}">
+					<ChildrenList>
+						<Action Name="" ID="{8DB0BDA8-B092-467F-A5A2-0878431E0F14}" ShortID="490623695">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="transport_activate" ID="{7CA7C8D6-8122-4AFD-9E7A-ACA84A7F35E8}" WorkUnitID="{F27DCBFD-B41E-4801-95D4-E1AD708B4A26}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="RuneFailed" ID="{C1F2754A-F8DB-46FF-AAF0-5FEF087BE487}">
+					<ChildrenList>
+						<Action Name="" ID="{6570F671-3A1E-4148-A5D1-53A6017AF5E3}" ShortID="631851555">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="dbl_shield_lowfreq2" ID="{55C24010-7E41-4F76-9073-B687006EE5C5}" WorkUnitID="{F27DCBFD-B41E-4801-95D4-E1AD708B4A26}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>

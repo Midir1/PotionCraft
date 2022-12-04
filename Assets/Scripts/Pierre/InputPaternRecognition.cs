@@ -10,6 +10,7 @@ using static UnityEngine.GraphicsBuffer;
 
 public class InputPaternRecognition : MonoBehaviour
 {
+
     [SerializeField] Object pointToInstantiate;
     [SerializeField] Object lineToInstantiate;
 
@@ -204,7 +205,6 @@ public class InputPaternRecognition : MonoBehaviour
     void Success()
     {
         inventory.BeginCraftPotion();
-        
         runeDrawLine.Braval();
         ClearPath();
     }

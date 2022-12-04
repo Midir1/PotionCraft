@@ -1,0 +1,453 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{F27DCBFD-B41E-4801-95D4-E1AD708B4A26}" SchemaVersion="110">
+	<AudioObjects>
+		<WorkUnit Name="Default Work Unit" ID="{F27DCBFD-B41E-4801-95D4-E1AD708B4A26}" PersistMode="Standalone">
+			<ChildrenList>
+				<Folder Name="HaloInterface" ID="{83CDF2D7-06E5-4F98-9BBD-82ACA74B0B70}" ShortID="4256660">
+					<ChildrenList>
+						<Sound Name="back" ID="{087C20DF-E4B5-43DB-84B9-BABEBB93012A}" ShortID="672171160">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5400BE91-7FA6-411E-819E-9656DD5B8CE1}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4B7D7951-5658-4120-9EAD-A0CF4CEF5CAD}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="back" ID="{75160E52-0975-427E-8601-9C9E3E11FA30}">
+									<Language>SFX</Language>
+									<AudioFile>HaloInterface\back.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="974932754"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="back" ID="{75160E52-0975-427E-8601-9C9E3E11FA30}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="cursor" ID="{CEF1A97A-5735-4BF8-A614-52ED92DC6257}" ShortID="870458843">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5400BE91-7FA6-411E-819E-9656DD5B8CE1}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4B7D7951-5658-4120-9EAD-A0CF4CEF5CAD}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="cursor" ID="{2874DD6F-9507-4F2B-87DA-359D295C09D7}">
+									<Language>SFX</Language>
+									<AudioFile>HaloInterface\cursor.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="414351614"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="cursor" ID="{2874DD6F-9507-4F2B-87DA-359D295C09D7}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="dbl_shield_lowfreq2" ID="{55C24010-7E41-4F76-9073-B687006EE5C5}" ShortID="909867888">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5400BE91-7FA6-411E-819E-9656DD5B8CE1}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4B7D7951-5658-4120-9EAD-A0CF4CEF5CAD}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="dbl_shield_lowfreq2" ID="{A74383D2-5ECC-45BC-A526-BC8E0BCFF889}">
+									<Language>SFX</Language>
+									<AudioFile>HaloInterface\dbl_shield_lowfreq2.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="657556517"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="dbl_shield_lowfreq2" ID="{A74383D2-5ECC-45BC-A526-BC8E0BCFF889}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="dbl_time_pickup" ID="{19FCCB89-4A9A-49E0-A9F9-BC2DEF8384A2}" ShortID="814288161">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5400BE91-7FA6-411E-819E-9656DD5B8CE1}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4B7D7951-5658-4120-9EAD-A0CF4CEF5CAD}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="dbl_time_pickup" ID="{AB6B330B-D85E-405C-945E-353F85147A9E}">
+									<Language>SFX</Language>
+									<AudioFile>HaloInterface\dbl_time_pickup.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="481535688"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="dbl_time_pickup" ID="{AB6B330B-D85E-405C-945E-353F85147A9E}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="flag_failure_flag_fail" ID="{EBA35BF4-8597-49BA-9701-C4C1B49B5A44}" ShortID="978916189">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5400BE91-7FA6-411E-819E-9656DD5B8CE1}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4B7D7951-5658-4120-9EAD-A0CF4CEF5CAD}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="flag_failure_flag_fail" ID="{88A31D31-5446-49E1-BC98-4879B7BF0A79}">
+									<Language>SFX</Language>
+									<AudioFile>HaloInterface\flag_failure_flag_fail.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="62315142"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="flag_failure_flag_fail" ID="{88A31D31-5446-49E1-BC98-4879B7BF0A79}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="forward" ID="{D0893A6F-F0AD-4DB3-8624-925B3344B9CA}" ShortID="633023016">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5400BE91-7FA6-411E-819E-9656DD5B8CE1}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4B7D7951-5658-4120-9EAD-A0CF4CEF5CAD}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="forward" ID="{441064B0-E008-4BE2-A4A9-4F616FB74436}">
+									<Language>SFX</Language>
+									<AudioFile>HaloInterface\forward.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="614813247"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="forward" ID="{441064B0-E008-4BE2-A4A9-4F616FB74436}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="health_low" ID="{6F1DF615-098B-4BF0-A05E-292DC73FBF22}" ShortID="669477509">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5400BE91-7FA6-411E-819E-9656DD5B8CE1}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4B7D7951-5658-4120-9EAD-A0CF4CEF5CAD}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="health_low" ID="{95AADD8C-722B-4E8D-B768-2711172A014A}">
+									<Language>SFX</Language>
+									<AudioFile>HaloInterface\health_low.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="373454988"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="health_low" ID="{95AADD8C-722B-4E8D-B768-2711172A014A}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="health_pickup" ID="{5B219BB1-0CCA-407A-98CB-A1B028EAE51F}" ShortID="137186236">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5400BE91-7FA6-411E-819E-9656DD5B8CE1}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4B7D7951-5658-4120-9EAD-A0CF4CEF5CAD}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="health_pickup" ID="{C8695512-235D-4A1A-BEC4-4CD3492E2932}">
+									<Language>SFX</Language>
+									<AudioFile>HaloInterface\health_pickup.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="521589481"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="health_pickup" ID="{C8695512-235D-4A1A-BEC4-4CD3492E2932}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="hill_move" ID="{3846ED92-01E1-4727-B4C7-398BB10EE078}" ShortID="161686139">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5400BE91-7FA6-411E-819E-9656DD5B8CE1}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4B7D7951-5658-4120-9EAD-A0CF4CEF5CAD}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="hill_move" ID="{C4745184-3B5E-429A-A666-165E0FC66138}">
+									<Language>SFX</Language>
+									<AudioFile>HaloInterface\hill_move.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="310494117"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="hill_move" ID="{C4745184-3B5E-429A-A666-165E0FC66138}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="invis_powerup" ID="{FDA862BE-471D-4BBD-9E16-869F7293ADDF}" ShortID="294236321">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5400BE91-7FA6-411E-819E-9656DD5B8CE1}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4B7D7951-5658-4120-9EAD-A0CF4CEF5CAD}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="invis_powerup" ID="{0A49BCE9-2633-4956-96CF-9B597CC75CB2}">
+									<Language>SFX</Language>
+									<AudioFile>HaloInterface\invis_powerup.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="343691610"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="invis_powerup" ID="{0A49BCE9-2633-4956-96CF-9B597CC75CB2}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="player_respawn" ID="{F2EE398A-ED53-441E-92FE-9C3566338606}" ShortID="674971041">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5400BE91-7FA6-411E-819E-9656DD5B8CE1}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4B7D7951-5658-4120-9EAD-A0CF4CEF5CAD}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="player_respawn" ID="{73D883C6-F5FF-403F-A8EC-DFDF64E39CDD}">
+									<Language>SFX</Language>
+									<AudioFile>HaloInterface\player_respawn.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="353222274"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="player_respawn" ID="{73D883C6-F5FF-403F-A8EC-DFDF64E39CDD}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="respawn_timer" ID="{83753174-5F16-4080-8F69-12D88F483977}" ShortID="406406358">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5400BE91-7FA6-411E-819E-9656DD5B8CE1}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4B7D7951-5658-4120-9EAD-A0CF4CEF5CAD}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="respawn_timer" ID="{229481ED-4429-4931-967B-0C911A76C9FE}">
+									<Language>SFX</Language>
+									<AudioFile>HaloInterface\respawn_timer.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="407829509"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="respawn_timer" ID="{229481ED-4429-4931-967B-0C911A76C9FE}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="shield_charge" ID="{ABD236CF-44C4-486F-B3DA-D802326EBB73}" ShortID="915182652">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5400BE91-7FA6-411E-819E-9656DD5B8CE1}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4B7D7951-5658-4120-9EAD-A0CF4CEF5CAD}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="shield_charge" ID="{F0C09277-C651-4198-B3A6-B77A591648A5}">
+									<Language>SFX</Language>
+									<AudioFile>HaloInterface\shield_charge.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="532916448"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="shield_charge" ID="{F0C09277-C651-4198-B3A6-B77A591648A5}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="shield_depleted" ID="{08061317-01F9-47AA-8826-5BD4CE2F950A}" ShortID="145517584">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5400BE91-7FA6-411E-819E-9656DD5B8CE1}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4B7D7951-5658-4120-9EAD-A0CF4CEF5CAD}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="shield_depleted" ID="{0E46FD1E-03FB-4DBB-BCAB-3BD8A8762354}">
+									<Language>SFX</Language>
+									<AudioFile>HaloInterface\shield_depleted.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="197352059"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="shield_depleted" ID="{0E46FD1E-03FB-4DBB-BCAB-3BD8A8762354}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="shield_hit" ID="{003512D3-94B3-4E84-BE0F-8C10F5CD1E3C}" ShortID="1011757977">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5400BE91-7FA6-411E-819E-9656DD5B8CE1}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4B7D7951-5658-4120-9EAD-A0CF4CEF5CAD}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="shield_hit" ID="{828695D0-D513-44D7-AFCA-E69F4F1031CC}">
+									<Language>SFX</Language>
+									<AudioFile>HaloInterface\shield_hit.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="113326077"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="shield_hit" ID="{828695D0-D513-44D7-AFCA-E69F4F1031CC}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="shield_low" ID="{47C8CC74-5255-4424-B04B-71F193FFE516}" ShortID="796454522">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5400BE91-7FA6-411E-819E-9656DD5B8CE1}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4B7D7951-5658-4120-9EAD-A0CF4CEF5CAD}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="shield_low" ID="{D0E3FABC-F068-4A47-81A0-A7F11765AB54}">
+									<Language>SFX</Language>
+									<AudioFile>HaloInterface\shield_low.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="1009112918"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="shield_low" ID="{D0E3FABC-F068-4A47-81A0-A7F11765AB54}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="target_point_collect" ID="{5B2B9B2A-4946-4A15-89EB-ED3680A65773}" ShortID="879588232">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5400BE91-7FA6-411E-819E-9656DD5B8CE1}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4B7D7951-5658-4120-9EAD-A0CF4CEF5CAD}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="target_point_collect" ID="{DF4E43E2-938B-4166-9E90-ABEE1E78E873}">
+									<Language>SFX</Language>
+									<AudioFile>HaloInterface\target_point_collect.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="655240674"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="target_point_collect" ID="{DF4E43E2-938B-4166-9E90-ABEE1E78E873}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="teleporter_loop" ID="{00CFE444-1104-48FE-B8CF-D06279AAC83A}" ShortID="1033595321">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5400BE91-7FA6-411E-819E-9656DD5B8CE1}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4B7D7951-5658-4120-9EAD-A0CF4CEF5CAD}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="teleporter_loop" ID="{A40898F1-1BD0-4531-8316-84554B38C361}">
+									<Language>SFX</Language>
+									<AudioFile>HaloInterface\teleporter_loop.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="818792494"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="teleporter_loop" ID="{A40898F1-1BD0-4531-8316-84554B38C361}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="timer_end" ID="{8A0A8541-2FB4-4933-B13D-88D6FBBE8B84}" ShortID="773634635">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5400BE91-7FA6-411E-819E-9656DD5B8CE1}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4B7D7951-5658-4120-9EAD-A0CF4CEF5CAD}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="timer_end" ID="{34872499-A0DB-4280-866F-D8238F044E13}">
+									<Language>SFX</Language>
+									<AudioFile>HaloInterface\timer_end.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="315997539"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="timer_end" ID="{34872499-A0DB-4280-866F-D8238F044E13}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="transport_activate" ID="{7CA7C8D6-8122-4AFD-9E7A-ACA84A7F35E8}" ShortID="51137493">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5400BE91-7FA6-411E-819E-9656DD5B8CE1}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4B7D7951-5658-4120-9EAD-A0CF4CEF5CAD}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="transport_activate" ID="{51F25651-FCC3-466B-B63E-523D6A4560C2}">
+									<Language>SFX</Language>
+									<AudioFile>HaloInterface\transport_activate.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="1047348045"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="transport_activate" ID="{51F25651-FCC3-466B-B63E-523D6A4560C2}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+				</Folder>
+			</ChildrenList>
+		</WorkUnit>
+	</AudioObjects>
+</WwiseDocument>

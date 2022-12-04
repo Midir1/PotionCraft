@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="16" SoundBankVersion="145">
+	<RootPaths>
+		<ProjectRoot>../..</ProjectRoot>
+		<SourceFilesRoot>../../.cache/Windows</SourceFilesRoot>
+		<SoundBanksRoot>.</SoundBanksRoot>
+		<ExternalSourcesInputFile></ExternalSourcesInputFile>
+		<ExternalSourcesOutputRoot>.</ExternalSourcesOutputRoot>
+	</RootPaths>
+	<DialogueEvents/>
+	<SoundBanks>
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{986487A9-2683-E47A-8688-3D0FE6FDB954}">
+			<ShortName>Init</ShortName>
+			<Path>Init.bnk</Path>
+			<Plugins>
+				<AudioDevices>
+					<Plugin Id="2317455096" Name="No_Output" LibName="No Output" LibId="11862023"/>
+					<Plugin Id="3859886410" Name="System" LibName="System" LibId="11403271"/>
+				</AudioDevices>
+			</Plugins>
+			<Busses>
+				<Bus Id="3803692087" Name="Master Audio Bus"/>
+			</Busses>
+		</SoundBank>
+		<SoundBank Id="2880737896" Type="User" Language="SFX" Hash="{41AB63DD-3DDD-D79E-042F-91089B00E05C}">
+			<ShortName>MainBank</ShortName>
+			<Path>MainBank.bnk</Path>
+			<Media>
+				<File Id="62315142" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>HaloInterface\flag_failure_flag_fail.wav</ShortName>
+					<CachePath>SFX/HaloInterface/flag_failure_flag_fail_10C4C929.wem</CachePath>
+				</File>
+				<File Id="113326077" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>HaloInterface\shield_hit.wav</ShortName>
+					<CachePath>SFX/HaloInterface/shield_hit_10C4C929.wem</CachePath>
+				</File>
+				<File Id="197352059" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>HaloInterface\shield_depleted.wav</ShortName>
+					<CachePath>SFX/HaloInterface/shield_depleted_10C4C929.wem</CachePath>
+				</File>
+				<File Id="310494117" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>HaloInterface\hill_move.wav</ShortName>
+					<CachePath>SFX/HaloInterface/hill_move_10C4C929.wem</CachePath>
+				</File>
+				<File Id="315997539" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>HaloInterface\timer_end.wav</ShortName>
+					<CachePath>SFX/HaloInterface/timer_end_10C4C929.wem</CachePath>
+				</File>
+				<File Id="343691610" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>HaloInterface\invis_powerup.wav</ShortName>
+					<CachePath>SFX/HaloInterface/invis_powerup_10C4C929.wem</CachePath>
+				</File>
+				<File Id="353222274" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>HaloInterface\player_respawn.wav</ShortName>
+					<CachePath>SFX/HaloInterface/player_respawn_10C4C929.wem</CachePath>
+				</File>
+				<File Id="373454988" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>HaloInterface\health_low.wav</ShortName>
+					<CachePath>SFX/HaloInterface/health_low_10C4C929.wem</CachePath>
+				</File>
+				<File Id="407829509" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>HaloInterface\respawn_timer.wav</ShortName>
+					<CachePath>SFX/HaloInterface/respawn_timer_10C4C929.wem</CachePath>
+				</File>
+				<File Id="414351614" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>HaloInterface\cursor.wav</ShortName>
+					<CachePath>SFX/HaloInterface/cursor_10C4C929.wem</CachePath>
+				</File>
+				<File Id="481535688" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>HaloInterface\dbl_time_pickup.wav</ShortName>
+					<CachePath>SFX/HaloInterface/dbl_time_pickup_10C4C929.wem</CachePath>
+				</File>
+				<File Id="521589481" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>HaloInterface\health_pickup.wav</ShortName>
+					<CachePath>SFX/HaloInterface/health_pickup_10C4C929.wem</CachePath>
+				</File>
+				<File Id="532916448" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>HaloInterface\shield_charge.wav</ShortName>
+					<CachePath>SFX/HaloInterface/shield_charge_10C4C929.wem</CachePath>
+				</File>
+				<File Id="614813247" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>HaloInterface\forward.wav</ShortName>
+					<CachePath>SFX/HaloInterface/forward_10C4C929.wem</CachePath>
+				</File>
+				<File Id="655240674" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>HaloInterface\target_point_collect.wav</ShortName>
+					<CachePath>SFX/HaloInterface/target_point_collect_10C4C929.wem</CachePath>
+				</File>
+				<File Id="657556517" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>HaloInterface\dbl_shield_lowfreq2.wav</ShortName>
+					<CachePath>SFX/HaloInterface/dbl_shield_lowfreq2_10C4C929.wem</CachePath>
+				</File>
+				<File Id="818792494" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>HaloInterface\teleporter_loop.wav</ShortName>
+					<CachePath>SFX/HaloInterface/teleporter_loop_10C4C929.wem</CachePath>
+				</File>
+				<File Id="974932754" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>HaloInterface\back.wav</ShortName>
+					<CachePath>SFX/HaloInterface/back_10C4C929.wem</CachePath>
+				</File>
+				<File Id="1009112918" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>HaloInterface\shield_low.wav</ShortName>
+					<CachePath>SFX/HaloInterface/shield_low_10C4C929.wem</CachePath>
+				</File>
+				<File Id="1047348045" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>HaloInterface\transport_activate.wav</ShortName>
+					<CachePath>SFX/HaloInterface/transport_activate_10C4C929.wem</CachePath>
+				</File>
+			</Media>
+			<Events>
+				<Event Id="3753912512" Name="RuneCompleted" DurationType="OneShot" DurationMin="1.3641723" DurationMax="1.3641723">
+					<MediaRefs>
+						<MediaRef Id="1047348045"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1903788806" Name="RuneFailed" DurationType="OneShot" DurationMin="1.285805" DurationMax="1.285805">
+					<MediaRefs>
+						<MediaRef Id="657556517"/>
+					</MediaRefs>
+				</Event>
+			</Events>
+			<Busses>
+				<Bus Id="3803692087" Name="Master Audio Bus"/>
+			</Busses>
+		</SoundBank>
+	</SoundBanks>
+	<FileHash>{9949934A-91D1-0A27-A66A-280CBE761DCF}</FileHash>
+</SoundBanksInfo>

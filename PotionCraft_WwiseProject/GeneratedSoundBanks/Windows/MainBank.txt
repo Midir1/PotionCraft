@@ -1,0 +1,29 @@
+Event	ID	Name			Wwise Object Path	Notes
+	1903788806	RuneFailed			\Default Work Unit\RuneFailed	
+	3753912512	RuneCompleted			\Default Work Unit\RuneCompleted	
+
+Audio Bus	ID	Name			Wwise Object Path	Notes
+	3803692087	Master Audio Bus			\Default Work Unit\Master Audio Bus	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	62315142	flag_failure_flag_fail	E:\yazami\Work\Local\02\PotionCraft\PotionCraft_WwiseProject\.cache\Windows\SFX\HaloInterface\flag_failure_flag_fail_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\HaloInterface\flag_failure_flag_fail		21984
+	113326077	shield_hit	E:\yazami\Work\Local\02\PotionCraft\PotionCraft_WwiseProject\.cache\Windows\SFX\HaloInterface\shield_hit_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\HaloInterface\shield_hit		45280
+	197352059	shield_depleted	E:\yazami\Work\Local\02\PotionCraft\PotionCraft_WwiseProject\.cache\Windows\SFX\HaloInterface\shield_depleted_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\HaloInterface\shield_depleted		101344
+	310494117	hill_move	E:\yazami\Work\Local\02\PotionCraft\PotionCraft_WwiseProject\.cache\Windows\SFX\HaloInterface\hill_move_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\HaloInterface\hill_move		132448
+	315997539	timer_end	E:\yazami\Work\Local\02\PotionCraft\PotionCraft_WwiseProject\.cache\Windows\SFX\HaloInterface\timer_end_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\HaloInterface\timer_end		5600
+	343691610	invis_powerup	E:\yazami\Work\Local\02\PotionCraft\PotionCraft_WwiseProject\.cache\Windows\SFX\HaloInterface\invis_powerup_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\HaloInterface\invis_powerup		29920
+	353222274	player_respawn	E:\yazami\Work\Local\02\PotionCraft\PotionCraft_WwiseProject\.cache\Windows\SFX\HaloInterface\player_respawn_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\HaloInterface\player_respawn		10208
+	373454988	health_low	E:\yazami\Work\Local\02\PotionCraft\PotionCraft_WwiseProject\.cache\Windows\SFX\HaloInterface\health_low_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\HaloInterface\health_low		75872
+	407829509	respawn_timer	E:\yazami\Work\Local\02\PotionCraft\PotionCraft_WwiseProject\.cache\Windows\SFX\HaloInterface\respawn_timer_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\HaloInterface\respawn_timer		3808
+	414351614	cursor	E:\yazami\Work\Local\02\PotionCraft\PotionCraft_WwiseProject\.cache\Windows\SFX\HaloInterface\cursor_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\HaloInterface\cursor		10080
+	481535688	dbl_time_pickup	E:\yazami\Work\Local\02\PotionCraft\PotionCraft_WwiseProject\.cache\Windows\SFX\HaloInterface\dbl_time_pickup_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\HaloInterface\dbl_time_pickup		22240
+	521589481	health_pickup	E:\yazami\Work\Local\02\PotionCraft\PotionCraft_WwiseProject\.cache\Windows\SFX\HaloInterface\health_pickup_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\HaloInterface\health_pickup		58464
+	532916448	shield_charge	E:\yazami\Work\Local\02\PotionCraft\PotionCraft_WwiseProject\.cache\Windows\SFX\HaloInterface\shield_charge_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\HaloInterface\shield_charge		177120
+	614813247	forward	E:\yazami\Work\Local\02\PotionCraft\PotionCraft_WwiseProject\.cache\Windows\SFX\HaloInterface\forward_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\HaloInterface\forward		10336
+	655240674	target_point_collect	E:\yazami\Work\Local\02\PotionCraft\PotionCraft_WwiseProject\.cache\Windows\SFX\HaloInterface\target_point_collect_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\HaloInterface\target_point_collect		27488
+	657556517	dbl_shield_lowfreq2	E:\yazami\Work\Local\02\PotionCraft\PotionCraft_WwiseProject\.cache\Windows\SFX\HaloInterface\dbl_shield_lowfreq2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\HaloInterface\dbl_shield_lowfreq2		113504
+	818792494	teleporter_loop	E:\yazami\Work\Local\02\PotionCraft\PotionCraft_WwiseProject\.cache\Windows\SFX\HaloInterface\teleporter_loop_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\HaloInterface\teleporter_loop		151904
+	974932754	back	E:\yazami\Work\Local\02\PotionCraft\PotionCraft_WwiseProject\.cache\Windows\SFX\HaloInterface\back_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\HaloInterface\back		14432
+	1009112918	shield_low	E:\yazami\Work\Local\02\PotionCraft\PotionCraft_WwiseProject\.cache\Windows\SFX\HaloInterface\shield_low_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\HaloInterface\shield_low		159712
+	1047348045	transport_activate	E:\yazami\Work\Local\02\PotionCraft\PotionCraft_WwiseProject\.cache\Windows\SFX\HaloInterface\transport_activate_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\HaloInterface\transport_activate		120416
+
