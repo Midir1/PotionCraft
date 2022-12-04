@@ -1,3 +1,4 @@
+using JetBrains.Annotations;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -10,12 +11,11 @@ public class MenusHandler : MonoBehaviour
     [SerializeField] private GameObject optionsMenu;
     [SerializeField] private GameObject creditsMenu;
 
-    private const string LoadGame = "LoadGameScene", LoadGame1 = "LoadGameScene1", GameOptions = "LoadOptions", QuitGame = "Quit", GameCredits = "LoadCredits";
+    private const string LoadGame = "LoadGameScene", GameOptions = "LoadOptions", QuitGame = "Quit", GameCredits = "LoadCredits";
     private const string ReturnOptionsToMenu = "OptionsToMain", ReturnCreditsToMenu = "CreditsToMain";
 
     #region Buttons
     public void PlayButton() => Invoke(LoadGame, animationDuration);
-    public void Play1Button() => Invoke(LoadGame1, animationDuration);
 
     public void OptionsButton() => Invoke(GameOptions, animationDuration);
 
@@ -29,40 +29,41 @@ public class MenusHandler : MonoBehaviour
     #endregion
 
     #region Loading
+    [UsedImplicitly]
     private void LoadGameScene()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
-
-    private void LoadGameScene1()
-    {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 2);
-    }
-
+    
+    [UsedImplicitly]
     private void LoadOptions()
     {
         mainMenu.SetActive(false);
         optionsMenu.SetActive(true);
     }
 
+    [UsedImplicitly]
     private void Quit()
     {
         Application.Quit();
         Debug.Log("Quit Button");
     }
 
+    [UsedImplicitly]
     private void LoadCredits()
     {
         mainMenu.SetActive(false); 
         creditsMenu.SetActive(true);
     }
 
+    [UsedImplicitly]
     private void OptionsToMain()
     {
         optionsMenu.SetActive(false);
         mainMenu.SetActive(true);
     }
 
+    [UsedImplicitly]
     private void CreditsToMain()
     {
         creditsMenu.SetActive(false);
