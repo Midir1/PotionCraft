@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 5949679261849485865}
   - component: {fileID: 5949679261849485846}
   - component: {fileID: 5949679261849485864}
+  - component: {fileID: 3368428460956172331}
   m_Layer: 5
   m_Name: LuckyLeaf
   m_TagString: Ingredient
@@ -28,7 +29,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5949679261849485842}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -137,6 +138,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   item: {fileID: 11400000, guid: 782531ee8dd19654abba4b5575e8674c, type: 2}
+  vfx: {fileID: 1532753793918100367, guid: 65d5ad2ec184bb044ad939ac22f391d2, type: 3}
 --- !u!61 &5949679261849485864
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -163,3 +165,23 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 100, y: 107.41867}
   m_EdgeRadius: 0
+--- !u!95 &3368428460956172331
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5949679261849485842}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 5fca47ee0556df24a8b3f9c4093485fe, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

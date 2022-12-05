@@ -219,7 +219,7 @@ public class CustomerClass
 
         
         parent = new GameObject("Customer", typeof(RectTransform));
-        parent.GetComponent<RectTransform>().anchoredPosition = new Vector2(0, 1.8f);
+        parent.GetComponent<RectTransform>().anchoredPosition = new Vector3(0, 1.8f);
         parent.GetComponent<RectTransform>().SetParent(customerParent);
         //anim = parent.AddComponent<Animator>();
         //anim.runtimeAnimatorController = Resources.Load("AnimationController/Customer") as RuntimeAnimatorController; ;
@@ -228,7 +228,6 @@ public class CustomerClass
         float ratioH = (1920 / (float)Screen.height)* 1.5f;
         parent.transform.localScale *= ratioH; 
         parent.transform.SetSiblingIndex(0);
-
         for (int i = 0; i < nbPart; i++)
         {
 
@@ -304,7 +303,7 @@ public class CustomerClass
 
             parchemin[i].transform.position = new Vector2(0 - nbPotion * 0.8f , 3.2f-i);
             potionGo[i].transform.position = new Vector2(0 - nbPotion * 0.8f, 3.2f-i);
-        }   
+        }
     }
 
     private string PathToPotion(int i)
