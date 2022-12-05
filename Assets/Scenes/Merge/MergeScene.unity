@@ -5747,8 +5747,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2169014484708949148}
-  - component: {fileID: 2169014484708949859}
   - component: {fileID: 2169014484708949858}
+  - component: {fileID: 2169014484708949859}
   - component: {fileID: 2169014484708949860}
   m_Layer: 0
   m_Name: RuneInput
