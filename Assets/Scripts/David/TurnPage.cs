@@ -21,7 +21,12 @@ public class TurnPage : MonoBehaviour
     {
         if (canvas.enabled)
         {
-            if (!toLeft && !toRight && Input.touchCount > 0)
+            for (int i = 0; i < pages.Count; i++) // check each potion if unlocked in GameManager
+            {
+                pages[i].GetComponent<Potion>().locked = !GameManager.Instance.Bp[i];
+            }
+
+            if (!toLeft && !toRight && Input.touchCount > 0) // before action
             {
                 if (Input.GetTouch(0).phase == TouchPhase.Began)
                 {
@@ -43,7 +48,7 @@ public class TurnPage : MonoBehaviour
                 }
             }
 
-            if (toLeft)
+            if (toLeft) // if action mean turn page to the left
             {
                 if (gameObjectID == pages.Count - 1)
                 {
@@ -59,7 +64,7 @@ public class TurnPage : MonoBehaviour
                     }
                 }
             }
-            if (toRight)
+            if (toRight) // if action mean turn page to the right
             {
                 if (gameObjectID == 0)
                 {
