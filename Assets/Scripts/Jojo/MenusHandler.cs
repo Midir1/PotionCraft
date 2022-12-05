@@ -1,21 +1,41 @@
+using System.Collections.Generic;
 using JetBrains.Annotations;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class MenusHandler : MonoBehaviour
 {
-    [SerializeField] private float animationDuration;
+    
 
     [Header("Menus")]
     [SerializeField] private GameObject mainMenu;
     [SerializeField] private GameObject optionsMenu;
     [SerializeField] private GameObject creditsMenu;
 
+    [Header("PlayAnim")] 
+    [SerializeField] private List<Button> buttons;
+    [SerializeField] private float animationDuration;
+    [SerializeField] private Animator anim;
+    [SerializeField] private GameObject titlePanel;
+
     private const string LoadGame = "LoadGameScene", GameOptions = "LoadOptions", QuitGame = "Quit", GameCredits = "LoadCredits";
     private const string ReturnOptionsToMenu = "OptionsToMain", ReturnCreditsToMenu = "CreditsToMain";
 
     #region Buttons
-    public void PlayButton() => Invoke(LoadGame, animationDuration);
+    public void PlayButton()
+    {
+        Invoke(LoadGame, animationDuration);
+
+        for (int i = 0; i < buttons.Count; i++)
+        {
+            buttons[i].gameObject.SetActive(false);
+        }
+        
+        titlePanel.SetActive(false);
+        
+        anim.Play("DoorPlay");
+    }
 
     public void OptionsButton() => Invoke(GameOptions, animationDuration);
 
