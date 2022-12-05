@@ -29,11 +29,17 @@ public class ItemShopScript : MonoBehaviour
             {
                 GameManager.Instance.RemoveMoney(price);
                 availablePurchase = false;
+                foreach (Transform child in transform)
+                {
+                    if (child.name == "ButtonBuy")
+                        child.gameObject.SetActive(false);
+                }
                 return true;
             }
         }
         return false;
     }
 
+    
 
 }
