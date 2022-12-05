@@ -8321,6 +8321,7 @@ MonoBehaviour:
   maxIngredients: 3
   ingredients: []
   isBrewing: 0
+  isBurning: 0
   recipes:
   - {fileID: 11400000, guid: ecfca48ad80cc504ea43d012b28038b6, type: 2}
   - {fileID: 11400000, guid: 5a9b819b018db91458bfa038a644acd5, type: 2}
@@ -8352,7 +8353,9 @@ MonoBehaviour:
   potionParent: {fileID: 1366774180}
   drawPanel: {fileID: 1863211342}
   inputManager: {fileID: 2169014484708949150}
-  UpgradeBrewingSpeedInSeconds: 5
+  upgradeBrewingSpeed: 5
+  upgradeBurningSpeed: 5
+  timeToBurn: 20
 --- !u!50 &5042596509059252249
 Rigidbody2D:
   serializedVersion: 4
@@ -8715,6 +8718,7 @@ MonoBehaviour:
   maxIngredients: 3
   ingredients: []
   isBrewing: 0
+  isBurning: 0
   recipes:
   - {fileID: 11400000, guid: ecfca48ad80cc504ea43d012b28038b6, type: 2}
   - {fileID: 11400000, guid: 5a9b819b018db91458bfa038a644acd5, type: 2}
@@ -8746,7 +8750,9 @@ MonoBehaviour:
   potionParent: {fileID: 1366774180}
   drawPanel: {fileID: 1863211342}
   inputManager: {fileID: 2169014484708949150}
-  UpgradeBrewingSpeedInSeconds: 5
+  upgradeBrewingSpeed: 5
+  upgradeBurningSpeed: 5
+  timeToBurn: 20
 --- !u!50 &5767409982852965793
 Rigidbody2D:
   serializedVersion: 4
@@ -31095,6 +31101,7 @@ MonoBehaviour:
   maxIngredients: 3
   ingredients: []
   isBrewing: 0
+  isBurning: 0
   recipes:
   - {fileID: 11400000, guid: ecfca48ad80cc504ea43d012b28038b6, type: 2}
   - {fileID: 11400000, guid: 5a9b819b018db91458bfa038a644acd5, type: 2}
@@ -31126,7 +31133,9 @@ MonoBehaviour:
   potionParent: {fileID: 1366774180}
   drawPanel: {fileID: 1863211342}
   inputManager: {fileID: 2169014484708949150}
-  UpgradeBrewingSpeedInSeconds: 5
+  upgradeBrewingSpeed: 5
+  upgradeBurningSpeed: 5
+  timeToBurn: 20
 --- !u!50 &8449247379981402216
 Rigidbody2D:
   serializedVersion: 4

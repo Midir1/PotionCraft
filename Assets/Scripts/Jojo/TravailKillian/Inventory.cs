@@ -10,16 +10,20 @@ public class Inventory : MonoBehaviour
     public List<Item> ingredients;
     
     public bool isBrewing;
+    public bool isBurning;
     
     [SerializeField] private List<Recipe> recipes;
     [SerializeField] private List<GameObject> potions;
     [SerializeField] private Transform potionParent;
     [SerializeField] private GameObject drawPanel;
     [SerializeField] private GameObject inputManager;
-    [SerializeField] private float UpgradeBrewingSpeedInSeconds;
+    [SerializeField] private float upgradeBrewingSpeed;
+    [SerializeField] private float upgradeBurningSpeed;
+    [SerializeField] private int timeToBurn;
 
     private int potionIndex = -1;
-    private float timer;
+    private float timerBrewing;
+    private float timerBurning;
     private int cauldronIndex = -1;
 
     private GameManager manager;
@@ -44,11 +48,21 @@ public class Inventory : MonoBehaviour
 
     private void Update()
     {
-        if (potionIndex == -1 || !isBrewing) return;
-        
-        timer += Time.deltaTime;
+        if (potionIndex != -1 && isBrewing)
+        {
+            timerBrewing += Time.deltaTime;
+            int isCauldronUpgraded = Convert.ToInt32(GameManager.Instance.cauldron[cauldronIndex].upgradeTime);
 
-        if (timer > (recipes[potionIndex].timeToWait - UpgradeBrewingSpeedInSeconds * Convert.ToInt32(GameManager.Instance.cauldron[cauldronIndex].upgradeTime))) CraftPotion();
+            if (timerBrewing > (recipes[potionIndex].timeToWait - upgradeBrewingSpeed * isCauldronUpgraded)) CraftPotion();
+        }
+
+        if (isBurning)
+        {
+            timerBurning += Time.deltaTime;
+            int isCauldronUpgraded = Convert.ToInt32(GameManager.Instance.cauldron[cauldronIndex].upgradeSpeed);
+            Debug.Log(timerBurning);
+            if (timerBurning > (timeToBurn - upgradeBurningSpeed * isCauldronUpgraded)) BurnPotion();
+        }
     }
 
     //Recipes and Potions Needs to be in the same order in the inspector to give the provided result
@@ -102,13 +116,22 @@ public class Inventory : MonoBehaviour
     private void CraftPotion()
     {
         isBrewing = false;
-        timer = 0f;
+        isBurning = true;
+        timerBrewing = 0f;
 
         ingredients.Clear();
         potions[potionIndex].GetComponent<BoxCollider2D>().size = new Vector2(100, 100);
         Instantiate(potions[potionIndex], potionParent);
 
         potionIndex = -1;
+    }
+
+    private void BurnPotion()
+    {
+        Transform burnedPotion = transform.GetChild(0);
+        
+        isBurning = false;
+        Destroy(burnedPotion.gameObject);
     }
 
     private void SetRecipeActive(string _potionName)
