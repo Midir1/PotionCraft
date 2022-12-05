@@ -1,31 +1,50 @@
+using System.Collections.Generic;
 using JetBrains.Annotations;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class MenusHandler : MonoBehaviour
 {
-    [SerializeField] private float animationDuration;
+    
 
     [Header("Menus")]
     [SerializeField] private GameObject mainMenu;
     [SerializeField] private GameObject optionsMenu;
     [SerializeField] private GameObject creditsMenu;
 
-    private const string LoadGame = "LoadGameScene", GameOptions = "LoadOptions", QuitGame = "Quit", GameCredits = "LoadCredits";
+    [Header("PlayAnim")] 
+    [SerializeField] private List<Button> buttons;
+    [SerializeField] private float playAnimationDuration;
+    [SerializeField] private float buttonAnimationDuration;
+    [SerializeField] private Animator anim;
+    [SerializeField] private GameObject titlePanel;
+
+    private const string LoadGame = "LoadGameScene", GameOptions = "LoadOptions", GameCredits = "LoadCredits";
     private const string ReturnOptionsToMenu = "OptionsToMain", ReturnCreditsToMenu = "CreditsToMain";
 
     #region Buttons
-    public void PlayButton() => Invoke(LoadGame, animationDuration);
+    public void PlayButton()
+    {
+        Invoke(LoadGame, playAnimationDuration);
 
-    public void OptionsButton() => Invoke(GameOptions, animationDuration);
+        for (int i = 0; i < buttons.Count; i++)
+        {
+            buttons[i].gameObject.SetActive(false);
+        }
+        
+        titlePanel.SetActive(false);
+        
+        anim.Play("DoorPlay");
+    }
 
-    public void QuitButton() => Invoke(QuitGame, animationDuration);
+    public void OptionsButton() => Invoke(GameOptions, buttonAnimationDuration);
 
-    public void CreditsButton() => Invoke(GameCredits, animationDuration);
+    public void CreditsButton() => Invoke(GameCredits, buttonAnimationDuration);
 
-    public void ReturnButton_OptionsMain() => Invoke(ReturnOptionsToMenu, animationDuration);
+    public void ReturnButton_OptionsMain() => Invoke(ReturnOptionsToMenu, buttonAnimationDuration);
 
-    public void ReturnButton_CreditsMain() => Invoke(ReturnCreditsToMenu, animationDuration);
+    public void ReturnButton_CreditsMain() => Invoke(ReturnCreditsToMenu, buttonAnimationDuration);
     #endregion
 
     #region Loading
@@ -40,13 +59,6 @@ public class MenusHandler : MonoBehaviour
     {
         mainMenu.SetActive(false);
         optionsMenu.SetActive(true);
-    }
-
-    [UsedImplicitly]
-    private void Quit()
-    {
-        Application.Quit();
-        Debug.Log("Quit Button");
     }
 
     [UsedImplicitly]

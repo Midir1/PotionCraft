@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Text;
+using Unity.Mathematics;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -14,6 +16,8 @@ public class createNewPatern : MonoBehaviour
     Vector2 pos;
     Vector2 posLastPoint;
 
+    [SerializeField] RuneList.Patern patern;
+
     [SerializeField] float distBTWpoint;
     float actualDistBTWpoint;
 
@@ -21,6 +25,8 @@ public class createNewPatern : MonoBehaviour
 
     [SerializeField] Canvas canva;
     [SerializeField] Object point;
+
+    Transform origin;
 
     List<Vector2> path = new List<Vector2>();
     List<Object> arrPoint = new List<Object>();
@@ -33,6 +39,9 @@ public class createNewPatern : MonoBehaviour
     void Start()
     {
         patern1 = new List<Vector2>(arrTemp);
+        
+        origin = canva.transform.Find("RuneShape");
+        canva.GetComponentInChildren<RunePathImage>().SetPatern(patern);
     }
 
     void Update()
@@ -59,7 +68,8 @@ public class createNewPatern : MonoBehaviour
                 
                 if (distance > actualDistBTWpoint)
                 {
-                    Object circleCopy = Instantiate(point, new Vector2(transform.position.x + pos.x , transform.position.y + pos.y), Quaternion.identity, canva.transform);
+
+                    Object circleCopy = Instantiate(point, new Vector2(transform.position.x + pos.x , transform.position.y + pos.y), Quaternion.identity, origin);
                     arrPoint.Add(circleCopy);
                     path.Add(pos);
                     posLastPoint = pos;

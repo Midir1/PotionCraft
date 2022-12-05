@@ -6,7 +6,7 @@ public class BuyButtonScript : MonoBehaviour
 {
     ItemShopScript currentItemShop;
 
-    [SerializeField] private List<Recipe> recipes;
+    [SerializeField] private Recipe recipe;
 
     void OnMouseDown()
     {
@@ -97,15 +97,6 @@ public class BuyButtonScript : MonoBehaviour
 
     private void SetRecipeActive(string _potionName)
     {
-        for (int i = 0; i < recipes.Count; i++)
-        {
-            var recipe = recipes[i];
-
-            if (recipe.name == _potionName)
-            {
-                recipe.isActive = true;
-                return;
-            }
-        }
+        recipe.isActive = true;
     }
 }

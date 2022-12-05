@@ -16,7 +16,9 @@ public class InputPaternRecognition : MonoBehaviour
 
     [SerializeField] RuneList runeList;
     [SerializeField] Patern patern = Patern.NotInitialized;
-    [SerializeField] private Transform parentTransform;
+    [SerializeField] Canvas canva;
+
+    Transform parentTransform;
 
     Object line;
     RuneDrawLine runeDrawLine;
@@ -41,7 +43,8 @@ public class InputPaternRecognition : MonoBehaviour
 
     void Start()
     {
-        rune = runeList.GetRune(patern);
+        parentTransform = canva.transform.Find("RuneShape") ;
+        SetPatern(patern);
         InitRuneDisplay();
     }
 
@@ -200,6 +203,7 @@ public class InputPaternRecognition : MonoBehaviour
     {
         patern = _patern;
         InitRuneDisplay();
+        canva.GetComponentInChildren<RunePathImage>().SetPatern(_patern);
     }
 
     void Success()

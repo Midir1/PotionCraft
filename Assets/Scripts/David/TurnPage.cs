@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class TurnPage : MonoBehaviour
 {
+    [SerializeField] Canvas canvas;
     public GameObject page;
     public List<GameObject> pages;
     public float moveSpeed = 100.0f;
@@ -18,67 +19,65 @@ public class TurnPage : MonoBehaviour
 
     void Update()
     {
-        if (!toLeft && !toRight && Input.touchCount > 0)
+        if (canvas.enabled)
         {
-            if (Input.GetTouch(0).phase == TouchPhase.Began)
+            for (int i = 0; i < pages.Count; i++) // check each potion if unlocked in GameManager
             {
-                startTouchPosition = Input.GetTouch(0).position;
+                pages[i].GetComponent<Potion>().locked = !GameManager.Instance.Bp[i];
             }
 
-            if (Input.GetTouch(0).phase == TouchPhase.Ended)
+            if (!toLeft && !toRight && Input.touchCount > 0) // before action
             {
-                endTouchPosition = Input.GetTouch(0).position;
-
-                if (endTouchPosition.x < startTouchPosition.x)
+                if (Input.GetTouch(0).phase == TouchPhase.Began)
                 {
-                    toLeft = true;
+                    startTouchPosition = Input.GetTouch(0).position;
                 }
-                if (endTouchPosition.x > startTouchPosition.x)
+
+                if (Input.GetTouch(0).phase == TouchPhase.Ended)
                 {
-                    toRight = true;
+                    endTouchPosition = Input.GetTouch(0).position;
+
+                    if (endTouchPosition.x < startTouchPosition.x)
+                    {
+                        toLeft = true;
+                    }
+                    if (endTouchPosition.x > startTouchPosition.x)
+                    {
+                        toRight = true;
+                    }
                 }
             }
-        }
 
-        if (toLeft)
-        {
-            if (gameObjectID == pages.Count - 1)
+            if (toLeft) // if action mean turn page to the left
             {
-                toLeft = false;
-            }
-            else
-            {
-                pages[gameObjectID].transform.Rotate(0.0f, -moveSpeed * Time.deltaTime, 0.0f);
-                //alpha -= Time.deltaTime * 100;
-                //pages[gameObjectID].GetComponent<CanvasRenderer>().SetAlpha(alpha);
-                //pages[gameObjectID].GetComponentInChildren<CanvasRenderer>().SetAlpha(alpha);
-                //if (pages[gameObjectID].GetComponent<CanvasRenderer>().GetAlpha() < 1f)
-                if (pages[gameObjectID].transform.rotation.y < -0.71f)
+                if (gameObjectID == pages.Count - 1)
                 {
-                    //pages[gameObjectID].GetComponent<CanvasRenderer>().SetAlpha(0);
                     toLeft = false;
-                    gameObjectID++;
+                }
+                else
+                {
+                    pages[gameObjectID].transform.Rotate(0.0f, -moveSpeed * Time.deltaTime, 0.0f);
+                    if (pages[gameObjectID].transform.rotation.y < -0.8f)
+                    {
+                        toLeft = false;
+                        gameObjectID++;
+                    }
                 }
             }
-        }
-        if (toRight)
-        {
-            if (gameObjectID == 0)
+            if (toRight) // if action mean turn page to the right
             {
-                toRight = false;
-            }
-            else
-            {
-                pages[gameObjectID - 1].transform.Rotate(0.0f, moveSpeed * Time.deltaTime, 0.0f);
-                //alpha += Time.deltaTime * 100;
-                //pages[gameObjectID-1].GetComponent<CanvasRenderer>().SetAlpha(alpha);
-                //if (pages[gameObjectID-1].GetComponent<CanvasRenderer>().GetAlpha() > 254f)
-                if (pages[gameObjectID - 1].transform.rotation.y > 0.0f)
+                if (gameObjectID == 0)
                 {
-                    pages[gameObjectID - 1].transform.rotation = new Quaternion();
-                    //pages[gameObjectID - 1].GetComponent<CanvasRenderer>().SetAlpha(255.0f);
                     toRight = false;
-                    gameObjectID--;
+                }
+                else
+                {
+                    pages[gameObjectID - 1].transform.Rotate(0.0f, moveSpeed * Time.deltaTime, 0.0f);
+                    if (pages[gameObjectID - 1].transform.rotation.y > 0.0f)
+                    {
+                        toRight = false;
+                        gameObjectID--;
+                    }
                 }
             }
         }
