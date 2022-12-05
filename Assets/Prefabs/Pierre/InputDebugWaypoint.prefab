@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6438192550246423889}
   - component: {fileID: 6438192550246423888}
   - component: {fileID: 6438192550246423891}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: InputDebugWaypoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}

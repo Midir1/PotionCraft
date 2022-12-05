@@ -128,10 +128,10 @@ public class Inventory : MonoBehaviour
 
     private void BurnPotion()
     {
-        Transform burnedPotion = transform.GetChild(0);
+        //Transform burnedPotion = transform.GetChild(0);
         
-        isBurning = false;
-        Destroy(burnedPotion.gameObject);
+        //isBurning = false;
+        //Destroy(burnedPotion.gameObject);
     }
 
     private void SetRecipeActive(string _potionName)
