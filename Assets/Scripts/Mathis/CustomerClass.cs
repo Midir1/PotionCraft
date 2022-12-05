@@ -301,8 +301,8 @@ public class CustomerClass
             parchemin[i].transform.SetParent(parent.transform);
             potionGo[i].transform.SetParent(parent.transform);
 
-            parchemin[i].transform.position = new Vector2(0 - nbPotion * 0.8f , 3.2f-i);
-            potionGo[i].transform.position = new Vector2(0 - nbPotion * 0.8f, 3.2f-i);
+            parchemin[i].transform.position = new Vector2(0 - nbPotion * 0.4f , 3.2f-i);
+            potionGo[i].transform.position = new Vector2(0 - nbPotion * 0.4f, 3.2f-i);
         }
     }
 

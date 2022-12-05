@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class SwipeCauldron : MonoBehaviour, IBeginDragHandler, IEndDragHandler
 {
     [SerializeField] private float lerpSpeed;
+    [SerializeField] private float posY;
     
     [SerializeField] private RectTransform cauldron1, cauldron2, cauldron3;
     
@@ -48,9 +49,9 @@ public class SwipeCauldron : MonoBehaviour, IBeginDragHandler, IEndDragHandler
 
         float cauldronHeight = 600f * Screen.height / 1080f;
         
-        cauldron1.anchoredPosition = new Vector2(0f, 300f);
-        cauldron2.anchoredPosition = new Vector2(-Screen.width, 300f);
-        cauldron3.anchoredPosition = new Vector2(Screen.width, 300f);
+        cauldron1.anchoredPosition = new Vector2(0f, posY);
+        cauldron2.anchoredPosition = new Vector2(-Screen.width, posY);
+        cauldron3.anchoredPosition = new Vector2(Screen.width, posY);
         
         cauldron1.sizeDelta = new Vector2(Screen.width, cauldronHeight);
         cauldron2.sizeDelta = new Vector2(Screen.width, cauldronHeight);

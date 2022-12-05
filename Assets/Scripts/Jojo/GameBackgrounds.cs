@@ -42,7 +42,7 @@ public class GameBackgrounds : MonoBehaviour, IBeginDragHandler, IEndDragHandler
 
     private void Start()
     {
-        rectTransform = GetComponent<RectTransform>();
+        rectTransform = GetComponent<RectTransform>();  
         canvasScaler = GetComponentInParent<CanvasScaler>();
         scrollRect = GetComponent<ScrollRect>();
 
