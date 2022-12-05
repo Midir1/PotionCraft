@@ -34,7 +34,7 @@ public class Inventory : MonoBehaviour
         }
 
         manager = GameManager.Instance;
-        Debug.Log("Inventory");
+        
         //Reset craft potion
         for (int i = 0; i < recipes.Count; i++)
         {
@@ -69,7 +69,7 @@ public class Inventory : MonoBehaviour
                 else if (ingredients[index] == recipeIngredient3) recipeIngredient3 = null;
                 else break;
 
-                //if (!(recipe.isActive)) break;
+                if (!(recipe.isActive)) break;
 
                 if (index == recipe.ingredients.Count - 1)
                 {
