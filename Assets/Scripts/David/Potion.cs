@@ -29,7 +29,6 @@ enum INGREDIENT
 struct Ingredient
 {
     public Image image;
-    public TMP_Text name;
     public TMP_Text quantity;
 }
 enum RUNE
@@ -81,16 +80,15 @@ public class Potion : MonoBehaviour
     private void Unlocked()
     {
         image.color = Color.white;
-        name.color = Color.white;
+        name.color = new Color(66f / 256f, 46f / 256f, 22f / 256f, 1);
         coin.color = Color.white;
-        price.color = Color.white;
-        description.color = Color.white;
+        price.color = new Color(66f / 256f, 46f / 256f, 22f / 256f, 1);
+        description.color = new Color(66f / 256f, 46f / 256f, 22f / 256f, 1);
         rune.color = Color.white;
         for (int i = 0; i < ingredient.Count; i++)
         {
             ingredient[i].image.color = Color.white;
-            ingredient[i].name.color = Color.white;
-            ingredient[i].quantity.color = Color.white;
+            ingredient[i].quantity.color = new Color(66f / 256f, 46f / 256f, 22f / 256f, 1);
         }
     }
     private void Locked()
@@ -104,7 +102,6 @@ public class Potion : MonoBehaviour
         for (int i = 0; i < ingredient.Count; i++)
         {
             ingredient[i].image.color = Color.clear;
-            ingredient[i].name.color = Color.clear;
             ingredient[i].quantity.color = Color.clear;
         }
     }
