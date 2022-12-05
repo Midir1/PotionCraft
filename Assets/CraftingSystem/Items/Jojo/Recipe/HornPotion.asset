@@ -19,4 +19,4 @@ MonoBehaviour:
   result: {fileID: 11400000, guid: b3a87fd2911720d48afd6ee9eeb42155, type: 2}
   isActive: 0
   timeToWait: 10
-  rune: 0
+  rune: 6
