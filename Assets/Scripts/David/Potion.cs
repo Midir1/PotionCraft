@@ -60,7 +60,7 @@ public class Potion : MonoBehaviour
     [SerializeField] TMP_Text description;
     [SerializeField] Image rune;
     [SerializeField] List<Ingredient> ingredient;
-    [SerializeField] bool locked;
+    [SerializeField]public bool locked;
     private void Start()
     {
 

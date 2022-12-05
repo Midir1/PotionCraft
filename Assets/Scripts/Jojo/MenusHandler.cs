@@ -15,17 +15,18 @@ public class MenusHandler : MonoBehaviour
 
     [Header("PlayAnim")] 
     [SerializeField] private List<Button> buttons;
-    [SerializeField] private float animationDuration;
+    [SerializeField] private float playAnimationDuration;
+    [SerializeField] private float buttonAnimationDuration;
     [SerializeField] private Animator anim;
     [SerializeField] private GameObject titlePanel;
 
-    private const string LoadGame = "LoadGameScene", GameOptions = "LoadOptions", QuitGame = "Quit", GameCredits = "LoadCredits";
+    private const string LoadGame = "LoadGameScene", GameOptions = "LoadOptions", GameCredits = "LoadCredits";
     private const string ReturnOptionsToMenu = "OptionsToMain", ReturnCreditsToMenu = "CreditsToMain";
 
     #region Buttons
     public void PlayButton()
     {
-        Invoke(LoadGame, animationDuration);
+        Invoke(LoadGame, playAnimationDuration);
 
         for (int i = 0; i < buttons.Count; i++)
         {
@@ -37,15 +38,13 @@ public class MenusHandler : MonoBehaviour
         anim.Play("DoorPlay");
     }
 
-    public void OptionsButton() => Invoke(GameOptions, animationDuration);
+    public void OptionsButton() => Invoke(GameOptions, buttonAnimationDuration);
 
-    public void QuitButton() => Invoke(QuitGame, animationDuration);
+    public void CreditsButton() => Invoke(GameCredits, buttonAnimationDuration);
 
-    public void CreditsButton() => Invoke(GameCredits, animationDuration);
+    public void ReturnButton_OptionsMain() => Invoke(ReturnOptionsToMenu, buttonAnimationDuration);
 
-    public void ReturnButton_OptionsMain() => Invoke(ReturnOptionsToMenu, animationDuration);
-
-    public void ReturnButton_CreditsMain() => Invoke(ReturnCreditsToMenu, animationDuration);
+    public void ReturnButton_CreditsMain() => Invoke(ReturnCreditsToMenu, buttonAnimationDuration);
     #endregion
 
     #region Loading
@@ -60,13 +59,6 @@ public class MenusHandler : MonoBehaviour
     {
         mainMenu.SetActive(false);
         optionsMenu.SetActive(true);
-    }
-
-    [UsedImplicitly]
-    private void Quit()
-    {
-        Application.Quit();
-        Debug.Log("Quit Button");
     }
 
     [UsedImplicitly]

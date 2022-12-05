@@ -2,24 +2,28 @@ using System;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Inventory : MonoBehaviour
 {
     public int maxIngredients;
-    
+
     public List<Item> ingredients;
-    
+
     public bool isBrewing;
     public bool isBurning;
-    
+
     [SerializeField] private List<Recipe> recipes;
     [SerializeField] private List<GameObject> potions;
     [SerializeField] private Transform potionParent;
     [SerializeField] private GameObject drawPanel;
     [SerializeField] private GameObject inputManager;
+    [SerializeField] private Slider burningSlider;
     [SerializeField] private float upgradeBrewingSpeed;
     [SerializeField] private float upgradeBurningSpeed;
     [SerializeField] private int timeToBurn;
+    [SerializeField] private Image hourglass;
+    [SerializeField] private List<Sprite> hourglassSprites;
 
     private int potionIndex = -1;
     private float timerBrewing;
@@ -32,18 +36,20 @@ public class Inventory : MonoBehaviour
     {
         switch (this.name)
         {
-            case "Red Cauldron": cauldronIndex = 0;  break;
+            case "Red Cauldron": cauldronIndex = 0; break;
             case "Blue Cauldron": cauldronIndex = 1; break;
             case "Green Cauldron": cauldronIndex = 2; break;
         }
 
         manager = GameManager.Instance;
-        
+
         //Reset craft potion
         for (int i = 0; i < recipes.Count; i++)
         {
             recipes[i].isActive = manager.Bp[i];
         }
+
+        burningSlider.value = 0;
     }
 
     private void Update()
@@ -56,11 +62,45 @@ public class Inventory : MonoBehaviour
             if (timerBrewing > (recipes[potionIndex].timeToWait - upgradeBrewingSpeed * isCauldronUpgraded)) CraftPotion();
         }
 
+        //Reset if potion is dragged
+        if (transform.childCount <= 2)
+        {
+            isBurning = false;
+            burningSlider.value = 0;
+            hourglass.sprite = hourglassSprites[0];
+            timerBurning = 0;
+        }
+
         if (isBurning)
         {
             timerBurning += Time.deltaTime;
             int isCauldronUpgraded = Convert.ToInt32(GameManager.Instance.cauldron[cauldronIndex].upgradeSpeed);
-            Debug.Log(timerBurning);
+
+            if (isCauldronUpgraded == 1)
+            {
+                burningSlider.maxValue = timeToBurn + upgradeBurningSpeed;
+                if ((int)timerBurning > 0)
+                {
+                    hourglass.sprite = hourglassSprites[timeToBurn + (int)upgradeBurningSpeed / ((int)timerBurning % 5)];
+                }
+                else
+                {
+                    hourglass.sprite = hourglassSprites[0];
+                }
+            }
+            else
+            {
+                burningSlider.value = timerBurning;
+                if ((int)timerBurning > 0 && (int)timerBurning < timeToBurn)
+                {
+                    hourglass.sprite = hourglassSprites[(int)timerBurning / (timeToBurn / 4)];
+                }
+                else
+                {
+                    hourglass.sprite = hourglassSprites[0];
+                }
+            }
+
             if (timerBurning > (timeToBurn - upgradeBurningSpeed * isCauldronUpgraded)) BurnPotion();
         }
     }
@@ -71,7 +111,7 @@ public class Inventory : MonoBehaviour
         for (var i = 0; i < recipes.Count; i++)
         {
             var recipe = recipes[i];
-            
+
             Item recipeIngredient1 = recipe.ingredients[0];
             Item recipeIngredient2 = recipe.ingredients[1];
             Item recipeIngredient3 = recipe.ingredients[2];
@@ -83,13 +123,13 @@ public class Inventory : MonoBehaviour
                 else if (ingredients[index] == recipeIngredient3) recipeIngredient3 = null;
                 else break;
 
-                if (!(recipe.isActive)) break;
+                if (!recipe.isActive) break;
 
                 if (index == recipe.ingredients.Count - 1)
                 {
                     drawPanel.SetActive(true);
                     inputManager.SetActive(true);
-                    
+
                     InputPaternRecognition inputPaternRecognition = inputManager.GetComponent<InputPaternRecognition>();
                     inputPaternRecognition.SetPatern(recipe.rune);
 
@@ -101,7 +141,7 @@ public class Inventory : MonoBehaviour
                 }
             }
         }
-        
+
         ingredients.Clear();
     }
 
@@ -109,7 +149,7 @@ public class Inventory : MonoBehaviour
     {
         drawPanel.SetActive(false);
         inputManager.SetActive(false);
-        
+
         isBrewing = true;
     }
 
@@ -117,7 +157,7 @@ public class Inventory : MonoBehaviour
     {
         isBrewing = false;
         isBurning = true;
-        timerBrewing = 0f;
+        timerBrewing = 0.0f;
 
         ingredients.Clear();
         potions[potionIndex].GetComponent<BoxCollider2D>().size = new Vector2(100, 100);
@@ -128,23 +168,11 @@ public class Inventory : MonoBehaviour
 
     private void BurnPotion()
     {
-        //Transform burnedPotion = transform.GetChild(0);
-        
-        //isBurning = false;
-        //Destroy(burnedPotion.gameObject);
-    }
-
-    private void SetRecipeActive(string _potionName)
-    {
-        for (int i = 0; i < recipes.Count; i++)
-        {
-            var recipe = recipes[i];
-
-            if (recipe.name == _potionName)
-            {
-                recipe.isActive = true;
-                return;
-            }
-        }
+        Transform burnedPotion = transform.GetChild(2);
+        isBurning = false;
+        timerBurning = 0.0f;
+        burningSlider.value = 0;
+        hourglass.sprite = hourglassSprites[4];
+         Destroy(burnedPotion.gameObject);
     }
 }
