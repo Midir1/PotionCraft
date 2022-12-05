@@ -10,6 +10,7 @@ public class GameBackgrounds : MonoBehaviour, IBeginDragHandler, IEndDragHandler
     [SerializeField] private List<RectTransform> resizable;
     [SerializeField] private Vector2 defaultResolution;
     [SerializeField] private float swipeTolerance;
+    [SerializeField] bool isActive = true;
 
     private RectTransform rectTransform;
 
@@ -53,45 +54,55 @@ public class GameBackgrounds : MonoBehaviour, IBeginDragHandler, IEndDragHandler
 
     private void Update()
     {
-        ScrollBetweenFloors();
-        //ScrollBetweenTransition();
-        ClampScroll();
+        if (isActive)
+        {
+            scrollRect.enabled = true;
+            ScrollBetweenFloors();
+            //ScrollBetweenTransition();
+            ClampScroll();
+        }
+        else
+        {
+            scrollRect.enabled = false;
+        }
     }
 
     public void OnBeginDrag(PointerEventData data)
     {
-        startPosY = rectTransform.anchoredPosition.y;
+            startPosY = rectTransform.anchoredPosition.y;
+        
     }
     
     public void OnEndDrag(PointerEventData data)
     {
-        float deltaY = rectTransform.anchoredPosition.y - startPosY;
+            float deltaY = rectTransform.anchoredPosition.y - startPosY;
+
+            switch (isDownstairs)
+            {
+                case true when rectTransform.anchoredPosition.y < swipeUpPos && deltaY < 0f:
+                    targetRectPos = new Vector2(0f, -Screen.height * 2f);
+                    IsLerping = true;
+                    isDownstairs = false;
+                    startLerpPos = rectTransform.anchoredPosition;
+                    break;
+                case false when rectTransform.anchoredPosition.y > swipeDownPos && deltaY > 0f:
+                    targetRectPos = new Vector2(0f, 0f);
+                    IsLerping = true;
+                    isDownstairs = true;
+                    startLerpPos = rectTransform.anchoredPosition;
+                    break;
+                case true:
+                    targetRectPos = new Vector2(0f, 0f);
+                    IsLerping = true;
+                    startLerpPos = rectTransform.anchoredPosition;
+                    break;
+                case false:
+                    targetRectPos = new Vector2(0f, -Screen.height * 2f);
+                    IsLerping = true;
+                    startLerpPos = rectTransform.anchoredPosition;
+                    break;
+            }
         
-        switch (isDownstairs)
-        {
-            case true when rectTransform.anchoredPosition.y < swipeUpPos && deltaY < 0f:
-                targetRectPos = new Vector2(0f, -Screen.height * 2f);
-                IsLerping = true;
-                isDownstairs = false;
-                startLerpPos = rectTransform.anchoredPosition;
-                break;
-            case false when rectTransform.anchoredPosition.y > swipeDownPos && deltaY > 0f:
-                targetRectPos = new Vector2(0f, 0f);
-                IsLerping = true;
-                isDownstairs = true;
-                startLerpPos = rectTransform.anchoredPosition;
-                break;
-            case true:
-                targetRectPos = new Vector2(0f, 0f);
-                IsLerping = true;
-                startLerpPos = rectTransform.anchoredPosition;
-                break;
-            case false:
-                targetRectPos = new Vector2(0f, -Screen.height * 2f);
-                IsLerping = true;
-                startLerpPos = rectTransform.anchoredPosition;
-                break;
-        }
     }
 
     private void ChangeUIResolution()

@@ -11,6 +11,7 @@ public class StateManager : MonoBehaviour
     [SerializeField] int lastState = 16;
     [SerializeField] List<string> speech;
     private static StateManager instance;
+    public int potionTutoEnd;
 
     #endregion
 
@@ -43,16 +44,37 @@ public class StateManager : MonoBehaviour
             if (speech.Count < i+1)
                 speech.Add("");
         }
-        Debug.Log(speech.Count);
+        potionTutoEnd = 1;
     }
 
+    public void ButtonGrimoir()
+    {
+        if(currentState == 6)
+        {
+            CurrentState++;
+        }
+    }
+    public void ReturnButtonGrimoir()
+    {
+        if (currentState == 7)
+        {
+            CurrentState++;
+        }
+    }
     private void Update()
     {
-        if(Input.GetButtonDown("Fire1"))
+        if(Input.touchCount == 1 && Input.GetTouch(0).phase == TouchPhase.Ended)
         {
-            currentState++;
-            if (currentState > lastState)
-                currentState = 0;
+            if (currentState <= 5 || currentState  == 10 || currentState == 17)
+            {
+                currentState++;
+                if (currentState > lastState)
+                    currentState = 0;
+            }
+        }
+        if(currentState == 8 && potionTutoEnd == 0)
+        {
+            currentState++; 
         }
     }
 }

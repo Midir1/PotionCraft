@@ -43,6 +43,7 @@ public class GameManager : MonoBehaviour
     public bool tipIsAvailable = false;
     public bool bellIsAvailable = false;
     public bool[] Bp = new bool[(int)PotionBp.PotionBpNb];
+    public bool tutoState = true;
     #endregion
 
     #region getters/setters
