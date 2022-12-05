@@ -17,7 +17,7 @@ public class IngredientManager : Drag
         {
             hasBeenDragged = true;
         }
-        
+
         if (hasBeenDragged && !isDragged && !inCauldron)
         {
             Destroy(gameObject);

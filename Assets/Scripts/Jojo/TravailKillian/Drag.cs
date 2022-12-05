@@ -6,9 +6,12 @@ public class Drag : MonoBehaviour
 {
     protected bool isDragged;
     
-    private Canvas canvas;
-    
-    private void Start() => canvas = GetComponentInParent<Canvas>();
+    protected Canvas canvas;
+
+    virtual protected void Start()
+    {
+        canvas = GetComponentInParent<Canvas>();
+    }
 
     [UsedImplicitly]
     public void DragHandler(BaseEventData data)
