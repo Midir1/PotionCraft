@@ -473,6 +473,20 @@
         {
             "m_OutputSlot": {
                 "m_Node": {
+                    "m_Id": "a2ee7e51284b4304908c98570ca472a7"
+                },
+                "m_SlotId": 1
+            },
+            "m_InputSlot": {
+                "m_Node": {
+                    "m_Id": "d2abb90932bd466fb148d171b76250f3"
+                },
+                "m_SlotId": 0
+            }
+        },
+        {
+            "m_OutputSlot": {
+                "m_Node": {
                     "m_Id": "a542108cf6cc49549cb91d8d422a9810"
                 },
                 "m_SlotId": 2
@@ -739,8 +753,8 @@
     ],
     "m_VertexContext": {
         "m_Position": {
-            "x": 0.0,
-            "y": 0.0
+            "x": 344.99993896484377,
+            "y": 50.9999885559082
         },
         "m_Blocks": [
             {
@@ -756,8 +770,8 @@
     },
     "m_FragmentContext": {
         "m_Position": {
-            "x": 0.0,
-            "y": 200.0
+            "x": 344.99993896484377,
+            "y": 251.00001525878907
         },
         "m_Blocks": [
             {
@@ -2842,7 +2856,7 @@
     ],
     "synonyms": [],
     "m_Precision": 0,
-    "m_PreviewExpanded": true,
+    "m_PreviewExpanded": false,
     "m_DismissedVersion": 0,
     "m_PreviewMode": 0,
     "m_CustomColors": {
