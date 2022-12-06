@@ -4,19 +4,19 @@ using UnityEngine;
 
 public enum PotionBp
 {
+    Heart,
+    Champ,
     Clean,
     Drunkard,
-    Champ,
-    Luminescence,
-    Spicy,
-    Horned,
-    Sea,
-    Strawberry,
     Gamer,
     Graphic,
-    Toad,
-    Heart,
+    Horned,
+    Luminescence,
+    Sea,
     Sleep,
+    Spicy,
+    Strawberry,
+    Toad,
     PotionBpNb
 }
 

@@ -18,7 +18,6 @@ public class Inventory : MonoBehaviour
     [SerializeField] private Transform potionParent;
     [SerializeField] private GameObject drawPanel;
     [SerializeField] private GameObject inputManager;
-    [SerializeField] private Slider burningSlider;
     [SerializeField] private float upgradeBrewingSpeed;
     [SerializeField] private float upgradeBurningSpeed;
     [SerializeField] private int timeToBurn;
@@ -29,6 +28,7 @@ public class Inventory : MonoBehaviour
     private float timerBrewing;
     private float timerBurning;
     private int cauldronIndex = -1;
+    private int nbChild = 0;
 
     private GameManager manager;
 
@@ -49,7 +49,7 @@ public class Inventory : MonoBehaviour
             recipes[i].isActive = manager.Bp[i];
         }
 
-        burningSlider.value = 0;
+        nbChild = transform.childCount;
     }
 
     private void Update()
@@ -63,10 +63,9 @@ public class Inventory : MonoBehaviour
         }
 
         //Reset if potion is dragged
-        if (transform.childCount <= 2)
+        if (transform.childCount <= nbChild)
         {
             isBurning = false;
-            burningSlider.value = 0;
             hourglass.sprite = hourglassSprites[0];
             timerBurning = 0;
         }
@@ -78,7 +77,6 @@ public class Inventory : MonoBehaviour
 
             if (isCauldronUpgraded == 1)
             {
-                burningSlider.maxValue = timeToBurn + upgradeBurningSpeed;
                 if ((int)timerBurning > 0)
                 {
                     hourglass.sprite = hourglassSprites[timeToBurn + (int)upgradeBurningSpeed / ((int)timerBurning % 5)];
@@ -90,7 +88,6 @@ public class Inventory : MonoBehaviour
             }
             else
             {
-                burningSlider.value = timerBurning;
                 if ((int)timerBurning > 0 && (int)timerBurning < timeToBurn)
                 {
                     hourglass.sprite = hourglassSprites[(int)timerBurning / (timeToBurn / 4)];
@@ -168,11 +165,10 @@ public class Inventory : MonoBehaviour
 
     private void BurnPotion()
     {
-        Transform burnedPotion = transform.GetChild(2);
+        Transform burnedPotion = transform.GetChild(nbChild);
         isBurning = false;
         timerBurning = 0.0f;
-        burningSlider.value = 0;
         hourglass.sprite = hourglassSprites[4];
-         Destroy(burnedPotion.gameObject);
+        Destroy(burnedPotion.gameObject);
     }
 }
