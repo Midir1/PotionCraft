@@ -3,23 +3,177 @@
 	<Events>
 		<WorkUnit Name="Default Work Unit" ID="{2917357C-9B5B-47C0-9F0A-D8C0D827D3C1}" PersistMode="Standalone">
 			<ChildrenList>
-				<Event Name="RuneCompleted" ID="{5046C600-7173-426B-A594-7B6F31D01345}">
+				<Event Name="Play_WITCHCRAFT_SFX_FERME_GRIMOIRE" ID="{A71579CE-5CE9-4EDE-8B4A-3771C07722DE}">
 					<ChildrenList>
-						<Action Name="" ID="{8DB0BDA8-B092-467F-A5A2-0878431E0F14}" ShortID="490623695">
+						<Action Name="" ID="{27FEF06A-189F-479C-897C-23C12DDC2AE5}" ShortID="195341671">
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="transport_activate" ID="{7CA7C8D6-8122-4AFD-9E7A-ACA84A7F35E8}" WorkUnitID="{F27DCBFD-B41E-4801-95D4-E1AD708B4A26}"/>
+									<ObjectRef Name="WITCHCRAFT_SFX_FERME_GRIMOIRE" ID="{FD26215B-19E3-436F-9AF4-79986EE70EEE}" WorkUnitID="{F27DCBFD-B41E-4801-95D4-E1AD708B4A26}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
 					</ChildrenList>
 				</Event>
-				<Event Name="RuneFailed" ID="{C1F2754A-F8DB-46FF-AAF0-5FEF087BE487}">
+				<Event Name="Play_ACHAT_CHAUDRON" ID="{0EBB7AAE-5C25-456E-810B-FE514920A91A}">
 					<ChildrenList>
-						<Action Name="" ID="{6570F671-3A1E-4148-A5D1-53A6017AF5E3}" ShortID="631851555">
+						<Action Name="" ID="{A5C9B3EC-FFAB-4EFF-B6B5-4C1DAB439B07}" ShortID="859939555">
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="dbl_shield_lowfreq2" ID="{55C24010-7E41-4F76-9073-B687006EE5C5}" WorkUnitID="{F27DCBFD-B41E-4801-95D4-E1AD708B4A26}"/>
+									<ObjectRef Name="ACHAT_CHAUDRON" ID="{E29CFFEB-52DA-4A16-AFA7-24D9EA9F04D6}" WorkUnitID="{F27DCBFD-B41E-4801-95D4-E1AD708B4A26}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_GRIMOIR_TURN_PAGE" ID="{96338753-8CB8-455D-8979-8F620E456550}">
+					<ChildrenList>
+						<Action Name="" ID="{280C1B62-8E66-4144-B03E-429656E2E918}" ShortID="776769366">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="GRIMOIR_TURN_PAGE" ID="{37C15485-7CA1-47AA-B947-2224CAA43C89}" WorkUnitID="{F27DCBFD-B41E-4801-95D4-E1AD708B4A26}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_MENE_SONETTE" ID="{86E26D8F-5AFB-4C46-8D84-37BA06595529}">
+					<ChildrenList>
+						<Action Name="" ID="{D8555C5A-F849-44F8-8488-88EB8BBE3BA7}" ShortID="304977779">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="MENE_SONETTE" ID="{1C3CE226-1CBF-4093-A06C-7393613C6F36}" WorkUnitID="{F27DCBFD-B41E-4801-95D4-E1AD708B4A26}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_TIPS" ID="{D846BAA1-25E9-4F32-89CF-18AD89B430CB}">
+					<ChildrenList>
+						<Action Name="" ID="{88960FBE-01A1-414E-BA33-9FE53863F9E9}" ShortID="874717322">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="TIPS" ID="{CBDE22CA-F3B5-4AA1-8C8B-B16CE653EF4E}" WorkUnitID="{F27DCBFD-B41E-4801-95D4-E1AD708B4A26}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_WITCHCRAFT_SFX_RUNE_GOOD" ID="{4CDC4499-9DF4-4BD1-AF96-33DA5E32A430}">
+					<ChildrenList>
+						<Action Name="" ID="{188454EF-97FE-4310-879E-0A3841BBD8E9}" ShortID="385391449">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="WITCHCRAFT_SFX_RUNE_GOOD" ID="{93520929-2F1C-445A-8E20-C9CA017131AB}" WorkUnitID="{F27DCBFD-B41E-4801-95D4-E1AD708B4A26}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_WITCHCRAFT_SFX_RUNE_BAD" ID="{DC9361EC-429A-4B1F-AD8E-EE2BC3D33EF3}">
+					<ChildrenList>
+						<Action Name="" ID="{14DFCAE4-753D-4354-A7A0-6A21E29D08EE}" ShortID="856358072">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="WITCHCRAFT_SFX_RUNE_BAD" ID="{1F125572-1C37-47C9-A9DE-A2886A5C77CB}" WorkUnitID="{F27DCBFD-B41E-4801-95D4-E1AD708B4A26}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_WITCHCRAFT_SFX_POTION_GOOD" ID="{C6C668E4-ED84-449C-997E-E2ACFC0DEB1A}">
+					<ChildrenList>
+						<Action Name="" ID="{4A42E6D3-87EB-4689-B1F7-F047415A96CA}" ShortID="695004460">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="WITCHCRAFT_SFX_POTION_GOOD" ID="{8C47CBAA-D22D-4D3F-BBA3-095F24A36373}" WorkUnitID="{F27DCBFD-B41E-4801-95D4-E1AD708B4A26}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_WITCHCRAFT_SFX_POTION_BAD" ID="{CEDA272A-F4AC-47CC-8A98-8EEB0CA7291E}">
+					<ChildrenList>
+						<Action Name="" ID="{CA8BCED4-8618-4AF1-8687-C6AB8B8C9526}" ShortID="685180965">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="WITCHCRAFT_SFX_POTION_BAD" ID="{2308083C-47E7-4604-B720-87020BB09D44}" WorkUnitID="{F27DCBFD-B41E-4801-95D4-E1AD708B4A26}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_WITCHCRAFT_SFX_PARCHEMIN" ID="{8059AE1C-4CBF-4A8E-9D83-7FDFC1119498}">
+					<ChildrenList>
+						<Action Name="" ID="{855BF451-253B-4763-A4D8-74CE2D12648F}" ShortID="333609776">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="WITCHCRAFT_SFX_PARCHEMIN" ID="{F476C7E8-3228-47A5-BA66-F9290252068D}" WorkUnitID="{F27DCBFD-B41E-4801-95D4-E1AD708B4A26}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_WITCHCRAFT_SFX_OUVRE_GRIMOIRE_1" ID="{3F5B965C-2544-4103-84BB-1FD511EF4753}">
+					<ChildrenList>
+						<Action Name="" ID="{F6FE8E87-8584-49AC-9BAF-95BF1F619DB2}" ShortID="541924669">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="WITCHCRAFT_SFX_OUVRE_GRIMOIRE_1" ID="{168EEF18-5AF7-4D29-81B1-BBC8535C811D}" WorkUnitID="{F27DCBFD-B41E-4801-95D4-E1AD708B4A26}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_WITCHCRAFT_SFX_NOUVEAU_CLIENT" ID="{C2D8F64B-7B9B-4272-8AD8-54F12AD980DB}">
+					<ChildrenList>
+						<Action Name="" ID="{E459BD31-166E-472C-BB47-8AE7DB28F001}" ShortID="615513626">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="WITCHCRAFT_SFX_NOUVEAU_CLIENT" ID="{E3214364-6A22-4CD7-8EDD-DCCF8611335D}" WorkUnitID="{F27DCBFD-B41E-4801-95D4-E1AD708B4A26}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_WITCHCRAFT_SFX_MENU" ID="{E58F3B92-47D1-4413-BCFE-04F0E2C970C6}">
+					<ChildrenList>
+						<Action Name="" ID="{02452E26-9EFF-4BC0-A7D8-547E33484552}" ShortID="97420412">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="WITCHCRAFT_SFX_MENU" ID="{8ECA21F7-3ED6-4EDF-B334-A4389894BBB0}" WorkUnitID="{F27DCBFD-B41E-4801-95D4-E1AD708B4A26}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_WITCHCRAFT_SFX_INGREDIENT_POTION" ID="{B6DA6AF6-2CC0-43ED-B44A-220650682F97}">
+					<ChildrenList>
+						<Action Name="" ID="{9FD1576E-8174-446E-982E-52B4F181D2F4}" ShortID="766144898">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="WITCHCRAFT_SFX_INGREDIENT_POTION" ID="{F148C975-1AA5-43AA-8BF8-5F9DC92008A9}" WorkUnitID="{F27DCBFD-B41E-4801-95D4-E1AD708B4A26}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_BUY_POTION" ID="{1C2033D3-576E-4EC6-92B3-2A74E932A46A}">
+					<ChildrenList>
+						<Action Name="" ID="{389811BB-7445-43C1-95A7-AE5786141E2E}" ShortID="845250566">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="BUY_POTION" ID="{6C14C95E-5537-4BE4-AA11-00ED9A41DE5F}" WorkUnitID="{F27DCBFD-B41E-4801-95D4-E1AD708B4A26}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_AMELIORATION_CHAUDRON" ID="{31596290-52BB-4382-A84C-B7F4594312F1}">
+					<ChildrenList>
+						<Action Name="" ID="{C16934C6-E104-428C-8AA8-F17073EEC5FD}" ShortID="31134280">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="AMELIORATION_CHAUDRON" ID="{072AE154-012C-437C-8D47-8D7A0D4DB916}" WorkUnitID="{F27DCBFD-B41E-4801-95D4-E1AD708B4A26}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>

@@ -79,6 +79,7 @@ public class TurnPage : MonoBehaviour
                     if (pages[gameObjectID - 1].transform.rotation.y > 0.0f)
                     {
                         toRight = false;
+                        turnPage.Post(gameObject);
                         gameObjectID--;
                     }
                 }

@@ -447,6 +447,808 @@
 						</Sound>
 					</ChildrenList>
 				</Folder>
+				<Folder Name="SFX" ID="{8495E59E-9D97-4D95-85A0-8C40B2DBD200}" ShortID="225315786">
+					<ChildrenList>
+						<Sound Name="WITCHCRAFT_SFX_ACHAT_BOITE_TIPS" ID="{50ABDB24-C267-4940-AD7D-48E5AEB11FEA}" ShortID="775541491">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5400BE91-7FA6-411E-819E-9656DD5B8CE1}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4B7D7951-5658-4120-9EAD-A0CF4CEF5CAD}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="WITCHCRAFT_SFX_ACHAT_BOITE_TIPS" ID="{022DF6B4-EFFF-418F-B3CF-54E611A7EC14}">
+									<Language>SFX</Language>
+									<AudioFile>SFX\WITCHCRAFT_SFX_ACHAT_BOITE_TIPS.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="951031920"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="WITCHCRAFT_SFX_ACHAT_BOITE_TIPS" ID="{022DF6B4-EFFF-418F-B3CF-54E611A7EC14}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="WITCHCRAFT_SFX_ACHAT_SONNETTE" ID="{26B041F2-EE54-4A2B-A5E2-64F34187E928}" ShortID="353643550">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5400BE91-7FA6-411E-819E-9656DD5B8CE1}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4B7D7951-5658-4120-9EAD-A0CF4CEF5CAD}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="WITCHCRAFT_SFX_ACHAT_SONNETTE" ID="{9A099096-AA4D-4BEF-9618-50695A305813}">
+									<Language>SFX</Language>
+									<AudioFile>SFX\WITCHCRAFT_SFX_ACHAT_SONNETTE.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="914377712"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="WITCHCRAFT_SFX_ACHAT_SONNETTE" ID="{9A099096-AA4D-4BEF-9618-50695A305813}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="WITCHCRAFT_SFX_ANGRY_DEMON_01" ID="{6C1B6D4D-A98C-447E-BF0C-DAAA526F7585}" ShortID="1054140205">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5400BE91-7FA6-411E-819E-9656DD5B8CE1}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4B7D7951-5658-4120-9EAD-A0CF4CEF5CAD}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="WITCHCRAFT_SFX_ANGRY_DEMON_01" ID="{CC5DDCE6-7644-4BF4-B924-A80021A2A703}">
+									<Language>SFX</Language>
+									<AudioFile>SFX\WITCHCRAFT_SFX_ANGRY_DEMON_01.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="480721126"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="WITCHCRAFT_SFX_ANGRY_DEMON_01" ID="{CC5DDCE6-7644-4BF4-B924-A80021A2A703}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="WITCHCRAFT_SFX_ANGRY_DEMON_02" ID="{1ED8C493-6A62-4E69-A72C-3DB5B8A39C0F}" ShortID="598696360">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5400BE91-7FA6-411E-819E-9656DD5B8CE1}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4B7D7951-5658-4120-9EAD-A0CF4CEF5CAD}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="WITCHCRAFT_SFX_ANGRY_DEMON_02" ID="{C0AD378A-4626-47C5-977A-E1ACBE3293F4}">
+									<Language>SFX</Language>
+									<AudioFile>SFX\WITCHCRAFT_SFX_ANGRY_DEMON_02.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="1058908871"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="WITCHCRAFT_SFX_ANGRY_DEMON_02" ID="{C0AD378A-4626-47C5-977A-E1ACBE3293F4}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="WITCHCRAFT_SFX_ANGRY_MINOTAUR" ID="{5A931DC5-914A-4290-850B-09206766008D}" ShortID="1052087494">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5400BE91-7FA6-411E-819E-9656DD5B8CE1}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4B7D7951-5658-4120-9EAD-A0CF4CEF5CAD}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="WITCHCRAFT_SFX_ANGRY_MINOTAUR" ID="{716FC949-F17B-4D99-B857-5692F83F2D83}">
+									<Language>SFX</Language>
+									<AudioFile>SFX\WITCHCRAFT_SFX_ANGRY_MINOTAUR.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="297749601"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="WITCHCRAFT_SFX_ANGRY_MINOTAUR" ID="{716FC949-F17B-4D99-B857-5692F83F2D83}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="WITCHCRAFT_SFX_ANGRY_PUMPKIN_01" ID="{9A442FA3-A662-45A8-B538-03D6FDE4E318}" ShortID="969567533">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5400BE91-7FA6-411E-819E-9656DD5B8CE1}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4B7D7951-5658-4120-9EAD-A0CF4CEF5CAD}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="WITCHCRAFT_SFX_ANGRY_PUMPKIN_01" ID="{6F6C8DD5-7173-4183-93D2-DBBE5A854E60}">
+									<Language>SFX</Language>
+									<AudioFile>SFX\WITCHCRAFT_SFX_ANGRY_PUMPKIN_01.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="333040350"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="WITCHCRAFT_SFX_ANGRY_PUMPKIN_01" ID="{6F6C8DD5-7173-4183-93D2-DBBE5A854E60}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="WITCHCRAFT_SFX_ANGRY_SKELETON" ID="{BE4C80E4-7F42-4430-81C9-574EB561EEE1}" ShortID="872394350">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5400BE91-7FA6-411E-819E-9656DD5B8CE1}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4B7D7951-5658-4120-9EAD-A0CF4CEF5CAD}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="WITCHCRAFT_SFX_ANGRY_SKELETON" ID="{42F63D25-A6AF-4F73-8128-118C63C3FDB2}">
+									<Language>SFX</Language>
+									<AudioFile>SFX\WITCHCRAFT_SFX_ANGRY_SKELETON.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="59718433"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="WITCHCRAFT_SFX_ANGRY_SKELETON" ID="{42F63D25-A6AF-4F73-8128-118C63C3FDB2}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="WITCHCRAFT_SFX_FERME_GRIMOIRE" ID="{FD26215B-19E3-436F-9AF4-79986EE70EEE}" ShortID="344589707">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5400BE91-7FA6-411E-819E-9656DD5B8CE1}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4B7D7951-5658-4120-9EAD-A0CF4CEF5CAD}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="WITCHCRAFT_SFX_FERME_GRIMOIRE" ID="{0125185E-5256-4829-B8B1-9F542CADF3DC}">
+									<Language>SFX</Language>
+									<AudioFile>SFX\WITCHCRAFT_SFX_FERME_GRIMOIRE.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="854449426"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="WITCHCRAFT_SFX_FERME_GRIMOIRE" ID="{0125185E-5256-4829-B8B1-9F542CADF3DC}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="WITCHCRAFT_SFX_INGREDIENT_POTION" ID="{F148C975-1AA5-43AA-8BF8-5F9DC92008A9}" ShortID="248515133">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5400BE91-7FA6-411E-819E-9656DD5B8CE1}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4B7D7951-5658-4120-9EAD-A0CF4CEF5CAD}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="WITCHCRAFT_SFX_INGREDIENT_POTION" ID="{C860F31D-458C-4937-B76A-2799A54A0281}">
+									<Language>SFX</Language>
+									<AudioFile>SFX\WITCHCRAFT_SFX_INGREDIENT_POTION.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="464979140"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="WITCHCRAFT_SFX_INGREDIENT_POTION" ID="{C860F31D-458C-4937-B76A-2799A54A0281}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="WITCHCRAFT_SFX_MENU" ID="{8ECA21F7-3ED6-4EDF-B334-A4389894BBB0}" ShortID="956572802">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5400BE91-7FA6-411E-819E-9656DD5B8CE1}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4B7D7951-5658-4120-9EAD-A0CF4CEF5CAD}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="WITCHCRAFT_SFX_MENU" ID="{55758E5F-4C26-4F95-A584-2D00CE043B50}">
+									<Language>SFX</Language>
+									<AudioFile>SFX\WITCHCRAFT_SFX_MENU.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="584772848"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="WITCHCRAFT_SFX_MENU" ID="{55758E5F-4C26-4F95-A584-2D00CE043B50}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="WITCHCRAFT_SFX_NOUVEAU_CLIENT" ID="{E3214364-6A22-4CD7-8EDD-DCCF8611335D}" ShortID="854107006">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5400BE91-7FA6-411E-819E-9656DD5B8CE1}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4B7D7951-5658-4120-9EAD-A0CF4CEF5CAD}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="WITCHCRAFT_SFX_NOUVEAU_CLIENT" ID="{79151E54-94A7-4F94-8405-B9E2F4860244}">
+									<Language>SFX</Language>
+									<AudioFile>SFX\WITCHCRAFT_SFX_NOUVEAU_CLIENT.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="478517217"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="WITCHCRAFT_SFX_NOUVEAU_CLIENT" ID="{79151E54-94A7-4F94-8405-B9E2F4860244}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="WITCHCRAFT_SFX_OUVRE_GRIMOIRE_1" ID="{168EEF18-5AF7-4D29-81B1-BBC8535C811D}" ShortID="409139929">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5400BE91-7FA6-411E-819E-9656DD5B8CE1}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4B7D7951-5658-4120-9EAD-A0CF4CEF5CAD}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="WITCHCRAFT_SFX_OUVRE_GRIMOIRE_1" ID="{99BED9A1-F540-4E21-9DB7-3958BF4132B5}">
+									<Language>SFX</Language>
+									<AudioFile>SFX\WITCHCRAFT_SFX_OUVRE_GRIMOIRE_1.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="197427510"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="WITCHCRAFT_SFX_OUVRE_GRIMOIRE_1" ID="{99BED9A1-F540-4E21-9DB7-3958BF4132B5}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="WITCHCRAFT_SFX_PARCHEMIN" ID="{F476C7E8-3228-47A5-BA66-F9290252068D}" ShortID="918224076">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5400BE91-7FA6-411E-819E-9656DD5B8CE1}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4B7D7951-5658-4120-9EAD-A0CF4CEF5CAD}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="WITCHCRAFT_SFX_PARCHEMIN" ID="{F7ECABD0-64DC-41D4-88C8-DE9A27D1012F}">
+									<Language>SFX</Language>
+									<AudioFile>SFX\WITCHCRAFT_SFX_PARCHEMIN.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="1058639048"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="WITCHCRAFT_SFX_PARCHEMIN" ID="{F7ECABD0-64DC-41D4-88C8-DE9A27D1012F}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="WITCHCRAFT_SFX_POTION_BAD" ID="{2308083C-47E7-4604-B720-87020BB09D44}" ShortID="350097249">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5400BE91-7FA6-411E-819E-9656DD5B8CE1}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4B7D7951-5658-4120-9EAD-A0CF4CEF5CAD}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="WITCHCRAFT_SFX_POTION_BAD" ID="{C43B2144-8243-4A84-9DA0-6EAB5F5698D2}">
+									<Language>SFX</Language>
+									<AudioFile>SFX\WITCHCRAFT_SFX_POTION_BAD.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="20146126"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="WITCHCRAFT_SFX_POTION_BAD" ID="{C43B2144-8243-4A84-9DA0-6EAB5F5698D2}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="WITCHCRAFT_SFX_POTION_GOOD" ID="{8C47CBAA-D22D-4D3F-BBA3-095F24A36373}" ShortID="1029053666">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5400BE91-7FA6-411E-819E-9656DD5B8CE1}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4B7D7951-5658-4120-9EAD-A0CF4CEF5CAD}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="WITCHCRAFT_SFX_POTION_GOOD" ID="{0167C3AF-0D98-47AD-9BE4-D4D6E7837DAE}">
+									<Language>SFX</Language>
+									<AudioFile>SFX\WITCHCRAFT_SFX_POTION_GOOD.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="968921399"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="WITCHCRAFT_SFX_POTION_GOOD" ID="{0167C3AF-0D98-47AD-9BE4-D4D6E7837DAE}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="WITCHCRAFT_SFX_RUNE_BAD" ID="{1F125572-1C37-47C9-A9DE-A2886A5C77CB}" ShortID="566138512">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5400BE91-7FA6-411E-819E-9656DD5B8CE1}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4B7D7951-5658-4120-9EAD-A0CF4CEF5CAD}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="WITCHCRAFT_SFX_RUNE_BAD" ID="{D3856A4D-3E48-4B61-ACF4-C365F4BECC99}">
+									<Language>SFX</Language>
+									<AudioFile>SFX\WITCHCRAFT_SFX_RUNE_BAD.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="823038839"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="WITCHCRAFT_SFX_RUNE_BAD" ID="{D3856A4D-3E48-4B61-ACF4-C365F4BECC99}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="WITCHCRAFT_SFX_RUNE_GOOD" ID="{93520929-2F1C-445A-8E20-C9CA017131AB}" ShortID="704197314">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5400BE91-7FA6-411E-819E-9656DD5B8CE1}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4B7D7951-5658-4120-9EAD-A0CF4CEF5CAD}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="WITCHCRAFT_SFX_RUNE_GOOD" ID="{971CA6CA-863D-4651-9638-AB8B6B71AB7E}">
+									<Language>SFX</Language>
+									<AudioFile>SFX\WITCHCRAFT_SFX_RUNE_GOOD.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="56026652"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="WITCHCRAFT_SFX_RUNE_GOOD" ID="{971CA6CA-863D-4651-9638-AB8B6B71AB7E}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="WITCHCRAFT_SFX__ANGRY_NYMPHE_01" ID="{6746FFD1-7FB1-46B1-AB1E-A4917DA8BCD3}" ShortID="914578023">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5400BE91-7FA6-411E-819E-9656DD5B8CE1}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="SFX" ID="{C4BA68BB-BCA0-4EE7-99A1-6FBA47AA5413}" WorkUnitID="{4B7D7951-5658-4120-9EAD-A0CF4CEF5CAD}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="WITCHCRAFT_SFX__ANGRY_NYMPHE_01" ID="{07B14F4C-B888-488C-AA3F-D298C017FD06}">
+									<Language>SFX</Language>
+									<AudioFile>SFX\WITCHCRAFT_SFX__ANGRY_NYMPHE_01.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="30977768"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="WITCHCRAFT_SFX__ANGRY_NYMPHE_01" ID="{07B14F4C-B888-488C-AA3F-D298C017FD06}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="WITCHCRAFT_SFX__ANGRY_NYMPHE_02" ID="{874F2893-5B53-42BE-B922-3FFE30E5BDCE}" ShortID="216980726">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5400BE91-7FA6-411E-819E-9656DD5B8CE1}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4B7D7951-5658-4120-9EAD-A0CF4CEF5CAD}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="WITCHCRAFT_SFX__ANGRY_NYMPHE_02" ID="{9D8E9DB8-0A63-4730-9685-195259394BE9}">
+									<Language>SFX</Language>
+									<AudioFile>SFX\WITCHCRAFT_SFX__ANGRY_NYMPHE_02.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="926383028"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="WITCHCRAFT_SFX__ANGRY_NYMPHE_02" ID="{9D8E9DB8-0A63-4730-9685-195259394BE9}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<RandomSequenceContainer Name="MENE_SONETTE" ID="{1C3CE226-1CBF-4093-A06C-7393613C6F36}" ShortID="126045939">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5400BE91-7FA6-411E-819E-9656DD5B8CE1}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4B7D7951-5658-4120-9EAD-A0CF4CEF5CAD}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="WITCHCRAFT_SFX_MENU_SONNETTE" ID="{39405CB0-9655-40F4-B082-D314F7C432AD}" ShortID="359422935">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5400BE91-7FA6-411E-819E-9656DD5B8CE1}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4B7D7951-5658-4120-9EAD-A0CF4CEF5CAD}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="WITCHCRAFT_SFX_MENU_SONNETTE" ID="{624597B6-B886-456D-8C29-60B6F4C4C4FF}">
+											<Language>SFX</Language>
+											<AudioFile>SFX\WITCHCRAFT_SFX_MENU_SONNETTE.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="981137270"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="WITCHCRAFT_SFX_MENU_SONNETTE" ID="{624597B6-B886-456D-8C29-60B6F4C4C4FF}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="WITCHCRAFT_SFX_MENU_SONNETTE_02" ID="{0B1F4F74-787C-4756-9F42-2D64EE11958D}" ShortID="23959454">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5400BE91-7FA6-411E-819E-9656DD5B8CE1}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4B7D7951-5658-4120-9EAD-A0CF4CEF5CAD}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="WITCHCRAFT_SFX_MENU_SONNETTE_02" ID="{3AA69D25-62F2-4D03-AF1E-A531E3BC73A2}">
+											<Language>SFX</Language>
+											<AudioFile>SFX\WITCHCRAFT_SFX_MENU_SONNETTE_02.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="877418667"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="WITCHCRAFT_SFX_MENU_SONNETTE_02" ID="{3AA69D25-62F2-4D03-AF1E-A531E3BC73A2}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
+						<RandomSequenceContainer Name="GRIMOIR_TURN_PAGE" ID="{37C15485-7CA1-47AA-B947-2224CAA43C89}" ShortID="178684381">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5400BE91-7FA6-411E-819E-9656DD5B8CE1}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4B7D7951-5658-4120-9EAD-A0CF4CEF5CAD}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="WITCHCRAFT_SFX_TOURNE_PAGE_01" ID="{49B7129C-DDB9-49AE-BE23-2A787D9666E6}" ShortID="254777747">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5400BE91-7FA6-411E-819E-9656DD5B8CE1}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4B7D7951-5658-4120-9EAD-A0CF4CEF5CAD}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="WITCHCRAFT_SFX_TOURNE_PAGE_01" ID="{B3675154-D987-4253-9317-DE7E353C3520}">
+											<Language>SFX</Language>
+											<AudioFile>SFX\WITCHCRAFT_SFX_TOURNE_PAGE_01.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="519804808"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="WITCHCRAFT_SFX_TOURNE_PAGE_01" ID="{B3675154-D987-4253-9317-DE7E353C3520}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="WITCHCRAFT_SFX_TOURNE_PAGE_02" ID="{7D2FDB38-B4ED-4BEE-AABE-9F8EF649A307}" ShortID="535599091">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5400BE91-7FA6-411E-819E-9656DD5B8CE1}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4B7D7951-5658-4120-9EAD-A0CF4CEF5CAD}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="WITCHCRAFT_SFX_TOURNE_PAGE_02" ID="{B81C02DC-61B5-42FF-A9B4-9E6F9E95EB04}">
+											<Language>SFX</Language>
+											<AudioFile>SFX\WITCHCRAFT_SFX_TOURNE_PAGE_02.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="266877472"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="WITCHCRAFT_SFX_TOURNE_PAGE_02" ID="{B81C02DC-61B5-42FF-A9B4-9E6F9E95EB04}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="WITCHCRAFT_SFX_TOURNE_PAGE_03" ID="{81972383-9C77-4738-B112-5D4C2D1D82BD}" ShortID="611758284">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5400BE91-7FA6-411E-819E-9656DD5B8CE1}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4B7D7951-5658-4120-9EAD-A0CF4CEF5CAD}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="WITCHCRAFT_SFX_TOURNE_PAGE_03" ID="{BFAA9467-9A81-449D-A615-21D929E84B0E}">
+											<Language>SFX</Language>
+											<AudioFile>SFX\WITCHCRAFT_SFX_TOURNE_PAGE_03.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="160770417"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="WITCHCRAFT_SFX_TOURNE_PAGE_03" ID="{BFAA9467-9A81-449D-A615-21D929E84B0E}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
+						<RandomSequenceContainer Name="ACHAT_CHAUDRON" ID="{E29CFFEB-52DA-4A16-AFA7-24D9EA9F04D6}" ShortID="650219662">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5400BE91-7FA6-411E-819E-9656DD5B8CE1}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4B7D7951-5658-4120-9EAD-A0CF4CEF5CAD}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="WITCHCRAFT_SFX_ACHAT_CHAUDRON_01" ID="{12D5E4EC-4F0F-4A73-825C-ADE2F0D64944}" ShortID="832550802">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5400BE91-7FA6-411E-819E-9656DD5B8CE1}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4B7D7951-5658-4120-9EAD-A0CF4CEF5CAD}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="WITCHCRAFT_SFX_ACHAT_CHAUDRON_01" ID="{A7BBD945-1F9F-4499-9A50-5D0E0E9A4C10}">
+											<Language>SFX</Language>
+											<AudioFile>SFX\WITCHCRAFT_SFX_ACHAT_CHAUDRON_01.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="36655867"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="WITCHCRAFT_SFX_ACHAT_CHAUDRON_01" ID="{A7BBD945-1F9F-4499-9A50-5D0E0E9A4C10}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="WITCHCRAFT_SFX_ACHAT_CHAUDRON_02" ID="{6BB161AC-F41E-4545-858A-A8E34D072978}" ShortID="237237654">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5400BE91-7FA6-411E-819E-9656DD5B8CE1}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4B7D7951-5658-4120-9EAD-A0CF4CEF5CAD}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="WITCHCRAFT_SFX_ACHAT_CHAUDRON_02" ID="{E3A89758-DB2D-4502-9095-CDA48C545139}">
+											<Language>SFX</Language>
+											<AudioFile>SFX\WITCHCRAFT_SFX_ACHAT_CHAUDRON_02.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="927188442"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="WITCHCRAFT_SFX_ACHAT_CHAUDRON_02" ID="{E3A89758-DB2D-4502-9095-CDA48C545139}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
+						<RandomSequenceContainer Name="TIPS" ID="{CBDE22CA-F3B5-4AA1-8C8B-B16CE653EF4E}" ShortID="251147335">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5400BE91-7FA6-411E-819E-9656DD5B8CE1}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4B7D7951-5658-4120-9EAD-A0CF4CEF5CAD}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="WITCHCRAFT_SFX_TIPS_01" ID="{71913F2B-313F-4B95-8AF4-781F71DE0ABF}" ShortID="597295301">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5400BE91-7FA6-411E-819E-9656DD5B8CE1}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4B7D7951-5658-4120-9EAD-A0CF4CEF5CAD}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="WITCHCRAFT_SFX_TIPS_01" ID="{E4EF20EA-046E-4607-8816-9715E2FCD5E7}">
+											<Language>SFX</Language>
+											<AudioFile>SFX\WITCHCRAFT_SFX_TIPS_01.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="657474476"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="WITCHCRAFT_SFX_TIPS_01" ID="{E4EF20EA-046E-4607-8816-9715E2FCD5E7}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="WITCHCRAFT_SFX_TIPS_02" ID="{D9594AB3-5205-4A57-8D89-9390EF3E6022}" ShortID="254855170">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5400BE91-7FA6-411E-819E-9656DD5B8CE1}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4B7D7951-5658-4120-9EAD-A0CF4CEF5CAD}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="WITCHCRAFT_SFX_TIPS_02" ID="{7D84DBE0-DB0D-49D7-8447-E697FB6D4BE3}">
+											<Language>SFX</Language>
+											<AudioFile>SFX\WITCHCRAFT_SFX_TIPS_02.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="680270546"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="WITCHCRAFT_SFX_TIPS_02" ID="{7D84DBE0-DB0D-49D7-8447-E697FB6D4BE3}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
+						<RandomSequenceContainer Name="BUY_POTION" ID="{6C14C95E-5537-4BE4-AA11-00ED9A41DE5F}" ShortID="299174442">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5400BE91-7FA6-411E-819E-9656DD5B8CE1}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4B7D7951-5658-4120-9EAD-A0CF4CEF5CAD}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="WITCHCRAFT_SFX_BUY_POTION_01" ID="{10AEBD98-0F6F-4054-858D-640C29268B8F}" ShortID="526844241">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5400BE91-7FA6-411E-819E-9656DD5B8CE1}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4B7D7951-5658-4120-9EAD-A0CF4CEF5CAD}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="WITCHCRAFT_SFX_BUY_POTION_01" ID="{DAA7BBD5-4B28-4C41-B644-C377ACC9B04F}">
+											<Language>SFX</Language>
+											<AudioFile>SFX\WITCHCRAFT_SFX_BUY_POTION_01.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="61526642"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="WITCHCRAFT_SFX_BUY_POTION_01" ID="{DAA7BBD5-4B28-4C41-B644-C377ACC9B04F}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="WITCHCRAFT_SFX_BUY_POTION_02" ID="{969BA623-D017-4341-A639-7C0DF94A95EE}" ShortID="765610858">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5400BE91-7FA6-411E-819E-9656DD5B8CE1}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4B7D7951-5658-4120-9EAD-A0CF4CEF5CAD}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="WITCHCRAFT_SFX_BUY_POTION_02" ID="{4CD5059C-AF97-446B-9971-B0F1EFC519A3}">
+											<Language>SFX</Language>
+											<AudioFile>SFX\WITCHCRAFT_SFX_BUY_POTION_02.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="329715689"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="WITCHCRAFT_SFX_BUY_POTION_02" ID="{4CD5059C-AF97-446B-9971-B0F1EFC519A3}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="WITCHCRAFT_SFX_BUY_POTION_03" ID="{A1CD0A28-EDE9-4129-B15C-51BCC94DFC05}" ShortID="709270520">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5400BE91-7FA6-411E-819E-9656DD5B8CE1}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4B7D7951-5658-4120-9EAD-A0CF4CEF5CAD}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="WITCHCRAFT_SFX_BUY_POTION_03" ID="{51EA7AB3-2F9C-4891-B56E-BC23F47418EA}">
+											<Language>SFX</Language>
+											<AudioFile>SFX\WITCHCRAFT_SFX_BUY_POTION_03.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="570538854"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="WITCHCRAFT_SFX_BUY_POTION_03" ID="{51EA7AB3-2F9C-4891-B56E-BC23F47418EA}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
+						<RandomSequenceContainer Name="AMELIORATION_CHAUDRON" ID="{072AE154-012C-437C-8D47-8D7A0D4DB916}" ShortID="70764260">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5400BE91-7FA6-411E-819E-9656DD5B8CE1}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4B7D7951-5658-4120-9EAD-A0CF4CEF5CAD}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="WITCHCRAFT_SFX_AMELIORATION_CHAUDRON_01" ID="{4F11F61E-D01A-4DE7-8448-135E5E5461E8}" ShortID="441011807">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5400BE91-7FA6-411E-819E-9656DD5B8CE1}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4B7D7951-5658-4120-9EAD-A0CF4CEF5CAD}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="WITCHCRAFT_SFX_AMELIORATION_CHAUDRON_01" ID="{305F7B8B-D522-474A-862D-C5A6785E3996}">
+											<Language>SFX</Language>
+											<AudioFile>SFX\WITCHCRAFT_SFX_AMELIORATION_CHAUDRON_01.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="168994821"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="WITCHCRAFT_SFX_AMELIORATION_CHAUDRON_01" ID="{305F7B8B-D522-474A-862D-C5A6785E3996}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="WITCHCRAFT_SFX_AMELIORATION_CHAUDRON_02" ID="{4701AAE3-9FCF-4A14-9420-875D7F8B2923}" ShortID="941874694">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5400BE91-7FA6-411E-819E-9656DD5B8CE1}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4B7D7951-5658-4120-9EAD-A0CF4CEF5CAD}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="WITCHCRAFT_SFX_AMELIORATION_CHAUDRON_02" ID="{9D8DAAF4-A6AA-463B-85D6-3EA6CE8C053E}">
+											<Language>SFX</Language>
+											<AudioFile>SFX\WITCHCRAFT_SFX_AMELIORATION_CHAUDRON_02.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="1051567337"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="WITCHCRAFT_SFX_AMELIORATION_CHAUDRON_02" ID="{9D8DAAF4-A6AA-463B-85D6-3EA6CE8C053E}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
+					</ChildrenList>
+				</Folder>
 			</ChildrenList>
 		</WorkUnit>
 	</AudioObjects>
