@@ -177,11 +177,11 @@ MonoBehaviour:
   EventSucces:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 0b75a6ef4bedea646801a7e9ee46cd14, type: 2}
+    WwiseObjectReference: {fileID: 11400000, guid: e67039902387c554cbc9070bcd1715ef, type: 2}
   EventFail:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: d78815e727deac34faa5093e49470092, type: 2}
+    WwiseObjectReference: {fileID: 11400000, guid: dd40c6b5b95cbcc4f88a45ddec04255f, type: 2}
 --- !u!114 &6367163009777415199
 MonoBehaviour:
   m_ObjectHideFlags: 0

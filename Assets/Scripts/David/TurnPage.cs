@@ -5,6 +5,8 @@ using UnityEngine;
 public class TurnPage : MonoBehaviour
 {
     [SerializeField] Canvas canvas;
+    public AK.Wwise.Event turnPage;
+    
     public GameObject page;
     public List<GameObject> pages;
     public float moveSpeed = 100.0f;
@@ -60,6 +62,7 @@ public class TurnPage : MonoBehaviour
                     if (pages[gameObjectID].transform.rotation.y < -0.8f)
                     {
                         toLeft = false;
+                        turnPage.Post(gameObject);
                         gameObjectID++;
                     }
                 }
