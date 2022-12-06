@@ -361,6 +361,7 @@ MonoBehaviour:
   maxIngredients: 3
   ingredients: []
   isBrewing: 0
+  isBurning: 0
   recipes:
   - {fileID: 11400000, guid: ecfca48ad80cc504ea43d012b28038b6, type: 2}
   - {fileID: 11400000, guid: 5a9b819b018db91458bfa038a644acd5, type: 2}
@@ -392,7 +393,12 @@ MonoBehaviour:
   potionParent: {fileID: 1008081058}
   drawPanel: {fileID: 1195566745}
   inputManager: {fileID: 68372152}
-  UpgradeBrewingSpeedInSeconds: 5
+  burningSlider: {fileID: 0}
+  upgradeBrewingSpeed: 0
+  upgradeBurningSpeed: 0
+  timeToBurn: 0
+  hourglass: {fileID: 0}
+  hourglassSprites: []
 --- !u!114 &63795367
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -477,7 +483,7 @@ MonoBehaviour:
   lineToInstantiate: {fileID: 8524689591320302899, guid: 6554f5b0d892d0d4d9de628e463668b2, type: 3}
   runeList: {fileID: 68372153}
   patern: 1
-  parentTransform: {fileID: 1195566746}
+  canva: {fileID: 0}
   numPtc: 8
   radiusCollision: 0.8
   distBTWpoint: 0.1
@@ -3549,6 +3555,7 @@ MonoBehaviour:
   maxIngredients: 3
   ingredients: []
   isBrewing: 0
+  isBurning: 0
   recipes:
   - {fileID: 11400000, guid: ecfca48ad80cc504ea43d012b28038b6, type: 2}
   - {fileID: 11400000, guid: 5a9b819b018db91458bfa038a644acd5, type: 2}
@@ -3580,7 +3587,12 @@ MonoBehaviour:
   potionParent: {fileID: 1008081058}
   drawPanel: {fileID: 1195566745}
   inputManager: {fileID: 68372152}
-  UpgradeBrewingSpeedInSeconds: 5
+  burningSlider: {fileID: 0}
+  upgradeBrewingSpeed: 0
+  upgradeBurningSpeed: 0
+  timeToBurn: 0
+  hourglass: {fileID: 0}
+  hourglassSprites: []
 --- !u!114 &903532993
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4469,6 +4481,105 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1086082977}
   m_CullTransparentMesh: 1
+--- !u!1001 &1175340102
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 2
+    m_TransformParent: {fileID: 1837797304}
+    m_Modifications:
+    - target: {fileID: 5864568135386092296, guid: eb3b62198fc93684d8ae5b76e6199737, type: 3}
+      propertyPath: m_Pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5864568135386092296, guid: eb3b62198fc93684d8ae5b76e6199737, type: 3}
+      propertyPath: m_Pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5864568135386092296, guid: eb3b62198fc93684d8ae5b76e6199737, type: 3}
+      propertyPath: m_RootOrder
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5864568135386092296, guid: eb3b62198fc93684d8ae5b76e6199737, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5864568135386092296, guid: eb3b62198fc93684d8ae5b76e6199737, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5864568135386092296, guid: eb3b62198fc93684d8ae5b76e6199737, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5864568135386092296, guid: eb3b62198fc93684d8ae5b76e6199737, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5864568135386092296, guid: eb3b62198fc93684d8ae5b76e6199737, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 75
+      objectReference: {fileID: 0}
+    - target: {fileID: 5864568135386092296, guid: eb3b62198fc93684d8ae5b76e6199737, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 75
+      objectReference: {fileID: 0}
+    - target: {fileID: 5864568135386092296, guid: eb3b62198fc93684d8ae5b76e6199737, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5864568135386092296, guid: eb3b62198fc93684d8ae5b76e6199737, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5864568135386092296, guid: eb3b62198fc93684d8ae5b76e6199737, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5864568135386092296, guid: eb3b62198fc93684d8ae5b76e6199737, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5864568135386092296, guid: eb3b62198fc93684d8ae5b76e6199737, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5864568135386092296, guid: eb3b62198fc93684d8ae5b76e6199737, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5864568135386092296, guid: eb3b62198fc93684d8ae5b76e6199737, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5864568135386092296, guid: eb3b62198fc93684d8ae5b76e6199737, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5864568135386092296, guid: eb3b62198fc93684d8ae5b76e6199737, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 292
+      objectReference: {fileID: 0}
+    - target: {fileID: 5864568135386092296, guid: eb3b62198fc93684d8ae5b76e6199737, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5864568135386092296, guid: eb3b62198fc93684d8ae5b76e6199737, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5864568135386092296, guid: eb3b62198fc93684d8ae5b76e6199737, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6258459352089946643, guid: eb3b62198fc93684d8ae5b76e6199737, type: 3}
+      propertyPath: m_Name
+      value: CleanlinessPotion
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_AddedGameObjects: []
+  m_SourcePrefab: {fileID: 100100000, guid: eb3b62198fc93684d8ae5b76e6199737, type: 3}
 --- !u!1 &1177616954
 GameObject:
   m_ObjectHideFlags: 0
@@ -5203,6 +5314,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1336501736}
   m_CullTransparentMesh: 1
+--- !u!224 &1399566480 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 5864568135386092296, guid: eb3b62198fc93684d8ae5b76e6199737, type: 3}
+  m_PrefabInstance: {fileID: 1175340102}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1432431846
 GameObject:
   m_ObjectHideFlags: 0
@@ -5324,10 +5440,8 @@ MonoBehaviour:
   rune: {fileID: 1921887529}
   ingredient:
   - image: {fileID: 445025497}
-    name: {fileID: 671322487}
     quantity: {fileID: 147486444}
   - image: {fileID: 1313843773}
-    name: {fileID: 1745569679}
     quantity: {fileID: 718362395}
   locked: 0
 --- !u!114 &1496335671
@@ -5762,7 +5876,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9854d9eeed9238c42a36623841c5e2d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  recipes: []
+  recipe: {fileID: 0}
 --- !u!114 &1533243750
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6942,6 +7056,7 @@ RectTransform:
   m_Children:
   - {fileID: 487438117}
   - {fileID: 1046347079}
+  - {fileID: 1399566480}
   m_Father: {fileID: 879338726}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -7566,6 +7681,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lerpSpeed: 0.45
+  posY: 0
   cauldron1: {fileID: 290346144}
   cauldron2: {fileID: 903532989}
   cauldron3: {fileID: 63795363}
