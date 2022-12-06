@@ -90,7 +90,7 @@ public class HeaderSpeakerManager : MonoBehaviour
         {
             foreach (Transform child in transform)
             {
-                if (child.name != "HeadHubert1")
+                if (child.name != "HeadClient2")
                     child.gameObject.SetActive(false);
                 else
                     child.gameObject.SetActive(true);

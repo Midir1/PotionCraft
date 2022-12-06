@@ -71,10 +71,17 @@ public class StateManager : MonoBehaviour
                 if (currentState > lastState)
                     currentState = 0;
             }
+            //temporaire
+            if (currentState == 9 || currentState == 10 || currentState == 11)
+            {
+                currentState++;
+            }
         }
         if(currentState == 8 && potionTutoEnd == 0)
         {
             currentState++; 
         }
+
+       
     }
 }

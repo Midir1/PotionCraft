@@ -12,7 +12,7 @@ public class SpeakerNameScript : MonoBehaviour
     }
     void Update()
     {
-        if(StateManager.Instance.CurrentState == 2 || StateManager.Instance.CurrentState == 12)
+        if(StateManager.Instance.CurrentState == 2 || StateManager.Instance.CurrentState == 3 || StateManager.Instance.CurrentState == 13)
         {
             nameValue.text = "Client";
         }

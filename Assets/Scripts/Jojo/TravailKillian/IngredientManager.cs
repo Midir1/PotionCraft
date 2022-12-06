@@ -16,14 +16,11 @@ public class IngredientManager : Drag
 
         if (hasBeenDragged && !isDragged && !inCauldron)
         {
-            Destroy(gameObject);
-            if (GameManager.Instance.tutoState == true)
+            if (!GameManager.Instance.tutoState)
             {
-                if (gameObject.name == "NymphTear(Clone)")
-                {
-                    StateManager.Instance.potionTutoEnd--;
-                }
+                Destroy(gameObject);
             }
+            
         }
 
     }
@@ -31,7 +28,15 @@ public class IngredientManager : Drag
 
     private void OnTriggerStay2D(Collider2D other)
     {
-        if (!GameManager.Instance.tutoState)
+        if (GameManager.Instance.tutoState)
+        {
+            Destroy(gameObject);
+            if (gameObject.name == "NymphTear(Clone)")
+            {
+                StateManager.Instance.potionTutoEnd--;
+            }
+        }
+        else
         {
             //Debug.Log("ui");
             inCauldron = true;
@@ -47,6 +52,8 @@ public class IngredientManager : Drag
 
             Destroy(gameObject);
         }
+
+        
     }
 
     private void OnTriggerExit2D(Collider2D collision)
