@@ -6,13 +6,15 @@ using UnityEngine.UI;
 
 public class MenusHandler : MonoBehaviour
 {
+    
+
     [Header("Menus")]
     [SerializeField] private GameObject mainMenu;
     [SerializeField] private GameObject optionsMenu;
     [SerializeField] private GameObject creditsMenu;
 
     [Header("PlayAnim")] 
-    [SerializeField] private List<GameObject> buttons;
+    [SerializeField] private List<Button> buttons;
     [SerializeField] private float playAnimationDuration;
     [SerializeField] private float buttonAnimationDuration;
     [SerializeField] private Animator anim;
@@ -28,7 +30,7 @@ public class MenusHandler : MonoBehaviour
 
         for (int i = 0; i < buttons.Count; i++)
         {
-            buttons[i].SetActive(false);
+            buttons[i].gameObject.SetActive(false);
         }
         
         titlePanel.SetActive(false);
