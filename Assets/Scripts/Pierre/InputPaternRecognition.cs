@@ -75,11 +75,11 @@ public class InputPaternRecognition : MonoBehaviour
     void DrawLine()
     {
         Touch touch = Input.GetTouch(0);
-        Vector2 fingerPos = Camera.main.ScreenToWorldPoint(touch.position) - transform.position;
+        Vector2 fingerPos = Camera.main.ScreenToWorldPoint(touch.position) - parentTransform.position;
 
         if (arrPointLine.Count == 0)
         {
-            line = Instantiate(lineToInstantiate, gameObject.transform);
+            line = Instantiate(lineToInstantiate, parentTransform);
             runeDrawLine = line.GetComponent<RuneDrawLine>();
 
             arrPointLine.Add(fingerPos);
@@ -123,8 +123,8 @@ public class InputPaternRecognition : MonoBehaviour
         //1 - collision finger/ point
         //2 - angle fingerFoward / pointFoward
 
-        Touch touch = Input.GetTouch(0);
-        Vector2 fingerPos = Camera.main.ScreenToWorldPoint(touch.position);
+       // Touch touch = Input.GetTouch(0);
+       // Vector2 fingerPos = Camera.main.ScreenToWorldPoint(touch.position);
 
         int furthestPointTutched = 0;
         
@@ -226,17 +226,17 @@ public class InputPaternRecognition : MonoBehaviour
 
         rune = runeList.GetRune(patern);
 
-        bool firstPoint = true;
-        foreach (Vector2 pos in rune)
-        {
-            Object circleCopy = Instantiate(pointToInstantiate, pos + (Vector2)transform.position, Quaternion.identity, parentTransform);
-            if (firstPoint)
-            {
-                circleCopy.GetComponent<CanvasRenderer>().SetColor(UnityEngine.Color.red);
-                firstPoint = false;
-            }
-            arrPointRune.Add(circleCopy);
-        }
+        //bool firstPoint = true;
+        //foreach (Vector2 pos in rune)
+        //{
+        //    Object circleCopy = Instantiate(pointToInstantiate, pos + (Vector2)parentTransform.position, Quaternion.identity, parentTransform);
+        //    if (firstPoint)
+        //    {
+        //        circleCopy.GetComponent<CanvasRenderer>().SetColor(UnityEngine.Color.red);
+        //        firstPoint = false;
+        //    }
+        //    arrPointRune.Add(circleCopy);
+        //}
     }
 
     

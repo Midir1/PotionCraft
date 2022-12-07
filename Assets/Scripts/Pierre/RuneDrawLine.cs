@@ -31,14 +31,14 @@ public class RuneDrawLine : MonoBehaviour
 
     public void Braval()
     {
-        Debug.Log("Rune Goujoub");
+        
         EventSucces.Post(gameObject);
         Destroy(gameObject);
     }
 
     public void Fail()
     {
-        Debug.Log("Rune No");
+  
         EventFail.Post(gameObject);
         Destroy(gameObject);
 

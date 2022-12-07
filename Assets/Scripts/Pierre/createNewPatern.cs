@@ -50,7 +50,7 @@ public class createNewPatern : MonoBehaviour
         {
             touch = Input.GetTouch(0);
 
-            pos = Camera.main.ScreenToWorldPoint(touch.position) - transform.position;
+            pos = Camera.main.ScreenToWorldPoint(touch.position) - origin.position;
             if (touch.phase == TouchPhase.Began)
             {
                 //clear the last path
@@ -69,7 +69,7 @@ public class createNewPatern : MonoBehaviour
                 if (distance > actualDistBTWpoint)
                 {
 
-                    Object circleCopy = Instantiate(point, new Vector2(transform.position.x + pos.x , transform.position.y + pos.y), Quaternion.identity, origin);
+                    Object circleCopy = Instantiate(point, new Vector2(origin.position.x + pos.x , origin.position.y + pos.y), Quaternion.identity, origin);
                     arrPoint.Add(circleCopy);
                     path.Add(pos);
                     posLastPoint = pos;

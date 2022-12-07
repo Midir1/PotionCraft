@@ -85,47 +85,47 @@ LineRenderer:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 0.2073141
-        inSlope: 0
-        outSlope: 0
+        value: 0.002319336
+        inSlope: 8.178485
+        outSlope: 8.178485
         tangentMode: 0
         weightedMode: 0
         inWeight: 0
-        outWeight: 0
+        outWeight: 0.19310951
       - serializedVersion: 3
-        time: 0.13793503
-        value: 0.29267737
-        inSlope: 0.24268092
-        outSlope: 0.24268092
+        time: 0.062872514
+        value: 0.1956868
+        inSlope: 0.010557524
+        outSlope: 0.010557524
         tangentMode: 0
         weightedMode: 0
-        inWeight: 1
-        outWeight: 0.1192003
+        inWeight: 0.82803035
+        outWeight: 0.066549234
       - serializedVersion: 3
-        time: 0.88177514
-        value: 0.2804891
-        inSlope: -0.30312836
-        outSlope: -0.30312836
+        time: 0.9359039
+        value: 0.17426613
+        inSlope: -0.065974034
+        outSlope: -0.065974034
         tangentMode: 0
         weightedMode: 0
-        inWeight: 0.32450664
-        outWeight: 0
+        inWeight: 0.062412206
+        outWeight: 0.58660734
       - serializedVersion: 3
         time: 1
-        value: 0.15853845
-        inSlope: -0.643651
-        outSlope: -0.643651
+        value: 0
+        inSlope: -5.1504636
+        outSlope: -5.1504636
         tangentMode: 0
         weightedMode: 0
-        inWeight: 1
+        inWeight: 0.14928095
         outWeight: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
     colorGradient:
       serializedVersion: 2
-      key0: {r: 0, g: 0, b: 0, a: 1}
-      key1: {r: 0, g: 0, b: 0, a: 1}
+      key0: {r: 1, g: 0.5615011, b: 0, a: 0.7372549}
+      key1: {r: 1, g: 0.10728225, b: 0, a: 0.5529412}
       key2: {r: 0, g: 0, b: 0, a: 0}
       key3: {r: 0, g: 0, b: 0, a: 0}
       key4: {r: 0, g: 0, b: 0, a: 0}
@@ -140,7 +140,7 @@ LineRenderer:
       ctime5: 0
       ctime6: 0
       ctime7: 0
-      atime0: 0
+      atime0: 37394
       atime1: 65535
       atime2: 0
       atime3: 0
