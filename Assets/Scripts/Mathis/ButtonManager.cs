@@ -36,40 +36,63 @@ public class ButtonManager : MonoBehaviour
 
         timer += Time.deltaTime;
 
+        if (GameManager.Instance.tutoState)
+        {
+            if (StateManager.Instance.CurrentState == 2 && !StateManager.Instance.spawnClient)
+            {
+                startDay = true;
+                StateManager.Instance.spawnClient = true;
+            }
+        }
+
         if (startDay)
         {
             SpawnCustomer();
+            if (GameManager.Instance.tutoState)
+                startDay = false;
         }
 
     }
-
     public void OpenShop()
     {
         startDay = !startDay;
-        if (startDay)
+        if (!GameManager.Instance.tutoState)
         {
-            shopForeground.sprite = Resources.Load<Sprite>("background/Bot_1Open");
-        }
-        else
-        {
-            shopForeground.sprite = Resources.Load<Sprite>("background/Bot_1prime");
+            if (startDay)
+            {
+                shopForeground.sprite = Resources.Load<Sprite>("background/Bot_1Open");
+            }
+            else
+            {
+                shopForeground.sprite = Resources.Load<Sprite>("background/Bot_1prime");
+            }
         }
     }
 
     public void SpawnCustomer()
     {
-        if (timer > 8.0f)
+        if (!GameManager.Instance.tutoState)
         {
-            timer = 0f;
-            if (customerTab.Count < 3)
+            if (timer > 8.0f)
             {
-                // ajout
-                customer = new CustomerClass();
-                customerTab.Add(customer);
-                customer.DisplayCustomer(customerParent);
-                CustomerMove();
-                
+                timer = 0f;
+                if (customerTab.Count < 3)
+                {
+                    // ajout
+                    customer = new CustomerClass();
+                    customerTab.Add(customer);
+                    customer.DisplayCustomer(customerParent);
+                    CustomerMove();
+
+                }
             }
+        }
+        else
+        {
+            customer = new CustomerClass();
+            customerTab.Add(customer);
+            customer.DisplayCustomer(customerParent);
+            CustomerMove();
         }
     }
 
@@ -90,60 +113,61 @@ public class ButtonManager : MonoBehaviour
 
     public void EraseCustomer(Transform parent, int potionIndex)
     {
+        
+            int nb = 0;
 
-        int nb = 0;
-
-        for (int i = 0; i < customerTab.Count; i++)
-        {
-            if (parent == customerTab[i].partDisplay[0].transform.parent)
+            for (int i = 0; i < customerTab.Count; i++)
             {
-                pickedCustomer = customerTab[i];
-                nb = i;
-            }
-
-        }
-        if (pickedCustomer.isAngry && pickedCustomer.hero == HERO.SUCCUBUS && pickedCustomer.potionCanFall == true)
-        {
-            Debug.Log("Potion tomber");
-            pickedCustomer.potionCanFall = false;
-        }
-        else
-        {
-            bool wrongPot = true;
-
-            for (int i = 0; i < pickedCustomer.parchemin.Count; i++)
-            {
-                
-                if (potionIndex == (int)pickedCustomer.askedPotion_Customer[i].name)
+                if (parent == customerTab[i].partDisplay[0].transform.parent)
                 {
-                    Debug.Log("Bonne potion");
-                    Destroy(pickedCustomer.parchemin[i]);
-                    Destroy(pickedCustomer.potionGo[i]);
-                    pickedCustomer.parchemin.RemoveAt(i);
-                    pickedCustomer.potionGo.RemoveAt(i);
-                    wrongPot = false;
-                    break;
-                }             
-            }
-
-            if (wrongPot)
-            {
-                Debug.Log("Mauvaise Potion");
-                pickedCustomer.isAngry = true;
-            }
-
-            if (pickedCustomer.potionGo.Count == 0 || wrongPot)
-            {
-                for (int i = 0; i < pickedCustomer.nbPart; i++)
-                {
-                    Destroy(pickedCustomer.partDisplay[i]);
+                    pickedCustomer = customerTab[i];
+                    nb = i;
                 }
-                Destroy(parent.gameObject);
-                customerTab.RemoveAt(nb);
-                CustomerMove();
+
             }
-            
-        }
+            if (pickedCustomer.isAngry && pickedCustomer.hero == HERO.SUCCUBUS && pickedCustomer.potionCanFall == true)
+            {
+                Debug.Log("Potion tomber");
+                pickedCustomer.potionCanFall = false;
+            }
+            else
+            {
+                bool wrongPot = true;
+
+                for (int i = 0; i < pickedCustomer.parchemin.Count; i++)
+                {
+
+                    if (potionIndex == (int)pickedCustomer.askedPotion_Customer[i].name)
+                    {
+                        Debug.Log("Bonne potion");
+                        Destroy(pickedCustomer.parchemin[i]);
+                        Destroy(pickedCustomer.potionGo[i]);
+                        pickedCustomer.parchemin.RemoveAt(i);
+                        pickedCustomer.potionGo.RemoveAt(i);
+                        wrongPot = false;
+                        break;
+                    }
+                }
+
+                if (wrongPot)
+                {
+                    Debug.Log("Mauvaise Potion");
+                    pickedCustomer.isAngry = true;
+                }
+
+                if (pickedCustomer.potionGo.Count == 0 || wrongPot)
+                {
+                    for (int i = 0; i < pickedCustomer.nbPart; i++)
+                    {
+                        Destroy(pickedCustomer.partDisplay[i]);
+                    }
+                    Destroy(parent.gameObject);
+                    customerTab.RemoveAt(nb);
+                    CustomerMove();
+                }
+
+            }
+        
         
     }
         

@@ -7,10 +7,10 @@ using System.IO;
 using System;
 enum RACE
 {
-	PUMPKIN,
-	DEVIL,
-	SKELETON,
-	RACENB
+    PUMPKIN,
+    DEVIL,
+    SKELETON,
+    RACENB
 }
 
 public enum HERO
@@ -24,49 +24,49 @@ public enum HERO
 //temporaire en attendant la classe
 public enum INGREDIENT_CUSTOMER
 {
-	ROUGE,
-	VERT,
-	BLEU,
+    ROUGE,
+    VERT,
+    BLEU,
     INGREDIENT_CUSTOMERNB
 }
 
 
 public enum RUNES
 {
-	RUNE1,
-	RUNE2,
-	RUNE3,
-	RUNE4,
-	RUNE5,
-	RUNE6,
-	RUNENB
+    RUNE1,
+    RUNE2,
+    RUNE3,
+    RUNE4,
+    RUNE5,
+    RUNE6,
+    RUNENB
 }
 
 public struct Potion_Customer
 {
-	public List<INGREDIENT_CUSTOMER> ing;
+    public List<INGREDIENT_CUSTOMER> ing;
     public RUNES rune;
     public int price;
     public PotionBp name;
 }
 
-public class CustomerClass 
+public class CustomerClass
 {
     #region Fields
     private float timerMax;
-	public float timer;
-	public Potion_Customer[] askedPotion_Customer;
-	
-	//Skin random du perso
-	private int[] part;
-	public GameObject[] partDisplay;
+    public float timer;
+    public Potion_Customer[] askedPotion_Customer;
+
+    //Skin random du perso
+    private int[] part;
+    public GameObject[] partDisplay;
     public GameObject parent;
     private string[] secondPath;
     private Sprite sprite;
-	public Vector2 pos;
-	private RACE race;
-	public HERO hero;
-	public int nbPart;
+    public Vector2 pos;
+    private RACE race;
+    public HERO hero;
+    public int nbPart;
     public Animator anim;
     private GameManager manager;
     public bool isAngry;
@@ -77,19 +77,19 @@ public class CustomerClass
 
     #endregion
 
-    public CustomerClass ()
-	{
+    public CustomerClass()
+    {
         manager = GameManager.Instance;
 
         isAngry = false;
         potionCanFall = false;
-       
+
 
 
         int Potion_CustomerSize = UnityEngine.Random.Range(1, 4);
 
-		timerMax = 4 * Potion_CustomerSize;
-		timer = timerMax;
+        timerMax = 4 * Potion_CustomerSize;
+        timer = timerMax;
 
         if (UnityEngine.Random.Range(1, 11) == 1)
         {
@@ -108,38 +108,47 @@ public class CustomerClass
             nbPotion = 3;
 
         askedPotion_Customer = new Potion_Customer[nbPotion];
-
-        for (int i = 0; i < nbPotion; i++)
+        if (!GameManager.Instance.tutoState)
         {
-            askedPotion_Customer[i] = new Potion_Customer();
-            int rng = 0;
-            do
+            for (int i = 0; i < nbPotion; i++)
             {
-                rng = UnityEngine.Random.Range(0, (int)PotionBp.PotionBpNb);
-                askedPotion_Customer[i].name = (PotionBp)rng;
-            } while (manager.Bp[rng] == false);
+                askedPotion_Customer[i] = new Potion_Customer();
+                int rng = 0;
+                do
+                {
+                    rng = UnityEngine.Random.Range(0, (int)PotionBp.PotionBpNb);
+                    askedPotion_Customer[i].name = (PotionBp)rng;
+                } while (manager.Bp[rng] == false);
 
-            askedPotion_Customer[i].ing = new List<INGREDIENT_CUSTOMER>();
+                askedPotion_Customer[i].ing = new List<INGREDIENT_CUSTOMER>();
 
-            for (int j = 0; j < Potion_CustomerSize; j++)
-            {
-                askedPotion_Customer[i].ing.Add((INGREDIENT_CUSTOMER)UnityEngine.Random.Range(0, (int)INGREDIENT_CUSTOMER.INGREDIENT_CUSTOMERNB));
+                for (int j = 0; j < Potion_CustomerSize; j++)
+                {
+                    askedPotion_Customer[i].ing.Add((INGREDIENT_CUSTOMER)UnityEngine.Random.Range(0, (int)INGREDIENT_CUSTOMER.INGREDIENT_CUSTOMERNB));
+                }
+
+                askedPotion_Customer[i].rune = (RUNES)UnityEngine.Random.Range(0, (int)RUNES.RUNENB);
+
+
+                askedPotion_Customer[i].price = 100 + 10 * Potion_CustomerSize + 10 * (int)askedPotion_Customer[i].rune;
             }
-
-            askedPotion_Customer[i].rune = (RUNES)UnityEngine.Random.Range(0, (int)RUNES.RUNENB);
-
-
-            askedPotion_Customer[i].price = 100 + 10 * Potion_CustomerSize + 10 * (int)askedPotion_Customer[i].rune;
         }
-       
+        else
+        {
+            askedPotion_Customer[0] = new Potion_Customer();
+            askedPotion_Customer[0].name = PotionBp.Clean;
+            askedPotion_Customer[0].rune = (RUNES)UnityEngine.Random.Range(0, (int)RUNES.RUNENB);
+            askedPotion_Customer[0].price = 100 + 10 * Potion_CustomerSize + 10 * (int)askedPotion_Customer[0].rune;
+        }
+
 
     }
 
 
-	#region Methods
-	public int Paiement()
-	{
-        int result= 0;
+    #region Methods
+    public int Paiement()
+    {
+        int result = 0;
         //renvoie le prix d'acar de la Potion_Customer confectionné
         for (int i = 0; i < nbPotion; i++)
         {
@@ -154,23 +163,23 @@ public class CustomerClass
 
             result += (int)timePrice + (int)priceLeft * 2;
         }
-		
-        
-		return result;
-	}
+
+
+        return result;
+    }
 
     public void DisplayCustomer(Transform customerParent)
-	{
-		string path;
+    {
+        string path;
 
-        if (race == RACE.RACENB)
+        if (race == RACE.RACENB && !GameManager.Instance.tutoState)
         {
             switch (hero)
             {
                 case HERO.MERCHANT:
-                    path = "OC/tenu3";  
+                    path = "OC/tenu3";
                     break;
-                case HERO.WARIOR:   
+                case HERO.WARIOR:
                     path = "OC/tenu1";
                     break;
                 case HERO.SUCCUBUS:
@@ -194,30 +203,43 @@ public class CustomerClass
         }
         else
         {
-            switch (race)
+            if (!GameManager.Instance.tutoState)
             {
-                case RACE.PUMPKIN:
-                    path = Pumpkin();
-                    break;
-                case RACE.DEVIL:
-                    path = Devil();
-                    break;
-                case RACE.SKELETON:
-                    path = Skeleton();
-                    break;
-                default:
-                    path = Devil();
-                    break;
-            }
+                switch (race)
+                {
+                    case RACE.PUMPKIN:
+                        path = Pumpkin();
+                        break;
+                    case RACE.DEVIL:
+                        path = Devil();
+                        break;
+                    case RACE.SKELETON:
+                        path = Skeleton();
+                        break;
+                    default:
+                        path = Devil();
+                        break;
+                }
 
-            for (int i = 0; i < nbPart; i++)
+
+                for (int i = 0; i < nbPart; i++)
+                {
+                    part[i] = UnityEngine.Random.Range(1, 5);
+                }
+            }
+            else
             {
-                part[i] = UnityEngine.Random.Range(1, 5);
+                path = Pumpkin();
+                part[0] = 3;
+                part[1] = 3;
+                part[2] = 1;
+                part[3] = 3;
+                part[4] = 2;
             }
 
         }
 
-        
+
         parent = new GameObject("Customer", typeof(RectTransform));
         parent.GetComponent<RectTransform>().anchoredPosition = new Vector3(0, 1.8f);
         parent.GetComponent<RectTransform>().SetParent(customerParent);
@@ -225,8 +247,8 @@ public class CustomerClass
         //anim.runtimeAnimatorController = Resources.Load("AnimationController/Customer") as RuntimeAnimatorController; ;
         //anim.SetInteger("Race", (int)race);
 
-        float ratioH = (1920 / (float)Screen.height)* 1.5f;
-        parent.transform.localScale *= ratioH; 
+        float ratioH = (1920 / (float)Screen.height) * 1.5f;
+        parent.transform.localScale *= ratioH;
         parent.transform.SetSiblingIndex(0);
         for (int i = 0; i < nbPart; i++)
         {
@@ -247,7 +269,7 @@ public class CustomerClass
                 {
                     pos = new Vector2(1, 2);
                 }
-                
+
                 sprite = Resources.Load<Sprite>(path);
             }
             else
@@ -258,14 +280,14 @@ public class CustomerClass
             image.sprite = sprite;
             Vector2 size = image.sprite.bounds.size;
             collide.size = size;
-    
+
             partDisplay[i].GetComponent<RectTransform>().sizeDelta = size;
-            Vector2 pivot = new Vector2(sprite.pivot.x / (size.x* sprite.pixelsPerUnit), sprite.pivot.y / (size.y* sprite.pixelsPerUnit));
+            Vector2 pivot = new Vector2(sprite.pivot.x / (size.x * sprite.pixelsPerUnit), sprite.pivot.y / (size.y * sprite.pixelsPerUnit));
 
             partDisplay[i].GetComponent<RectTransform>().pivot = pivot;
             partDisplay[i].GetComponent<RectTransform>().anchoredPosition = pos;
-      
-            partDisplay[i].GetComponent<RectTransform>().SetParent(parent.transform); 
+
+            partDisplay[i].GetComponent<RectTransform>().SetParent(parent.transform);
 
         }
 
@@ -301,8 +323,8 @@ public class CustomerClass
             parchemin[i].transform.SetParent(parent.transform);
             potionGo[i].transform.SetParent(parent.transform);
 
-            parchemin[i].transform.position = new Vector2(0 - nbPotion * 0.4f , 3.2f-i);
-            potionGo[i].transform.position = new Vector2(0 - nbPotion * 0.4f, 3.2f-i);
+            parchemin[i].transform.position = new Vector2(0 - nbPotion * 0.4f, 3.2f - i);
+            potionGo[i].transform.position = new Vector2(0 - nbPotion * 0.4f, 3.2f - i);
         }
     }
 
@@ -436,7 +458,7 @@ public class CustomerClass
                 partDisplay[4].GetComponent<Image>().sprite = s;
 
             }
-        }    
+        }
         isAngry = true;
     }
 
@@ -459,8 +481,8 @@ public class CustomerClass
     }
 
     public string Pumpkin()
-	{
-		string path = "pumpkin/";
+    {
+        string path = "pumpkin/";
 
         nbPart = 5;
         partDisplay = new GameObject[nbPart];
@@ -496,14 +518,17 @@ public class CustomerClass
     }
 
     public void Update(int pos)
-	{
-		timer -= Time.deltaTime;
-        if (timer < timerMax*0.5 && !isAngry)
+    {
+        if (!GameManager.Instance.tutoState)
         {
-            Angry();
+            timer -= Time.deltaTime;
+            if (timer < timerMax * 0.5 && !isAngry)
+            {
+                Angry();
+            }
         }
-        
+
     }
 
-	#endregion
+    #endregion
 }

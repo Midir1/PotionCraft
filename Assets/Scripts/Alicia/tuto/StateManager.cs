@@ -7,11 +7,14 @@ public class StateManager : MonoBehaviour
 
     #region Attributes
 
+    public int potionTutoEnd;
+    public bool spawnClient = false;
     [SerializeField] int currentState = 0;
     [SerializeField] int lastState = 16;
     [SerializeField] List<string> speech;
+    [SerializeField] GameObject potion;
     private static StateManager instance;
-    public int potionTutoEnd;
+
 
     #endregion
 
@@ -41,7 +44,7 @@ public class StateManager : MonoBehaviour
     {
         for (int i = 0; i <= lastState; i++)
         {
-            if (speech.Count < i+1)
+            if (speech.Count < i + 1)
                 speech.Add("");
         }
         potionTutoEnd = 1;
@@ -49,7 +52,7 @@ public class StateManager : MonoBehaviour
 
     public void ButtonGrimoir()
     {
-        if(currentState == 6)
+        if (currentState == 6)
         {
             CurrentState++;
         }
@@ -63,25 +66,39 @@ public class StateManager : MonoBehaviour
     }
     private void Update()
     {
-        if(Input.touchCount == 1 && Input.GetTouch(0).phase == TouchPhase.Ended)
+        if (Input.touchCount == 1 && Input.GetTouch(0).phase == TouchPhase.Ended)
         {
-            if (currentState <= 5 || currentState  == 10 || currentState == 17)
+            if (currentState <= 5  || currentState == 17 )
             {
                 currentState++;
                 if (currentState > lastState)
                     currentState = 0;
+
+            }
+            else if (currentState == 11)
+            {
+                currentState++;
+                potion.SetActive(true);
+            }
+            else if (currentState == 13)
+            {
+                currentState++;
             }
             //temporaire
-            if (currentState == 9 || currentState == 10 || currentState == 11)
+            if (currentState == 9 || currentState == 10)
             {
                 currentState++;
             }
         }
-        if(currentState == 8 && potionTutoEnd == 0)
-        {
-            currentState++; 
-        }
 
-       
+        if (currentState == 8 && potionTutoEnd == 0)
+        {
+            currentState++;
+        }
+        if (currentState == 12 && potion == null)
+            currentState++;
+        
+
+
     }
 }
