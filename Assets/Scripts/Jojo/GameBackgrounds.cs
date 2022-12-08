@@ -53,13 +53,15 @@ public class GameBackgrounds : MonoBehaviour, IBeginDragHandler, IEndDragHandler
 
     private void Update()
     {
-        if (!GameManager.Instance.tutoState || ( GameManager.Instance.tutoState && StateManager.Instance.CurrentState == 14))
+        if (!GameManager.Instance.tutoState|| (GameManager.Instance.tutoState && StateManager.Instance.CurrentState == 14))
         {
-            scrollRect.enabled = true;
+            
             ScrollBetweenFloors();
             //ScrollBetweenTransition();
             ClampScroll();
-            if(transform.position.y <= -19 && GameManager.Instance.tutoState)
+            if(GameManager.Instance.tutoState && StateManager.Instance.CurrentState == 14)
+                scrollRect.enabled = true;
+            if (transform.position.y <= -19 && GameManager.Instance.tutoState)
             {
                 StateManager.Instance.CurrentState++;
             }
