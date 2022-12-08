@@ -25,7 +25,8 @@ public class IngredientManager : Drag
         ingredientManagers = new IngredientManager[5];
         images = new Image[5];
 
-        doorButton = GameObject.FindWithTag("DoorButton").GetComponent<Image>();
+        doorButton = GameObject.FindWithTag("DoorButton")?.GetComponent<Image>();
+        
     }
 
 
