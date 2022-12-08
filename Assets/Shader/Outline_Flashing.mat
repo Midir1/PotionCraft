@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Outline
-  m_Shader: {fileID: -6465566751694194690, guid: 7feea8befd781644d865ee9abcb7c4d5, type: 3}
+  m_Name: Outline_Flashing
+  m_Shader: {fileID: -6465566751694194690, guid: e5649cfe9a19fa34699ea7c3c677aef0, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords:
@@ -45,10 +45,9 @@ Material:
     - CORNERS: 1
     - _Thiccness: 0.01
     m_Colors:
-    - _Color: {r: 1.319508, g: 0.8425735, b: 0.46680707, a: 0}
-    - _OutlineColor: {r: 8.47419, g: 4.303646, b: 0.44367486, a: 1}
+    - _OutlineColor: {r: 4.083006, g: 1.5177667, b: 0.2118541, a: 1}
   m_BuildTextureStacks: []
---- !u!114 &3293787632364953602
+--- !u!114 &3689196024686687553
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}
