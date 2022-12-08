@@ -8,7 +8,7 @@ public class Drag : MonoBehaviour
     
     protected Canvas canvas;
 
-    virtual protected void Start()
+    protected virtual void Start()
     {
         canvas = GetComponentInParent<Canvas>();
     }

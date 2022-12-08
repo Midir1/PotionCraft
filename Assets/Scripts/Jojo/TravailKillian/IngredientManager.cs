@@ -1,4 +1,7 @@
+using JetBrains.Annotations;
 using UnityEngine;
+using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 public class IngredientManager : Drag
 {
@@ -9,6 +12,22 @@ public class IngredientManager : Drag
 
     private bool hasBeenDragged = false;
     private bool inCauldron = false;
+    
+    private IngredientManager[] ingredientManagers;
+    private Image[] images;
+
+    private Image doorButton;
+    
+    protected override void Start()
+    {
+        base.Start();
+
+        ingredientManagers = new IngredientManager[5];
+        images = new Image[5];
+
+        doorButton = GameObject.FindWithTag("DoorButton").GetComponent<Image>();
+    }
+
 
     private void Update()
     {
@@ -81,4 +100,36 @@ public class IngredientManager : Drag
             }
         }
     }
+    
+    [UsedImplicitly]
+    public void BeginDrag(BaseEventData data)
+    {
+        ingredientManagers = FindObjectsOfType<IngredientManager>();
+
+        for (var index = 0; index < ingredientManagers.Length; index++)
+        {
+            images[index] = ingredientManagers[index].GetComponent<Image>();
+                
+            if (images[index].gameObject == gameObject) continue;
+            images[index].raycastTarget = false;
+        }
+
+        if (doorButton != null) doorButton.raycastTarget = false;
+    }
+    
+    [UsedImplicitly] public void EndDrag(BaseEventData data)
+    {
+        for (var index = 0; index < ingredientManagers.Length; index++)
+        {
+            if (images[index].gameObject == gameObject) continue;
+                
+            images[index].raycastTarget = true;
+        }
+        
+        if (doorButton != null) doorButton.raycastTarget = true;
+        
+        ingredientManagers = new IngredientManager[5];
+        images = new Image[5];
+    }
+
 }
