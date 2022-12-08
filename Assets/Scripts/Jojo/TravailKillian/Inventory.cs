@@ -9,6 +9,7 @@ public class Inventory : MonoBehaviour
     public int maxIngredients;
 
     public AK.Wwise.Event EventBadPotion;
+    public AK.Wwise.Event eventGoodPotion;
 
     public List<Item> ingredients;
 
@@ -139,6 +140,8 @@ public class Inventory : MonoBehaviour
                     inputPaternRecognition.inventory = this;
 
                     potionIndex = i;
+
+                    eventGoodPotion.Post(gameObject);
 
                     goodMix = true;
                     return;

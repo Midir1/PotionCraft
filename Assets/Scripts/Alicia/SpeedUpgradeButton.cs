@@ -5,6 +5,9 @@ using TMPro;
 
 public class SpeedUpgradeButton : MonoBehaviour
 {
+
+    public AK.Wwise.Event eventWwise;
+
     [SerializeField] uint price;
     bool availablePurchase = true;
     private TextMeshProUGUI priceValue;
@@ -21,6 +24,7 @@ public class SpeedUpgradeButton : MonoBehaviour
         {
             GameManager.Instance.RemoveMoney(price);
             availablePurchase = false;
+            eventWwise.Post(gameObject);
 
             switch (GetComponentInParent<ItemShopScript>().Id)
             {

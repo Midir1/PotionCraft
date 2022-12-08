@@ -5,6 +5,8 @@ using TMPro;
 
 public class TimeUpgradeButton : MonoBehaviour
 {
+    public AK.Wwise.Event eventWwise;
+
     [SerializeField] uint price;
     bool availablePurchase = true;
     private TextMeshProUGUI priceValue;
@@ -19,6 +21,7 @@ public class TimeUpgradeButton : MonoBehaviour
     {
         if (availablePurchase && GameManager.Instance.CurrentMoney > price && transform.position.y < 3.0f && transform.position.y > -3.3f)
         {
+            eventWwise.Post(gameObject);
 
             GameManager.Instance.RemoveMoney(price);
 
