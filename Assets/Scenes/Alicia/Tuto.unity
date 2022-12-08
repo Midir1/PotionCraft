@@ -359,6 +359,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxIngredients: 3
+  EventBadPotion:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
+  eventGoodPotion:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
   ingredients: []
   isBrewing: 0
   isBurning: 0
@@ -1363,7 +1371,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f91572bee362a0e4cb0e6d79878c55ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  price: 100
+  price: 0
   id: Strawberry
 --- !u!114 &403953577
 MonoBehaviour:
@@ -3391,7 +3399,6 @@ MonoBehaviour:
   - {fileID: 290346144}
   defaultResolution: {x: 1080, y: 1920}
   swipeTolerance: 0.2
-  isActive: 0
 --- !u!1 &883843145
 GameObject:
   m_ObjectHideFlags: 0
@@ -3640,6 +3647,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxIngredients: 3
+  EventBadPotion:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
+  eventGoodPotion:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
   ingredients: []
   isBrewing: 0
   isBurning: 0
@@ -4182,7 +4197,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 328, y: 1023}
+  m_AnchoredPosition: {x: -372, y: 1023}
   m_SizeDelta: {x: 175, y: 400}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1046347080
@@ -5650,6 +5665,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9854d9eeed9238c42a36623841c5e2d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  eventWwiseChaudrond:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
+  eventWwisePostion:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
+  eventWwiseTip:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
+  eventWwiseSonnette:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
   recipe: {fileID: 0}
 --- !u!114 &1533243750
 MonoBehaviour:
@@ -6706,6 +6737,7 @@ GameObject:
   - component: {fileID: 1760692841}
   - component: {fileID: 1760692840}
   - component: {fileID: 1760692839}
+  - component: {fileID: 1760692843}
   m_Layer: 5
   m_Name: Shop
   m_TagString: Untagged
@@ -6799,6 +6831,18 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1760692843
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1760692838}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64616ab4b8f52b947a24c394aa686962, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1787008635
 GameObject:
   m_ObjectHideFlags: 0
@@ -7981,7 +8025,7 @@ MonoBehaviour:
   potionTutoEnd: 0
   spawnClient: 0
   currentState: 0
-  lastState: 17
+  lastState: 18
   speech:
   - Welcome to your new workplace, young witch, I am Hubert the owner of this shop.
     *HOO*
@@ -8011,6 +8055,7 @@ MonoBehaviour:
     supplies come see me !
   - Now, about your compendium, i manage to find one of the lost pages, please take
     it.
+  - 
   - '*HOO* before you go, let me warn you that not every customer will be as easily
     pleased as that pumpkin-head...'
   potion: {fileID: 544137576}

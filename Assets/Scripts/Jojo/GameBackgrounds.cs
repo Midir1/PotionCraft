@@ -10,7 +10,6 @@ public class GameBackgrounds : MonoBehaviour, IBeginDragHandler, IEndDragHandler
     [SerializeField] private List<RectTransform> resizable;
     [SerializeField] private Vector2 defaultResolution;
     [SerializeField] private float swipeTolerance;
-    [SerializeField] bool isActive = true;
 
     private RectTransform rectTransform;
 
@@ -54,12 +53,16 @@ public class GameBackgrounds : MonoBehaviour, IBeginDragHandler, IEndDragHandler
 
     private void Update()
     {
-        if (isActive)
+        if (!GameManager.Instance.tutoState || ( GameManager.Instance.tutoState && StateManager.Instance.CurrentState == 14))
         {
             scrollRect.enabled = true;
             ScrollBetweenFloors();
             //ScrollBetweenTransition();
             ClampScroll();
+            if(transform.position.y <= -19)
+            {
+                StateManager.Instance.CurrentState++;
+            }
         }
         else
         {

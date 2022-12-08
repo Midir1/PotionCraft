@@ -12,6 +12,7 @@ public class SpeechScript : MonoBehaviour
     }
     void Update()
     {
+        if(GameManager.Instance.tutoState)
         speechValue.text = StateManager.Instance.Speech[StateManager.Instance.CurrentState];
     }
 }

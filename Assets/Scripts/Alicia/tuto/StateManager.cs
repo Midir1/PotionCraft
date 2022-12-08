@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class StateManager : MonoBehaviour
 {
@@ -10,11 +12,10 @@ public class StateManager : MonoBehaviour
     public int potionTutoEnd;
     public bool spawnClient = false;
     [SerializeField] int currentState = 0;
-    [SerializeField] int lastState = 16;
+    [SerializeField] int lastState = 18;
     [SerializeField] List<string> speech;
     [SerializeField] GameObject potion;
     private static StateManager instance;
-
 
     #endregion
 
@@ -68,12 +69,11 @@ public class StateManager : MonoBehaviour
     {
         if (Input.touchCount == 1 && Input.GetTouch(0).phase == TouchPhase.Ended)
         {
-            if (currentState <= 5  || currentState == 17 )
-            {
-                currentState++;
-                if (currentState > lastState)
-                    currentState = 0;
 
+            if (currentState <= 5|| currentState == 17)
+            {
+                if (currentState <= lastState)
+                    currentState++;
             }
             else if (currentState == 11)
             {
@@ -81,8 +81,11 @@ public class StateManager : MonoBehaviour
                 potion.SetActive(true);
             }
             else if (currentState == 13)
-            {
                 currentState++;
+            else if (currentState == lastState)
+            {
+                GameManager.Instance.tutoState = false;
+                SceneManager.LoadSceneAsync("OriginalMergeScene");
             }
             //temporaire
             if (currentState == 9 || currentState == 10)
@@ -92,12 +95,10 @@ public class StateManager : MonoBehaviour
         }
 
         if (currentState == 8 && potionTutoEnd == 0)
-        {
             currentState++;
-        }
-        if (currentState == 12 && potion == null)
+        else if (currentState == 12 && potion == null)
             currentState++;
-        
+
 
 
     }

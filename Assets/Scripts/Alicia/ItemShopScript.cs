@@ -23,20 +23,34 @@ public class ItemShopScript : MonoBehaviour
     }
     public bool BuyIt()
     {
-        if (availablePurchase && transform.position.y < 3.0f && transform.position.y > -3.3f)
+        if(!GameManager.Instance.tutoState)
         {
-            if (GameManager.Instance.CurrentMoney > price)
+            if (availablePurchase && transform.position.y < 3.0f && transform.position.y > -3.3f)
             {
-                GameManager.Instance.RemoveMoney(price);
-                availablePurchase = false;
-                foreach (Transform child in transform)
+                if (GameManager.Instance.CurrentMoney > price)
                 {
-                    if (child.name == "ButtonBuy")
-                        child.gameObject.SetActive(false);
+                    GameManager.Instance.RemoveMoney(price);
+                    availablePurchase = false;
+                    foreach (Transform child in transform)
+                    {
+                        if (child.name == "ButtonBuy")
+                            child.gameObject.SetActive(false);
+                    }
+                    return true;
                 }
-                return true;
             }
+            return false;
         }
+        else if(StateManager.Instance.CurrentState == 16)
+        {
+            foreach (Transform child in transform)
+            {
+                if (child.name == "ButtonBuy")
+                    child.gameObject.SetActive(false);
+            }
+            StateManager.Instance.CurrentState++;
+        }
+
         return false;
     }
 
