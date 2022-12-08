@@ -8,10 +8,14 @@ public class Inventory : MonoBehaviour
 {
     public int maxIngredients;
 
+    public AK.Wwise.Event EventBadPotion;
+
     public List<Item> ingredients;
 
     public bool isBrewing;
     public bool isBurning;
+
+    
 
     [SerializeField] private List<Recipe> recipes;
     [SerializeField] private List<GameObject> potions;
@@ -105,6 +109,8 @@ public class Inventory : MonoBehaviour
     //Recipes and Potions Needs to be in the same order in the inspector to give the provided result
     public void CheckPotionExist()
     {
+        bool goodMix = false;
+
         for (var i = 0; i < recipes.Count; i++)
         {
             var recipe = recipes[i];
@@ -134,10 +140,13 @@ public class Inventory : MonoBehaviour
 
                     potionIndex = i;
 
+                    goodMix = true;
                     return;
                 }
             }
         }
+
+        if (!goodMix) EventBadPotion.Post(gameObject);
 
         ingredients.Clear();
     }

@@ -4,6 +4,9 @@ public class IngredientManager : Drag
 {
     [SerializeField] private Item item;
 
+    public AK.Wwise.Event EventIngrediantIn;
+    public AK.Wwise.Event EventBadPotion;
+
     private bool hasBeenDragged = false;
     private bool inCauldron = false;
 
@@ -18,6 +21,8 @@ public class IngredientManager : Drag
         {
             if (!GameManager.Instance.tutoState)
             {
+                
+                EventBadPotion.Post(transform.parent.gameObject);
                 Destroy(gameObject);
             }
             
@@ -41,13 +46,23 @@ public class IngredientManager : Drag
             //Debug.Log("ui");
             inCauldron = true;
 
-            if (!other.CompareTag("Cauldron") || isDragged) return;
-
             Inventory inventory = other.GetComponent<Inventory>();
 
-            if (inventory.isBrewing) return;
+            if (!other.CompareTag("Cauldron") || isDragged)
+            {
+                // EventBadPotion.Post(transform.parent.gameObject);
+                return;
+            }
+
+            if (inventory.isBrewing)
+            {
+                EventBadPotion.Post(transform.parent.gameObject);
+                return;
+            }
 
             inventory.ingredients.Add(item);
+            EventIngrediantIn.Post(transform.parent.gameObject);
+
             if (inventory.ingredients.Count == inventory.maxIngredients) inventory.CheckPotionExist();
 
             Destroy(gameObject);

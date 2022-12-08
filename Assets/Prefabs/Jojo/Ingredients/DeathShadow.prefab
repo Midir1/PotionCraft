@@ -139,8 +139,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   item: {fileID: 11400000, guid: 7f58031e1425d3741a304364fffdb6c5, type: 2}
-  vfx: {fileID: 1532753793918100367, guid: 65d5ad2ec184bb044ad939ac22f391d2, type: 3}
-  vfx2: {fileID: 6412907808537790569, guid: ecbb2790726a96748a4fbfb179ea5500, type: 3}
+  EventIngrediantIn:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 9fbaf9f4bfdaad345aad57f0a6d875dc, type: 2}
+  EventBadPotion:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
 --- !u!61 &6866526220078503472
 BoxCollider2D:
   m_ObjectHideFlags: 0
