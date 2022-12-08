@@ -59,7 +59,7 @@ public class GameBackgrounds : MonoBehaviour, IBeginDragHandler, IEndDragHandler
             ScrollBetweenFloors();
             //ScrollBetweenTransition();
             ClampScroll();
-            if(transform.position.y <= -19)
+            if(transform.position.y <= -19 && GameManager.Instance.tutoState)
             {
                 StateManager.Instance.CurrentState++;
             }
