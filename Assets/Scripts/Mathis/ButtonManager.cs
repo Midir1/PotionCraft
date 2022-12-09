@@ -15,6 +15,7 @@ public class ButtonManager : MonoBehaviour
     CustomerClass pickedCustomer;
 
     [SerializeField]Image shopForeground;
+    [SerializeField]Image doorImage;
 
     float timer = 8f;
     bool startDay = false;
@@ -55,16 +56,19 @@ public class ButtonManager : MonoBehaviour
     }
     public void OpenShop()
     {
+
         startDay = !startDay;
         if (!GameManager.Instance.tutoState)
         {
             if (startDay)
             {
-                shopForeground.sprite = Resources.Load<Sprite>("background/Bot_1Open");
+                shopForeground.sprite = Resources.Load<Sprite>("background/Bot_1OpenAlpha");
+                doorImage.sprite = Resources.Load<Sprite>("background/porte_ouverte");
             }
             else
             {
-                shopForeground.sprite = Resources.Load<Sprite>("background/Bot_1prime");
+                shopForeground.sprite = Resources.Load<Sprite>("background/Bot_1CloseAlpha");
+                doorImage.sprite = Resources.Load<Sprite>("background/porte");
             }
         }
     }
@@ -106,7 +110,7 @@ public class ButtonManager : MonoBehaviour
                 Vector3 pos = customerTab[i].parent.GetComponent<RectTransform>().anchoredPosition3D;
                 customerTab[i].parent.GetComponent<RectTransform>().anchoredPosition3D = new Vector3(pos.x,pos.y,0);
                 customerTab[i].parent.GetComponent<RectTransform>().localScale = new Vector3(296 * Mathf.Cos(i), 296 * Mathf.Cos(i));
-                //customerTab[i].anim.SetInteger("Pos", i);
+                customerTab[i].anim.SetInteger("Pos", i);
             }
         }
     }
