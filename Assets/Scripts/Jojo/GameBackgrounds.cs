@@ -10,6 +10,9 @@ public class GameBackgrounds : MonoBehaviour, IBeginDragHandler, IEndDragHandler
     [SerializeField] private List<RectTransform> resizable;
     [SerializeField] private Vector2 defaultResolution;
     [SerializeField] private float swipeTolerance;
+    
+    [SerializeField] private Canvas shopCanvas;
+    [SerializeField] private Canvas grimoireCanvas;
 
     private RectTransform rectTransform;
 
@@ -53,6 +56,8 @@ public class GameBackgrounds : MonoBehaviour, IBeginDragHandler, IEndDragHandler
 
     private void Update()
     {
+        if (shopCanvas.isActiveAndEnabled || grimoireCanvas.isActiveAndEnabled) return;
+        
         if (!GameManager.Instance.tutoState|| (GameManager.Instance.tutoState && StateManager.Instance.CurrentState == 14))
         {
             
