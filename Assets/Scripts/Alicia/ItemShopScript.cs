@@ -27,7 +27,7 @@ public class ItemShopScript : MonoBehaviour
         {
             if (availablePurchase && transform.position.y < 3.0f && transform.position.y > -3.3f)
             {
-                if (GameManager.Instance.CurrentMoney > price)
+                if (GameManager.Instance.CurrentMoney >= price)
                 {
                     GameManager.Instance.RemoveMoney(price);
                     availablePurchase = false;
