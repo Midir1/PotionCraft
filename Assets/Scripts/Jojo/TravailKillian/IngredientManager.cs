@@ -15,12 +15,12 @@ public class IngredientManager : Drag
 
     private bool hasBeenDragged = false;
     private bool inCauldron = false;
-    
+
     private IngredientManager[] ingredientManagers;
     private Image[] images;
 
     private Image doorButton;
-    
+
     protected override void Start()
     {
         base.Start();
@@ -28,8 +28,9 @@ public class IngredientManager : Drag
         ingredientManagers = new IngredientManager[5];
         images = new Image[5];
 
-        doorButton = GameObject.FindWithTag("DoorButton")?.GetComponent<Image>();
-        
+        if (!GameManager.Instance.tutoState)
+            doorButton = GameObject.FindWithTag("DoorButton")?.GetComponent<Image>();
+
     }
 
 
@@ -44,11 +45,11 @@ public class IngredientManager : Drag
         {
             if (!GameManager.Instance.tutoState)
             {
-                
+
                 EventBadPotion.Post(transform.parent.gameObject);
                 Destroy(gameObject);
             }
-            
+
         }
 
     }
@@ -138,7 +139,7 @@ public class IngredientManager : Drag
             Destroy(this);
         }
 
-        
+
     }
 
     private void OnTriggerExit2D(Collider2D collision)
@@ -151,7 +152,7 @@ public class IngredientManager : Drag
             }
         }
     }
-    
+
     [UsedImplicitly]
     public void BeginDrag(BaseEventData data)
     {
@@ -160,25 +161,26 @@ public class IngredientManager : Drag
         for (var index = 0; index < ingredientManagers.Length; index++)
         {
             images[index] = ingredientManagers[index].GetComponent<Image>();
-                
+
             if (images[index].gameObject == gameObject) continue;
             images[index].raycastTarget = false;
         }
 
         if (doorButton != null) doorButton.raycastTarget = false;
     }
-    
-    [UsedImplicitly] public void EndDrag(BaseEventData data)
+
+    [UsedImplicitly]
+    public void EndDrag(BaseEventData data)
     {
         for (var index = 0; index < ingredientManagers.Length; index++)
         {
             if (images[index].gameObject == gameObject) continue;
-                
+
             images[index].raycastTarget = true;
         }
-        
+
         if (doorButton != null) doorButton.raycastTarget = true;
-        
+
         ingredientManagers = new IngredientManager[5];
         images = new Image[5];
     }

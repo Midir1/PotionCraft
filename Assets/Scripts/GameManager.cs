@@ -37,7 +37,7 @@ public class GameManager : MonoBehaviour
     #region Attributes
 
     [SerializeField] uint maxMoney = 99999;
-    [SerializeField] uint currentMoney = 1000;
+    [SerializeField] uint currentMoney = 2000;
     public CauldronShop[] cauldron = new CauldronShop[3];
     public ShopState shopState = ShopState.SHOP;
     public bool tipIsAvailable = false;
