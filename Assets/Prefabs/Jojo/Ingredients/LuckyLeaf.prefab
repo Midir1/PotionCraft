@@ -171,6 +171,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   item: {fileID: 11400000, guid: 782531ee8dd19654abba4b5575e8674c, type: 2}
+  vfx: {fileID: 1532753793918100367, guid: 65d5ad2ec184bb044ad939ac22f391d2, type: 3}
+  vfx2: {fileID: 6412907808537790569, guid: ecbb2790726a96748a4fbfb179ea5500, type: 3}
   EventIngrediantIn:
     idInternal: 0
     valueGuidInternal: 

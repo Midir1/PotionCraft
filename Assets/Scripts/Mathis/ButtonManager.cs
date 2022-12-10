@@ -64,11 +64,13 @@ public class ButtonManager : MonoBehaviour
             {
                 shopForeground.sprite = Resources.Load<Sprite>("background/Bot_1OpenAlpha");
                 doorImage.sprite = Resources.Load<Sprite>("background/porte_ouverte");
+                doorImage.GetComponent<RectTransform>().anchoredPosition3D = new Vector2(-414, doorImage.GetComponent<RectTransform>().anchoredPosition3D.y);
             }
             else
             {
                 shopForeground.sprite = Resources.Load<Sprite>("background/Bot_1CloseAlpha");
                 doorImage.sprite = Resources.Load<Sprite>("background/porte");
+                doorImage.GetComponent<RectTransform>().anchoredPosition3D = new Vector2(-332, doorImage.GetComponent<RectTransform>().anchoredPosition3D.y);
             }
         }
     }
@@ -105,11 +107,11 @@ public class ButtonManager : MonoBehaviour
         for (int i = 0; i < customerTab.Count; i++)
         {
             {
-                customerTab[i].pos.x = -(i - 0.7f + i * 1.5f);
-                customerTab[i].parent.transform.position = new Vector3(customerTab[i].pos.x, customerTab[i].pos.y); 
-                Vector3 pos = customerTab[i].parent.GetComponent<RectTransform>().anchoredPosition3D;
-                customerTab[i].parent.GetComponent<RectTransform>().anchoredPosition3D = new Vector3(pos.x,pos.y,0);
-                customerTab[i].parent.GetComponent<RectTransform>().localScale = new Vector3(296 * Mathf.Cos(i), 296 * Mathf.Cos(i));
+                //customerTab[i].pos.x = -(i - 0.7f + i * 1.5f);
+                //customerTab[i].parent.transform.position = new Vector3(customerTab[i].pos.x, customerTab[i].pos.y); 
+                //Vector3 pos = customerTab[i].parent.GetComponent<RectTransform>().anchoredPosition3D;
+                //customerTab[i].parent.GetComponent<RectTransform>().anchoredPosition3D = new Vector3(pos.x,pos.y,0);
+                //customerTab[i].parent.GetComponent<RectTransform>().localScale = new Vector3(296 * Mathf.Cos(i), 296 * Mathf.Cos(i));
                 customerTab[i].anim.SetInteger("Pos", i);
             }
         }
