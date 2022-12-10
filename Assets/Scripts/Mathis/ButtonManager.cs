@@ -176,8 +176,14 @@ public class ButtonManager : MonoBehaviour
         
         
     }
-        
-    
+
+    public void ButtonQuit()
+    {
+
+        if (GameManager.Instance.tutoState)
+            StateManager.Instance.CurrentState++;
+
+    }
 
 }
 
