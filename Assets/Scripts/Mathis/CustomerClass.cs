@@ -91,12 +91,7 @@ public class CustomerClass
         isAngry = false;
         potionCanFall = false;
 
-
-
-        int Potion_CustomerSize = UnityEngine.Random.Range(1, 4);
-
-        timerMax = 4 * Potion_CustomerSize;
-        timer = timerMax;
+    
 
         if (!GameManager.Instance.tutoState)
         {
@@ -136,18 +131,6 @@ public class CustomerClass
                     rng = UnityEngine.Random.Range(0, (int)PotionBp.PotionBpNb);
                     askedPotion_Customer[i].name = (PotionBp)rng;
                 } while (manager.Bp[rng] == false);
-
-                askedPotion_Customer[i].ing = new List<INGREDIENT_CUSTOMER>();
-
-                for (int j = 0; j < Potion_CustomerSize; j++)
-                {
-                    askedPotion_Customer[i].ing.Add((INGREDIENT_CUSTOMER)UnityEngine.Random.Range(0, (int)INGREDIENT_CUSTOMER.INGREDIENT_CUSTOMERNB));
-                }
-
-                askedPotion_Customer[i].rune = (RUNES)UnityEngine.Random.Range(0, (int)RUNES.RUNENB);
-
-
-                askedPotion_Customer[i].price = 100 + 10 * Potion_CustomerSize + 10 * (int)askedPotion_Customer[i].rune;
             }
         }
         else
@@ -155,10 +138,10 @@ public class CustomerClass
             askedPotion_Customer[0] = new Potion_Customer();
             askedPotion_Customer[0].name = PotionBp.Clean;
             askedPotion_Customer[0].rune = (RUNES)UnityEngine.Random.Range(0, (int)RUNES.RUNENB);
-            askedPotion_Customer[0].price = 100 + 10 * Potion_CustomerSize + 10 * (int)askedPotion_Customer[0].rune;
         }
 
-
+        timerMax = 20 * nbPotion;
+        timer = timerMax;
     }
 
 
@@ -177,22 +160,13 @@ public class CustomerClass
         Debug.Log("You have clicked the button!");
     }
 
-    public int Paiement()
+    public uint Paiement()
     {
-        int result = 0;
+        uint result = 0;
         //renvoie le prix d'acar de la Potion_Customer confectionn�
         for (int i = 0; i < nbPotion; i++)
         {
-            float timePrice = (float)askedPotion_Customer[i].price * 0.4f;
-
-            float timeLeft = timer / timerMax;
-
-            timePrice = timePrice * timeLeft;
-
-            float priceLeft = (float)askedPotion_Customer[i].price * 0.3f;
-            //compare Potion_Customer cr�er et demander
-
-            result += (int)timePrice + (int)priceLeft * 2;
+            result = (uint)(timer/nbPotion) * 10;
         }
 
 
@@ -274,6 +248,7 @@ public class CustomerClass
         parent = new GameObject("Customer", typeof(RectTransform));
         parent.GetComponent<RectTransform>().anchoredPosition = new Vector3(0, 1.8f);
         parent.GetComponent<RectTransform>().SetParent(customerParent);
+        parent.AddComponent<SiblingIndex>();
         if (!GameManager.Instance.tutoState)
         {
             anim = parent.AddComponent<Animator>();
@@ -600,7 +575,11 @@ public class CustomerClass
     {
         if (!GameManager.Instance.tutoState)
         {
-            timer -= Time.deltaTime;
+            if (timer > 0)
+            {
+                timer -= Time.deltaTime;
+            }
+          
             if (timer < timerMax * 0.5 && !isAngry)
             {
                 Angry();

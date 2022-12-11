@@ -12,10 +12,10 @@ public enum PotionBp
     Graphic,
     Horned,
     Luminescence,
-    Sea,
     Sleep,
     Spicy,
     Strawberry,
+    Sea,
     Toad,
     PotionBpNb
 }
