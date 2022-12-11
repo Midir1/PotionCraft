@@ -2443,6 +2443,7 @@ GameObject:
   - component: {fileID: 1266263411}
   - component: {fileID: 1266263410}
   - component: {fileID: 1266263409}
+  - component: {fileID: 1266263412}
   m_Layer: 5
   m_Name: Button
   m_TagString: DoorButton
@@ -2526,6 +2527,30 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1266263412}
+        m_TargetAssemblyTypeName: Cycle, Assembly-CSharp
+        m_MethodName: BeginCycle
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1319380534289054652}
+        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1266263410
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2564,6 +2589,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1266263407}
   m_CullTransparentMesh: 1
+--- !u!114 &1266263412
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1266263407}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b492b5de894577a46af90ba56fa6a245, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttonManager: {fileID: 1939098867}
+  scroll: {fileID: 1319380534289054652}
+  cycleTimer: 120
 --- !u!224 &1289674066 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 5949679261849485845, guid: a1d96504a8cf932488747c90c3b2ffdb, type: 3}
@@ -4797,6 +4837,10 @@ MonoBehaviour:
   swipeTolerance: 0.2
   shopCanvas: {fileID: 8504958890484469707}
   grimoireCanvas: {fileID: 5683640516881821373}
+  uiToHide:
+  - {fileID: 3155998841971372222}
+  - {fileID: 823565107}
+  - {fileID: 7659303012331775108}
   laderEvent:
     idInternal: 0
     valueGuidInternal: 

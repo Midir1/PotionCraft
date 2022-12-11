@@ -13,6 +13,8 @@ public class GameBackgrounds : MonoBehaviour, IBeginDragHandler, IEndDragHandler
 
     [SerializeField] private Canvas shopCanvas;
     [SerializeField] private Canvas grimoireCanvas;
+    
+    [SerializeField] private List<GameObject> uiToHide;
 
     public AK.Wwise.Event laderEvent;
 
@@ -34,6 +36,10 @@ public class GameBackgrounds : MonoBehaviour, IBeginDragHandler, IEndDragHandler
     private Vector2 startLerpPos;
     private float lerpTimer;
 
+    private float defaultLerpSpeed;
+
+    public static bool Day;
+
     private bool IsLerping
     {
         get => isLerping;
@@ -42,6 +48,14 @@ public class GameBackgrounds : MonoBehaviour, IBeginDragHandler, IEndDragHandler
             isLerping = value;
 
             scrollRect.enabled = !isLerping;
+
+            if (!isLerping)
+            {
+                foreach (var ui in uiToHide)
+                {
+                    ui.SetActive(true);
+                }
+            }
         }
     }
 
@@ -53,11 +67,14 @@ public class GameBackgrounds : MonoBehaviour, IBeginDragHandler, IEndDragHandler
 
         targetRectPos = rectTransform.anchoredPosition;
 
+        defaultLerpSpeed = lerpSpeed;
+
         ChangeUIResolution();
     }
 
     private void Update()
     {
+        if (Day) return;
         if (shopCanvas.isActiveAndEnabled || grimoireCanvas.isActiveAndEnabled) return;
 
         if (!GameManager.Instance.tutoState || (GameManager.Instance.tutoState && StateManager.Instance.CurrentState == 14))
@@ -95,6 +112,12 @@ public class GameBackgrounds : MonoBehaviour, IBeginDragHandler, IEndDragHandler
             case true when rectTransform.anchoredPosition.y < swipeUpPos && deltaY < 0f:
                 targetRectPos = new Vector2(0f, -Screen.height * 2f);
                 IsLerping = true;
+                foreach (var ui in uiToHide)
+                {
+                    ui.SetActive(false);
+                }
+
+                lerpSpeed = defaultLerpSpeed;
                 isDownstairs = false;
                 startLerpPos = rectTransform.anchoredPosition;
                 laderEvent.Post(gameObject);
@@ -102,6 +125,11 @@ public class GameBackgrounds : MonoBehaviour, IBeginDragHandler, IEndDragHandler
             case false when rectTransform.anchoredPosition.y > swipeDownPos && deltaY > 0f:
                 targetRectPos = new Vector2(0f, 0f);
                 IsLerping = true;
+                foreach (var ui in uiToHide)
+                {
+                    ui.SetActive(false);
+                }
+                lerpSpeed = defaultLerpSpeed;
                 isDownstairs = true;
                 startLerpPos = rectTransform.anchoredPosition;
                 laderEvent.Post(gameObject);
@@ -109,11 +137,13 @@ public class GameBackgrounds : MonoBehaviour, IBeginDragHandler, IEndDragHandler
             case true:
                 targetRectPos = new Vector2(0f, 0f);
                 IsLerping = true;
+                lerpSpeed = 0.4f;
                 startLerpPos = rectTransform.anchoredPosition;
                 break;
             case false:
                 targetRectPos = new Vector2(0f, -Screen.height * 2f);
                 IsLerping = true;
+                lerpSpeed = 0.4f;
                 startLerpPos = rectTransform.anchoredPosition;
                 break;
         }
