@@ -10,12 +10,15 @@ public class StateManager : MonoBehaviour
     #region Attributes
 
     public int potionTutoEnd;
-    public bool oneTear = true;
-    public bool spawnClient = false;
-    [SerializeField] int currentState = 0;
-    [SerializeField] int lastState = 18;
+    public bool oneTear ;
+    public bool spawnClient ;
+    public bool succesRune ;
+    [SerializeField] int currentState;
+    [SerializeField] int lastState;
     [SerializeField] List<string> speech;
     [SerializeField] GameObject potion;
+    [SerializeField] GameObject drawPanel;
+    [SerializeField] GameObject inputManager;
     private static StateManager instance;
 
     #endregion
@@ -50,6 +53,11 @@ public class StateManager : MonoBehaviour
                 speech.Add("");
         }
         potionTutoEnd = 3;
+        oneTear = true;
+        spawnClient = false;
+        succesRune = false;
+        currentState = 0;
+        lastState = 18;
     }
 
     public void ButtonGrimoir()
@@ -72,7 +80,7 @@ public class StateManager : MonoBehaviour
         if (Input.touchCount == 1 && Input.GetTouch(0).phase == TouchPhase.Ended)
         {
 
-            if (currentState <= 5|| currentState == 17)
+            if (currentState <= 5 || currentState == 17 || currentState == 10)
             {
                 if (currentState <= lastState)
                     currentState++;
@@ -89,15 +97,25 @@ public class StateManager : MonoBehaviour
                 GameManager.Instance.tutoState = false;
                 SceneManager.LoadSceneAsync("OriginalMergeScene");
             }
-            //temporaire
-            if (currentState == 9 || currentState == 10)
-            {
-                currentState++;
-            }
+
         }
 
         if (currentState == 8 && potionTutoEnd == 0)
+        {
             currentState++;
+
+            drawPanel.SetActive(true);
+            inputManager.SetActive(true);
+
+            InputPaternRecognition inputPaternRecognition = inputManager.GetComponent<InputPaternRecognition>();
+            inputPaternRecognition.SetPatern(RuneList.Patern.balais);
+        }
+        else if(currentState == 9 && succesRune)
+        {
+            currentState++;
+            drawPanel.SetActive(false);
+            inputManager.SetActive(false);
+        }
         else if (currentState == 12 && potion == null)
             currentState++;
 

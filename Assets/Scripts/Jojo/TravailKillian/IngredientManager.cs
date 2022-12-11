@@ -66,6 +66,7 @@ public class IngredientManager : Drag
             }
             if (gameObject.name == "Trigger")
                 StateManager.Instance.potionTutoEnd--;
+          
         }
         else
         {
