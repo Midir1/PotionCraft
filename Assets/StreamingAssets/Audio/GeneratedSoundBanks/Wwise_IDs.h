@@ -19,6 +19,7 @@ namespace AK
         static const AkUniqueID PLAY_GRIMOIR_TURN_PAGE = 1696398315U;
         static const AkUniqueID PLAY_MENE_SONETTE = 995460564U;
         static const AkUniqueID PLAY_TIPS = 3306921892U;
+        static const AkUniqueID PLAY_WITCHCRAFT_MUSIQUE_MENU_ET_TUTO_FINALE = 3424909936U;
         static const AkUniqueID PLAY_WITCHCRAFT_SFX_FERME_GRIMOIRE = 493932176U;
         static const AkUniqueID PLAY_WITCHCRAFT_SFX_INGREDIENT_POTION = 4153132563U;
         static const AkUniqueID PLAY_WITCHCRAFT_SFX_MENU = 4139995531U;

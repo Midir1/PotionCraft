@@ -1,20 +1,21 @@
 Event	ID	Name			Wwise Object Path	Notes
-	493932176	Play_WITCHCRAFT_SFX_FERME_GRIMOIRE			\Default Work Unit\Play_WITCHCRAFT_SFX_FERME_GRIMOIRE	
-	995460564	Play_MENE_SONETTE			\Default Work Unit\Play_MENE_SONETTE	
-	1696398315	Play_GRIMOIR_TURN_PAGE			\Default Work Unit\Play_GRIMOIR_TURN_PAGE	
-	1699283934	Play_WITCHCRAFT_SFX_RUNE_GOOD			\Default Work Unit\Play_WITCHCRAFT_SFX_RUNE_GOOD	
-	1893662557	Play_WITCHCRAFT_SFX_PARCHEMIN			\Default Work Unit\Play_WITCHCRAFT_SFX_PARCHEMIN	
-	2136037632	Play_WITCHCRAFT_SFX_OUVRE_GRIMOIRE_1			\Default Work Unit\Play_WITCHCRAFT_SFX_OUVRE_GRIMOIRE_1	
-	2239915258	Play_WITCHCRAFT_SFX_RUNE_BAD			\Default Work Unit\Play_WITCHCRAFT_SFX_RUNE_BAD	
-	2406833951	Play_WITCHCRAFT_SFX_POTION_BAD			\Default Work Unit\Play_WITCHCRAFT_SFX_POTION_BAD	
-	3134291484	Play_BUY_POTION			\Default Work Unit\Play_BUY_POTION	
-	3200132785	Play_WITCHCRAFT_SFX_NOUVEAU_CLIENT			\Default Work Unit\Play_WITCHCRAFT_SFX_NOUVEAU_CLIENT	
-	3306921892	Play_TIPS			\Default Work Unit\Play_TIPS	
-	3585549483	Play_AMELIORATION_CHAUDRON			\Default Work Unit\Play_AMELIORATION_CHAUDRON	
-	3899313153	Play_WITCHCRAFT_SFX_POTION_GOOD			\Default Work Unit\Play_WITCHCRAFT_SFX_POTION_GOOD	
-	4139995531	Play_WITCHCRAFT_SFX_MENU			\Default Work Unit\Play_WITCHCRAFT_SFX_MENU	
-	4153132563	Play_WITCHCRAFT_SFX_INGREDIENT_POTION			\Default Work Unit\Play_WITCHCRAFT_SFX_INGREDIENT_POTION	
-	4159994098	Play_ACHAT_CHAUDRON			\Default Work Unit\Play_ACHAT_CHAUDRON	
+	493932176	Play_WITCHCRAFT_SFX_FERME_GRIMOIRE			\Default Work Unit\Sfx\Play_WITCHCRAFT_SFX_FERME_GRIMOIRE	
+	995460564	Play_MENE_SONETTE			\Default Work Unit\Sfx\Play_MENE_SONETTE	
+	1696398315	Play_GRIMOIR_TURN_PAGE			\Default Work Unit\Sfx\Play_GRIMOIR_TURN_PAGE	
+	1699283934	Play_WITCHCRAFT_SFX_RUNE_GOOD			\Default Work Unit\Sfx\Play_WITCHCRAFT_SFX_RUNE_GOOD	
+	1893662557	Play_WITCHCRAFT_SFX_PARCHEMIN			\Default Work Unit\Sfx\Play_WITCHCRAFT_SFX_PARCHEMIN	
+	2136037632	Play_WITCHCRAFT_SFX_OUVRE_GRIMOIRE_1			\Default Work Unit\Sfx\Play_WITCHCRAFT_SFX_OUVRE_GRIMOIRE_1	
+	2239915258	Play_WITCHCRAFT_SFX_RUNE_BAD			\Default Work Unit\Sfx\Play_WITCHCRAFT_SFX_RUNE_BAD	
+	2406833951	Play_WITCHCRAFT_SFX_POTION_BAD			\Default Work Unit\Sfx\Play_WITCHCRAFT_SFX_POTION_BAD	
+	3134291484	Play_BUY_POTION			\Default Work Unit\Sfx\Play_BUY_POTION	
+	3200132785	Play_WITCHCRAFT_SFX_NOUVEAU_CLIENT			\Default Work Unit\Sfx\Play_WITCHCRAFT_SFX_NOUVEAU_CLIENT	
+	3306921892	Play_TIPS			\Default Work Unit\Sfx\Play_TIPS	
+	3424909936	Play_WITCHCRAFT_MUSIQUE_MENU_ET_TUTO_FINALE			\Default Work Unit\Music\Play_WITCHCRAFT_MUSIQUE_MENU_ET_TUTO_FINALE	
+	3585549483	Play_AMELIORATION_CHAUDRON			\Default Work Unit\Sfx\Play_AMELIORATION_CHAUDRON	
+	3899313153	Play_WITCHCRAFT_SFX_POTION_GOOD			\Default Work Unit\Sfx\Play_WITCHCRAFT_SFX_POTION_GOOD	
+	4139995531	Play_WITCHCRAFT_SFX_MENU			\Default Work Unit\Sfx\Play_WITCHCRAFT_SFX_MENU	
+	4153132563	Play_WITCHCRAFT_SFX_INGREDIENT_POTION			\Default Work Unit\Sfx\Play_WITCHCRAFT_SFX_INGREDIENT_POTION	
+	4159994098	Play_ACHAT_CHAUDRON			\Default Work Unit\Sfx\Play_ACHAT_CHAUDRON	
 
 Audio Bus	ID	Name			Wwise Object Path	Notes
 	393239870	SFX			\Default Work Unit\Master Audio Bus\SFX	
@@ -22,57 +23,50 @@ Audio Bus	ID	Name			Wwise Object Path	Notes
 	3991942870	Music			\Default Work Unit\Master Audio Bus\Music	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	7980115	MUSIC_IN_GAME_SKELETON_01	E:\yazami\Work\Local\02\PotionCraft\PotionCraft_WwiseProject\.cache\Android\SFX\MUSIC_IN_GAME_SKELETON_01_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Music\MUSIC_IN_GAME_SKELETON_01		2304096
 	20146126	WITCHCRAFT_SFX_POTION_BAD	E:\yazami\Work\Local\02\PotionCraft\PotionCraft_WwiseProject\.cache\Android\SFX\SFX\WITCHCRAFT_SFX_POTION_BAD_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\WITCHCRAFT_SFX_POTION_BAD		1040480
-	30977768	WITCHCRAFT_SFX__ANGRY_NYMPHE_01	E:\yazami\Work\Local\02\PotionCraft\PotionCraft_WwiseProject\.cache\Android\SFX\SFX\WITCHCRAFT_SFX__ANGRY_NYMPHE_01_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\WITCHCRAFT_SFX__ANGRY_NYMPHE_01		333920
+	30977768	WITCHCRAFT_SFX__ANGRY_NYMPHE_01	E:\yazami\Work\Local\02\PotionCraft\PotionCraft_WwiseProject\.cache\Android\SFX\SFX\WITCHCRAFT_SFX__ANGRY_NYMPHE_01_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Client\WITCHCRAFT_SFX__ANGRY_NYMPHE_01		333920
 	36655867	WITCHCRAFT_SFX_ACHAT_CHAUDRON_01	E:\yazami\Work\Local\02\PotionCraft\PotionCraft_WwiseProject\.cache\Android\SFX\SFX\WITCHCRAFT_SFX_ACHAT_CHAUDRON_01_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\ACHAT_CHAUDRON\WITCHCRAFT_SFX_ACHAT_CHAUDRON_01		105568
 	56026652	WITCHCRAFT_SFX_RUNE_GOOD	E:\yazami\Work\Local\02\PotionCraft\PotionCraft_WwiseProject\.cache\Android\SFX\SFX\WITCHCRAFT_SFX_RUNE_GOOD_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\WITCHCRAFT_SFX_RUNE_GOOD		534624
-	59718433	WITCHCRAFT_SFX_ANGRY_SKELETON	E:\yazami\Work\Local\02\PotionCraft\PotionCraft_WwiseProject\.cache\Android\SFX\SFX\WITCHCRAFT_SFX_ANGRY_SKELETON_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\WITCHCRAFT_SFX_ANGRY_SKELETON		315488
+	59718433	WITCHCRAFT_SFX_ANGRY_SKELETON	E:\yazami\Work\Local\02\PotionCraft\PotionCraft_WwiseProject\.cache\Android\SFX\SFX\WITCHCRAFT_SFX_ANGRY_SKELETON_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Client\WITCHCRAFT_SFX_ANGRY_SKELETON		315488
 	61526642	WITCHCRAFT_SFX_BUY_POTION_01	E:\yazami\Work\Local\02\PotionCraft\PotionCraft_WwiseProject\.cache\Android\SFX\SFX\WITCHCRAFT_SFX_BUY_POTION_01_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\BUY_POTION\WITCHCRAFT_SFX_BUY_POTION_01		327776
-	62315142	flag_failure_flag_fail	E:\yazami\Work\Local\02\PotionCraft\PotionCraft_WwiseProject\.cache\Android\SFX\HaloInterface\flag_failure_flag_fail_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\HaloInterface\flag_failure_flag_fail		21984
-	113326077	shield_hit	E:\yazami\Work\Local\02\PotionCraft\PotionCraft_WwiseProject\.cache\Android\SFX\HaloInterface\shield_hit_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\HaloInterface\shield_hit		45280
+	91414950	MUSIC_IN_GAME_DEMON_02	E:\yazami\Work\Local\02\PotionCraft\PotionCraft_WwiseProject\.cache\Android\SFX\MUSIC_IN_GAME_DEMON_02_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Music\MUSIC_IN_GAME_DEMON_02		2304096
 	160770417	WITCHCRAFT_SFX_TOURNE_PAGE_03	E:\yazami\Work\Local\02\PotionCraft\PotionCraft_WwiseProject\.cache\Android\SFX\SFX\WITCHCRAFT_SFX_TOURNE_PAGE_03_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\GRIMOIR_TURN_PAGE\WITCHCRAFT_SFX_TOURNE_PAGE_03		198752
 	168994821	WITCHCRAFT_SFX_AMELIORATION_CHAUDRON_01	E:\yazami\Work\Local\02\PotionCraft\PotionCraft_WwiseProject\.cache\Android\SFX\SFX\WITCHCRAFT_SFX_AMELIORATION_CHAUDRON_01_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\AMELIORATION_CHAUDRON\WITCHCRAFT_SFX_AMELIORATION_CHAUDRON_01		398432
-	197352059	shield_depleted	E:\yazami\Work\Local\02\PotionCraft\PotionCraft_WwiseProject\.cache\Android\SFX\HaloInterface\shield_depleted_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\HaloInterface\shield_depleted		101344
 	197427510	WITCHCRAFT_SFX_OUVRE_GRIMOIRE_1	E:\yazami\Work\Local\02\PotionCraft\PotionCraft_WwiseProject\.cache\Android\SFX\SFX\WITCHCRAFT_SFX_OUVRE_GRIMOIRE_1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\WITCHCRAFT_SFX_OUVRE_GRIMOIRE_1		149600
 	266877472	WITCHCRAFT_SFX_TOURNE_PAGE_02	E:\yazami\Work\Local\02\PotionCraft\PotionCraft_WwiseProject\.cache\Android\SFX\SFX\WITCHCRAFT_SFX_TOURNE_PAGE_02_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\GRIMOIR_TURN_PAGE\WITCHCRAFT_SFX_TOURNE_PAGE_02		163936
-	297749601	WITCHCRAFT_SFX_ANGRY_MINOTAUR	E:\yazami\Work\Local\02\PotionCraft\PotionCraft_WwiseProject\.cache\Android\SFX\SFX\WITCHCRAFT_SFX_ANGRY_MINOTAUR_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\WITCHCRAFT_SFX_ANGRY_MINOTAUR		452704
-	310494117	hill_move	E:\yazami\Work\Local\02\PotionCraft\PotionCraft_WwiseProject\.cache\Android\SFX\HaloInterface\hill_move_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\HaloInterface\hill_move		132448
-	315997539	timer_end	E:\yazami\Work\Local\02\PotionCraft\PotionCraft_WwiseProject\.cache\Android\SFX\HaloInterface\timer_end_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\HaloInterface\timer_end		5600
+	297749601	WITCHCRAFT_SFX_ANGRY_MINOTAUR	E:\yazami\Work\Local\02\PotionCraft\PotionCraft_WwiseProject\.cache\Android\SFX\SFX\WITCHCRAFT_SFX_ANGRY_MINOTAUR_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Client\WITCHCRAFT_SFX_ANGRY_MINOTAUR		452704
 	329715689	WITCHCRAFT_SFX_BUY_POTION_02	E:\yazami\Work\Local\02\PotionCraft\PotionCraft_WwiseProject\.cache\Android\SFX\SFX\WITCHCRAFT_SFX_BUY_POTION_02_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\BUY_POTION\WITCHCRAFT_SFX_BUY_POTION_02		315488
-	333040350	WITCHCRAFT_SFX_ANGRY_PUMPKIN_01	E:\yazami\Work\Local\02\PotionCraft\PotionCraft_WwiseProject\.cache\Android\SFX\SFX\WITCHCRAFT_SFX_ANGRY_PUMPKIN_01_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\WITCHCRAFT_SFX_ANGRY_PUMPKIN_01		239712
-	343691610	invis_powerup	E:\yazami\Work\Local\02\PotionCraft\PotionCraft_WwiseProject\.cache\Android\SFX\HaloInterface\invis_powerup_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\HaloInterface\invis_powerup		29920
-	353222274	player_respawn	E:\yazami\Work\Local\02\PotionCraft\PotionCraft_WwiseProject\.cache\Android\SFX\HaloInterface\player_respawn_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\HaloInterface\player_respawn		10208
-	373454988	health_low	E:\yazami\Work\Local\02\PotionCraft\PotionCraft_WwiseProject\.cache\Android\SFX\HaloInterface\health_low_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\HaloInterface\health_low		75872
-	407829509	respawn_timer	E:\yazami\Work\Local\02\PotionCraft\PotionCraft_WwiseProject\.cache\Android\SFX\HaloInterface\respawn_timer_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\HaloInterface\respawn_timer		3808
-	414351614	cursor	E:\yazami\Work\Local\02\PotionCraft\PotionCraft_WwiseProject\.cache\Android\SFX\HaloInterface\cursor_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\HaloInterface\cursor		10080
+	333040350	WITCHCRAFT_SFX_ANGRY_PUMPKIN_01	E:\yazami\Work\Local\02\PotionCraft\PotionCraft_WwiseProject\.cache\Android\SFX\SFX\WITCHCRAFT_SFX_ANGRY_PUMPKIN_01_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Client\WITCHCRAFT_SFX_ANGRY_PUMPKIN_01		239712
+	365139311	MUSIC_IN_GAME_BASE	E:\yazami\Work\Local\02\PotionCraft\PotionCraft_WwiseProject\.cache\Android\SFX\MUSIC_IN_GAME_BASE_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Music\MUSIC_IN_GAME_BASE		4608108
+	438222462	MUSIC_IN_GAME_DEMON_01	E:\yazami\Work\Local\02\PotionCraft\PotionCraft_WwiseProject\.cache\Android\SFX\MUSIC_IN_GAME_DEMON_01_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Music\MUSIC_IN_GAME_DEMON_01		2304096
+	460554117	MUSIC_IN_GAME_PUMPKIN_01	E:\yazami\Work\Local\02\PotionCraft\PotionCraft_WwiseProject\.cache\Android\SFX\MUSIC_IN_GAME_PUMPKIN_01_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Music\MUSIC_IN_GAME_PUMPKIN_01		2304096
 	464979140	WITCHCRAFT_SFX_INGREDIENT_POTION	E:\yazami\Work\Local\02\PotionCraft\PotionCraft_WwiseProject\.cache\Android\SFX\SFX\WITCHCRAFT_SFX_INGREDIENT_POTION_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\WITCHCRAFT_SFX_INGREDIENT_POTION		467040
 	478517217	WITCHCRAFT_SFX_NOUVEAU_CLIENT	E:\yazami\Work\Local\02\PotionCraft\PotionCraft_WwiseProject\.cache\Android\SFX\SFX\WITCHCRAFT_SFX_NOUVEAU_CLIENT_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\WITCHCRAFT_SFX_NOUVEAU_CLIENT		394336
-	480721126	WITCHCRAFT_SFX_ANGRY_DEMON_01	E:\yazami\Work\Local\02\PotionCraft\PotionCraft_WwiseProject\.cache\Android\SFX\SFX\WITCHCRAFT_SFX_ANGRY_DEMON_01_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\WITCHCRAFT_SFX_ANGRY_DEMON_01		217184
-	481535688	dbl_time_pickup	E:\yazami\Work\Local\02\PotionCraft\PotionCraft_WwiseProject\.cache\Android\SFX\HaloInterface\dbl_time_pickup_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\HaloInterface\dbl_time_pickup		22240
+	480721126	WITCHCRAFT_SFX_ANGRY_DEMON_01	E:\yazami\Work\Local\02\PotionCraft\PotionCraft_WwiseProject\.cache\Android\SFX\SFX\WITCHCRAFT_SFX_ANGRY_DEMON_01_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Client\WITCHCRAFT_SFX_ANGRY_DEMON_01		217184
 	519804808	WITCHCRAFT_SFX_TOURNE_PAGE_01	E:\yazami\Work\Local\02\PotionCraft\PotionCraft_WwiseProject\.cache\Android\SFX\SFX\WITCHCRAFT_SFX_TOURNE_PAGE_01_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\GRIMOIR_TURN_PAGE\WITCHCRAFT_SFX_TOURNE_PAGE_01		254048
-	521589481	health_pickup	E:\yazami\Work\Local\02\PotionCraft\PotionCraft_WwiseProject\.cache\Android\SFX\HaloInterface\health_pickup_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\HaloInterface\health_pickup		58464
-	532916448	shield_charge	E:\yazami\Work\Local\02\PotionCraft\PotionCraft_WwiseProject\.cache\Android\SFX\HaloInterface\shield_charge_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\HaloInterface\shield_charge		177120
+	544189197	MUSIC_IN_GAME_SKELETON_02	E:\yazami\Work\Local\02\PotionCraft\PotionCraft_WwiseProject\.cache\Android\SFX\MUSIC_IN_GAME_SKELETON_02_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Music\MUSIC_IN_GAME_SKELETON_02		2304096
+	548837911	WITCHCRAFT_MUSIQUE_MENU_ET_TUTO_FINALE	E:\yazami\Work\Local\02\PotionCraft\PotionCraft_WwiseProject\.cache\Android\SFX\WITCHCRAFT_MUSIQUE_MENU_ET_TUTO_FINALE_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Music\WITCHCRAFT_MUSIQUE_MENU_ET_TUTO_FINALE		20318836
 	570538854	WITCHCRAFT_SFX_BUY_POTION_03	E:\yazami\Work\Local\02\PotionCraft\PotionCraft_WwiseProject\.cache\Android\SFX\SFX\WITCHCRAFT_SFX_BUY_POTION_03_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\BUY_POTION\WITCHCRAFT_SFX_BUY_POTION_03		335968
+	575767285	MUSIC_IN_GAME_NYMPHE	E:\yazami\Work\Local\02\PotionCraft\PotionCraft_WwiseProject\.cache\Android\SFX\MUSIC_IN_GAME_NYMPHE_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Music\MUSIC_IN_GAME_NYMPHE		4608100
 	584772848	WITCHCRAFT_SFX_MENU	E:\yazami\Work\Local\02\PotionCraft\PotionCraft_WwiseProject\.cache\Android\SFX\SFX\WITCHCRAFT_SFX_MENU_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\WITCHCRAFT_SFX_MENU		45664
-	614813247	forward	E:\yazami\Work\Local\02\PotionCraft\PotionCraft_WwiseProject\.cache\Android\SFX\HaloInterface\forward_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\HaloInterface\forward		10336
-	655240674	target_point_collect	E:\yazami\Work\Local\02\PotionCraft\PotionCraft_WwiseProject\.cache\Android\SFX\HaloInterface\target_point_collect_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\HaloInterface\target_point_collect		27488
 	657474476	WITCHCRAFT_SFX_TIPS_01	E:\yazami\Work\Local\02\PotionCraft\PotionCraft_WwiseProject\.cache\Android\SFX\SFX\WITCHCRAFT_SFX_TIPS_01_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\TIPS\WITCHCRAFT_SFX_TIPS_01		186464
-	657556517	dbl_shield_lowfreq2	E:\yazami\Work\Local\02\PotionCraft\PotionCraft_WwiseProject\.cache\Android\SFX\HaloInterface\dbl_shield_lowfreq2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\HaloInterface\dbl_shield_lowfreq2		113504
 	680270546	WITCHCRAFT_SFX_TIPS_02	E:\yazami\Work\Local\02\PotionCraft\PotionCraft_WwiseProject\.cache\Android\SFX\SFX\WITCHCRAFT_SFX_TIPS_02_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\TIPS\WITCHCRAFT_SFX_TIPS_02		282720
-	818792494	teleporter_loop	E:\yazami\Work\Local\02\PotionCraft\PotionCraft_WwiseProject\.cache\Android\SFX\HaloInterface\teleporter_loop_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\HaloInterface\teleporter_loop		151904
+	760588283	MUSIC_IN_GAME_MINOTAUR	E:\yazami\Work\Local\02\PotionCraft\PotionCraft_WwiseProject\.cache\Android\SFX\MUSIC_IN_GAME_MINOTAUR_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Music\MUSIC_IN_GAME_MINOTAUR		2304096
+	795641910	MUSIC_IN_GAME_CHAMPI	E:\yazami\Work\Local\02\PotionCraft\PotionCraft_WwiseProject\.cache\Android\SFX\MUSIC_IN_GAME_CHAMPI_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Music\MUSIC_IN_GAME_CHAMPI		2304096
 	823038839	WITCHCRAFT_SFX_RUNE_BAD	E:\yazami\Work\Local\02\PotionCraft\PotionCraft_WwiseProject\.cache\Android\SFX\SFX\WITCHCRAFT_SFX_RUNE_BAD_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\WITCHCRAFT_SFX_RUNE_BAD		505952
+	846263526	MUSIC_IN_GAME_NYMPHE_03	E:\yazami\Work\Local\02\PotionCraft\PotionCraft_WwiseProject\.cache\Android\SFX\MUSIC_IN_GAME_NYMPHE_03_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Music\MUSIC_IN_GAME_NYMPHE_03		2304096
 	854449426	WITCHCRAFT_SFX_FERME_GRIMOIRE	E:\yazami\Work\Local\02\PotionCraft\PotionCraft_WwiseProject\.cache\Android\SFX\SFX\WITCHCRAFT_SFX_FERME_GRIMOIRE_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\WITCHCRAFT_SFX_FERME_GRIMOIRE		274528
 	877418667	WITCHCRAFT_SFX_MENU_SONNETTE_02	E:\yazami\Work\Local\02\PotionCraft\PotionCraft_WwiseProject\.cache\Android\SFX\SFX\WITCHCRAFT_SFX_MENU_SONNETTE_02_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\MENE_SONETTE\WITCHCRAFT_SFX_MENU_SONNETTE_02		374880
 	914377712	WITCHCRAFT_SFX_ACHAT_SONNETTE	E:\yazami\Work\Local\02\PotionCraft\PotionCraft_WwiseProject\.cache\Android\SFX\SFX\WITCHCRAFT_SFX_ACHAT_SONNETTE_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\WITCHCRAFT_SFX_ACHAT_SONNETTE		309344
-	926383028	WITCHCRAFT_SFX__ANGRY_NYMPHE_02	E:\yazami\Work\Local\02\PotionCraft\PotionCraft_WwiseProject\.cache\Android\SFX\SFX\WITCHCRAFT_SFX__ANGRY_NYMPHE_02_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\WITCHCRAFT_SFX__ANGRY_NYMPHE_02		319916
+	926383028	WITCHCRAFT_SFX__ANGRY_NYMPHE_02	E:\yazami\Work\Local\02\PotionCraft\PotionCraft_WwiseProject\.cache\Android\SFX\SFX\WITCHCRAFT_SFX__ANGRY_NYMPHE_02_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Client\WITCHCRAFT_SFX__ANGRY_NYMPHE_02		319916
+	926874588	MUSIC_IN_GAME_BASE_DEUX_CLIENTS	E:\yazami\Work\Local\02\PotionCraft\PotionCraft_WwiseProject\.cache\Android\SFX\MUSIC_IN_GAME_BASE_DEUX_CLIENTS_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Music\MUSIC_IN_GAME_BASE_DEUX_CLIENTS		2304104
 	927188442	WITCHCRAFT_SFX_ACHAT_CHAUDRON_02	E:\yazami\Work\Local\02\PotionCraft\PotionCraft_WwiseProject\.cache\Android\SFX\SFX\WITCHCRAFT_SFX_ACHAT_CHAUDRON_02_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\ACHAT_CHAUDRON\WITCHCRAFT_SFX_ACHAT_CHAUDRON_02		119904
 	951031920	WITCHCRAFT_SFX_ACHAT_BOITE_TIPS	E:\yazami\Work\Local\02\PotionCraft\PotionCraft_WwiseProject\.cache\Android\SFX\SFX\WITCHCRAFT_SFX_ACHAT_BOITE_TIPS_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\WITCHCRAFT_SFX_ACHAT_BOITE_TIPS		243808
+	960176606	MUSIC_IN_GAME_PUMPKIN_02	E:\yazami\Work\Local\02\PotionCraft\PotionCraft_WwiseProject\.cache\Android\SFX\MUSIC_IN_GAME_PUMPKIN_02_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Music\MUSIC_IN_GAME_PUMPKIN_02		2304096
 	968921399	WITCHCRAFT_SFX_POTION_GOOD	E:\yazami\Work\Local\02\PotionCraft\PotionCraft_WwiseProject\.cache\Android\SFX\SFX\WITCHCRAFT_SFX_POTION_GOOD_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\WITCHCRAFT_SFX_POTION_GOOD		409696
-	974932754	back	E:\yazami\Work\Local\02\PotionCraft\PotionCraft_WwiseProject\.cache\Android\SFX\HaloInterface\back_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\HaloInterface\back		14432
 	981137270	WITCHCRAFT_SFX_MENU_SONNETTE	E:\yazami\Work\Local\02\PotionCraft\PotionCraft_WwiseProject\.cache\Android\SFX\SFX\WITCHCRAFT_SFX_MENU_SONNETTE_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\MENE_SONETTE\WITCHCRAFT_SFX_MENU_SONNETTE		382560
-	1009112918	shield_low	E:\yazami\Work\Local\02\PotionCraft\PotionCraft_WwiseProject\.cache\Android\SFX\HaloInterface\shield_low_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\HaloInterface\shield_low		159712
-	1047348045	transport_activate	E:\yazami\Work\Local\02\PotionCraft\PotionCraft_WwiseProject\.cache\Android\SFX\HaloInterface\transport_activate_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\HaloInterface\transport_activate		120416
 	1051567337	WITCHCRAFT_SFX_AMELIORATION_CHAUDRON_02	E:\yazami\Work\Local\02\PotionCraft\PotionCraft_WwiseProject\.cache\Android\SFX\SFX\WITCHCRAFT_SFX_AMELIORATION_CHAUDRON_02_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\AMELIORATION_CHAUDRON\WITCHCRAFT_SFX_AMELIORATION_CHAUDRON_02		617568
 	1058639048	WITCHCRAFT_SFX_PARCHEMIN	E:\yazami\Work\Local\02\PotionCraft\PotionCraft_WwiseProject\.cache\Android\SFX\SFX\WITCHCRAFT_SFX_PARCHEMIN_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\WITCHCRAFT_SFX_PARCHEMIN		178272
-	1058908871	WITCHCRAFT_SFX_ANGRY_DEMON_02	E:\yazami\Work\Local\02\PotionCraft\PotionCraft_WwiseProject\.cache\Android\SFX\SFX\WITCHCRAFT_SFX_ANGRY_DEMON_02_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\WITCHCRAFT_SFX_ANGRY_DEMON_02		229472
+	1058908871	WITCHCRAFT_SFX_ANGRY_DEMON_02	E:\yazami\Work\Local\02\PotionCraft\PotionCraft_WwiseProject\.cache\Android\SFX\SFX\WITCHCRAFT_SFX_ANGRY_DEMON_02_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Client\WITCHCRAFT_SFX_ANGRY_DEMON_02		229472
 
