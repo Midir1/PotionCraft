@@ -24,6 +24,11 @@ Event	ID	Name			Wwise Object Path	Notes
 	4153132563	Play_WITCHCRAFT_SFX_INGREDIENT_POTION			\Default Work Unit\Sfx\Play_WITCHCRAFT_SFX_INGREDIENT_POTION	
 	4159994098	Play_ACHAT_CHAUDRON			\Default Work Unit\Sfx\Play_ACHAT_CHAUDRON	
 
+Game Parameter	ID	Name			Wwise Object Path	Notes
+	50587143	BusMaster			\Default Work Unit\BusMaster	
+	534305110	BusMusic			\Default Work Unit\BusMusic	
+	1501993918	BusSfx			\Default Work Unit\BusSfx	
+
 Audio Bus	ID	Name			Wwise Object Path	Notes
 	393239870	SFX			\Default Work Unit\Master Audio Bus\SFX	
 	3803692087	Master Audio Bus			\Default Work Unit\Master Audio Bus	

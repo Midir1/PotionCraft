@@ -39,6 +39,13 @@ namespace AK
         static const AkUniqueID STOP_WITCHCRAFT_MUSIQUE_MENU_ET_TUTO_FINALE = 2120209058U;
     } // namespace EVENTS
 
+    namespace GAME_PARAMETERS
+    {
+        static const AkUniqueID BUSMASTER = 50587143U;
+        static const AkUniqueID BUSMUSIC = 534305110U;
+        static const AkUniqueID BUSSFX = 1501993918U;
+    } // namespace GAME_PARAMETERS
+
     namespace BANKS
     {
         static const AkUniqueID INIT = 1355168291U;

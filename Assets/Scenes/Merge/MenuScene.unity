@@ -541,6 +541,7 @@ GameObject:
   m_Component:
   - component: {fileID: 108455353}
   - component: {fileID: 108455354}
+  - component: {fileID: 108455355}
   m_Layer: 5
   m_Name: MusicSlider
   m_TagString: Untagged
@@ -618,10 +619,38 @@ MonoBehaviour:
   m_MinValue: 0.01
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 1
+  m_Value: 0.5
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 108455355}
+        m_TargetAssemblyTypeName: ChangeAkRtcp, Assembly-CSharp
+        m_MethodName: setRtcp
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 108455354}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Slider, UnityEngine.UI
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &108455355
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 108455352}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40dce6759e7f54e46a22a70c400d1bd4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rtcp:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 002ddf3091afc714bbaddd548620ca81, type: 2}
 --- !u!1 &139137532
 GameObject:
   m_ObjectHideFlags: 0
@@ -1430,6 +1459,7 @@ GameObject:
   - component: {fileID: 328773230}
   - component: {fileID: 328773229}
   - component: {fileID: 328773233}
+  - component: {fileID: 328773234}
   m_Layer: 0
   m_Name: WwiseGlobal
   m_TagString: Untagged
@@ -1501,6 +1531,18 @@ MonoBehaviour:
   unloadTriggerList: 958ca0ea
   bankNameInternal: 
   valueGuidInternal: 
+--- !u!114 &328773234
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 328773228}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87eca31c3d452f94e8471f490aeeca90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &396228912
 GameObject:
   m_ObjectHideFlags: 0
@@ -2482,6 +2524,7 @@ GameObject:
   m_Component:
   - component: {fileID: 694044911}
   - component: {fileID: 694044912}
+  - component: {fileID: 694044913}
   m_Layer: 5
   m_Name: VolumeSlider
   m_TagString: Untagged
@@ -2559,10 +2602,38 @@ MonoBehaviour:
   m_MinValue: 0.01
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 1
+  m_Value: 0.75
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 694044913}
+        m_TargetAssemblyTypeName: ChangeAkRtcp, Assembly-CSharp
+        m_MethodName: setRtcp
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 694044912}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Slider, UnityEngine.UI
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &694044913
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 694044910}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40dce6759e7f54e46a22a70c400d1bd4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rtcp:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: d6dc4e9b916b89d4d86d3c410cceabd7, type: 2}
 --- !u!1 &745788864
 GameObject:
   m_ObjectHideFlags: 0
@@ -5187,6 +5258,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2004534453}
   - component: {fileID: 2004534454}
+  - component: {fileID: 2004534455}
   m_Layer: 5
   m_Name: SFXSlider
   m_TagString: Untagged
@@ -5264,10 +5336,38 @@ MonoBehaviour:
   m_MinValue: 0.01
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 1
+  m_Value: 0.5
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2004534455}
+        m_TargetAssemblyTypeName: ChangeAkRtcp, Assembly-CSharp
+        m_MethodName: setRtcp
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 2004534454}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Slider, UnityEngine.UI
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &2004534455
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2004534452}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40dce6759e7f54e46a22a70c400d1bd4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rtcp:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 0cb473b443e7679429c3673735accd34, type: 2}
 --- !u!1 &2024324161
 GameObject:
   m_ObjectHideFlags: 0
