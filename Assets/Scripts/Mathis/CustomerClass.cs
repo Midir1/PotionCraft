@@ -75,6 +75,13 @@ public class CustomerClass
     public List<GameObject> parchemin;
     public int nbPotion;
 
+    public Canvas grimoire;
+    public List<GameObject> potions;
+    public GameObject turnPage;
+
+    private Vector3 pageRotation = new Vector3(0f, 0f, -7.5f);
+    private Vector3 pageScale = new Vector3(1.29f, 1.08f, 1f);
+
     #endregion
 
     public CustomerClass()
@@ -146,10 +153,24 @@ public class CustomerClass
 
 
     #region Methods
+
+    public void InitializeGrimoire(Canvas canvas, List<GameObject> potionsGO, GameObject turnPageGo)
+    {
+        grimoire = canvas;
+        potions = potionsGO;
+        turnPage = turnPageGo;
+    }
+    
+    void TaskOnClick()
+    {
+        //Output this to console when Button1 or Button3 is clicked
+        Debug.Log("You have clicked the button!");
+    }
+
     public int Paiement()
     {
         int result = 0;
-        //renvoie le prix d'acar de la Potion_Customer confectionné
+        //renvoie le prix d'acar de la Potion_Customer confectionnï¿½
         for (int i = 0; i < nbPotion; i++)
         {
             float timePrice = (float)askedPotion_Customer[i].price * 0.4f;
@@ -159,7 +180,7 @@ public class CustomerClass
             timePrice = timePrice * timeLeft;
 
             float priceLeft = (float)askedPotion_Customer[i].price * 0.3f;
-            //compare Potion_Customer créer et demander
+            //compare Potion_Customer crï¿½er et demander
 
             result += (int)timePrice + (int)priceLeft * 2;
         }
@@ -301,8 +322,10 @@ public class CustomerClass
         for (int i = 0; i < nbPotion; i++)
         {
             path = PathToPotion(i);
+            
             parchemin.Add(new GameObject("parcho", typeof(RectTransform)));
             potionGo.Add(new GameObject("askedPotion", typeof(RectTransform)));
+
             Image bulleImage = parchemin[i].AddComponent<Image>();
             Image potionImage = potionGo[i].AddComponent<Image>();
             Sprite bulleSprite = Resources.Load<Sprite>("UI/Parcho");
@@ -311,11 +334,34 @@ public class CustomerClass
             bulleImage.sprite = bulleSprite;
             potionImage.sprite = potionSprite;
 
-
-
             Vector2 size = bulleSprite.bounds.size;
             parchemin[i].GetComponent<RectTransform>().sizeDelta = size;
+            
+            //Jojo changement
+            parchemin[i].AddComponent<Button>().onClick.AddListener(() =>
+            {
+                grimoire.enabled = true;
 
+                for (int j = 0; j < potions.Count; j++)
+                {
+                    potions[j].SetActive(false);
+                    
+                    if(potionIndex == j)
+                    {
+                        potions[j].SetActive(true);
+
+                        RectTransform potionRectTransform = potions[j].GetComponent<RectTransform>();
+                        
+                        potionRectTransform.rotation = Quaternion.Euler(pageRotation);
+                        potionRectTransform.localScale = pageScale;
+                    }
+                }
+                
+                turnPage.SetActive(false);
+            });
+
+            //Fin
+            
             size = potionSprite.bounds.size;
             potionGo[i].GetComponent<RectTransform>().sizeDelta = size;
 
@@ -324,13 +370,15 @@ public class CustomerClass
             potionGo[i].GetComponent<RectTransform>().localScale = new Vector3(0.3f, 0.3f, 0.3f);
 
             parchemin[i].transform.SetParent(parent.transform);
-            potionGo[i].transform.SetParent(parent.transform);
+            potionGo[i].transform.SetParent(parchemin[i].transform);
 
             parchemin[i].transform.position = new Vector2(0 - nbPotion * 0.4f, 3.2f - i);
             potionGo[i].transform.position = new Vector2(0 - nbPotion * 0.4f, 3.2f - i);
         }
     }
 
+    private int potionIndex = -1;
+    
     private string PathToPotion(int i)
     {
         string potionPath = "Potions/";
@@ -338,42 +386,55 @@ public class CustomerClass
         {
             case PotionBp.Horned:
                 potionPath += "Horny_potion";
+                potionIndex = 6;
                 break;
             case PotionBp.Heart:
                 potionPath += "Love_potion";
+                potionIndex = 0;
                 break;
             case PotionBp.Clean:
                 potionPath += "Clean_potion";
+                potionIndex = 2;
                 break;
             case PotionBp.Drunkard:
                 potionPath += "Alcoolic_potion_300";
+                potionIndex = 3;
                 break;
             case PotionBp.Gamer:
                 potionPath += "Gamer_potion";
+                potionIndex = 4;
                 break;
             case PotionBp.Graphic:
                 potionPath += "Graph_Potion";
+                potionIndex = 5;
                 break;
             case PotionBp.Luminescence:
                 potionPath += "Luminescent_potion";
+                potionIndex = 7;
                 break;
             case PotionBp.Champ:
                 potionPath += "Sea_Potion";
+                potionIndex = 1;
                 break;
             case PotionBp.Sleep:
                 potionPath += "Sleep_potion";
+                potionIndex = 9;
                 break;
             case PotionBp.Spicy:
                 potionPath += "Spicy_potion";
+                potionIndex = 10;
                 break;
             case PotionBp.Strawberry:
                 potionPath += "Berry_potion";
+                potionIndex = 11;
                 break;
             case PotionBp.Sea:
                 potionPath += "Champotion";
+                potionIndex = 8;
                 break;
             case PotionBp.Toad:
                 potionPath += "Toad_potion";
+                potionIndex = 12;
                 break;
             default:
                 break;

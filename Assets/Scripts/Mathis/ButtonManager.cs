@@ -16,15 +16,14 @@ public class ButtonManager : MonoBehaviour
 
     [SerializeField]Image shopForeground;
     [SerializeField]Image doorImage;
-
+    
+    [SerializeField]Canvas grimoireCanvas;
+    [SerializeField]List<GameObject> potions;
+    [SerializeField]GameObject turnPage;
+    
     float timer = 8f;
     bool startDay = false;
-
-
-    void Start()
-    {
-
-    }
+    
 
     // Update is called once per frame
     void Update()
@@ -86,6 +85,7 @@ public class ButtonManager : MonoBehaviour
                 {
                     // ajout
                     customer = new CustomerClass();
+                    customer.InitializeGrimoire(grimoireCanvas, potions, turnPage);
                     customerTab.Add(customer);
                     customer.DisplayCustomer(customerParent);
                     CustomerMove();
