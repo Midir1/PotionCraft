@@ -5,20 +5,20 @@ using UnityEngine;
 
 public class DisplayPotionPrice : MonoBehaviour
 {
-    private TextMeshProUGUI moneyValue;
-    [SerializeField] PotionBp potion;
-
-    // Start is called before the first frame update
+    private TextMeshProUGUI priceValue;
+    [SerializeField] PotionBp potion = 0;
+    private int price = 0;
     void Start()
     {
-        moneyValue = gameObject.GetComponent<TextMeshProUGUI>();
-    }
+        priceValue = gameObject.GetComponent<TextMeshProUGUI>();
+        price = GameManager.Instance.potionPrice[(int)potion];
+        price = price / 3;
+        priceValue.text = price.ToString();
 
-    // Update is called once per frame
+    }
     void Update()
     {
-        int price = GameManager.Instance.potionPrice[(int)potion];
-        price = price / 3;
-        moneyValue.text = price.ToString(); 
+        
+
     }
 }
