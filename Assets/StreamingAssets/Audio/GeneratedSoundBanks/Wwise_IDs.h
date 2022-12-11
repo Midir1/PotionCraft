@@ -30,6 +30,7 @@ namespace AK
         static const AkUniqueID PLAY_WITCHCRAFT_SFX_POTION_GOOD = 3899313153U;
         static const AkUniqueID PLAY_WITCHCRAFT_SFX_RUNE_BAD = 2239915258U;
         static const AkUniqueID PLAY_WITCHCRAFT_SFX_RUNE_GOOD = 1699283934U;
+        static const AkUniqueID STOP_WITCHCRAFT_MUSIQUE_MENU_ET_TUTO_FINALE = 2120209058U;
     } // namespace EVENTS
 
     namespace BANKS

@@ -20,6 +20,7 @@ public class StateManager : MonoBehaviour
     [SerializeField] GameObject drawPanel;
     [SerializeField] GameObject inputManager;
     private static StateManager instance;
+    public AK.Wwise.Event stopMusic;
 
     #endregion
 
@@ -94,6 +95,7 @@ public class StateManager : MonoBehaviour
                 currentState++;
             else if (currentState == lastState)
             {
+                stopMusic.Post(gameObject);
                 GameManager.Instance.tutoState = false;
                 SceneManager.LoadSceneAsync("OriginalMergeScene");
             }
@@ -118,7 +120,7 @@ public class StateManager : MonoBehaviour
         }
         else if (currentState == 12 && potion == null)
             currentState++;
-
+        
 
 
     }

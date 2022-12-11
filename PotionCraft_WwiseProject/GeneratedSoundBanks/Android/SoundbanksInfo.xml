@@ -24,7 +24,7 @@
 				<Bus Id="3991942870" Name="Music"/>
 			</Busses>
 		</SoundBank>
-		<SoundBank Id="2880737896" Type="User" Language="SFX" Hash="{F39CC42F-409B-8BD7-E28E-FF8A36B117DE}">
+		<SoundBank Id="2880737896" Type="User" Language="SFX" Hash="{707D52D2-5356-D1AF-5A99-583D443E5AB4}">
 			<ShortName>MainBank</ShortName>
 			<Path>MainBank.bnk</Path>
 			<Media>
@@ -90,7 +90,7 @@
 				</File>
 				<File Id="365139311" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>MUSIC_IN_GAME_BASE.wav</ShortName>
-					<CachePath>SFX/MUSIC_IN_GAME_BASE_10C4C929.wem</CachePath>
+					<CachePath>SFX/MUSIC_IN_GAME_BASE_D79FB2B7.wem</CachePath>
 				</File>
 				<File Id="438222462" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>MUSIC_IN_GAME_DEMON_01.wav</ShortName>
@@ -122,7 +122,7 @@
 				</File>
 				<File Id="548837911" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>WITCHCRAFT_MUSIQUE_MENU_ET_TUTO_FINALE.wav</ShortName>
-					<CachePath>SFX/WITCHCRAFT_MUSIQUE_MENU_ET_TUTO_FINALE_10C4C929.wem</CachePath>
+					<CachePath>SFX/WITCHCRAFT_MUSIQUE_MENU_ET_TUTO_FINALE_D79FB2B7.wem</CachePath>
 				</File>
 				<File Id="570538854" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>SFX\WITCHCRAFT_SFX_BUY_POTION_03.wav</ShortName>
@@ -252,7 +252,7 @@
 						<MediaRef Id="680270546"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="3424909936" Name="Play_WITCHCRAFT_MUSIQUE_MENU_ET_TUTO_FINALE" DurationType="OneShot" DurationMin="105.826775" DurationMax="105.826775">
+				<Event Id="3424909936" Name="Play_WITCHCRAFT_MUSIQUE_MENU_ET_TUTO_FINALE" DurationType="Infinite">
 					<MediaRefs>
 						<MediaRef Id="548837911"/>
 					</MediaRefs>
@@ -307,6 +307,11 @@
 						<MediaRef Id="56026652"/>
 					</MediaRefs>
 				</Event>
+				<Event Id="2120209058" Name="Stop_WITCHCRAFT_MUSIQUE_MENU_ET_TUTO_FINALE" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
+					<MediaRefs>
+						<MediaRef Id="548837911"/>
+					</MediaRefs>
+				</Event>
 			</Events>
 			<Busses>
 				<Bus Id="393239870" Name="SFX"/>
@@ -315,5 +320,5 @@
 			</Busses>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{8EA15646-7F41-12A4-151F-F1C89AC4625C}</FileHash>
+	<FileHash>{BD3D0D62-894B-09CD-9C84-A1AA12B5DDED}</FileHash>
 </SoundBanksInfo>

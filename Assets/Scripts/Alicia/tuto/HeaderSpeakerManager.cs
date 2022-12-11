@@ -8,6 +8,7 @@ public class HeaderSpeakerManager : MonoBehaviour
     {
         foreach (Transform child in transform)
         {
+            //wellcom
             if (child.name != "HeadHubertNormal")
                 child.gameObject.SetActive(false);
             else
@@ -18,6 +19,7 @@ public class HeaderSpeakerManager : MonoBehaviour
     {
         if (StateManager.Instance.CurrentState == 2)
         {
+            //citrouille
             foreach (Transform child in transform)
             {
                 if (child.name != "HeadClient1")
@@ -28,6 +30,7 @@ public class HeaderSpeakerManager : MonoBehaviour
         }
         else if (StateManager.Instance.CurrentState == 4)
         {
+            //HuberExclamation
             foreach (Transform child in transform)
             {
                 if (child.name != "HeadHubertAvide")
@@ -48,6 +51,7 @@ public class HeaderSpeakerManager : MonoBehaviour
         }
         else if (StateManager.Instance.CurrentState == 6)
         {
+            //sad
             foreach (Transform child in transform)
             {
                 if (child.name != "HeadHubertSorry")
@@ -68,6 +72,7 @@ public class HeaderSpeakerManager : MonoBehaviour
         }
         else if (StateManager.Instance.CurrentState == 10)
         {
+            //welcom
             foreach (Transform child in transform)
             {
                 if (child.name != "HeadHubertSmile")
@@ -78,6 +83,7 @@ public class HeaderSpeakerManager : MonoBehaviour
         }
         else if (StateManager.Instance.CurrentState == 11)
         {
+            //welcom
             foreach (Transform child in transform)
             {
                 if (child.name != "HeadHubertNormal")
@@ -88,6 +94,7 @@ public class HeaderSpeakerManager : MonoBehaviour
         }
         else if (StateManager.Instance.CurrentState == 13)
         {
+            //pumkin
             foreach (Transform child in transform)
             {
                 if (child.name != "HeadClient2")
@@ -98,6 +105,7 @@ public class HeaderSpeakerManager : MonoBehaviour
         }
         else if (StateManager.Instance.CurrentState == 14)
         {
+            //hub exclam
             foreach (Transform child in transform)
             {
                 if (child.name != "HeadHubertAvide")
@@ -108,6 +116,7 @@ public class HeaderSpeakerManager : MonoBehaviour
         }
         else if (StateManager.Instance.CurrentState == 15)
         {
+            //Welcom
             foreach (Transform child in transform)
             {
                 if (child.name != "HeadHubertNormal")
@@ -118,6 +127,7 @@ public class HeaderSpeakerManager : MonoBehaviour
         }
         else if (StateManager.Instance.CurrentState == 16)
         {
+            //Welcom
             foreach (Transform child in transform)
             {
                 if (child.name != "HeadHubertSmile")
@@ -128,6 +138,7 @@ public class HeaderSpeakerManager : MonoBehaviour
         }
         else if (StateManager.Instance.CurrentState == 17)
         {
+            //sad hub
             foreach (Transform child in transform)
             {
                 if (child.name != "HeadHubertSorry")

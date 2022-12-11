@@ -4,6 +4,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	1696398315	Play_GRIMOIR_TURN_PAGE			\Default Work Unit\Sfx\Play_GRIMOIR_TURN_PAGE	
 	1699283934	Play_WITCHCRAFT_SFX_RUNE_GOOD			\Default Work Unit\Sfx\Play_WITCHCRAFT_SFX_RUNE_GOOD	
 	1893662557	Play_WITCHCRAFT_SFX_PARCHEMIN			\Default Work Unit\Sfx\Play_WITCHCRAFT_SFX_PARCHEMIN	
+	2120209058	Stop_WITCHCRAFT_MUSIQUE_MENU_ET_TUTO_FINALE			\Default Work Unit\Music\Stop_WITCHCRAFT_MUSIQUE_MENU_ET_TUTO_FINALE	
 	2136037632	Play_WITCHCRAFT_SFX_OUVRE_GRIMOIRE_1			\Default Work Unit\Sfx\Play_WITCHCRAFT_SFX_OUVRE_GRIMOIRE_1	
 	2239915258	Play_WITCHCRAFT_SFX_RUNE_BAD			\Default Work Unit\Sfx\Play_WITCHCRAFT_SFX_RUNE_BAD	
 	2406833951	Play_WITCHCRAFT_SFX_POTION_BAD			\Default Work Unit\Sfx\Play_WITCHCRAFT_SFX_POTION_BAD	
@@ -38,7 +39,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	297749601	WITCHCRAFT_SFX_ANGRY_MINOTAUR	E:\yazami\Work\Local\02\PotionCraft\PotionCraft_WwiseProject\.cache\Windows\SFX\SFX\WITCHCRAFT_SFX_ANGRY_MINOTAUR_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Client\WITCHCRAFT_SFX_ANGRY_MINOTAUR		452704
 	329715689	WITCHCRAFT_SFX_BUY_POTION_02	E:\yazami\Work\Local\02\PotionCraft\PotionCraft_WwiseProject\.cache\Windows\SFX\SFX\WITCHCRAFT_SFX_BUY_POTION_02_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\BUY_POTION\WITCHCRAFT_SFX_BUY_POTION_02		315488
 	333040350	WITCHCRAFT_SFX_ANGRY_PUMPKIN_01	E:\yazami\Work\Local\02\PotionCraft\PotionCraft_WwiseProject\.cache\Windows\SFX\SFX\WITCHCRAFT_SFX_ANGRY_PUMPKIN_01_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Client\WITCHCRAFT_SFX_ANGRY_PUMPKIN_01		239712
-	365139311	MUSIC_IN_GAME_BASE	E:\yazami\Work\Local\02\PotionCraft\PotionCraft_WwiseProject\.cache\Windows\SFX\MUSIC_IN_GAME_BASE_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Music\MUSIC_IN_GAME_BASE		4608108
+	365139311	MUSIC_IN_GAME_BASE	E:\yazami\Work\Local\02\PotionCraft\PotionCraft_WwiseProject\.cache\Windows\SFX\MUSIC_IN_GAME_BASE_D79FB2B7.wem		\Actor-Mixer Hierarchy\Default Work Unit\Music\MUSIC_IN_GAME_BASE		4608108
 	438222462	MUSIC_IN_GAME_DEMON_01	E:\yazami\Work\Local\02\PotionCraft\PotionCraft_WwiseProject\.cache\Windows\SFX\MUSIC_IN_GAME_DEMON_01_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Music\MUSIC_IN_GAME_DEMON_01		2304096
 	460554117	MUSIC_IN_GAME_PUMPKIN_01	E:\yazami\Work\Local\02\PotionCraft\PotionCraft_WwiseProject\.cache\Windows\SFX\MUSIC_IN_GAME_PUMPKIN_01_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Music\MUSIC_IN_GAME_PUMPKIN_01		2304096
 	464979140	WITCHCRAFT_SFX_INGREDIENT_POTION	E:\yazami\Work\Local\02\PotionCraft\PotionCraft_WwiseProject\.cache\Windows\SFX\SFX\WITCHCRAFT_SFX_INGREDIENT_POTION_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\WITCHCRAFT_SFX_INGREDIENT_POTION		467040
@@ -46,7 +47,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	480721126	WITCHCRAFT_SFX_ANGRY_DEMON_01	E:\yazami\Work\Local\02\PotionCraft\PotionCraft_WwiseProject\.cache\Windows\SFX\SFX\WITCHCRAFT_SFX_ANGRY_DEMON_01_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Client\WITCHCRAFT_SFX_ANGRY_DEMON_01		217184
 	519804808	WITCHCRAFT_SFX_TOURNE_PAGE_01	E:\yazami\Work\Local\02\PotionCraft\PotionCraft_WwiseProject\.cache\Windows\SFX\SFX\WITCHCRAFT_SFX_TOURNE_PAGE_01_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\GRIMOIR_TURN_PAGE\WITCHCRAFT_SFX_TOURNE_PAGE_01		254048
 	544189197	MUSIC_IN_GAME_SKELETON_02	E:\yazami\Work\Local\02\PotionCraft\PotionCraft_WwiseProject\.cache\Windows\SFX\MUSIC_IN_GAME_SKELETON_02_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Music\MUSIC_IN_GAME_SKELETON_02		2304096
-	548837911	WITCHCRAFT_MUSIQUE_MENU_ET_TUTO_FINALE	E:\yazami\Work\Local\02\PotionCraft\PotionCraft_WwiseProject\.cache\Windows\SFX\WITCHCRAFT_MUSIQUE_MENU_ET_TUTO_FINALE_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Music\WITCHCRAFT_MUSIQUE_MENU_ET_TUTO_FINALE		20318836
+	548837911	WITCHCRAFT_MUSIQUE_MENU_ET_TUTO_FINALE	E:\yazami\Work\Local\02\PotionCraft\PotionCraft_WwiseProject\.cache\Windows\SFX\WITCHCRAFT_MUSIQUE_MENU_ET_TUTO_FINALE_D79FB2B7.wem		\Actor-Mixer Hierarchy\Default Work Unit\Music\WITCHCRAFT_MUSIQUE_MENU_ET_TUTO_FINALE		20318836
 	570538854	WITCHCRAFT_SFX_BUY_POTION_03	E:\yazami\Work\Local\02\PotionCraft\PotionCraft_WwiseProject\.cache\Windows\SFX\SFX\WITCHCRAFT_SFX_BUY_POTION_03_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\BUY_POTION\WITCHCRAFT_SFX_BUY_POTION_03		335968
 	575767285	MUSIC_IN_GAME_NYMPHE	E:\yazami\Work\Local\02\PotionCraft\PotionCraft_WwiseProject\.cache\Windows\SFX\MUSIC_IN_GAME_NYMPHE_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Music\MUSIC_IN_GAME_NYMPHE		4608100
 	584772848	WITCHCRAFT_SFX_MENU	E:\yazami\Work\Local\02\PotionCraft\PotionCraft_WwiseProject\.cache\Windows\SFX\SFX\WITCHCRAFT_SFX_MENU_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\WITCHCRAFT_SFX_MENU		45664
