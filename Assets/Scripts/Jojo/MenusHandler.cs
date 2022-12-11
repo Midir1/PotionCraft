@@ -2,7 +2,6 @@ using System.Collections.Generic;
 using JetBrains.Annotations;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.UI;
 
 public class MenusHandler : MonoBehaviour
 {
@@ -18,12 +17,17 @@ public class MenusHandler : MonoBehaviour
     [SerializeField] private Animator anim;
     [SerializeField] private GameObject titlePanel;
 
+    private bool alreadyClicked;
+
     private const string LoadGame = "LoadGameScene", GameOptions = "LoadOptions", GameCredits = "LoadCredits";
     private const string ReturnOptionsToMenu = "OptionsToMain", ReturnCreditsToMenu = "CreditsToMain";
 
     #region Buttons
     public void PlayButton()
     {
+        if (alreadyClicked) return;
+        alreadyClicked = true;
+        
         Invoke(LoadGame, playAnimationDuration);
 
         for (int i = 0; i < buttons.Count; i++)
@@ -36,25 +40,54 @@ public class MenusHandler : MonoBehaviour
         anim.Play("DoorPlay");
     }
 
-    public void OptionsButton() => Invoke(GameOptions, buttonAnimationDuration);
+    public void OptionsButton()
+    {
+        if (alreadyClicked) return;
+        alreadyClicked = true;
+        
+        Invoke(GameOptions, buttonAnimationDuration);
+    }
 
-    public void CreditsButton() => Invoke(GameCredits, buttonAnimationDuration);
+    public void CreditsButton()
+    {
+        if (alreadyClicked) return;
+        alreadyClicked = true;
+        
+        Invoke(GameCredits, buttonAnimationDuration);
+    }
 
-    public void ReturnButton_OptionsMain() => Invoke(ReturnOptionsToMenu, buttonAnimationDuration);
+    public void ReturnButton_OptionsMain()
+    {
+        if (alreadyClicked) return;
+        alreadyClicked = true;
+        
+        Invoke(ReturnOptionsToMenu, buttonAnimationDuration);
+    }
 
-    public void ReturnButton_CreditsMain() => Invoke(ReturnCreditsToMenu, buttonAnimationDuration);
+    public void ReturnButton_CreditsMain()
+    {
+        if (alreadyClicked) return;
+        alreadyClicked = true;
+        
+        Invoke(ReturnCreditsToMenu, buttonAnimationDuration);
+    }
+
     #endregion
 
     #region Loading
     [UsedImplicitly]
     private void LoadGameScene()
     {
+        alreadyClicked = false;
+        
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
     
     [UsedImplicitly]
     private void LoadOptions()
     {
+        alreadyClicked = false;
+        
         mainMenu.SetActive(false);
         optionsMenu.SetActive(true);
     }
@@ -62,6 +95,8 @@ public class MenusHandler : MonoBehaviour
     [UsedImplicitly]
     private void LoadCredits()
     {
+        alreadyClicked = false;
+        
         mainMenu.SetActive(false); 
         creditsMenu.SetActive(true);
     }
@@ -69,6 +104,8 @@ public class MenusHandler : MonoBehaviour
     [UsedImplicitly]
     private void OptionsToMain()
     {
+        alreadyClicked = false;
+        
         optionsMenu.SetActive(false);
         mainMenu.SetActive(true);
     }
@@ -76,6 +113,8 @@ public class MenusHandler : MonoBehaviour
     [UsedImplicitly]
     private void CreditsToMain()
     {
+        alreadyClicked = false;
+        
         creditsMenu.SetActive(false);
         mainMenu.SetActive(true);
     }
