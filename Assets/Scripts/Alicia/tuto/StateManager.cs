@@ -10,6 +10,7 @@ public class StateManager : MonoBehaviour
     #region Attributes
 
     public int potionTutoEnd;
+    public bool oneTear = true;
     public bool spawnClient = false;
     [SerializeField] int currentState = 0;
     [SerializeField] int lastState = 18;
@@ -48,7 +49,7 @@ public class StateManager : MonoBehaviour
             if (speech.Count < i + 1)
                 speech.Add("");
         }
-        potionTutoEnd = 1;
+        potionTutoEnd = 3;
     }
 
     public void ButtonGrimoir()

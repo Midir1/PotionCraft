@@ -45,7 +45,6 @@ public class IngredientManager : Drag
         {
             if (!GameManager.Instance.tutoState)
             {
-
                 EventBadPotion.Post(transform.parent.gameObject);
                 Destroy(gameObject);
             }
@@ -57,13 +56,16 @@ public class IngredientManager : Drag
 
     private void OnTriggerStay2D(Collider2D other)
     {
-        if (GameManager.Instance.tutoState)
+        if (GameManager.Instance.tutoState && other.name == "Red Cauldron")
         {
             Destroy(gameObject);
-            if (gameObject.name == "NymphTear(Clone)")
+            if (gameObject.name == "NymphTear(Clone)" && StateManager.Instance.oneTear )
             {
                 StateManager.Instance.potionTutoEnd--;
+                StateManager.Instance.oneTear = false;
             }
+            if (gameObject.name == "Trigger")
+                StateManager.Instance.potionTutoEnd--;
         }
         else
         {
@@ -167,6 +169,7 @@ public class IngredientManager : Drag
         }
 
         if (doorButton != null) doorButton.raycastTarget = false;
+
     }
 
     [UsedImplicitly]
