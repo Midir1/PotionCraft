@@ -199,6 +199,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 10131738}
   m_CullTransparentMesh: 1
+--- !u!1 &26481158 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1739886321728774678, guid: b7094ef44e4fd0241b48dc9348bc16dc, type: 3}
+  m_PrefabInstance: {fileID: 1828878504}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &70547772
 GameObject:
   m_ObjectHideFlags: 0
@@ -489,6 +494,7 @@ GameObject:
   - component: {fileID: 160245093}
   - component: {fileID: 160245092}
   - component: {fileID: 160245091}
+  - component: {fileID: 160245094}
   m_Layer: 5
   m_Name: RetunrButton
   m_TagString: Untagged
@@ -596,6 +602,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 160245094}
+        m_TargetAssemblyTypeName: PostAkEvent, Assembly-CSharp
+        m_MethodName: PostEvent
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!114 &160245092
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -634,6 +652,26 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 160245089}
   m_CullTransparentMesh: 1
+--- !u!114 &160245094
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 160245089}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb20e0cd124aa1941b14e1a4e21f35a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventSoundOnDisable:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
+  eventSound:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 37a5b496b42de6e4590355a1249b6ca8, type: 2}
 --- !u!1 &177198563
 GameObject:
   m_ObjectHideFlags: 0
@@ -2037,11 +2075,11 @@ MonoBehaviour:
   EventBadPotion:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 0}
+    WwiseObjectReference: {fileID: 11400000, guid: ca06b48e4ae90c6449ebc1bc72284db3, type: 2}
   eventGoodPotion:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 0}
+    WwiseObjectReference: {fileID: 11400000, guid: 9392d12ba066efa448a9e0405fa6fd16, type: 2}
   ingredients: []
   isBrewing: 0
   isBurning: 0
@@ -2497,11 +2535,11 @@ MonoBehaviour:
   EventBadPotion:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 0}
+    WwiseObjectReference: {fileID: 11400000, guid: ca06b48e4ae90c6449ebc1bc72284db3, type: 2}
   eventGoodPotion:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 0}
+    WwiseObjectReference: {fileID: 11400000, guid: 9392d12ba066efa448a9e0405fa6fd16, type: 2}
   ingredients: []
   isBrewing: 0
   isBurning: 0
@@ -2596,6 +2634,7 @@ GameObject:
   - component: {fileID: 648089174}
   - component: {fileID: 648089173}
   - component: {fileID: 648089172}
+  - component: {fileID: 648089175}
   m_Layer: 5
   m_Name: ReturnButton
   m_TagString: Untagged
@@ -2679,6 +2718,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 648089175}
+        m_TargetAssemblyTypeName: PostAkEvent, Assembly-CSharp
+        m_MethodName: PostEvent
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &648089173
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2717,6 +2768,26 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 648089170}
   m_CullTransparentMesh: 1
+--- !u!114 &648089175
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 648089170}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb20e0cd124aa1941b14e1a4e21f35a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventSoundOnDisable:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
+  eventSound:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 6dcdc7d906c94774084ca6a2ec4b4f10, type: 2}
 --- !u!1001 &654289782
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3519,6 +3590,10 @@ MonoBehaviour:
   swipeTolerance: 0.2
   shopCanvas: {fileID: 1760692841}
   grimoireCanvas: {fileID: 950892586}
+  laderEvent:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: a6d50bfcf8874cd42b5578d04c9a45d8, type: 2}
 --- !u!1 &883843145
 GameObject:
   m_ObjectHideFlags: 0
@@ -5429,6 +5504,7 @@ GameObject:
   - component: {fileID: 1533243749}
   - component: {fileID: 1533243748}
   - component: {fileID: 1533243752}
+  - component: {fileID: 1533243753}
   m_Layer: 5
   m_Name: ButtonBuy
   m_TagString: Untagged
@@ -5499,19 +5575,19 @@ MonoBehaviour:
   eventWwiseChaudrond:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 0}
+    WwiseObjectReference: {fileID: 11400000, guid: d433ec8a0d7ded24296854a7f57f38a8, type: 2}
   eventWwisePostion:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 0}
+    WwiseObjectReference: {fileID: 11400000, guid: 648e4b97001e7944aaa7f223d4ccdb33, type: 2}
   eventWwiseTip:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 0}
+    WwiseObjectReference: {fileID: 11400000, guid: 29e4cddfde0b509439b52a3019f338f0, type: 2}
   eventWwiseSonnette:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 0}
+    WwiseObjectReference: {fileID: 11400000, guid: f6d94db89160e004c99886f8c5ff9688, type: 2}
   recipe: {fileID: 0}
 --- !u!114 &1533243750
 MonoBehaviour:
@@ -5565,6 +5641,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   state: 16
   material: {fileID: 2100000, guid: 35324785977a1aa459899c2418c84f30, type: 2}
+--- !u!114 &1533243753
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1533243746}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb20e0cd124aa1941b14e1a4e21f35a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventSoundOnDisable:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 648e4b97001e7944aaa7f223d4ccdb33, type: 2}
+  eventSound:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
 --- !u!1 &1543394862
 GameObject:
   m_ObjectHideFlags: 0
@@ -6269,6 +6365,8 @@ GameObject:
   - component: {fileID: 1647640843}
   - component: {fileID: 1647640842}
   - component: {fileID: 1647640844}
+  - component: {fileID: 1647640846}
+  - component: {fileID: 1647640845}
   m_Layer: 0
   m_Name: WwiseGlobal
   m_TagString: Untagged
@@ -6333,13 +6431,64 @@ MonoBehaviour:
   data:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 0}
+    WwiseObjectReference: {fileID: 11400000, guid: 95f5dd0e284ac5341b96504b43ac9950, type: 2}
   decodeBank: 0
   loadAsynchronous: 0
   saveDecodedBank: 0
   unloadTriggerList: 958ca0ea
   bankNameInternal: 
   valueGuidInternal: 
+--- !u!114 &1647640845
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1647640841}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eded48e32ef83374992754fbc8c53e1a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerList: f7e1664c
+  useOtherObject: 0
+  actionOnEventType: 0
+  curveInterpolation: 4
+  enableActionOnEvent: 0
+  data:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 38924d9ff0aa5a14b83f9c1bb296d6ba, type: 2}
+  useCallbacks: 0
+  Callbacks: []
+  playingId: 0
+  soundEmitterObject: {fileID: 0}
+  transitionDuration: 0
+  eventIdInternal: 0
+  valueGuidInternal: 
+  m_callbackDataInternal: {fileID: 0}
+--- !u!114 &1647640846
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1647640841}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31785d02d9b7d15469ed10e7ab1c10cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_listeners:
+    initialListenerList: []
+    useDefaultListeners: 1
+  isEnvironmentAware: 0
+  isStaticObject: 0
+  m_positionOffsetData:
+    KeepMe: 0
+    positionOffset: {x: 0, y: 0, z: 0}
+  m_posOffsetData: {fileID: 0}
+  listenerMask: 1
 --- !u!4 &1675082898 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8937197201416826885, guid: 7b529c622f1796842b2165fe44cf34d7, type: 3}
@@ -6433,6 +6582,7 @@ GameObject:
   - component: {fileID: 1687591902}
   - component: {fileID: 1687591901}
   - component: {fileID: 1687591900}
+  - component: {fileID: 1687591903}
   m_Layer: 5
   m_Name: GrimoireButton
   m_TagString: Untagged
@@ -6558,6 +6708,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1687591903}
+        m_TargetAssemblyTypeName: PostAkEvent, Assembly-CSharp
+        m_MethodName: PostEvent
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!222 &1687591902
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -6566,6 +6728,26 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1687591898}
   m_CullTransparentMesh: 1
+--- !u!114 &1687591903
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1687591898}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb20e0cd124aa1941b14e1a4e21f35a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventSoundOnDisable:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
+  eventSound:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 4540f6e7f6e48d448aa52115e849b656, type: 2}
 --- !u!1 &1711919097 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5949679261849485842, guid: a1d96504a8cf932488747c90c3b2ffdb, type: 3}
@@ -6812,6 +6994,7 @@ GameObject:
   - component: {fileID: 1757007860}
   - component: {fileID: 1757007859}
   - component: {fileID: 1757007862}
+  - component: {fileID: 1757007863}
   m_Layer: 5
   m_Name: HubertButton
   m_TagString: Untagged
@@ -6895,6 +7078,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 1757007863}
+        m_TargetAssemblyTypeName: PostAkEvent, Assembly-CSharp
+        m_MethodName: PostEvent
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!114 &1757007860
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6947,6 +7142,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   state: 15
   material: {fileID: 2100000, guid: 35324785977a1aa459899c2418c84f30, type: 2}
+--- !u!114 &1757007863
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1757007857}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb20e0cd124aa1941b14e1a4e21f35a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventSoundOnDisable:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
+  eventSound:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 6dcdc7d906c94774084ca6a2ec4b4f10, type: 2}
 --- !u!1 &1760692838
 GameObject:
   m_ObjectHideFlags: 0
@@ -7484,6 +7699,57 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 1739886321728774681, guid: b7094ef44e4fd0241b48dc9348bc16dc, type: 3}
   m_PrefabInstance: {fileID: 1828878504}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1828878512
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 26481158}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eded48e32ef83374992754fbc8c53e1a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerList: 958ca0ea
+  useOtherObject: 0
+  actionOnEventType: 0
+  curveInterpolation: 4
+  enableActionOnEvent: 0
+  data:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 9fbaf9f4bfdaad345aad57f0a6d875dc, type: 2}
+  useCallbacks: 0
+  Callbacks: []
+  playingId: 0
+  soundEmitterObject: {fileID: 0}
+  transitionDuration: 0
+  eventIdInternal: 0
+  valueGuidInternal: 
+  m_callbackDataInternal: {fileID: 0}
+--- !u!114 &1828878513
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 26481158}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31785d02d9b7d15469ed10e7ab1c10cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_listeners:
+    initialListenerList: []
+    useDefaultListeners: 1
+  isEnvironmentAware: 0
+  isStaticObject: 0
+  m_positionOffsetData:
+    KeepMe: 0
+    positionOffset: {x: 0, y: 0, z: 0}
+  m_posOffsetData: {fileID: 0}
+  listenerMask: 1
 --- !u!1 &1837797303
 GameObject:
   m_ObjectHideFlags: 0
@@ -8046,11 +8312,11 @@ MonoBehaviour:
   EventBadPotion:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 0}
+    WwiseObjectReference: {fileID: 11400000, guid: ca06b48e4ae90c6449ebc1bc72284db3, type: 2}
   eventGoodPotion:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 0}
+    WwiseObjectReference: {fileID: 11400000, guid: 9392d12ba066efa448a9e0405fa6fd16, type: 2}
   ingredients: []
   isBrewing: 0
   isBurning: 0
@@ -8992,6 +9258,10 @@ MonoBehaviour:
   potion: {fileID: 544137576}
   drawPanel: {fileID: 436065998}
   inputManager: {fileID: 1543394862}
+  stopMusic:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: d5174e0b7121a2843a53d9ac02202761, type: 2}
 --- !u!1 &2142360758
 GameObject:
   m_ObjectHideFlags: 0
@@ -9109,3 +9379,59 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 989593c988840044d9c58fc0ff2bdde9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &2142968257 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 379512875618637240, guid: 1d615237e39c9ff41a4a27bbec07cd9a, type: 3}
+  m_PrefabInstance: {fileID: 1499047342}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2142968264
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2142968257}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eded48e32ef83374992754fbc8c53e1a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerList: 958ca0ea
+  useOtherObject: 0
+  actionOnEventType: 0
+  curveInterpolation: 4
+  enableActionOnEvent: 0
+  data:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 9fbaf9f4bfdaad345aad57f0a6d875dc, type: 2}
+  useCallbacks: 0
+  Callbacks: []
+  playingId: 0
+  soundEmitterObject: {fileID: 0}
+  transitionDuration: 0
+  eventIdInternal: 0
+  valueGuidInternal: 
+  m_callbackDataInternal: {fileID: 0}
+--- !u!114 &2142968265
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2142968257}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31785d02d9b7d15469ed10e7ab1c10cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_listeners:
+    initialListenerList: []
+    useDefaultListeners: 1
+  isEnvironmentAware: 0
+  isStaticObject: 0
+  m_positionOffsetData:
+    KeepMe: 0
+    positionOffset: {x: 0, y: 0, z: 0}
+  m_posOffsetData: {fileID: 0}
+  listenerMask: 1

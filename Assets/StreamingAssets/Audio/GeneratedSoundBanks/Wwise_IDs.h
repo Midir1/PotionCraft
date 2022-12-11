@@ -16,6 +16,7 @@ namespace AK
         static const AkUniqueID PLAY_ACHAT_CHAUDRON = 4159994098U;
         static const AkUniqueID PLAY_AMELIORATION_CHAUDRON = 3585549483U;
         static const AkUniqueID PLAY_BUY_POTION = 3134291484U;
+        static const AkUniqueID PLAY_ECHELLE = 3678673408U;
         static const AkUniqueID PLAY_GRIMOIR_TURN_PAGE = 1696398315U;
         static const AkUniqueID PLAY_MENE_SONETTE = 995460564U;
         static const AkUniqueID PLAY_TIPS = 3306921892U;

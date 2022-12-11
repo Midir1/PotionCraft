@@ -10,9 +10,11 @@ public class GameBackgrounds : MonoBehaviour, IBeginDragHandler, IEndDragHandler
     [SerializeField] private List<RectTransform> resizable;
     [SerializeField] private Vector2 defaultResolution;
     [SerializeField] private float swipeTolerance;
-    
+
     [SerializeField] private Canvas shopCanvas;
     [SerializeField] private Canvas grimoireCanvas;
+
+    public AK.Wwise.Event laderEvent;
 
     private RectTransform rectTransform;
 
@@ -38,14 +40,14 @@ public class GameBackgrounds : MonoBehaviour, IBeginDragHandler, IEndDragHandler
         set
         {
             isLerping = value;
-            
+
             scrollRect.enabled = !isLerping;
         }
     }
 
     private void Start()
     {
-        rectTransform = GetComponent<RectTransform>();  
+        rectTransform = GetComponent<RectTransform>();
         canvasScaler = GetComponentInParent<CanvasScaler>();
         scrollRect = GetComponent<ScrollRect>();
 
@@ -57,14 +59,15 @@ public class GameBackgrounds : MonoBehaviour, IBeginDragHandler, IEndDragHandler
     private void Update()
     {
         if (shopCanvas.isActiveAndEnabled || grimoireCanvas.isActiveAndEnabled) return;
-        
-        if (!GameManager.Instance.tutoState|| (GameManager.Instance.tutoState && StateManager.Instance.CurrentState == 14))
+
+        if (!GameManager.Instance.tutoState || (GameManager.Instance.tutoState && StateManager.Instance.CurrentState == 14))
         {
-            
+
             ScrollBetweenFloors();
             //ScrollBetweenTransition();
             ClampScroll();
-            if(GameManager.Instance.tutoState && StateManager.Instance.CurrentState == 14)
+
+            if (GameManager.Instance.tutoState && StateManager.Instance.CurrentState == 14)
                 scrollRect.enabled = true;
             if (transform.position.y <= -19 && GameManager.Instance.tutoState)
             {
@@ -79,40 +82,42 @@ public class GameBackgrounds : MonoBehaviour, IBeginDragHandler, IEndDragHandler
 
     public void OnBeginDrag(PointerEventData data)
     {
-            startPosY = rectTransform.anchoredPosition.y;
-        
+        startPosY = rectTransform.anchoredPosition.y;
+
     }
-    
+
     public void OnEndDrag(PointerEventData data)
     {
-            float deltaY = rectTransform.anchoredPosition.y - startPosY;
+        float deltaY = rectTransform.anchoredPosition.y - startPosY;
 
-            switch (isDownstairs)
-            {
-                case true when rectTransform.anchoredPosition.y < swipeUpPos && deltaY < 0f:
-                    targetRectPos = new Vector2(0f, -Screen.height * 2f);
-                    IsLerping = true;
-                    isDownstairs = false;
-                    startLerpPos = rectTransform.anchoredPosition;
-                    break;
-                case false when rectTransform.anchoredPosition.y > swipeDownPos && deltaY > 0f:
-                    targetRectPos = new Vector2(0f, 0f);
-                    IsLerping = true;
-                    isDownstairs = true;
-                    startLerpPos = rectTransform.anchoredPosition;
-                    break;
-                case true:
-                    targetRectPos = new Vector2(0f, 0f);
-                    IsLerping = true;
-                    startLerpPos = rectTransform.anchoredPosition;
-                    break;
-                case false:
-                    targetRectPos = new Vector2(0f, -Screen.height * 2f);
-                    IsLerping = true;
-                    startLerpPos = rectTransform.anchoredPosition;
-                    break;
-            }
-        
+        switch (isDownstairs)
+        {
+            case true when rectTransform.anchoredPosition.y < swipeUpPos && deltaY < 0f:
+                targetRectPos = new Vector2(0f, -Screen.height * 2f);
+                IsLerping = true;
+                isDownstairs = false;
+                startLerpPos = rectTransform.anchoredPosition;
+                laderEvent.Post(gameObject);
+                break;
+            case false when rectTransform.anchoredPosition.y > swipeDownPos && deltaY > 0f:
+                targetRectPos = new Vector2(0f, 0f);
+                IsLerping = true;
+                isDownstairs = true;
+                startLerpPos = rectTransform.anchoredPosition;
+                laderEvent.Post(gameObject);
+                break;
+            case true:
+                targetRectPos = new Vector2(0f, 0f);
+                IsLerping = true;
+                startLerpPos = rectTransform.anchoredPosition;
+                break;
+            case false:
+                targetRectPos = new Vector2(0f, -Screen.height * 2f);
+                IsLerping = true;
+                startLerpPos = rectTransform.anchoredPosition;
+                break;
+        }
+
     }
 
     private void ChangeUIResolution()
@@ -158,7 +163,7 @@ public class GameBackgrounds : MonoBehaviour, IBeginDragHandler, IEndDragHandler
 
     private void ScrollBetweenFloors()
     {
-        if(IsLerping)
+        if (IsLerping)
         {
             lerpTimer += Time.deltaTime / lerpSpeed;
             rectTransform.anchoredPosition = Vector3.Lerp(startLerpPos, targetRectPos, lerpTimer);
@@ -174,7 +179,7 @@ public class GameBackgrounds : MonoBehaviour, IBeginDragHandler, IEndDragHandler
     private void ScrollBetweenTransition()
     {
         if (!IsLerping) return;
-        
+
         if (Input.touchCount > 0)
         {
             Touch touch = Input.GetTouch(0);

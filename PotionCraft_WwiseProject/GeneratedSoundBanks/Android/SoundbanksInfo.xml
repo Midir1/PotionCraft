@@ -24,7 +24,7 @@
 				<Bus Id="3991942870" Name="Music"/>
 			</Busses>
 		</SoundBank>
-		<SoundBank Id="2880737896" Type="User" Language="SFX" Hash="{707D52D2-5356-D1AF-5A99-583D443E5AB4}">
+		<SoundBank Id="2880737896" Type="User" Language="SFX" Hash="{F5A83821-5D50-DAC7-D5EB-589539F61183}">
 			<ShortName>MainBank</ShortName>
 			<Path>MainBank.bnk</Path>
 			<Media>
@@ -79,6 +79,10 @@
 				<File Id="297749601" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>SFX\WITCHCRAFT_SFX_ANGRY_MINOTAUR.wav</ShortName>
 					<CachePath>SFX/SFX/WITCHCRAFT_SFX_ANGRY_MINOTAUR_10C4C929.wem</CachePath>
+				</File>
+				<File Id="305001455" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>WITCHCRAFT_SFX_ECHELLE_01.wav</ShortName>
+					<CachePath>SFX/WITCHCRAFT_SFX_ECHELLE_01_10C4C929.wem</CachePath>
 				</File>
 				<File Id="329715689" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>SFX\WITCHCRAFT_SFX_BUY_POTION_02.wav</ShortName>
@@ -164,6 +168,10 @@
 					<ShortName>SFX\WITCHCRAFT_SFX_FERME_GRIMOIRE.wav</ShortName>
 					<CachePath>SFX/SFX/WITCHCRAFT_SFX_FERME_GRIMOIRE_10C4C929.wem</CachePath>
 				</File>
+				<File Id="874043956" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>WITCHCRAFT_SFX_ECHELLE_02.wav</ShortName>
+					<CachePath>SFX/WITCHCRAFT_SFX_ECHELLE_02_10C4C929.wem</CachePath>
+				</File>
 				<File Id="877418667" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>SFX\WITCHCRAFT_SFX_MENU_SONNETTE_02.wav</ShortName>
 					<CachePath>SFX/SFX/WITCHCRAFT_SFX_MENU_SONNETTE_02_10C4C929.wem</CachePath>
@@ -231,6 +239,12 @@
 						<MediaRef Id="61526642"/>
 						<MediaRef Id="329715689"/>
 						<MediaRef Id="570538854"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3678673408" Name="Play_ECHELLE" DurationType="OneShot" DurationMin="1.7386667" DurationMax="2.1866667">
+					<MediaRefs>
+						<MediaRef Id="305001455"/>
+						<MediaRef Id="874043956"/>
 					</MediaRefs>
 				</Event>
 				<Event Id="1696398315" Name="Play_GRIMOIR_TURN_PAGE" DurationType="OneShot" DurationMin="0.85333335" DurationMax="1.3226666">
@@ -320,5 +334,5 @@
 			</Busses>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{BD3D0D62-894B-09CD-9C84-A1AA12B5DDED}</FileHash>
+	<FileHash>{1F72B8FA-4687-C20E-7720-F8BF737348AF}</FileHash>
 </SoundBanksInfo>
