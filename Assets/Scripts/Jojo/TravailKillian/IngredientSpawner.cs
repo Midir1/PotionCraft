@@ -33,7 +33,7 @@ public class IngredientSpawner : MonoBehaviour
         {
             if (name == "NymphTearSpawner")
             {
-                if (transform.childCount <= 1)
+                if (transform.childCount <= 1 && StateManager.Instance.oneTear)
                 {
                     GameObject gameObject = Instantiate(prefabIngredient, transform.position, Quaternion.identity, transform);
                 }

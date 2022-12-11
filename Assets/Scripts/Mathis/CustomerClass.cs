@@ -98,21 +98,31 @@ public class CustomerClass
         timerMax = 4 * Potion_CustomerSize;
         timer = timerMax;
 
-        if (UnityEngine.Random.Range(1, 11) == 1)
+        if (!GameManager.Instance.tutoState)
         {
-            hero = (HERO)UnityEngine.Random.Range(0, (int)HERO.HERONB);
-            race = RACE.RACENB;
+            if (UnityEngine.Random.Range(1, 11) == 1)
+            {
+                hero = (HERO)UnityEngine.Random.Range(0, (int)HERO.HERONB);
+                race = RACE.RACENB;
+            }
+            else
+            {
+                race = (RACE)UnityEngine.Random.Range(0, (int)RACE.RACENB);
+                hero = HERO.HERONB;
+            }
+
+            nbPotion = 1;
+
+            if (hero == HERO.MERCHANT)
+                nbPotion = 3;
         }
         else
         {
-            race = (RACE)UnityEngine.Random.Range(0, (int)RACE.RACENB);
+            race = RACE.PUMPKIN;
             hero = HERO.HERONB;
+
+            nbPotion = 1;
         }
-
-        nbPotion = 1;
-
-        if (hero == HERO.MERCHANT)
-            nbPotion = 3;
 
         askedPotion_Customer = new Potion_Customer[nbPotion];
         if (!GameManager.Instance.tutoState)

@@ -71,7 +71,6 @@ public class Inventory : MonoBehaviour
         if (transform.childCount <= nbChild)
         {
             isBurning = false;
-            hourglass.sprite = hourglassSprites[0];
             timerBurning = 0;
         }
 
@@ -80,30 +79,16 @@ public class Inventory : MonoBehaviour
             timerBurning += Time.deltaTime;
             int isCauldronUpgraded = Convert.ToInt32(GameManager.Instance.cauldron[cauldronIndex].upgradeSpeed);
 
-            if (isCauldronUpgraded == 1)
+            if ((int)timerBurning > 0 && (int)timerBurning < timeToBurn + upgradeBurningSpeed * isCauldronUpgraded)
             {
-                if ((int)timerBurning > 0)
-                {
-                    hourglass.sprite = hourglassSprites[timeToBurn + (int)upgradeBurningSpeed / ((int)timerBurning % 5)];
-                }
-                else
-                {
-                    hourglass.sprite = hourglassSprites[0];
-                }
+                hourglass.sprite = hourglassSprites[(int)(timerBurning / ((float)(timeToBurn + upgradeBurningSpeed * isCauldronUpgraded) / 4.0f))];
             }
             else
             {
-                if ((int)timerBurning > 0 && (int)timerBurning < timeToBurn)
-                {
-                    hourglass.sprite = hourglassSprites[(int)timerBurning / (timeToBurn / 4)];
-                }
-                else
-                {
-                    hourglass.sprite = hourglassSprites[0];
-                }
+                hourglass.sprite = hourglassSprites[0];
             }
 
-            if (timerBurning > (timeToBurn - upgradeBurningSpeed * isCauldronUpgraded)) BurnPotion();
+            if (timerBurning > (timeToBurn + upgradeBurningSpeed * isCauldronUpgraded)) BurnPotion();
         }
     }
 
@@ -170,7 +155,8 @@ public class Inventory : MonoBehaviour
 
         ingredients.Clear();
         potions[potionIndex].GetComponent<BoxCollider2D>().size = new Vector2(100, 100);
-        Instantiate(potions[potionIndex], potionParent);
+        GameObject craftedPotion = Instantiate(potions[potionIndex], potionParent);
+        craftedPotion.transform.position = new Vector3(craftedPotion.transform.position.x, craftedPotion.transform.position.y + 0.5f, craftedPotion.transform.position.z); 
 
         potionIndex = -1;
     }

@@ -208,9 +208,13 @@ public class InputPaternRecognition : MonoBehaviour
 
     void Success()
     {
-        inventory.BeginCraftPotion();
+        inventory?.BeginCraftPotion();
         runeDrawLine.Braval();
         ClearPath();
+        if(GameManager.Instance.tutoState)
+        {
+            StateManager.Instance.succesRune = true; 
+        }
     }
 
     void Failure()
