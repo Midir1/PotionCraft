@@ -20,6 +20,7 @@ public class ButtonManager : MonoBehaviour
     [SerializeField]Canvas grimoireCanvas;
     [SerializeField]List<GameObject> potions;
     [SerializeField]GameObject turnPage;
+    [SerializeField]GameObject VFX;
     
     float timer = 8f;
     bool startDay = false;
@@ -145,6 +146,7 @@ public class ButtonManager : MonoBehaviour
                     if (potionIndex == (int)pickedCustomer.askedPotion_Customer[i].name)
                     {
                         Debug.Log("Bonne potion");
+                        GameManager.Instance.AddMoney(pickedCustomer.Paiement());
                         Destroy(pickedCustomer.parchemin[i]);
                         Destroy(pickedCustomer.potionGo[i]);
                         pickedCustomer.parchemin.RemoveAt(i);
@@ -165,9 +167,9 @@ public class ButtonManager : MonoBehaviour
                     pickedCustomer.anim.SetInteger("Pos", 4);
                     for (int i = 0; i < pickedCustomer.nbPart; i++)
                     {
-                    Destroy(pickedCustomer.partDisplay[i], 5.0f) ;
+                    Destroy(pickedCustomer.partDisplay[i]) ;
                     }
-                    Destroy(parent.gameObject, 5.0f);
+                    Destroy(parent.gameObject);
                     customerTab.RemoveAt(nb);
                     
                     CustomerMove();
