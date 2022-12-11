@@ -111,7 +111,7 @@ public class ButtonManager : MonoBehaviour
                 //Vector3 pos = customerTab[i].parent.GetComponent<RectTransform>().anchoredPosition3D;
                 //customerTab[i].parent.GetComponent<RectTransform>().anchoredPosition3D = new Vector3(pos.x,pos.y,0);
                 //customerTab[i].parent.GetComponent<RectTransform>().localScale = new Vector3(296 * Mathf.Cos(i), 296 * Mathf.Cos(i));
-                customerTab[i].anim.SetInteger("Pos", i);
+                customerTab[i].anim.SetInteger("Pos", 3-i);
             }
         }
     }
@@ -162,12 +162,14 @@ public class ButtonManager : MonoBehaviour
 
                 if (pickedCustomer.potionGo.Count == 0 || wrongPot)
                 {
+                    pickedCustomer.anim.SetInteger("Pos", 4);
                     for (int i = 0; i < pickedCustomer.nbPart; i++)
                     {
-                        Destroy(pickedCustomer.partDisplay[i]);
+                    Destroy(pickedCustomer.partDisplay[i], 5.0f) ;
                     }
-                    Destroy(parent.gameObject);
+                    Destroy(parent.gameObject, 5.0f);
                     customerTab.RemoveAt(nb);
+                    
                     CustomerMove();
                 }
 
