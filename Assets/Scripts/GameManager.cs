@@ -43,6 +43,7 @@ public class GameManager : MonoBehaviour
     public bool tipIsAvailable = false;
     public bool bellIsAvailable = false;
     public bool[] Bp = new bool[(int)PotionBp.PotionBpNb];
+    public int[] potionPrice = new int[(int)PotionBp.PotionBpNb];
     public bool tutoState = false;
     #endregion
 
@@ -80,6 +81,21 @@ public class GameManager : MonoBehaviour
         Bp[(int)PotionBp.Heart] = true;
         Bp[(int)PotionBp.Sleep] = true;
         Bp[(int)PotionBp.Gamer] = true;
+        potionPrice[(int)PotionBp.Clean] = 100;
+        potionPrice[(int)PotionBp.Drunkard] = 100;
+        potionPrice[(int)PotionBp.Luminescence] = 250;
+        potionPrice[(int)PotionBp.Champ] = 250;
+        potionPrice[(int)PotionBp.Horned] = 500;
+        potionPrice[(int)PotionBp.Spicy] = 500;
+        potionPrice[(int)PotionBp.Sea] = 750;
+        potionPrice[(int)PotionBp.Strawberry] = 750;
+        potionPrice[(int)PotionBp.Toad] = 1000;
+        potionPrice[(int)PotionBp.Graphic] = 1500;
+        potionPrice[(int)PotionBp.Heart] = 100;
+        potionPrice[(int)PotionBp.Gamer] = 100;
+        potionPrice[(int)PotionBp.Sleep] = 100;
+
+
     }
 
     /// <summary>
