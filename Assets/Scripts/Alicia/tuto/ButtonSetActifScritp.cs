@@ -6,7 +6,6 @@ using UnityEngine.UI;
 public class ButtonSetActifScritp : MonoBehaviour
 {
     [SerializeField] int activeState = 0;
-    [SerializeField] bool OneTime = true;
 
     private void Start()
     {
@@ -16,7 +15,7 @@ public class ButtonSetActifScritp : MonoBehaviour
     {
         if (StateManager.Instance.CurrentState == activeState)
             GetComponent<Button>().interactable = true;
-        if (OneTime && StateManager.Instance.CurrentState == (activeState + 1))
+        else if (StateManager.Instance.CurrentState != activeState)
             GetComponent<Button>().interactable = false;
     }
 }

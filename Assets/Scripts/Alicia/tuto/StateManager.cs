@@ -56,6 +56,7 @@ public class StateManager : MonoBehaviour
         if (currentState == 6)
         {
             CurrentState++;
+
         }
     }
     public void ReturnButtonGrimoir()

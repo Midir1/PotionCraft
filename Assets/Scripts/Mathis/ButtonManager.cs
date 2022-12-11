@@ -98,7 +98,6 @@ public class ButtonManager : MonoBehaviour
             customer = new CustomerClass();
             customerTab.Add(customer);
             customer.DisplayCustomer(customerParent);
-            CustomerMove();
         }
     }
 
