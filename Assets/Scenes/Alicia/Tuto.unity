@@ -1175,7 +1175,6 @@ GameObject:
   - component: {fileID: 413511229}
   - component: {fileID: 413511228}
   - component: {fileID: 413511227}
-  - component: {fileID: 413511230}
   m_Layer: 5
   m_Name: Price
   m_TagString: Untagged
@@ -1301,19 +1300,6 @@ RectTransform:
   m_AnchoredPosition: {x: 92, y: 575}
   m_SizeDelta: {x: 500, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &413511230
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 413511226}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 80f0b4a0c85f81c46bdf8972c6806543, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  potion: 0
 --- !u!1 &436065998
 GameObject:
   m_ObjectHideFlags: 0
@@ -1923,7 +1909,6 @@ MonoBehaviour:
   grimoireCanvas: {fileID: 0}
   potions: []
   turnPage: {fileID: 0}
-  VFX: {fileID: 0}
 --- !u!4 &509528062
 Transform:
   m_ObjectHideFlags: 0

@@ -146,16 +146,7 @@ public class ButtonManager : MonoBehaviour
                     if (potionIndex == (int)pickedCustomer.askedPotion_Customer[i].name)
                     {
                         Debug.Log("Bonne potion");
-
-                        if (pickedCustomer.Paiement() > 0)
-                        {
-                            GameManager.Instance.AddMoney(pickedCustomer.Paiement());
-                            GameObject go = Instantiate(VFX, transform);
-
-                            go.GetComponent<ParticleSystem>().Play();
-                            Destroy(go, 1.0f);
-                        }
-                    
+                        GameManager.Instance.AddMoney(pickedCustomer.Paiement());
                         Destroy(pickedCustomer.parchemin[i]);
                         Destroy(pickedCustomer.potionGo[i]);
                         pickedCustomer.parchemin.RemoveAt(i);
