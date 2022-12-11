@@ -3616,7 +3616,7 @@ MonoBehaviour:
   - {fileID: 5683640516108972557}
   - {fileID: 5683640515893573999}
   turnPage: {fileID: 1303242646957857590}
-  VFX: {fileID: 0}
+  VFX: {fileID: 7289916171035614637, guid: a9c05c418304b4c41ba7afc550fb97d2, type: 3}
 --- !u!1001 &1939895115
 PrefabInstance:
   m_ObjectHideFlags: 0

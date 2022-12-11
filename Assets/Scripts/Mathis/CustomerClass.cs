@@ -81,7 +81,7 @@ public class CustomerClass
 
     private Vector3 pageRotation = new Vector3(0f, 0f, -7.5f);
     private Vector3 pageScale = new Vector3(1.29f, 1.08f, 1f);
-
+    private int[] rngPot;
     #endregion
 
     public CustomerClass()
@@ -120,17 +120,18 @@ public class CustomerClass
         }
 
         askedPotion_Customer = new Potion_Customer[nbPotion];
+        rngPot = new int[nbPotion];
         if (!GameManager.Instance.tutoState)
         {
             for (int i = 0; i < nbPotion; i++)
             {
                 askedPotion_Customer[i] = new Potion_Customer();
-                int rng = 0;
+                rngPot[i] = 0;
                 do
                 {
-                    rng = UnityEngine.Random.Range(0, (int)PotionBp.PotionBpNb);
-                    askedPotion_Customer[i].name = (PotionBp)rng;
-                } while (manager.Bp[rng] == false);
+                    rngPot[i] = UnityEngine.Random.Range(0, (int)PotionBp.PotionBpNb);
+                    askedPotion_Customer[i].name = (PotionBp)rngPot[i];
+                } while (manager.Bp[rngPot[i]] == false);
             }
         }
         else
@@ -166,7 +167,12 @@ public class CustomerClass
         //renvoie le prix d'acar de la Potion_Customer confectionn�
         for (int i = 0; i < nbPotion; i++)
         {
-            result = (uint)(timer/nbPotion) * 10;
+            int price = GameManager.Instance.potionPrice[rngPot[i]]/3;
+
+            float temp = ((timer/nbPotion) * 10)/100.0f;
+
+            Debug.Log(temp);
+            result = (uint)(price * temp);
         }
 
 
