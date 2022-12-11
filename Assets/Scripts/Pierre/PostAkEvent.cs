@@ -4,14 +4,34 @@ using UnityEngine;
 
 public class PostAkEvent : MonoBehaviour
 {
-    public AK.Wwise.Event eventSoundOnDisable;
+    [SerializeField] bool postOnDisable = false;
+    [SerializeField] bool postOnStart = false;
+    [SerializeField] bool postOnDestroy = false;
+
     public AK.Wwise.Event eventSound;
     public void PostEvent()
     {
         eventSound.Post(gameObject);
     }
+    private void Start()
+    {
+        if (postOnStart)
+        {
+            eventSound.Post(gameObject);
+        }
+    }
     private void OnDisable()
     {
-        eventSoundOnDisable.Post(gameObject);
+        if (postOnDisable)
+        {
+            eventSound.Post(gameObject);
+        }
+    }
+    private void OnDestroy()
+    {
+        if (postOnDestroy)
+        {
+            eventSound.Post(gameObject);
+        }
     }
 }

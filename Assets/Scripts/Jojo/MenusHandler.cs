@@ -17,8 +17,6 @@ public class MenusHandler : MonoBehaviour
     [SerializeField] private Animator anim;
     [SerializeField] private GameObject titlePanel;
 
-    public AK.Wwise.Event goPlayEnvent;
-
     private bool alreadyClicked;
 
     private const string LoadGame = "LoadGameScene", GameOptions = "LoadOptions", GameCredits = "LoadCredits";
@@ -81,8 +79,6 @@ public class MenusHandler : MonoBehaviour
     private void LoadGameScene()
     {
         alreadyClicked = false;
-
-        goPlayEnvent.Post(gameObject);
 
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
