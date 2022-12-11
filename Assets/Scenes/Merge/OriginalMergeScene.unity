@@ -8825,6 +8825,10 @@ MonoBehaviour:
   swipeTolerance: 0.2
   shopCanvas: {fileID: 8504958890484469707}
   grimoireCanvas: {fileID: 5683640516881821373}
+  laderEvent:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: a6d50bfcf8874cd42b5578d04c9a45d8, type: 2}
 --- !u!114 &1319380534289054655
 MonoBehaviour:
   m_ObjectHideFlags: 0

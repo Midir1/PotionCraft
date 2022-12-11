@@ -467,11 +467,12 @@ public class CustomerClass
             switch (hero)
             {
                 case HERO.MERCHANT:
+                    //AkSoundEngine.PostEvent("Play_WITCHCRAFT_SFX_ANGRY_DEMON", parent);
                     path = "OC/tenu_mechant3";
                     break;
                 case HERO.WARIOR:
+                    AkSoundEngine.PostEvent("Play_WITCHCRAFT_SFX_ANGRY_MINOTAUR", parent);
                     path = "OC/tenu_mechant1-tourner";
-
                     tempPot = askedPotion_Customer[0];
                     do
                     {
@@ -485,6 +486,7 @@ public class CustomerClass
 
                     break;
                 case HERO.SUCCUBUS:
+                    AkSoundEngine.PostEvent("Play_WITCHCRAFT_SFX_ANGRY_NYMPHE", parent);
                     path = "OC/tenu_mechant2";
                     break;
                 default:
@@ -500,12 +502,15 @@ public class CustomerClass
             switch (race)
             {
                 case RACE.PUMPKIN:
+                    AkSoundEngine.PostEvent("Play_WITCHCRAFT_SFX_ANGRY_PUMPKIN_01", parent);
                     path = "pumpkin/";
                     break;
                 case RACE.DEVIL:
+                    AkSoundEngine.PostEvent("Play_WITCHCRAFT_SFX_ANGRY_DEMON", parent);
                     path = "demon/";
                     break;
                 case RACE.SKELETON:
+                    AkSoundEngine.PostEvent("Play_WITCHCRAFT_SFX_ANGRY_SKELETON", parent);
                     path = "skeleton/";
                     posEye = 2;
                     break;

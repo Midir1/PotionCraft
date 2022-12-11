@@ -24,7 +24,7 @@
 				<Bus Id="3991942870" Name="Music"/>
 			</Busses>
 		</SoundBank>
-		<SoundBank Id="2880737896" Type="User" Language="SFX" Hash="{F5A83821-5D50-DAC7-D5EB-589539F61183}">
+		<SoundBank Id="2880737896" Type="User" Language="SFX" Hash="{86E5007B-BA64-54AA-B77B-B28F24217EB3}">
 			<ShortName>MainBank</ShortName>
 			<Path>MainBank.bnk</Path>
 			<Media>
@@ -271,6 +271,33 @@
 						<MediaRef Id="548837911"/>
 					</MediaRefs>
 				</Event>
+				<Event Id="1925305941" Name="Play_WITCHCRAFT_SFX_ANGRY_DEMON" DurationType="OneShot" DurationMin="1.1306666" DurationMax="1.1946666">
+					<MediaRefs>
+						<MediaRef Id="480721126"/>
+						<MediaRef Id="1058908871"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2010406635" Name="Play_WITCHCRAFT_SFX_ANGRY_MINOTAUR" DurationType="OneShot" DurationMin="2.3573334" DurationMax="2.3573334">
+					<MediaRefs>
+						<MediaRef Id="297749601"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2182169653" Name="Play_WITCHCRAFT_SFX_ANGRY_NYMPHE" DurationType="OneShot" DurationMin="1.6657292" DurationMax="1.7386667">
+					<MediaRefs>
+						<MediaRef Id="30977768"/>
+						<MediaRef Id="926383028"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3570363514" Name="Play_WITCHCRAFT_SFX_ANGRY_PUMPKIN_01" DurationType="OneShot" DurationMin="1.248" DurationMax="1.248">
+					<MediaRefs>
+						<MediaRef Id="333040350"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1224265497" Name="Play_WITCHCRAFT_SFX_ANGRY_SKELETON" DurationType="OneShot" DurationMin="1.6426667" DurationMax="1.6426667">
+					<MediaRefs>
+						<MediaRef Id="59718433"/>
+					</MediaRefs>
+				</Event>
 				<Event Id="493932176" Name="Play_WITCHCRAFT_SFX_FERME_GRIMOIRE" DurationType="OneShot" DurationMin="1.4293333" DurationMax="1.4293333">
 					<MediaRefs>
 						<MediaRef Id="854449426"/>
@@ -334,5 +361,5 @@
 			</Busses>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{1F72B8FA-4687-C20E-7720-F8BF737348AF}</FileHash>
+	<FileHash>{C7BCC1D2-0D54-28F4-7B75-4751A3F0DF51}</FileHash>
 </SoundBanksInfo>
