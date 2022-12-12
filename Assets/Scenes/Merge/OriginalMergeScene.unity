@@ -729,6 +729,7 @@ GameObject:
   - component: {fileID: 475050754}
   - component: {fileID: 475050753}
   - component: {fileID: 475050752}
+  - component: {fileID: 475050755}
   m_Layer: 5
   m_Name: HubertButton
   m_TagString: Untagged
@@ -813,6 +814,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 475050755}
+        m_TargetAssemblyTypeName: PostAkEvent, Assembly-CSharp
+        m_MethodName: PostEvent
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!114 &475050753
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -851,6 +864,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 475050750}
   m_CullTransparentMesh: 1
+--- !u!114 &475050755
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 475050750}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb20e0cd124aa1941b14e1a4e21f35a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  postOnDisable: 0
+  postOnStart: 0
+  postOnDestroy: 0
+  eventSound:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 6dcdc7d906c94774084ca6a2ec4b4f10, type: 2}
 --- !u!1 &491324340
 GameObject:
   m_ObjectHideFlags: 0
@@ -1345,6 +1377,7 @@ GameObject:
   - component: {fileID: 757551289}
   - component: {fileID: 757551291}
   - component: {fileID: 757551290}
+  - component: {fileID: 757551293}
   - component: {fileID: 757551292}
   m_Layer: 5
   m_Name: GrimoireButton
@@ -1430,6 +1463,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 757551293}
+        m_TargetAssemblyTypeName: PostAkEvent, Assembly-CSharp
+        m_MethodName: PostEvent
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!222 &757551291
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1468,6 +1513,25 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &757551293
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 757551288}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb20e0cd124aa1941b14e1a4e21f35a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  postOnDisable: 0
+  postOnStart: 0
+  postOnDestroy: 0
+  eventSound:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 4540f6e7f6e48d448aa52115e849b656, type: 2}
 --- !u!1 &783265184
 GameObject:
   m_ObjectHideFlags: 0
@@ -2443,6 +2507,7 @@ GameObject:
   - component: {fileID: 1266263411}
   - component: {fileID: 1266263410}
   - component: {fileID: 1266263409}
+  - component: {fileID: 1266263413}
   - component: {fileID: 1266263412}
   m_Layer: 5
   m_Name: Button
@@ -2551,6 +2616,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1266263413}
+        m_TargetAssemblyTypeName: PostAkEvent, Assembly-CSharp
+        m_MethodName: PostEvent
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1266263410
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2604,6 +2681,25 @@ MonoBehaviour:
   buttonManager: {fileID: 1939098867}
   scroll: {fileID: 1319380534289054652}
   cycleTimer: 120
+--- !u!114 &1266263413
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1266263407}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb20e0cd124aa1941b14e1a4e21f35a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  postOnDisable: 0
+  postOnStart: 0
+  postOnDestroy: 0
+  eventSound:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 588dbf6d18686d6488546bc9ba757cb4, type: 2}
 --- !u!224 &1289674066 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 5949679261849485845, guid: a1d96504a8cf932488747c90c3b2ffdb, type: 3}
@@ -2977,6 +3073,8 @@ GameObject:
   - component: {fileID: 1463225569}
   - component: {fileID: 1463225568}
   - component: {fileID: 1463225567}
+  - component: {fileID: 1463225571}
+  - component: {fileID: 1463225570}
   m_Layer: 5
   m_Name: ReturnButton
   m_TagString: Untagged
@@ -3060,6 +3158,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1463225571}
+        m_TargetAssemblyTypeName: PostAkEvent, Assembly-CSharp
+        m_MethodName: PostEvent
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1463225568
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3098,6 +3208,44 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1463225565}
   m_CullTransparentMesh: 1
+--- !u!114 &1463225570
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1463225565}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb20e0cd124aa1941b14e1a4e21f35a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  postOnDisable: 0
+  postOnStart: 0
+  postOnDestroy: 0
+  eventSound:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
+--- !u!114 &1463225571
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1463225565}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb20e0cd124aa1941b14e1a4e21f35a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  postOnDisable: 0
+  postOnStart: 0
+  postOnDestroy: 0
+  eventSound:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 6dcdc7d906c94774084ca6a2ec4b4f10, type: 2}
 --- !u!1 &1535983839
 GameObject:
   m_ObjectHideFlags: 0
@@ -4751,19 +4899,19 @@ MonoBehaviour:
   eventWwiseChaudrond:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 0}
+    WwiseObjectReference: {fileID: 11400000, guid: d433ec8a0d7ded24296854a7f57f38a8, type: 2}
   eventWwisePostion:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 0}
+    WwiseObjectReference: {fileID: 11400000, guid: 648e4b97001e7944aaa7f223d4ccdb33, type: 2}
   eventWwiseTip:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 0}
+    WwiseObjectReference: {fileID: 11400000, guid: 29e4cddfde0b509439b52a3019f338f0, type: 2}
   eventWwiseSonnette:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 0}
+    WwiseObjectReference: {fileID: 11400000, guid: f6d94db89160e004c99886f8c5ff9688, type: 2}
   recipe: {fileID: 0}
 --- !u!222 &1222925284919636964
 CanvasRenderer:
@@ -6914,19 +7062,19 @@ MonoBehaviour:
   eventWwiseChaudrond:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 0}
+    WwiseObjectReference: {fileID: 11400000, guid: d433ec8a0d7ded24296854a7f57f38a8, type: 2}
   eventWwisePostion:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 0}
+    WwiseObjectReference: {fileID: 11400000, guid: 648e4b97001e7944aaa7f223d4ccdb33, type: 2}
   eventWwiseTip:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 0}
+    WwiseObjectReference: {fileID: 11400000, guid: 29e4cddfde0b509439b52a3019f338f0, type: 2}
   eventWwiseSonnette:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 0}
+    WwiseObjectReference: {fileID: 11400000, guid: f6d94db89160e004c99886f8c5ff9688, type: 2}
   recipe: {fileID: 0}
 --- !u!114 &2328858205641454839
 MonoBehaviour:
@@ -6943,19 +7091,19 @@ MonoBehaviour:
   eventWwiseChaudrond:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 0}
+    WwiseObjectReference: {fileID: 11400000, guid: d433ec8a0d7ded24296854a7f57f38a8, type: 2}
   eventWwisePostion:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 0}
+    WwiseObjectReference: {fileID: 11400000, guid: 648e4b97001e7944aaa7f223d4ccdb33, type: 2}
   eventWwiseTip:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 0}
+    WwiseObjectReference: {fileID: 11400000, guid: 29e4cddfde0b509439b52a3019f338f0, type: 2}
   eventWwiseSonnette:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 0}
+    WwiseObjectReference: {fileID: 11400000, guid: f6d94db89160e004c99886f8c5ff9688, type: 2}
   recipe: {fileID: 0}
 --- !u!114 &2463762991090171692
 MonoBehaviour:
@@ -7303,6 +7451,7 @@ GameObject:
   - component: {fileID: 2723629167984478613}
   - component: {fileID: 2723629167984478614}
   - component: {fileID: 2723629167984478615}
+  - component: {fileID: 2723629167984478616}
   m_Layer: 5
   m_Name: RetunrButton
   m_TagString: Untagged
@@ -7404,6 +7553,37 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2723629167984478616}
+        m_TargetAssemblyTypeName: PostAkEvent, Assembly-CSharp
+        m_MethodName: PostEvent
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &2723629167984478616
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2723629167984478609}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb20e0cd124aa1941b14e1a4e21f35a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  postOnDisable: 0
+  postOnStart: 0
+  postOnDestroy: 0
+  eventSound:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 37a5b496b42de6e4590355a1249b6ca8, type: 2}
 --- !u!222 &2896059060921963672
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -7548,6 +7728,7 @@ GameObject:
   - component: {fileID: 3155998841825366991}
   - component: {fileID: 3155998841825366988}
   - component: {fileID: 3155998841825366989}
+  - component: {fileID: 3155998841825366992}
   - component: {fileID: 3155998841825366990}
   - component: {fileID: 3155998841825366985}
   m_Layer: 5
@@ -7656,6 +7837,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 3155998841825366992}
+        m_TargetAssemblyTypeName: PostAkEvent, Assembly-CSharp
+        m_MethodName: PostEvent
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!95 &3155998841825366990
 Animator:
   serializedVersion: 4
@@ -7684,6 +7877,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3155998841825366979}
   m_CullTransparentMesh: 1
+--- !u!114 &3155998841825366992
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3155998841825366979}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb20e0cd124aa1941b14e1a4e21f35a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  postOnDisable: 0
+  postOnStart: 0
+  postOnDestroy: 0
+  eventSound:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 588dbf6d18686d6488546bc9ba757cb4, type: 2}
 --- !u!222 &3155998841889843888
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -7876,6 +8088,7 @@ GameObject:
   - component: {fileID: 3155998842433625313}
   - component: {fileID: 3155998842433625318}
   - component: {fileID: 3155998842433625319}
+  - component: {fileID: 3155998842433625320}
   - component: {fileID: 3155998842433625316}
   - component: {fileID: 3155998842433625243}
   m_Layer: 5
@@ -8032,6 +8245,37 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 3155998842433625320}
+        m_TargetAssemblyTypeName: PostAkEvent, Assembly-CSharp
+        m_MethodName: PostEvent
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &3155998842433625320
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3155998842433625242}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb20e0cd124aa1941b14e1a4e21f35a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  postOnDisable: 0
+  postOnStart: 0
+  postOnDestroy: 0
+  eventSound:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 588dbf6d18686d6488546bc9ba757cb4, type: 2}
 --- !u!114 &3263540698030461894
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8077,19 +8321,19 @@ MonoBehaviour:
   eventWwiseChaudrond:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 0}
+    WwiseObjectReference: {fileID: 11400000, guid: d433ec8a0d7ded24296854a7f57f38a8, type: 2}
   eventWwisePostion:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 0}
+    WwiseObjectReference: {fileID: 11400000, guid: 648e4b97001e7944aaa7f223d4ccdb33, type: 2}
   eventWwiseTip:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 0}
+    WwiseObjectReference: {fileID: 11400000, guid: 29e4cddfde0b509439b52a3019f338f0, type: 2}
   eventWwiseSonnette:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 0}
+    WwiseObjectReference: {fileID: 11400000, guid: f6d94db89160e004c99886f8c5ff9688, type: 2}
   recipe: {fileID: 11400000, guid: eb20696ae3faccb419fc02ef537a9d9b, type: 2}
 --- !u!114 &3406046331454526348
 MonoBehaviour:
@@ -28265,7 +28509,7 @@ MonoBehaviour:
   eventWwise:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 0}
+    WwiseObjectReference: {fileID: 11400000, guid: de1f6b9d765be1248a2cc0429d90e290, type: 2}
   price: 50
 --- !u!61 &6359001785802688038
 BoxCollider2D:
@@ -28380,7 +28624,7 @@ MonoBehaviour:
   eventWwise:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 0}
+    WwiseObjectReference: {fileID: 11400000, guid: de1f6b9d765be1248a2cc0429d90e290, type: 2}
   price: 50
 --- !u!114 &6359001785993177618
 MonoBehaviour:
@@ -28629,7 +28873,7 @@ MonoBehaviour:
   eventWwise:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 0}
+    WwiseObjectReference: {fileID: 11400000, guid: de1f6b9d765be1248a2cc0429d90e290, type: 2}
   price: 50
 --- !u!61 &6359001786307179674
 BoxCollider2D:
@@ -28846,7 +29090,7 @@ MonoBehaviour:
   eventWwise:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 0}
+    WwiseObjectReference: {fileID: 11400000, guid: de1f6b9d765be1248a2cc0429d90e290, type: 2}
   price: 50
 --- !u!114 &6359001786627610798
 MonoBehaviour:
@@ -29444,6 +29688,7 @@ GameObject:
   - component: {fileID: 7659303012331775115}
   - component: {fileID: 7659303012331775114}
   - component: {fileID: 7659303012331775112}
+  - component: {fileID: 7659303012331775116}
   m_Layer: 5
   m_Name: GrimoirAccess
   m_TagString: Untagged
@@ -29527,6 +29772,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 7659303012331775116}
+        m_TargetAssemblyTypeName: PostAkEvent, Assembly-CSharp
+        m_MethodName: PostEvent
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!114 &7659303012331775114
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29565,6 +29822,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7659303012331775108}
   m_CullTransparentMesh: 1
+--- !u!114 &7659303012331775116
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7659303012331775108}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb20e0cd124aa1941b14e1a4e21f35a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  postOnDisable: 0
+  postOnStart: 0
+  postOnDestroy: 0
+  eventSound:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 4540f6e7f6e48d448aa52115e849b656, type: 2}
 --- !u!1 &7701139052957911283
 GameObject:
   m_ObjectHideFlags: 0
@@ -29728,19 +30004,19 @@ MonoBehaviour:
   eventWwiseChaudrond:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 0}
+    WwiseObjectReference: {fileID: 11400000, guid: d433ec8a0d7ded24296854a7f57f38a8, type: 2}
   eventWwisePostion:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 0}
+    WwiseObjectReference: {fileID: 11400000, guid: 648e4b97001e7944aaa7f223d4ccdb33, type: 2}
   eventWwiseTip:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 0}
+    WwiseObjectReference: {fileID: 11400000, guid: 29e4cddfde0b509439b52a3019f338f0, type: 2}
   eventWwiseSonnette:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 0}
+    WwiseObjectReference: {fileID: 11400000, guid: f6d94db89160e004c99886f8c5ff9688, type: 2}
   recipe: {fileID: 11400000, guid: 0a0943d0e1e7c1f469cebd8b976d18e8, type: 2}
 --- !u!114 &7863019401256351331
 MonoBehaviour:
@@ -29757,19 +30033,19 @@ MonoBehaviour:
   eventWwiseChaudrond:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 0}
+    WwiseObjectReference: {fileID: 11400000, guid: d433ec8a0d7ded24296854a7f57f38a8, type: 2}
   eventWwisePostion:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 0}
+    WwiseObjectReference: {fileID: 11400000, guid: 648e4b97001e7944aaa7f223d4ccdb33, type: 2}
   eventWwiseTip:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 0}
+    WwiseObjectReference: {fileID: 11400000, guid: 29e4cddfde0b509439b52a3019f338f0, type: 2}
   eventWwiseSonnette:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 0}
+    WwiseObjectReference: {fileID: 11400000, guid: f6d94db89160e004c99886f8c5ff9688, type: 2}
   recipe: {fileID: 11400000, guid: 5a9b819b018db91458bfa038a644acd5, type: 2}
 --- !u!114 &7863019401314035166
 MonoBehaviour:
@@ -29786,19 +30062,19 @@ MonoBehaviour:
   eventWwiseChaudrond:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 0}
+    WwiseObjectReference: {fileID: 11400000, guid: d433ec8a0d7ded24296854a7f57f38a8, type: 2}
   eventWwisePostion:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 0}
+    WwiseObjectReference: {fileID: 11400000, guid: 648e4b97001e7944aaa7f223d4ccdb33, type: 2}
   eventWwiseTip:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 0}
+    WwiseObjectReference: {fileID: 11400000, guid: 29e4cddfde0b509439b52a3019f338f0, type: 2}
   eventWwiseSonnette:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 0}
+    WwiseObjectReference: {fileID: 11400000, guid: f6d94db89160e004c99886f8c5ff9688, type: 2}
   recipe: {fileID: 11400000, guid: 3a13b988b221f10459197221e48f0dbf, type: 2}
 --- !u!114 &7863019401443245264
 MonoBehaviour:
@@ -29815,19 +30091,19 @@ MonoBehaviour:
   eventWwiseChaudrond:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 0}
+    WwiseObjectReference: {fileID: 11400000, guid: d433ec8a0d7ded24296854a7f57f38a8, type: 2}
   eventWwisePostion:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 0}
+    WwiseObjectReference: {fileID: 11400000, guid: 648e4b97001e7944aaa7f223d4ccdb33, type: 2}
   eventWwiseTip:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 0}
+    WwiseObjectReference: {fileID: 11400000, guid: 29e4cddfde0b509439b52a3019f338f0, type: 2}
   eventWwiseSonnette:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 0}
+    WwiseObjectReference: {fileID: 11400000, guid: f6d94db89160e004c99886f8c5ff9688, type: 2}
   recipe: {fileID: 11400000, guid: fb428489b0876974bb8648bf836b41ce, type: 2}
 --- !u!114 &7863019401621284851
 MonoBehaviour:
@@ -29844,19 +30120,19 @@ MonoBehaviour:
   eventWwiseChaudrond:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 0}
+    WwiseObjectReference: {fileID: 11400000, guid: d433ec8a0d7ded24296854a7f57f38a8, type: 2}
   eventWwisePostion:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 0}
+    WwiseObjectReference: {fileID: 11400000, guid: 648e4b97001e7944aaa7f223d4ccdb33, type: 2}
   eventWwiseTip:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 0}
+    WwiseObjectReference: {fileID: 11400000, guid: 29e4cddfde0b509439b52a3019f338f0, type: 2}
   eventWwiseSonnette:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 0}
+    WwiseObjectReference: {fileID: 11400000, guid: f6d94db89160e004c99886f8c5ff9688, type: 2}
   recipe: {fileID: 11400000, guid: fcd4f8a1e1ec59d4a9881e92c5bcc083, type: 2}
 --- !u!114 &7863019401973994856
 MonoBehaviour:
@@ -29873,19 +30149,19 @@ MonoBehaviour:
   eventWwiseChaudrond:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 0}
+    WwiseObjectReference: {fileID: 11400000, guid: d433ec8a0d7ded24296854a7f57f38a8, type: 2}
   eventWwisePostion:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 0}
+    WwiseObjectReference: {fileID: 11400000, guid: 648e4b97001e7944aaa7f223d4ccdb33, type: 2}
   eventWwiseTip:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 0}
+    WwiseObjectReference: {fileID: 11400000, guid: 29e4cddfde0b509439b52a3019f338f0, type: 2}
   eventWwiseSonnette:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 0}
+    WwiseObjectReference: {fileID: 11400000, guid: f6d94db89160e004c99886f8c5ff9688, type: 2}
   recipe: {fileID: 11400000, guid: a40d87a604015a6498f7f1db33872f05, type: 2}
 --- !u!114 &7863019402192945079
 MonoBehaviour:
@@ -29902,19 +30178,19 @@ MonoBehaviour:
   eventWwiseChaudrond:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 0}
+    WwiseObjectReference: {fileID: 11400000, guid: d433ec8a0d7ded24296854a7f57f38a8, type: 2}
   eventWwisePostion:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 0}
+    WwiseObjectReference: {fileID: 11400000, guid: 648e4b97001e7944aaa7f223d4ccdb33, type: 2}
   eventWwiseTip:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 0}
+    WwiseObjectReference: {fileID: 11400000, guid: 29e4cddfde0b509439b52a3019f338f0, type: 2}
   eventWwiseSonnette:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 0}
+    WwiseObjectReference: {fileID: 11400000, guid: f6d94db89160e004c99886f8c5ff9688, type: 2}
   recipe: {fileID: 11400000, guid: af5232b477ac31c49b6d6b1265618c62, type: 2}
 --- !u!224 &8041552932574008061
 RectTransform:
@@ -30862,19 +31138,19 @@ MonoBehaviour:
   eventWwiseChaudrond:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 0}
+    WwiseObjectReference: {fileID: 11400000, guid: d433ec8a0d7ded24296854a7f57f38a8, type: 2}
   eventWwisePostion:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 0}
+    WwiseObjectReference: {fileID: 11400000, guid: 648e4b97001e7944aaa7f223d4ccdb33, type: 2}
   eventWwiseTip:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 0}
+    WwiseObjectReference: {fileID: 11400000, guid: 29e4cddfde0b509439b52a3019f338f0, type: 2}
   eventWwiseSonnette:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 0}
+    WwiseObjectReference: {fileID: 11400000, guid: f6d94db89160e004c99886f8c5ff9688, type: 2}
   recipe: {fileID: 11400000, guid: 9b38acc30cc79f2498d267be2f3c8df6, type: 2}
 --- !u!61 &8504958889799371967
 BoxCollider2D:
@@ -30955,19 +31231,19 @@ MonoBehaviour:
   eventWwiseChaudrond:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 0}
+    WwiseObjectReference: {fileID: 11400000, guid: d433ec8a0d7ded24296854a7f57f38a8, type: 2}
   eventWwisePostion:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 0}
+    WwiseObjectReference: {fileID: 11400000, guid: 648e4b97001e7944aaa7f223d4ccdb33, type: 2}
   eventWwiseTip:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 0}
+    WwiseObjectReference: {fileID: 11400000, guid: 29e4cddfde0b509439b52a3019f338f0, type: 2}
   eventWwiseSonnette:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 0}
+    WwiseObjectReference: {fileID: 11400000, guid: f6d94db89160e004c99886f8c5ff9688, type: 2}
   recipe: {fileID: 0}
 --- !u!61 &8504958889865115317
 BoxCollider2D:
@@ -31708,19 +31984,19 @@ MonoBehaviour:
   eventWwiseChaudrond:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 0}
+    WwiseObjectReference: {fileID: 11400000, guid: d433ec8a0d7ded24296854a7f57f38a8, type: 2}
   eventWwisePostion:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 0}
+    WwiseObjectReference: {fileID: 11400000, guid: 648e4b97001e7944aaa7f223d4ccdb33, type: 2}
   eventWwiseTip:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 0}
+    WwiseObjectReference: {fileID: 11400000, guid: 29e4cddfde0b509439b52a3019f338f0, type: 2}
   eventWwiseSonnette:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 0}
+    WwiseObjectReference: {fileID: 11400000, guid: f6d94db89160e004c99886f8c5ff9688, type: 2}
   recipe: {fileID: 11400000, guid: 771d017891303ac4c9eab7c6950fd126, type: 2}
 --- !u!222 &8504958890217306632
 CanvasRenderer:
@@ -32465,6 +32741,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 20b32848693dbb34584ed2e90a539aa2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ButonShop:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8504958890499057133}
+        m_TargetAssemblyTypeName: PostAkEvent, Assembly-CSharp
+        m_MethodName: PostEvent
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!61 &8504958890499057128
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -32563,6 +32854,7 @@ GameObject:
   - component: {fileID: 8504958890499057130}
   - component: {fileID: 8504958890499057128}
   - component: {fileID: 8504958890499056919}
+  - component: {fileID: 8504958890499057133}
   m_Layer: 5
   m_Name: Shop
   m_TagString: Untagged
@@ -32570,6 +32862,25 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &8504958890499057133
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8504958890499057132}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb20e0cd124aa1941b14e1a4e21f35a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  postOnDisable: 0
+  postOnStart: 0
+  postOnDestroy: 0
+  eventSound:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 588dbf6d18686d6488546bc9ba757cb4, type: 2}
 --- !u!114 &8504958890510389776
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -34699,7 +35010,7 @@ MonoBehaviour:
   eventWwise:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 0}
+    WwiseObjectReference: {fileID: 11400000, guid: de1f6b9d765be1248a2cc0429d90e290, type: 2}
   price: 50
 --- !u!222 &8504958891331786597
 CanvasRenderer:
@@ -35006,6 +35317,7 @@ GameObject:
   - component: {fileID: 8504958891344538792}
   - component: {fileID: 8504958891344538838}
   - component: {fileID: 8504958891344538837}
+  - component: {fileID: 8504958891344538840}
   m_Layer: 5
   m_Name: Bank
   m_TagString: Untagged
@@ -35025,6 +35337,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb6dfb5ed96474043866eed312ace82c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ButonBank:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8504958891344538840}
+        m_TargetAssemblyTypeName: PostAkEvent, Assembly-CSharp
+        m_MethodName: PostEvent
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!61 &8504958891344538838
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -35059,6 +35386,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8504958891344538794}
   m_CullTransparentMesh: 1
+--- !u!114 &8504958891344538840
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8504958891344538794}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb20e0cd124aa1941b14e1a4e21f35a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  postOnDisable: 0
+  postOnStart: 0
+  postOnDestroy: 0
+  eventSound:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 588dbf6d18686d6488546bc9ba757cb4, type: 2}
 --- !u!222 &8504958891423395450
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -35358,7 +35704,7 @@ MonoBehaviour:
   eventWwise:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 0}
+    WwiseObjectReference: {fileID: 11400000, guid: de1f6b9d765be1248a2cc0429d90e290, type: 2}
   price: 50
 --- !u!222 &8504958891544230738
 CanvasRenderer:
@@ -35865,19 +36211,19 @@ MonoBehaviour:
   eventWwiseChaudrond:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 0}
+    WwiseObjectReference: {fileID: 11400000, guid: d433ec8a0d7ded24296854a7f57f38a8, type: 2}
   eventWwisePostion:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 0}
+    WwiseObjectReference: {fileID: 11400000, guid: 648e4b97001e7944aaa7f223d4ccdb33, type: 2}
   eventWwiseTip:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 0}
+    WwiseObjectReference: {fileID: 11400000, guid: 29e4cddfde0b509439b52a3019f338f0, type: 2}
   eventWwiseSonnette:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 0}
+    WwiseObjectReference: {fileID: 11400000, guid: f6d94db89160e004c99886f8c5ff9688, type: 2}
   recipe: {fileID: 0}
 --- !u!61 &8504958891607587384
 BoxCollider2D:
