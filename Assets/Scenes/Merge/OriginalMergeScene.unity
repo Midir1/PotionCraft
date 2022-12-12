@@ -11119,7 +11119,7 @@ MonoBehaviour:
   - {fileID: 3141039027797782176, guid: ff6baf0afd7a0ff4e98af51f312805ad, type: 3}
   - {fileID: 3389303494866882915, guid: fd7fd4b05e90db04286fcde99a58afde, type: 3}
   potionParent: {fileID: 5042596509059252247}
-  drawPanel: {fileID: 0}
+  drawPanel: {fileID: 1054231117}
   inputManager: {fileID: 2169014484708949150}
   upgradeBrewingSpeed: 5
   upgradeBurningSpeed: 5
@@ -30384,7 +30384,7 @@ MonoBehaviour:
   - {fileID: 3141039027797782176, guid: ff6baf0afd7a0ff4e98af51f312805ad, type: 3}
   - {fileID: 3389303494866882915, guid: fd7fd4b05e90db04286fcde99a58afde, type: 3}
   potionParent: {fileID: 8449247379981402213}
-  drawPanel: {fileID: 0}
+  drawPanel: {fileID: 1054231117}
   inputManager: {fileID: 2169014484708949150}
   upgradeBrewingSpeed: 5
   upgradeBurningSpeed: 5
