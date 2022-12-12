@@ -3,177 +3,899 @@
 	<Events>
 		<WorkUnit Name="Default Work Unit" ID="{2917357C-9B5B-47C0-9F0A-D8C0D827D3C1}" PersistMode="Standalone">
 			<ChildrenList>
-				<Event Name="Play_WITCHCRAFT_SFX_FERME_GRIMOIRE" ID="{A71579CE-5CE9-4EDE-8B4A-3771C07722DE}">
+				<Folder Name="Music" ID="{B0023F18-FDE7-4317-9F68-14A84EC87982}" ShortID="34040022">
 					<ChildrenList>
-						<Action Name="" ID="{27FEF06A-189F-479C-897C-23C12DDC2AE5}" ShortID="195341671">
+						<Event Name="Play_WITCHCRAFT_MUSIQUE_MENU_ET_TUTO_FINALE" ID="{5A9E0986-5381-473C-82A7-EF0B28651963}">
+							<ChildrenList>
+								<Action Name="" ID="{266FF7DE-A2AC-4719-A6B1-37D411382CD4}" ShortID="399079609">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="WITCHCRAFT_MUSIQUE_MENU_ET_TUTO_FINALE" ID="{2E1885D8-157E-45DA-BD9B-CFDC3CCFA5E7}" WorkUnitID="{F27DCBFD-B41E-4801-95D4-E1AD708B4A26}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Stop_WITCHCRAFT_MUSIQUE_MENU_ET_TUTO_FINALE" ID="{009B8DEC-0A1F-45E9-8B72-B0B59545AE66}">
+							<ChildrenList>
+								<Action Name="" ID="{1CF9BA92-7E8A-4012-BCFB-E0CCA7202B0E}" ShortID="139977403">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="WITCHCRAFT_MUSIQUE_MENU_ET_TUTO_FINALE" ID="{2E1885D8-157E-45DA-BD9B-CFDC3CCFA5E7}" WorkUnitID="{F27DCBFD-B41E-4801-95D4-E1AD708B4A26}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Folder Name="DinamicMusic" ID="{6B63733E-3C68-45D0-A583-6DA632A4D565}" ShortID="658307110">
+							<ChildrenList>
+								<Folder Name="Mute" ID="{F2101353-B759-4F23-9EF1-0EEF4B9281D6}" ShortID="296942514">
+									<ChildrenList>
+										<Event Name="Mute_BOUTIQUE_FERMEE_FINALE" ID="{10F24F6B-1D3A-4BE5-BA30-119DE4CB3D07}">
+											<ChildrenList>
+												<Action Name="" ID="{D20482A2-7C71-4499-97DB-D18D717C6934}" ShortID="651933722">
+													<PropertyList>
+														<Property Name="ActionType" Type="int16" Value="4"/>
+														<Property Name="FadeTime" Type="Real64" Value="1"/>
+														<Property Name="Volume" Type="Real64" Value="-96"/>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Target">
+															<ObjectRef Name="BOUTIQUE_FERMEE_FINALE" ID="{D206B11E-C22E-4529-B40D-03FF9D6027A0}" WorkUnitID="{F27DCBFD-B41E-4801-95D4-E1AD708B4A26}"/>
+														</Reference>
+													</ReferenceList>
+												</Action>
+											</ChildrenList>
+										</Event>
+										<Event Name="Mute_MUSIC_IN_GAME_NYMPHE" ID="{8E1A93DF-D6E8-4F47-9712-A9F55FF79612}">
+											<ChildrenList>
+												<Action Name="" ID="{64E8A01D-A374-4C9D-AFBE-402791E8816D}" ShortID="156427958">
+													<PropertyList>
+														<Property Name="ActionType" Type="int16" Value="4"/>
+														<Property Name="FadeTime" Type="Real64" Value="1"/>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Target">
+															<ObjectRef Name="MUSIC_IN_GAME_NYMPHE" ID="{2ECEF95B-80A2-4557-8ED1-A785175D8BD6}" WorkUnitID="{F27DCBFD-B41E-4801-95D4-E1AD708B4A26}"/>
+														</Reference>
+													</ReferenceList>
+												</Action>
+											</ChildrenList>
+										</Event>
+										<Event Name="Mute_MUSIC_IN_GAME_PUMPKIN_02" ID="{2DAAE1C9-9AED-4216-9C7B-75E29C0CC7D3}">
+											<ChildrenList>
+												<Action Name="" ID="{BD3DBE5E-F953-45BC-AF2B-79A2B84E6ADB}" ShortID="683669280">
+													<PropertyList>
+														<Property Name="ActionType" Type="int16" Value="4"/>
+														<Property Name="FadeTime" Type="Real64" Value="1"/>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Target">
+															<ObjectRef Name="MUSIC_IN_GAME_PUMPKIN_02" ID="{441DE2B3-B4F0-4B92-851A-55A8B1B203D1}" WorkUnitID="{F27DCBFD-B41E-4801-95D4-E1AD708B4A26}"/>
+														</Reference>
+													</ReferenceList>
+												</Action>
+											</ChildrenList>
+										</Event>
+										<Event Name="Mute_MUSIC_IN_GAME_DEMON_02" ID="{76E842ED-4261-4897-8ECB-15E0F78440C5}">
+											<ChildrenList>
+												<Action Name="" ID="{BA0AF959-0050-4434-931E-B965DA1B8366}" ShortID="688883921">
+													<PropertyList>
+														<Property Name="ActionType" Type="int16" Value="4"/>
+														<Property Name="FadeTime" Type="Real64" Value="1"/>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Target">
+															<ObjectRef Name="MUSIC_IN_GAME_DEMON_02" ID="{1F0FDD9B-DBEA-443D-A1A0-EDE43F04AECF}" WorkUnitID="{F27DCBFD-B41E-4801-95D4-E1AD708B4A26}"/>
+														</Reference>
+													</ReferenceList>
+												</Action>
+											</ChildrenList>
+										</Event>
+										<Event Name="Mute_MUSIC_IN_GAME_NYMPHE_03" ID="{5409447B-39B7-469E-8D13-6A1EA22828DD}">
+											<ChildrenList>
+												<Action Name="" ID="{219CE2F5-C496-4D78-8B3E-6C72CCBE4142}" ShortID="369661044">
+													<PropertyList>
+														<Property Name="ActionType" Type="int16" Value="4"/>
+														<Property Name="FadeTime" Type="Real64" Value="1"/>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Target">
+															<ObjectRef Name="MUSIC_IN_GAME_NYMPHE_03" ID="{BDAC3C16-70C4-4A42-ADA9-4A0E96F413A2}" WorkUnitID="{F27DCBFD-B41E-4801-95D4-E1AD708B4A26}"/>
+														</Reference>
+													</ReferenceList>
+												</Action>
+											</ChildrenList>
+										</Event>
+										<Event Name="Mute_MUSIC_IN_GAME_SKELETON_01" ID="{6BE8A99A-ED50-452F-86DE-BF44FE95DF59}">
+											<ChildrenList>
+												<Action Name="" ID="{DF60092B-57B7-40BF-882E-2781E4B1F996}" ShortID="699075419">
+													<PropertyList>
+														<Property Name="ActionType" Type="int16" Value="4"/>
+														<Property Name="FadeTime" Type="Real64" Value="1"/>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Target">
+															<ObjectRef Name="MUSIC_IN_GAME_SKELETON_01" ID="{4EC141D8-1BD3-4B6F-9478-28ADC90739D6}" WorkUnitID="{F27DCBFD-B41E-4801-95D4-E1AD708B4A26}"/>
+														</Reference>
+													</ReferenceList>
+												</Action>
+											</ChildrenList>
+										</Event>
+										<Event Name="Mute_MUSIC_IN_GAME_CHAMPI" ID="{5D27BF72-7375-40BF-9409-63F199AFE498}">
+											<ChildrenList>
+												<Action Name="" ID="{2C01E3AC-E9B3-4BA6-80DD-49843945D222}" ShortID="746850679">
+													<PropertyList>
+														<Property Name="ActionType" Type="int16" Value="4"/>
+														<Property Name="FadeTime" Type="Real64" Value="1"/>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Target">
+															<ObjectRef Name="MUSIC_IN_GAME_CHAMPI" ID="{53C9BAE7-4AD1-4AE7-9395-F12D385C3377}" WorkUnitID="{F27DCBFD-B41E-4801-95D4-E1AD708B4A26}"/>
+														</Reference>
+													</ReferenceList>
+												</Action>
+											</ChildrenList>
+										</Event>
+										<Event Name="Mute_MUSIC_IN_GAME_PUMPKIN_01" ID="{580D197E-6E9A-4117-A3F0-4F027A802621}">
+											<ChildrenList>
+												<Action Name="" ID="{5F6EB540-0946-4C2B-B33B-EE7F2667B05F}" ShortID="680599061">
+													<PropertyList>
+														<Property Name="ActionType" Type="int16" Value="4"/>
+														<Property Name="FadeTime" Type="Real64" Value="1"/>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Target">
+															<ObjectRef Name="MUSIC_IN_GAME_PUMPKIN_01" ID="{0C630448-75A1-4D8E-907F-DA98EF4D9DA3}" WorkUnitID="{F27DCBFD-B41E-4801-95D4-E1AD708B4A26}"/>
+														</Reference>
+													</ReferenceList>
+												</Action>
+											</ChildrenList>
+										</Event>
+										<Event Name="Mute_MUSIC_IN_GAME_SKELETON_02" ID="{FA08C30C-8904-43EE-A963-A2E20CC3595E}">
+											<ChildrenList>
+												<Action Name="" ID="{FD71EA01-6242-429C-95C0-8768F86B6E5C}" ShortID="949663699">
+													<PropertyList>
+														<Property Name="ActionType" Type="int16" Value="4"/>
+														<Property Name="FadeTime" Type="Real64" Value="1"/>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Target">
+															<ObjectRef Name="MUSIC_IN_GAME_SKELETON_02" ID="{A3CE24AE-DD65-427B-94B6-ADF686D4DE50}" WorkUnitID="{F27DCBFD-B41E-4801-95D4-E1AD708B4A26}"/>
+														</Reference>
+													</ReferenceList>
+												</Action>
+											</ChildrenList>
+										</Event>
+										<Event Name="Mute_MUSIC_IN_GAME_BASE_DEUX_CLIENTS" ID="{A9C2578C-5383-4147-8E47-D9A6B6DDD81F}">
+											<ChildrenList>
+												<Action Name="" ID="{111792FF-CC81-438C-B4D0-DB96EC368DDD}" ShortID="241857355">
+													<PropertyList>
+														<Property Name="ActionType" Type="int16" Value="4"/>
+														<Property Name="FadeTime" Type="Real64" Value="1"/>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Target">
+															<ObjectRef Name="MUSIC_IN_GAME_BASE_DEUX_CLIENTS" ID="{408A6C34-5E4E-43E0-91EE-E9CDBAE1F81F}" WorkUnitID="{F27DCBFD-B41E-4801-95D4-E1AD708B4A26}"/>
+														</Reference>
+													</ReferenceList>
+												</Action>
+											</ChildrenList>
+										</Event>
+										<Event Name="Mute_MUSIC_IN_GAME_MINOTAUR" ID="{7829F0FC-4BA1-43B1-B5F1-8D383F071342}">
+											<ChildrenList>
+												<Action Name="" ID="{4836D1B4-775A-4AAF-B287-9BA9A7AE1369}" ShortID="86784278">
+													<PropertyList>
+														<Property Name="ActionType" Type="int16" Value="4"/>
+														<Property Name="FadeTime" Type="Real64" Value="1"/>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Target">
+															<ObjectRef Name="MUSIC_IN_GAME_MINOTAUR" ID="{B58C6882-1B90-4DAA-9BB0-AE544D57AF91}" WorkUnitID="{F27DCBFD-B41E-4801-95D4-E1AD708B4A26}"/>
+														</Reference>
+													</ReferenceList>
+												</Action>
+											</ChildrenList>
+										</Event>
+										<Event Name="Mute_MUSIC_IN_GAME_DEMON_01" ID="{3CB22CBE-64B9-45CC-B549-582A0157BBE4}">
+											<ChildrenList>
+												<Action Name="" ID="{277C39FC-CC35-462B-AC50-09177EA329F3}" ShortID="677192174">
+													<PropertyList>
+														<Property Name="ActionType" Type="int16" Value="4"/>
+														<Property Name="FadeTime" Type="Real64" Value="1"/>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Target">
+															<ObjectRef Name="MUSIC_IN_GAME_DEMON_01" ID="{A00F98B0-E9DB-4B37-90C1-886E266833AC}" WorkUnitID="{F27DCBFD-B41E-4801-95D4-E1AD708B4A26}"/>
+														</Reference>
+													</ReferenceList>
+												</Action>
+											</ChildrenList>
+										</Event>
+									</ChildrenList>
+								</Folder>
+								<Folder Name="UnMute" ID="{94491636-CF73-4864-A2E5-78A265AB8754}" ShortID="895036304">
+									<ChildrenList>
+										<Event Name="UnMute_BOUTIQUE_FERMEE_FINALE" ID="{84FBF3CC-AD04-435C-A125-BE1BE40706CB}">
+											<ChildrenList>
+												<Action Name="" ID="{9722A72E-4377-4DE5-B7AD-FC4F7568D6D5}" ShortID="834121699">
+													<PropertyList>
+														<Property Name="ActionType" Type="int16" Value="5"/>
+														<Property Name="FadeTime" Type="Real64" Value="1"/>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Target">
+															<ObjectRef Name="BOUTIQUE_FERMEE_FINALE" ID="{D206B11E-C22E-4529-B40D-03FF9D6027A0}" WorkUnitID="{F27DCBFD-B41E-4801-95D4-E1AD708B4A26}"/>
+														</Reference>
+													</ReferenceList>
+												</Action>
+											</ChildrenList>
+										</Event>
+										<Event Name="UnMute_MUSIC_IN_GAME_DEMON_01" ID="{84FC7A80-51E6-4808-A3EF-CFEF4C6E3C91}">
+											<ChildrenList>
+												<Action Name="" ID="{D8AA7A2B-D0C2-4A7D-9C46-9AA426B1AD69}" ShortID="504001728">
+													<PropertyList>
+														<Property Name="ActionType" Type="int16" Value="5"/>
+														<Property Name="FadeTime" Type="Real64" Value="1"/>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Target">
+															<ObjectRef Name="MUSIC_IN_GAME_DEMON_01" ID="{A00F98B0-E9DB-4B37-90C1-886E266833AC}" WorkUnitID="{F27DCBFD-B41E-4801-95D4-E1AD708B4A26}"/>
+														</Reference>
+													</ReferenceList>
+												</Action>
+											</ChildrenList>
+										</Event>
+										<Event Name="UnMute_MUSIC_IN_GAME_DEMON_02" ID="{23D8F62C-7024-43D1-A6C0-6D92A404F00A}">
+											<ChildrenList>
+												<Action Name="" ID="{2182E92B-ACA6-4215-B31E-02BCD04DEA03}" ShortID="970926165">
+													<PropertyList>
+														<Property Name="ActionType" Type="int16" Value="5"/>
+														<Property Name="FadeTime" Type="Real64" Value="1"/>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Target">
+															<ObjectRef Name="MUSIC_IN_GAME_DEMON_02" ID="{1F0FDD9B-DBEA-443D-A1A0-EDE43F04AECF}" WorkUnitID="{F27DCBFD-B41E-4801-95D4-E1AD708B4A26}"/>
+														</Reference>
+													</ReferenceList>
+												</Action>
+											</ChildrenList>
+										</Event>
+										<Event Name="UnMute_MUSIC_IN_GAME_BASE_DEUX_CLIENTS" ID="{024862CF-7970-46DE-8980-35FA84908389}">
+											<ChildrenList>
+												<Action Name="" ID="{65FD0AA2-8B1F-4113-BB0E-A3664C5FAF4D}" ShortID="58688602">
+													<PropertyList>
+														<Property Name="ActionType" Type="int16" Value="5"/>
+														<Property Name="FadeTime" Type="Real64" Value="1"/>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Target">
+															<ObjectRef Name="MUSIC_IN_GAME_BASE_DEUX_CLIENTS" ID="{408A6C34-5E4E-43E0-91EE-E9CDBAE1F81F}" WorkUnitID="{F27DCBFD-B41E-4801-95D4-E1AD708B4A26}"/>
+														</Reference>
+													</ReferenceList>
+												</Action>
+											</ChildrenList>
+										</Event>
+										<Event Name="UnMute_MUSIC_IN_GAME_MINOTAUR" ID="{9BA5049E-55DF-4B20-8FE3-38A49E3384B5}">
+											<ChildrenList>
+												<Action Name="" ID="{2A612EAB-2BDC-4CEE-B675-FB7C4F59491F}" ShortID="852838836">
+													<PropertyList>
+														<Property Name="ActionType" Type="int16" Value="5"/>
+														<Property Name="FadeTime" Type="Real64" Value="1"/>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Target">
+															<ObjectRef Name="MUSIC_IN_GAME_MINOTAUR" ID="{B58C6882-1B90-4DAA-9BB0-AE544D57AF91}" WorkUnitID="{F27DCBFD-B41E-4801-95D4-E1AD708B4A26}"/>
+														</Reference>
+													</ReferenceList>
+												</Action>
+											</ChildrenList>
+										</Event>
+										<Event Name="UnMute_MUSIC_IN_GAME_NYMPHE_03" ID="{212339BA-EB68-46C3-8355-2DC886AE9792}">
+											<ChildrenList>
+												<Action Name="" ID="{CD22BC0E-990E-47B6-BB85-90A5708DD93D}" ShortID="668647144">
+													<PropertyList>
+														<Property Name="ActionType" Type="int16" Value="5"/>
+														<Property Name="FadeTime" Type="Real64" Value="1"/>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Target">
+															<ObjectRef Name="MUSIC_IN_GAME_NYMPHE_03" ID="{BDAC3C16-70C4-4A42-ADA9-4A0E96F413A2}" WorkUnitID="{F27DCBFD-B41E-4801-95D4-E1AD708B4A26}"/>
+														</Reference>
+													</ReferenceList>
+												</Action>
+											</ChildrenList>
+										</Event>
+										<Event Name="UnMute_MUSIC_IN_GAME_PUMPKIN_01" ID="{8BF18F61-01B4-4B7F-B346-B8405F08B6AD}">
+											<ChildrenList>
+												<Action Name="" ID="{33FD9A9A-2AE9-4A94-BCF9-A57E38046A2D}" ShortID="638892575">
+													<PropertyList>
+														<Property Name="ActionType" Type="int16" Value="5"/>
+														<Property Name="FadeTime" Type="Real64" Value="1"/>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Target">
+															<ObjectRef Name="MUSIC_IN_GAME_PUMPKIN_01" ID="{0C630448-75A1-4D8E-907F-DA98EF4D9DA3}" WorkUnitID="{F27DCBFD-B41E-4801-95D4-E1AD708B4A26}"/>
+														</Reference>
+													</ReferenceList>
+												</Action>
+											</ChildrenList>
+										</Event>
+										<Event Name="UnMute_MUSIC_IN_GAME_NYMPHE" ID="{8A159A8A-5A01-458C-A4C0-60DF85A2F267}">
+											<ChildrenList>
+												<Action Name="" ID="{2620647E-73F9-4B7C-904B-293D2DA19072}" ShortID="606940959">
+													<PropertyList>
+														<Property Name="ActionType" Type="int16" Value="5"/>
+														<Property Name="FadeTime" Type="Real64" Value="1"/>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Target">
+															<ObjectRef Name="MUSIC_IN_GAME_NYMPHE" ID="{2ECEF95B-80A2-4557-8ED1-A785175D8BD6}" WorkUnitID="{F27DCBFD-B41E-4801-95D4-E1AD708B4A26}"/>
+														</Reference>
+													</ReferenceList>
+												</Action>
+											</ChildrenList>
+										</Event>
+										<Event Name="UnMute_MUSIC_IN_GAME_CHAMPI" ID="{15E72FF6-A5B0-4B9B-AF1C-DA1AD453EF4D}">
+											<ChildrenList>
+												<Action Name="" ID="{430D88F5-CA4C-48DA-82AF-40E13BDA5565}" ShortID="717482159">
+													<PropertyList>
+														<Property Name="ActionType" Type="int16" Value="5"/>
+														<Property Name="FadeTime" Type="Real64" Value="1"/>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Target">
+															<ObjectRef Name="MUSIC_IN_GAME_CHAMPI" ID="{53C9BAE7-4AD1-4AE7-9395-F12D385C3377}" WorkUnitID="{F27DCBFD-B41E-4801-95D4-E1AD708B4A26}"/>
+														</Reference>
+													</ReferenceList>
+												</Action>
+											</ChildrenList>
+										</Event>
+										<Event Name="UnMute_MUSIC_IN_GAME_SKELETON_02" ID="{BFC68216-DD99-4BBB-BC45-028D610FA190}">
+											<ChildrenList>
+												<Action Name="" ID="{B6604019-2BBE-474D-821E-C5D64502E6E1}" ShortID="711967322">
+													<PropertyList>
+														<Property Name="ActionType" Type="int16" Value="5"/>
+														<Property Name="FadeTime" Type="Real64" Value="1"/>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Target">
+															<ObjectRef Name="MUSIC_IN_GAME_SKELETON_02" ID="{A3CE24AE-DD65-427B-94B6-ADF686D4DE50}" WorkUnitID="{F27DCBFD-B41E-4801-95D4-E1AD708B4A26}"/>
+														</Reference>
+													</ReferenceList>
+												</Action>
+											</ChildrenList>
+										</Event>
+										<Event Name="UnMute_MUSIC_IN_GAME_PUMPKIN_02" ID="{2A36232F-DCB5-47E9-A49A-857B0340419F}">
+											<ChildrenList>
+												<Action Name="" ID="{F5C373AB-27C7-4F7D-852E-42BABABD8707}" ShortID="291332632">
+													<PropertyList>
+														<Property Name="ActionType" Type="int16" Value="5"/>
+														<Property Name="FadeTime" Type="Real64" Value="1"/>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Target">
+															<ObjectRef Name="MUSIC_IN_GAME_PUMPKIN_02" ID="{441DE2B3-B4F0-4B92-851A-55A8B1B203D1}" WorkUnitID="{F27DCBFD-B41E-4801-95D4-E1AD708B4A26}"/>
+														</Reference>
+													</ReferenceList>
+												</Action>
+											</ChildrenList>
+										</Event>
+										<Event Name="UnMute_MUSIC_IN_GAME_SKELETON_01" ID="{1390B0C3-6AD0-42F5-ACFB-58557455DD93}">
+											<ChildrenList>
+												<Action Name="" ID="{3A368A3A-21C6-479A-BDF9-9A76795A40AC}" ShortID="689056399">
+													<PropertyList>
+														<Property Name="ActionType" Type="int16" Value="5"/>
+														<Property Name="FadeTime" Type="Real64" Value="1"/>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Target">
+															<ObjectRef Name="MUSIC_IN_GAME_SKELETON_01" ID="{4EC141D8-1BD3-4B6F-9478-28ADC90739D6}" WorkUnitID="{F27DCBFD-B41E-4801-95D4-E1AD708B4A26}"/>
+														</Reference>
+													</ReferenceList>
+												</Action>
+											</ChildrenList>
+										</Event>
+									</ChildrenList>
+								</Folder>
+							</ChildrenList>
+						</Folder>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="Sfx" ID="{36502AED-9FB3-42B2-B2D8-103BAC7C4216}" ShortID="905695174">
+					<ChildrenList>
+						<Event Name="Play_ACHAT_CHAUDRON" ID="{0EBB7AAE-5C25-456E-810B-FE514920A91A}">
+							<ChildrenList>
+								<Action Name="" ID="{A5C9B3EC-FFAB-4EFF-B6B5-4C1DAB439B07}" ShortID="859939555">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="ACHAT_CHAUDRON" ID="{E29CFFEB-52DA-4A16-AFA7-24D9EA9F04D6}" WorkUnitID="{F27DCBFD-B41E-4801-95D4-E1AD708B4A26}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_WITCHCRAFT_SFX_FERME_GRIMOIRE" ID="{A71579CE-5CE9-4EDE-8B4A-3771C07722DE}">
+							<ChildrenList>
+								<Action Name="" ID="{27FEF06A-189F-479C-897C-23C12DDC2AE5}" ShortID="195341671">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="WITCHCRAFT_SFX_FERME_GRIMOIRE" ID="{FD26215B-19E3-436F-9AF4-79986EE70EEE}" WorkUnitID="{F27DCBFD-B41E-4801-95D4-E1AD708B4A26}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_WITCHCRAFT_SFX_RUNE_GOOD" ID="{4CDC4499-9DF4-4BD1-AF96-33DA5E32A430}">
+							<ChildrenList>
+								<Action Name="" ID="{188454EF-97FE-4310-879E-0A3841BBD8E9}" ShortID="385391449">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="WITCHCRAFT_SFX_RUNE_GOOD" ID="{93520929-2F1C-445A-8E20-C9CA017131AB}" WorkUnitID="{F27DCBFD-B41E-4801-95D4-E1AD708B4A26}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_GRIMOIR_TURN_PAGE" ID="{96338753-8CB8-455D-8979-8F620E456550}">
+							<ChildrenList>
+								<Action Name="" ID="{280C1B62-8E66-4144-B03E-429656E2E918}" ShortID="776769366">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="GRIMOIR_TURN_PAGE" ID="{37C15485-7CA1-47AA-B947-2224CAA43C89}" WorkUnitID="{F27DCBFD-B41E-4801-95D4-E1AD708B4A26}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_WITCHCRAFT_SFX_POTION_GOOD" ID="{C6C668E4-ED84-449C-997E-E2ACFC0DEB1A}">
+							<ChildrenList>
+								<Action Name="" ID="{4A42E6D3-87EB-4689-B1F7-F047415A96CA}" ShortID="695004460">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="WITCHCRAFT_SFX_POTION_GOOD" ID="{8C47CBAA-D22D-4D3F-BBA3-095F24A36373}" WorkUnitID="{F27DCBFD-B41E-4801-95D4-E1AD708B4A26}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_WITCHCRAFT_SFX_RUNE_BAD" ID="{DC9361EC-429A-4B1F-AD8E-EE2BC3D33EF3}">
+							<ChildrenList>
+								<Action Name="" ID="{14DFCAE4-753D-4354-A7A0-6A21E29D08EE}" ShortID="856358072">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="WITCHCRAFT_SFX_RUNE_BAD" ID="{1F125572-1C37-47C9-A9DE-A2886A5C77CB}" WorkUnitID="{F27DCBFD-B41E-4801-95D4-E1AD708B4A26}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_WITCHCRAFT_SFX_PARCHEMIN" ID="{8059AE1C-4CBF-4A8E-9D83-7FDFC1119498}">
+							<ChildrenList>
+								<Action Name="" ID="{855BF451-253B-4763-A4D8-74CE2D12648F}" ShortID="333609776">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="WITCHCRAFT_SFX_PARCHEMIN" ID="{F476C7E8-3228-47A5-BA66-F9290252068D}" WorkUnitID="{F27DCBFD-B41E-4801-95D4-E1AD708B4A26}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_TIPS" ID="{D846BAA1-25E9-4F32-89CF-18AD89B430CB}">
+							<ChildrenList>
+								<Action Name="" ID="{88960FBE-01A1-414E-BA33-9FE53863F9E9}" ShortID="874717322">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="TIPS" ID="{CBDE22CA-F3B5-4AA1-8C8B-B16CE653EF4E}" WorkUnitID="{F27DCBFD-B41E-4801-95D4-E1AD708B4A26}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_WITCHCRAFT_SFX_POTION_BAD" ID="{CEDA272A-F4AC-47CC-8A98-8EEB0CA7291E}">
+							<ChildrenList>
+								<Action Name="" ID="{CA8BCED4-8618-4AF1-8687-C6AB8B8C9526}" ShortID="685180965">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="WITCHCRAFT_SFX_POTION_BAD" ID="{2308083C-47E7-4604-B720-87020BB09D44}" WorkUnitID="{F27DCBFD-B41E-4801-95D4-E1AD708B4A26}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_WITCHCRAFT_SFX_INGREDIENT_POTION" ID="{B6DA6AF6-2CC0-43ED-B44A-220650682F97}">
+							<ChildrenList>
+								<Action Name="" ID="{9FD1576E-8174-446E-982E-52B4F181D2F4}" ShortID="766144898">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="WITCHCRAFT_SFX_INGREDIENT_POTION" ID="{F148C975-1AA5-43AA-8BF8-5F9DC92008A9}" WorkUnitID="{F27DCBFD-B41E-4801-95D4-E1AD708B4A26}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_WITCHCRAFT_SFX_OUVRE_GRIMOIRE_1" ID="{3F5B965C-2544-4103-84BB-1FD511EF4753}">
+							<ChildrenList>
+								<Action Name="" ID="{F6FE8E87-8584-49AC-9BAF-95BF1F619DB2}" ShortID="541924669">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="WITCHCRAFT_SFX_OUVRE_GRIMOIRE_1" ID="{168EEF18-5AF7-4D29-81B1-BBC8535C811D}" WorkUnitID="{F27DCBFD-B41E-4801-95D4-E1AD708B4A26}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_WITCHCRAFT_SFX_MENU" ID="{E58F3B92-47D1-4413-BCFE-04F0E2C970C6}">
+							<ChildrenList>
+								<Action Name="" ID="{02452E26-9EFF-4BC0-A7D8-547E33484552}" ShortID="97420412">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="WITCHCRAFT_SFX_MENU" ID="{8ECA21F7-3ED6-4EDF-B334-A4389894BBB0}" WorkUnitID="{F27DCBFD-B41E-4801-95D4-E1AD708B4A26}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_BUY_POTION" ID="{1C2033D3-576E-4EC6-92B3-2A74E932A46A}">
+							<ChildrenList>
+								<Action Name="" ID="{389811BB-7445-43C1-95A7-AE5786141E2E}" ShortID="845250566">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="BUY_POTION" ID="{6C14C95E-5537-4BE4-AA11-00ED9A41DE5F}" WorkUnitID="{F27DCBFD-B41E-4801-95D4-E1AD708B4A26}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_MENE_SONETTE" ID="{86E26D8F-5AFB-4C46-8D84-37BA06595529}">
+							<ChildrenList>
+								<Action Name="" ID="{D8555C5A-F849-44F8-8488-88EB8BBE3BA7}" ShortID="304977779">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="MENE_SONETTE" ID="{1C3CE226-1CBF-4093-A06C-7393613C6F36}" WorkUnitID="{F27DCBFD-B41E-4801-95D4-E1AD708B4A26}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_WITCHCRAFT_SFX_NOUVEAU_CLIENT" ID="{C2D8F64B-7B9B-4272-8AD8-54F12AD980DB}">
+							<ChildrenList>
+								<Action Name="" ID="{E459BD31-166E-472C-BB47-8AE7DB28F001}" ShortID="615513626">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="WITCHCRAFT_SFX_NOUVEAU_CLIENT" ID="{E3214364-6A22-4CD7-8EDD-DCCF8611335D}" WorkUnitID="{F27DCBFD-B41E-4801-95D4-E1AD708B4A26}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_AMELIORATION_CHAUDRON" ID="{31596290-52BB-4382-A84C-B7F4594312F1}">
+							<ChildrenList>
+								<Action Name="" ID="{C16934C6-E104-428C-8AA8-F17073EEC5FD}" ShortID="31134280">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="AMELIORATION_CHAUDRON" ID="{072AE154-012C-437C-8D47-8D7A0D4DB916}" WorkUnitID="{F27DCBFD-B41E-4801-95D4-E1AD708B4A26}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_ECHELLE" ID="{A78CB52D-0373-435A-95A5-3F3883AC4E48}">
+							<ChildrenList>
+								<Action Name="" ID="{845099FA-744C-4BBD-9E01-15B0D942D477}" ShortID="585188615">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="ECHELLE" ID="{A58DB9A5-8E17-4339-AB57-1DE41D77264D}" WorkUnitID="{F27DCBFD-B41E-4801-95D4-E1AD708B4A26}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Folder Name="Cliant pas contant" ID="{ED55566F-1F93-4BEF-B674-4CA2B38F9EC4}" ShortID="754594686">
+							<ChildrenList>
+								<Event Name="Play_WITCHCRAFT_SFX_ANGRY_PUMPKIN_01" ID="{4A6F1D0A-21A5-4E99-AA38-37A8A6EA1597}">
+									<ChildrenList>
+										<Action Name="" ID="{69562B45-6D29-48FE-AFAB-B4854B692A9C}" ShortID="319583263">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="WITCHCRAFT_SFX_ANGRY_PUMPKIN_01" ID="{9A442FA3-A662-45A8-B538-03D6FDE4E318}" WorkUnitID="{F27DCBFD-B41E-4801-95D4-E1AD708B4A26}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Play_WITCHCRAFT_SFX_ANGRY_MINOTAUR" ID="{BDC5F108-68DF-46AB-947D-E96524B79E15}">
+									<ChildrenList>
+										<Action Name="" ID="{CD9E67E5-9D62-4F0E-AA26-788D9ECD1A94}" ShortID="835970327">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="WITCHCRAFT_SFX_ANGRY_MINOTAUR" ID="{5A931DC5-914A-4290-850B-09206766008D}" WorkUnitID="{F27DCBFD-B41E-4801-95D4-E1AD708B4A26}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Play_WITCHCRAFT_SFX_ANGRY_SKELETON" ID="{F40D3DE7-87C1-406A-BB6E-73BD480A121A}">
+									<ChildrenList>
+										<Action Name="" ID="{11CF2053-E3F0-46A3-9EC7-A130D2838EC1}" ShortID="494900152">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="WITCHCRAFT_SFX_ANGRY_SKELETON" ID="{BE4C80E4-7F42-4430-81C9-574EB561EEE1}" WorkUnitID="{F27DCBFD-B41E-4801-95D4-E1AD708B4A26}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Play_WITCHCRAFT_SFX_ANGRY_NYMPHE" ID="{C5AF2B2D-FC58-4B5B-9F3D-2AC470D98357}">
+									<ChildrenList>
+										<Action Name="" ID="{EE8506CF-8FE1-43AA-8B5D-2A2C65B54C2D}" ShortID="864418828">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="WITCHCRAFT_SFX_ANGRY_NYMPHE" ID="{BEF2EB33-597B-4D88-9956-D1234EAD21D8}" WorkUnitID="{F27DCBFD-B41E-4801-95D4-E1AD708B4A26}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Play_WITCHCRAFT_SFX_ANGRY_DEMON" ID="{6DE642CC-8076-4188-B860-7A5335DB5B58}">
+									<ChildrenList>
+										<Action Name="" ID="{4682715F-F7EA-4B29-A691-AF04CFB76717}" ShortID="200273256">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="WITCHCRAFT_SFX_ANGRY_DEMON" ID="{8B34AF28-70D3-4B28-8991-180B45F48D1A}" WorkUnitID="{F27DCBFD-B41E-4801-95D4-E1AD708B4A26}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+							</ChildrenList>
+						</Folder>
+					</ChildrenList>
+				</Folder>
+				<Event Name="Play_Dynamic_Music" ID="{28640424-6D7C-4F15-8AEB-D24528F3C7C0}">
+					<ChildrenList>
+						<Action Name="" ID="{CF504A19-53C6-4740-BFD7-DFF0ED8EC4AC}" ShortID="175698697">
+							<PropertyList>
+								<Property Name="FadeTime" Type="Real64" Value="1"/>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="WITCHCRAFT_SFX_FERME_GRIMOIRE" ID="{FD26215B-19E3-436F-9AF4-79986EE70EEE}" WorkUnitID="{F27DCBFD-B41E-4801-95D4-E1AD708B4A26}"/>
+									<ObjectRef Name="BOUTIQUE_FERMEE_FINALE" ID="{D206B11E-C22E-4529-B40D-03FF9D6027A0}" WorkUnitID="{F27DCBFD-B41E-4801-95D4-E1AD708B4A26}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
-					</ChildrenList>
-				</Event>
-				<Event Name="Play_ACHAT_CHAUDRON" ID="{0EBB7AAE-5C25-456E-810B-FE514920A91A}">
-					<ChildrenList>
-						<Action Name="" ID="{A5C9B3EC-FFAB-4EFF-B6B5-4C1DAB439B07}" ShortID="859939555">
+						<Action Name="" ID="{7B5317D9-A733-4B66-9370-195603982809}" ShortID="907748720">
+							<PropertyList>
+								<Property Name="FadeTime" Type="Real64" Value="1"/>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="ACHAT_CHAUDRON" ID="{E29CFFEB-52DA-4A16-AFA7-24D9EA9F04D6}" WorkUnitID="{F27DCBFD-B41E-4801-95D4-E1AD708B4A26}"/>
+									<ObjectRef Name="MUSIC_IN_GAME_BASE_DEUX_CLIENTS" ID="{408A6C34-5E4E-43E0-91EE-E9CDBAE1F81F}" WorkUnitID="{F27DCBFD-B41E-4801-95D4-E1AD708B4A26}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
-					</ChildrenList>
-				</Event>
-				<Event Name="Play_GRIMOIR_TURN_PAGE" ID="{96338753-8CB8-455D-8979-8F620E456550}">
-					<ChildrenList>
-						<Action Name="" ID="{280C1B62-8E66-4144-B03E-429656E2E918}" ShortID="776769366">
+						<Action Name="" ID="{EE99BD2A-F7F8-4AA1-9E4D-EBCB8E0236B4}" ShortID="906320972">
+							<PropertyList>
+								<Property Name="FadeTime" Type="Real64" Value="1"/>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="GRIMOIR_TURN_PAGE" ID="{37C15485-7CA1-47AA-B947-2224CAA43C89}" WorkUnitID="{F27DCBFD-B41E-4801-95D4-E1AD708B4A26}"/>
+									<ObjectRef Name="MUSIC_IN_GAME_CHAMPI" ID="{53C9BAE7-4AD1-4AE7-9395-F12D385C3377}" WorkUnitID="{F27DCBFD-B41E-4801-95D4-E1AD708B4A26}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
-					</ChildrenList>
-				</Event>
-				<Event Name="Play_MENE_SONETTE" ID="{86E26D8F-5AFB-4C46-8D84-37BA06595529}">
-					<ChildrenList>
-						<Action Name="" ID="{D8555C5A-F849-44F8-8488-88EB8BBE3BA7}" ShortID="304977779">
+						<Action Name="" ID="{AD75F020-231A-480F-9D9B-F51202D30A20}" ShortID="1039025046">
+							<PropertyList>
+								<Property Name="FadeTime" Type="Real64" Value="1"/>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="MENE_SONETTE" ID="{1C3CE226-1CBF-4093-A06C-7393613C6F36}" WorkUnitID="{F27DCBFD-B41E-4801-95D4-E1AD708B4A26}"/>
+									<ObjectRef Name="MUSIC_IN_GAME_DEMON_01" ID="{A00F98B0-E9DB-4B37-90C1-886E266833AC}" WorkUnitID="{F27DCBFD-B41E-4801-95D4-E1AD708B4A26}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
-					</ChildrenList>
-				</Event>
-				<Event Name="Play_TIPS" ID="{D846BAA1-25E9-4F32-89CF-18AD89B430CB}">
-					<ChildrenList>
-						<Action Name="" ID="{88960FBE-01A1-414E-BA33-9FE53863F9E9}" ShortID="874717322">
+						<Action Name="" ID="{22A77F24-9F99-4CBB-933E-18B2AC8C825F}" ShortID="581772658">
+							<PropertyList>
+								<Property Name="FadeTime" Type="Real64" Value="1"/>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="TIPS" ID="{CBDE22CA-F3B5-4AA1-8C8B-B16CE653EF4E}" WorkUnitID="{F27DCBFD-B41E-4801-95D4-E1AD708B4A26}"/>
+									<ObjectRef Name="MUSIC_IN_GAME_DEMON_02" ID="{1F0FDD9B-DBEA-443D-A1A0-EDE43F04AECF}" WorkUnitID="{F27DCBFD-B41E-4801-95D4-E1AD708B4A26}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
-					</ChildrenList>
-				</Event>
-				<Event Name="Play_WITCHCRAFT_SFX_RUNE_GOOD" ID="{4CDC4499-9DF4-4BD1-AF96-33DA5E32A430}">
-					<ChildrenList>
-						<Action Name="" ID="{188454EF-97FE-4310-879E-0A3841BBD8E9}" ShortID="385391449">
+						<Action Name="" ID="{4CBCA949-041E-46FA-8B53-600548DDD25F}" ShortID="691398714">
+							<PropertyList>
+								<Property Name="FadeTime" Type="Real64" Value="1"/>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="WITCHCRAFT_SFX_RUNE_GOOD" ID="{93520929-2F1C-445A-8E20-C9CA017131AB}" WorkUnitID="{F27DCBFD-B41E-4801-95D4-E1AD708B4A26}"/>
+									<ObjectRef Name="MUSIC_IN_GAME_MINOTAUR" ID="{B58C6882-1B90-4DAA-9BB0-AE544D57AF91}" WorkUnitID="{F27DCBFD-B41E-4801-95D4-E1AD708B4A26}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
-					</ChildrenList>
-				</Event>
-				<Event Name="Play_WITCHCRAFT_SFX_RUNE_BAD" ID="{DC9361EC-429A-4B1F-AD8E-EE2BC3D33EF3}">
-					<ChildrenList>
-						<Action Name="" ID="{14DFCAE4-753D-4354-A7A0-6A21E29D08EE}" ShortID="856358072">
+						<Action Name="" ID="{E2277769-C593-47F7-AC99-9EE4CE75586D}" ShortID="554319981">
+							<PropertyList>
+								<Property Name="FadeTime" Type="Real64" Value="1"/>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="WITCHCRAFT_SFX_RUNE_BAD" ID="{1F125572-1C37-47C9-A9DE-A2886A5C77CB}" WorkUnitID="{F27DCBFD-B41E-4801-95D4-E1AD708B4A26}"/>
+									<ObjectRef Name="MUSIC_IN_GAME_NYMPHE" ID="{2ECEF95B-80A2-4557-8ED1-A785175D8BD6}" WorkUnitID="{F27DCBFD-B41E-4801-95D4-E1AD708B4A26}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
-					</ChildrenList>
-				</Event>
-				<Event Name="Play_WITCHCRAFT_SFX_POTION_GOOD" ID="{C6C668E4-ED84-449C-997E-E2ACFC0DEB1A}">
-					<ChildrenList>
-						<Action Name="" ID="{4A42E6D3-87EB-4689-B1F7-F047415A96CA}" ShortID="695004460">
+						<Action Name="" ID="{FD73CA87-1058-4827-B9C9-95645ECAD1F4}" ShortID="168851246">
+							<PropertyList>
+								<Property Name="FadeTime" Type="Real64" Value="1"/>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="WITCHCRAFT_SFX_POTION_GOOD" ID="{8C47CBAA-D22D-4D3F-BBA3-095F24A36373}" WorkUnitID="{F27DCBFD-B41E-4801-95D4-E1AD708B4A26}"/>
+									<ObjectRef Name="MUSIC_IN_GAME_NYMPHE_03" ID="{BDAC3C16-70C4-4A42-ADA9-4A0E96F413A2}" WorkUnitID="{F27DCBFD-B41E-4801-95D4-E1AD708B4A26}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
-					</ChildrenList>
-				</Event>
-				<Event Name="Play_WITCHCRAFT_SFX_POTION_BAD" ID="{CEDA272A-F4AC-47CC-8A98-8EEB0CA7291E}">
-					<ChildrenList>
-						<Action Name="" ID="{CA8BCED4-8618-4AF1-8687-C6AB8B8C9526}" ShortID="685180965">
+						<Action Name="" ID="{E643AB2D-D9ED-430F-99D5-8E66F19EDC2E}" ShortID="286247270">
+							<PropertyList>
+								<Property Name="FadeTime" Type="Real64" Value="1"/>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="WITCHCRAFT_SFX_POTION_BAD" ID="{2308083C-47E7-4604-B720-87020BB09D44}" WorkUnitID="{F27DCBFD-B41E-4801-95D4-E1AD708B4A26}"/>
+									<ObjectRef Name="MUSIC_IN_GAME_PUMPKIN_01" ID="{0C630448-75A1-4D8E-907F-DA98EF4D9DA3}" WorkUnitID="{F27DCBFD-B41E-4801-95D4-E1AD708B4A26}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
-					</ChildrenList>
-				</Event>
-				<Event Name="Play_WITCHCRAFT_SFX_PARCHEMIN" ID="{8059AE1C-4CBF-4A8E-9D83-7FDFC1119498}">
-					<ChildrenList>
-						<Action Name="" ID="{855BF451-253B-4763-A4D8-74CE2D12648F}" ShortID="333609776">
+						<Action Name="" ID="{F8B71CFB-B61E-436A-ABC9-64CC98136AD9}" ShortID="692086855">
+							<PropertyList>
+								<Property Name="FadeTime" Type="Real64" Value="1"/>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="WITCHCRAFT_SFX_PARCHEMIN" ID="{F476C7E8-3228-47A5-BA66-F9290252068D}" WorkUnitID="{F27DCBFD-B41E-4801-95D4-E1AD708B4A26}"/>
+									<ObjectRef Name="MUSIC_IN_GAME_PUMPKIN_02" ID="{441DE2B3-B4F0-4B92-851A-55A8B1B203D1}" WorkUnitID="{F27DCBFD-B41E-4801-95D4-E1AD708B4A26}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
-					</ChildrenList>
-				</Event>
-				<Event Name="Play_WITCHCRAFT_SFX_OUVRE_GRIMOIRE_1" ID="{3F5B965C-2544-4103-84BB-1FD511EF4753}">
-					<ChildrenList>
-						<Action Name="" ID="{F6FE8E87-8584-49AC-9BAF-95BF1F619DB2}" ShortID="541924669">
+						<Action Name="" ID="{ABBCDD12-C96E-4CF6-AADD-A2F18F6383E2}" ShortID="350695029">
+							<PropertyList>
+								<Property Name="FadeTime" Type="Real64" Value="1"/>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="WITCHCRAFT_SFX_OUVRE_GRIMOIRE_1" ID="{168EEF18-5AF7-4D29-81B1-BBC8535C811D}" WorkUnitID="{F27DCBFD-B41E-4801-95D4-E1AD708B4A26}"/>
+									<ObjectRef Name="MUSIC_IN_GAME_SKELETON_01" ID="{4EC141D8-1BD3-4B6F-9478-28ADC90739D6}" WorkUnitID="{F27DCBFD-B41E-4801-95D4-E1AD708B4A26}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
-					</ChildrenList>
-				</Event>
-				<Event Name="Play_WITCHCRAFT_SFX_NOUVEAU_CLIENT" ID="{C2D8F64B-7B9B-4272-8AD8-54F12AD980DB}">
-					<ChildrenList>
-						<Action Name="" ID="{E459BD31-166E-472C-BB47-8AE7DB28F001}" ShortID="615513626">
+						<Action Name="" ID="{32960770-4C5B-4A70-822B-8813E00E52A5}" ShortID="506572899">
+							<PropertyList>
+								<Property Name="FadeTime" Type="Real64" Value="1"/>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="WITCHCRAFT_SFX_NOUVEAU_CLIENT" ID="{E3214364-6A22-4CD7-8EDD-DCCF8611335D}" WorkUnitID="{F27DCBFD-B41E-4801-95D4-E1AD708B4A26}"/>
+									<ObjectRef Name="MUSIC_IN_GAME_SKELETON_02" ID="{A3CE24AE-DD65-427B-94B6-ADF686D4DE50}" WorkUnitID="{F27DCBFD-B41E-4801-95D4-E1AD708B4A26}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
-					</ChildrenList>
-				</Event>
-				<Event Name="Play_WITCHCRAFT_SFX_MENU" ID="{E58F3B92-47D1-4413-BCFE-04F0E2C970C6}">
-					<ChildrenList>
-						<Action Name="" ID="{02452E26-9EFF-4BC0-A7D8-547E33484552}" ShortID="97420412">
+						<Action Name="" ID="{F50D1E7D-1E92-450E-A201-9C2ADACA6EAB}" ShortID="748567052">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="4"/>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="WITCHCRAFT_SFX_MENU" ID="{8ECA21F7-3ED6-4EDF-B334-A4389894BBB0}" WorkUnitID="{F27DCBFD-B41E-4801-95D4-E1AD708B4A26}"/>
+									<ObjectRef Name="BOUTIQUE_FERMEE_FINALE" ID="{D206B11E-C22E-4529-B40D-03FF9D6027A0}" WorkUnitID="{F27DCBFD-B41E-4801-95D4-E1AD708B4A26}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
-					</ChildrenList>
-				</Event>
-				<Event Name="Play_WITCHCRAFT_SFX_INGREDIENT_POTION" ID="{B6DA6AF6-2CC0-43ED-B44A-220650682F97}">
-					<ChildrenList>
-						<Action Name="" ID="{9FD1576E-8174-446E-982E-52B4F181D2F4}" ShortID="766144898">
+						<Action Name="" ID="{0DAEEE26-9623-4BC1-8AF8-3A0BEF0AF666}" ShortID="267799410">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="4"/>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="WITCHCRAFT_SFX_INGREDIENT_POTION" ID="{F148C975-1AA5-43AA-8BF8-5F9DC92008A9}" WorkUnitID="{F27DCBFD-B41E-4801-95D4-E1AD708B4A26}"/>
+									<ObjectRef Name="MUSIC_IN_GAME_BASE_DEUX_CLIENTS" ID="{408A6C34-5E4E-43E0-91EE-E9CDBAE1F81F}" WorkUnitID="{F27DCBFD-B41E-4801-95D4-E1AD708B4A26}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
-					</ChildrenList>
-				</Event>
-				<Event Name="Play_BUY_POTION" ID="{1C2033D3-576E-4EC6-92B3-2A74E932A46A}">
-					<ChildrenList>
-						<Action Name="" ID="{389811BB-7445-43C1-95A7-AE5786141E2E}" ShortID="845250566">
+						<Action Name="" ID="{1B4C0C6D-7147-488D-A24E-FB109E29CCB4}" ShortID="155186106">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="4"/>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="BUY_POTION" ID="{6C14C95E-5537-4BE4-AA11-00ED9A41DE5F}" WorkUnitID="{F27DCBFD-B41E-4801-95D4-E1AD708B4A26}"/>
+									<ObjectRef Name="MUSIC_IN_GAME_CHAMPI" ID="{53C9BAE7-4AD1-4AE7-9395-F12D385C3377}" WorkUnitID="{F27DCBFD-B41E-4801-95D4-E1AD708B4A26}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
-					</ChildrenList>
-				</Event>
-				<Event Name="Play_AMELIORATION_CHAUDRON" ID="{31596290-52BB-4382-A84C-B7F4594312F1}">
-					<ChildrenList>
-						<Action Name="" ID="{C16934C6-E104-428C-8AA8-F17073EEC5FD}" ShortID="31134280">
+						<Action Name="" ID="{AF9E0DB8-9E54-4065-890A-C7397409F08D}" ShortID="915344791">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="4"/>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="AMELIORATION_CHAUDRON" ID="{072AE154-012C-437C-8D47-8D7A0D4DB916}" WorkUnitID="{F27DCBFD-B41E-4801-95D4-E1AD708B4A26}"/>
+									<ObjectRef Name="MUSIC_IN_GAME_DEMON_01" ID="{A00F98B0-E9DB-4B37-90C1-886E266833AC}" WorkUnitID="{F27DCBFD-B41E-4801-95D4-E1AD708B4A26}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{025C5166-39D2-47C2-ACB1-3323DBA283CB}" ShortID="423386144">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="4"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="MUSIC_IN_GAME_DEMON_02" ID="{1F0FDD9B-DBEA-443D-A1A0-EDE43F04AECF}" WorkUnitID="{F27DCBFD-B41E-4801-95D4-E1AD708B4A26}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{66A5E26F-1D60-499C-A6E0-B750AA94521C}" ShortID="234327172">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="4"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="MUSIC_IN_GAME_MINOTAUR" ID="{B58C6882-1B90-4DAA-9BB0-AE544D57AF91}" WorkUnitID="{F27DCBFD-B41E-4801-95D4-E1AD708B4A26}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{7C2EA034-9EBD-4C3D-A0B4-B01AEBE91F00}" ShortID="480307437">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="4"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="MUSIC_IN_GAME_NYMPHE" ID="{2ECEF95B-80A2-4557-8ED1-A785175D8BD6}" WorkUnitID="{F27DCBFD-B41E-4801-95D4-E1AD708B4A26}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{51C9D658-585D-4BA2-9CD9-32791F54E4F0}" ShortID="299798328">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="4"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="MUSIC_IN_GAME_NYMPHE_03" ID="{BDAC3C16-70C4-4A42-ADA9-4A0E96F413A2}" WorkUnitID="{F27DCBFD-B41E-4801-95D4-E1AD708B4A26}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{73400CEA-F7D0-46E3-A7D7-C7A4B4C80AE1}" ShortID="961590692">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="4"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="MUSIC_IN_GAME_PUMPKIN_01" ID="{0C630448-75A1-4D8E-907F-DA98EF4D9DA3}" WorkUnitID="{F27DCBFD-B41E-4801-95D4-E1AD708B4A26}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{45DAC83E-9267-4393-BC3F-F2907914E258}" ShortID="401937468">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="4"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="MUSIC_IN_GAME_PUMPKIN_02" ID="{441DE2B3-B4F0-4B92-851A-55A8B1B203D1}" WorkUnitID="{F27DCBFD-B41E-4801-95D4-E1AD708B4A26}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{4C5BD1DD-E7A9-4A64-AB63-E95E2A6827B1}" ShortID="98073556">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="4"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="MUSIC_IN_GAME_SKELETON_01" ID="{4EC141D8-1BD3-4B6F-9478-28ADC90739D6}" WorkUnitID="{F27DCBFD-B41E-4801-95D4-E1AD708B4A26}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{B6808D73-2A31-45A0-A582-E27ACCE0A0E5}" ShortID="966916275">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="4"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="MUSIC_IN_GAME_SKELETON_02" ID="{A3CE24AE-DD65-427B-94B6-ADF686D4DE50}" WorkUnitID="{F27DCBFD-B41E-4801-95D4-E1AD708B4A26}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>

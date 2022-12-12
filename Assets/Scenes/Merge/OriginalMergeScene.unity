@@ -3603,6 +3603,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1939098866}
   - component: {fileID: 1939098867}
+  - component: {fileID: 1939098868}
   m_Layer: 0
   m_Name: CustomerManager
   m_TagString: Untagged
@@ -3657,6 +3658,111 @@ MonoBehaviour:
   - {fileID: 5683640515893573999}
   turnPage: {fileID: 1303242646957857590}
   VFX: {fileID: 7289916171035614637, guid: a9c05c418304b4c41ba7afc550fb97d2, type: 3}
+  customerChange:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1939098868}
+        m_TargetAssemblyTypeName: DinamicMusic, Assembly-CSharp
+        m_MethodName: OnClienChange
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1939098868
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1939098865}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a6cd31eae9bd7642b09e3ab346b46ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playAll:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: fb0624cc994fe114f8ef3c289c0df508, type: 2}
+  Mute:
+  - idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: e0ca955a323243846b34fb620d682f26, type: 2}
+  - idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: acd6eb94bfef9a544b0a5d8f9b949e82, type: 2}
+  - idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: af2381bd65c9f2c439b0c6b6c82b6a6b, type: 2}
+  - idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: bd182d6b6fae60d4fa95bd929f7b4220, type: 2}
+  - idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: a553f52ba1b55f548b683b3985d795ad, type: 2}
+  - idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 39c4d7a6f759ff643a14c8506dbc5da3, type: 2}
+  - idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: bc6d438678df7d347b7449010e961c24, type: 2}
+  - idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 85a198dc65fc9ca4380c880bd7c5b6a9, type: 2}
+  - idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: fc7a2fe43b8e2234284629b8bcdf3f43, type: 2}
+  - idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: dff639c193ceb874593544d1ae599ddd, type: 2}
+  - idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 931151852dff8274a8aedc16bc1604e5, type: 2}
+  - idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 17f5ac839802fde4abded712c3f917e1, type: 2}
+  UnMute:
+  - idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 52dcedb92c075ca4e828bb611f751414, type: 2}
+  - idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 4d2fcec4d02bf3a4e8d0f57e89d4478b, type: 2}
+  - idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 7e2bc830e2b15b747be24e8702653222, type: 2}
+  - idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 1264cd761eca1f34eacc9c0a22dfc2a4, type: 2}
+  - idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 763efe13a5458c3469264549939ade97, type: 2}
+  - idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: c13ffbd185636c4458dd15c889b2b3f0, type: 2}
+  - idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: e201e76d433587f40bed353494e74714, type: 2}
+  - idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: f71493c7f912ce941964cda778219d85, type: 2}
+  - idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: ea0791cc78a6d19478793e8803b1e737, type: 2}
+  - idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: d844d9626dbfa034882bcf34963e4a9e, type: 2}
+  - idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: e39863e231c0f9843afbd0507e40ef08, type: 2}
+  - idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: f5560788074b37c4b8cc6a7721078eb8, type: 2}
 --- !u!1001 &1939895115
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7dfea0f4146b3f84fa3c05f7b27dedd9, type: 3}
+  m_Name: 28640424-6D7C-4F15-8AEB-D24528F3C7C0
+  m_EditorClassIdentifier: 
+  objectName: Play_Dynamic_Music
+  id: 2023865973
+  guid: 28640424-6D7C-4F15-8AEB-D24528F3C7C0

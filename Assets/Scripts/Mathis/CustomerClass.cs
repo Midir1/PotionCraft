@@ -65,6 +65,7 @@ public class CustomerClass
     private Sprite sprite;
     public Vector2 pos;
     private RACE race;
+    internal RACE Race { get => race;}
     public HERO hero;
     public int nbPart;
     public Animator anim;
@@ -370,7 +371,9 @@ public class CustomerClass
     }
 
     private int potionIndex = -1;
-    
+
+
+
     private string PathToPotion(int i)
     {
         string potionPath = "Potions/";

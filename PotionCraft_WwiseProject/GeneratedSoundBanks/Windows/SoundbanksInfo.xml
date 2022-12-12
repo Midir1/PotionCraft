@@ -9,7 +9,7 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{E3E23193-B58E-830A-DD83-755444FEC8D8}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{3DCE144C-570A-2E20-EF44-54FD030C8AE9}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
@@ -27,15 +27,16 @@
 				<GameParameter Id="50587143" Name="BusMaster"/>
 				<GameParameter Id="534305110" Name="BusMusic"/>
 				<GameParameter Id="1501993918" Name="BusSfx"/>
+				<GameParameter Id="3671138082" Name="New_Game_Parameter"/>
 			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="2880737896" Type="User" Language="SFX" Hash="{9BAE7829-579A-B940-B4AA-ECB50509A0C9}">
+		<SoundBank Id="2880737896" Type="User" Language="SFX" Hash="{49E8FB81-674A-91A2-C6C5-451BEB1EA446}">
 			<ShortName>MainBank</ShortName>
 			<Path>MainBank.bnk</Path>
 			<Media>
 				<File Id="7980115" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>MUSIC_IN_GAME_SKELETON_01.wav</ShortName>
-					<CachePath>SFX/MUSIC_IN_GAME_SKELETON_01_10C4C929.wem</CachePath>
+					<CachePath>SFX/MUSIC_IN_GAME_SKELETON_01_D79FB2B7.wem</CachePath>
 				</File>
 				<File Id="20146126" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>SFX\WITCHCRAFT_SFX_POTION_BAD.wav</ShortName>
@@ -63,7 +64,7 @@
 				</File>
 				<File Id="91414950" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>MUSIC_IN_GAME_DEMON_02.wav</ShortName>
-					<CachePath>SFX/MUSIC_IN_GAME_DEMON_02_10C4C929.wem</CachePath>
+					<CachePath>SFX/MUSIC_IN_GAME_DEMON_02_D79FB2B7.wem</CachePath>
 				</File>
 				<File Id="160770417" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>SFX\WITCHCRAFT_SFX_TOURNE_PAGE_03.wav</ShortName>
@@ -76,6 +77,10 @@
 				<File Id="197427510" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>SFX\WITCHCRAFT_SFX_OUVRE_GRIMOIRE_1.wav</ShortName>
 					<CachePath>SFX/SFX/WITCHCRAFT_SFX_OUVRE_GRIMOIRE_1_10C4C929.wem</CachePath>
+				</File>
+				<File Id="230964898" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>BOUTIQUE_FERMEE_FINALE.wav</ShortName>
+					<CachePath>SFX/BOUTIQUE_FERMEE_FINALE_D79FB2B7.wem</CachePath>
 				</File>
 				<File Id="266877472" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>SFX\WITCHCRAFT_SFX_TOURNE_PAGE_02.wav</ShortName>
@@ -103,11 +108,11 @@
 				</File>
 				<File Id="438222462" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>MUSIC_IN_GAME_DEMON_01.wav</ShortName>
-					<CachePath>SFX/MUSIC_IN_GAME_DEMON_01_10C4C929.wem</CachePath>
+					<CachePath>SFX/MUSIC_IN_GAME_DEMON_01_D79FB2B7.wem</CachePath>
 				</File>
 				<File Id="460554117" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>MUSIC_IN_GAME_PUMPKIN_01.wav</ShortName>
-					<CachePath>SFX/MUSIC_IN_GAME_PUMPKIN_01_10C4C929.wem</CachePath>
+					<CachePath>SFX/MUSIC_IN_GAME_PUMPKIN_01_D79FB2B7.wem</CachePath>
 				</File>
 				<File Id="464979140" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>SFX\WITCHCRAFT_SFX_INGREDIENT_POTION.wav</ShortName>
@@ -127,7 +132,7 @@
 				</File>
 				<File Id="544189197" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>MUSIC_IN_GAME_SKELETON_02.wav</ShortName>
-					<CachePath>SFX/MUSIC_IN_GAME_SKELETON_02_10C4C929.wem</CachePath>
+					<CachePath>SFX/MUSIC_IN_GAME_SKELETON_02_D79FB2B7.wem</CachePath>
 				</File>
 				<File Id="548837911" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>WITCHCRAFT_MUSIQUE_MENU_ET_TUTO_FINALE.wav</ShortName>
@@ -139,7 +144,7 @@
 				</File>
 				<File Id="575767285" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>MUSIC_IN_GAME_NYMPHE.wav</ShortName>
-					<CachePath>SFX/MUSIC_IN_GAME_NYMPHE_10C4C929.wem</CachePath>
+					<CachePath>SFX/MUSIC_IN_GAME_NYMPHE_D79FB2B7.wem</CachePath>
 				</File>
 				<File Id="584772848" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>SFX\WITCHCRAFT_SFX_MENU.wav</ShortName>
@@ -155,11 +160,11 @@
 				</File>
 				<File Id="760588283" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>MUSIC_IN_GAME_MINOTAUR.wav</ShortName>
-					<CachePath>SFX/MUSIC_IN_GAME_MINOTAUR_10C4C929.wem</CachePath>
+					<CachePath>SFX/MUSIC_IN_GAME_MINOTAUR_D79FB2B7.wem</CachePath>
 				</File>
 				<File Id="795641910" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>MUSIC_IN_GAME_CHAMPI.wav</ShortName>
-					<CachePath>SFX/MUSIC_IN_GAME_CHAMPI_10C4C929.wem</CachePath>
+					<CachePath>SFX/MUSIC_IN_GAME_CHAMPI_D79FB2B7.wem</CachePath>
 				</File>
 				<File Id="823038839" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>SFX\WITCHCRAFT_SFX_RUNE_BAD.wav</ShortName>
@@ -167,7 +172,7 @@
 				</File>
 				<File Id="846263526" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>MUSIC_IN_GAME_NYMPHE_03.wav</ShortName>
-					<CachePath>SFX/MUSIC_IN_GAME_NYMPHE_03_10C4C929.wem</CachePath>
+					<CachePath>SFX/MUSIC_IN_GAME_NYMPHE_03_D79FB2B7.wem</CachePath>
 				</File>
 				<File Id="854449426" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>SFX\WITCHCRAFT_SFX_FERME_GRIMOIRE.wav</ShortName>
@@ -191,7 +196,7 @@
 				</File>
 				<File Id="926874588" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>MUSIC_IN_GAME_BASE_DEUX_CLIENTS.wav</ShortName>
-					<CachePath>SFX/MUSIC_IN_GAME_BASE_DEUX_CLIENTS_10C4C929.wem</CachePath>
+					<CachePath>SFX/MUSIC_IN_GAME_BASE_DEUX_CLIENTS_C5579977.wem</CachePath>
 				</File>
 				<File Id="927188442" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>SFX\WITCHCRAFT_SFX_ACHAT_CHAUDRON_02.wav</ShortName>
@@ -203,7 +208,7 @@
 				</File>
 				<File Id="960176606" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>MUSIC_IN_GAME_PUMPKIN_02.wav</ShortName>
-					<CachePath>SFX/MUSIC_IN_GAME_PUMPKIN_02_10C4C929.wem</CachePath>
+					<CachePath>SFX/MUSIC_IN_GAME_PUMPKIN_02_D79FB2B7.wem</CachePath>
 				</File>
 				<File Id="968921399" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>SFX\WITCHCRAFT_SFX_POTION_GOOD.wav</ShortName>
@@ -227,6 +232,66 @@
 				</File>
 			</Media>
 			<Events>
+				<Event Id="3738520330" Name="Mute_BOUTIQUE_FERMEE_FINALE" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
+					<MediaRefs>
+						<MediaRef Id="230964898"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="471894233" Name="Mute_MUSIC_IN_GAME_BASE_DEUX_CLIENTS" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
+					<MediaRefs>
+						<MediaRef Id="926874588"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1022835170" Name="Mute_MUSIC_IN_GAME_CHAMPI" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
+					<MediaRefs>
+						<MediaRef Id="795641910"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2055704365" Name="Mute_MUSIC_IN_GAME_DEMON_01" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
+					<MediaRefs>
+						<MediaRef Id="438222462"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2055704366" Name="Mute_MUSIC_IN_GAME_DEMON_02" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
+					<MediaRefs>
+						<MediaRef Id="91414950"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2764148719" Name="Mute_MUSIC_IN_GAME_MINOTAUR" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
+					<MediaRefs>
+						<MediaRef Id="760588283"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3756378729" Name="Mute_MUSIC_IN_GAME_NYMPHE" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
+					<MediaRefs>
+						<MediaRef Id="575767285"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="849813399" Name="Mute_MUSIC_IN_GAME_NYMPHE_03" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
+					<MediaRefs>
+						<MediaRef Id="846263526"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2268807606" Name="Mute_MUSIC_IN_GAME_PUMPKIN_01" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
+					<MediaRefs>
+						<MediaRef Id="460554117"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2268807605" Name="Mute_MUSIC_IN_GAME_PUMPKIN_02" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
+					<MediaRefs>
+						<MediaRef Id="960176606"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2305838305" Name="Mute_MUSIC_IN_GAME_SKELETON_01" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
+					<MediaRefs>
+						<MediaRef Id="7980115"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2305838306" Name="Mute_MUSIC_IN_GAME_SKELETON_02" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
+					<MediaRefs>
+						<MediaRef Id="544189197"/>
+					</MediaRefs>
+				</Event>
 				<Event Id="4159994098" Name="Play_ACHAT_CHAUDRON" DurationType="OneShot" DurationMin="0.54933333" DurationMax="0.624">
 					<MediaRefs>
 						<MediaRef Id="36655867"/>
@@ -244,6 +309,22 @@
 						<MediaRef Id="61526642"/>
 						<MediaRef Id="329715689"/>
 						<MediaRef Id="570538854"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2023865973" Name="Play_Dynamic_Music" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="7980115"/>
+						<MediaRef Id="91414950"/>
+						<MediaRef Id="230964898"/>
+						<MediaRef Id="438222462"/>
+						<MediaRef Id="460554117"/>
+						<MediaRef Id="544189197"/>
+						<MediaRef Id="575767285"/>
+						<MediaRef Id="760588283"/>
+						<MediaRef Id="795641910"/>
+						<MediaRef Id="846263526"/>
+						<MediaRef Id="926874588"/>
+						<MediaRef Id="960176606"/>
 					</MediaRefs>
 				</Event>
 				<Event Id="3678673408" Name="Play_ECHELLE" DurationType="OneShot" DurationMin="1.7386667" DurationMax="2.1866667">
@@ -358,6 +439,66 @@
 						<MediaRef Id="548837911"/>
 					</MediaRefs>
 				</Event>
+				<Event Id="2801066749" Name="UnMute_BOUTIQUE_FERMEE_FINALE" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
+					<MediaRefs>
+						<MediaRef Id="230964898"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3360191552" Name="UnMute_MUSIC_IN_GAME_BASE_DEUX_CLIENTS" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
+					<MediaRefs>
+						<MediaRef Id="926874588"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="71648165" Name="UnMute_MUSIC_IN_GAME_CHAMPI" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
+					<MediaRefs>
+						<MediaRef Id="795641910"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3746168242" Name="UnMute_MUSIC_IN_GAME_DEMON_01" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
+					<MediaRefs>
+						<MediaRef Id="438222462"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3746168241" Name="UnMute_MUSIC_IN_GAME_DEMON_02" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
+					<MediaRefs>
+						<MediaRef Id="91414950"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1497197816" Name="UnMute_MUSIC_IN_GAME_MINOTAUR" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
+					<MediaRefs>
+						<MediaRef Id="760588283"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="280058406" Name="UnMute_MUSIC_IN_GAME_NYMPHE" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
+					<MediaRefs>
+						<MediaRef Id="575767285"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2843128182" Name="UnMute_MUSIC_IN_GAME_NYMPHE_03" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
+					<MediaRefs>
+						<MediaRef Id="846263526"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3517842613" Name="UnMute_MUSIC_IN_GAME_PUMPKIN_01" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
+					<MediaRefs>
+						<MediaRef Id="460554117"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3517842614" Name="UnMute_MUSIC_IN_GAME_PUMPKIN_02" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
+					<MediaRefs>
+						<MediaRef Id="960176606"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2358205436" Name="UnMute_MUSIC_IN_GAME_SKELETON_01" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
+					<MediaRefs>
+						<MediaRef Id="7980115"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2358205439" Name="UnMute_MUSIC_IN_GAME_SKELETON_02" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
+					<MediaRefs>
+						<MediaRef Id="544189197"/>
+					</MediaRefs>
+				</Event>
 			</Events>
 			<Busses>
 				<Bus Id="393239870" Name="SFX"/>
@@ -368,8 +509,9 @@
 				<GameParameter Id="50587143" Name="BusMaster"/>
 				<GameParameter Id="534305110" Name="BusMusic"/>
 				<GameParameter Id="1501993918" Name="BusSfx"/>
+				<GameParameter Id="3671138082" Name="New_Game_Parameter"/>
 			</GameParameters>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{B14B86AA-8011-E8AF-AE31-FB4A7AA1D104}</FileHash>
+	<FileHash>{14C1C17B-F456-328C-D63F-C0E54302AB97}</FileHash>
 </SoundBanksInfo>

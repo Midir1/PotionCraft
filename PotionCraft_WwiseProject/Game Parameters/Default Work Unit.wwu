@@ -1,6 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{C751A2F6-DA08-42A8-83EF-AB431471358D}" SchemaVersion="110">
 	<GameParameters>
-		<WorkUnit Name="Default Work Unit" ID="{C751A2F6-DA08-42A8-83EF-AB431471358D}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{C751A2F6-DA08-42A8-83EF-AB431471358D}" PersistMode="Standalone">
+			<ChildrenList>
+				<GameParameter Name="BusMusic" ID="{5782BCE6-0B13-438E-B4A6-02B813968127}">
+					<PropertyList>
+						<Property Name="InitialValue" Type="Real64" Value="0.5"/>
+						<Property Name="Max" Type="Real64" Value="1"/>
+					</PropertyList>
+				</GameParameter>
+				<GameParameter Name="BusSfx" ID="{7EAAC50D-79E5-45B3-8CEF-8D7267F0E764}">
+					<PropertyList>
+						<Property Name="InitialValue" Type="Real64" Value="0.5"/>
+						<Property Name="Max" Type="Real64" Value="1"/>
+					</PropertyList>
+				</GameParameter>
+				<GameParameter Name="BusMaster" ID="{56AEB131-828F-4DF6-90B5-3ACBC2483FBF}">
+					<PropertyList>
+						<Property Name="InitialValue" Type="Real64" Value="0.75"/>
+						<Property Name="Max" Type="Real64" Value="1"/>
+					</PropertyList>
+				</GameParameter>
+				<GameParameter Name="New_Game_Parameter" ID="{5B082386-CC08-47E7-B072-02A757C1DDF4}"/>
+				<Folder Name="DynamicMusic" ID="{3B512B65-B71D-4F8D-A42B-ABC381500D91}" ShortID="607644908"/>
+			</ChildrenList>
+		</WorkUnit>
 	</GameParameters>
 </WwiseDocument>

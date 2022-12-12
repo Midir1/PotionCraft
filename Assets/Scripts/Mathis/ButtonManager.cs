@@ -5,6 +5,7 @@ using Unity.VisualScripting;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Events;
 
 public class ButtonManager : MonoBehaviour
 {
@@ -24,7 +25,15 @@ public class ButtonManager : MonoBehaviour
     
     float timer = 8f;
     bool startDay = false;
-    
+
+    public List<CustomerClass> CustomerTab { get => customerTab;}
+    public UnityEvent customerChange;
+
+    private void Start()
+    {
+        if (customerChange == null)
+            customerChange = new UnityEvent();
+    }
 
     // Update is called once per frame
     void Update()
@@ -90,7 +99,7 @@ public class ButtonManager : MonoBehaviour
                     customerTab.Add(customer);
                     customer.DisplayCustomer(customerParent);
                     CustomerMove();
-
+                    customerChange?.Invoke();
                 }
             }
         }
@@ -185,8 +194,11 @@ public class ButtonManager : MonoBehaviour
                 }
 
             }
-        
-        
+
+        if (!GameManager.Instance.tutoState)
+        {
+            customerChange?.Invoke();
+        }
     }
 
     public void ButtonQuit()
