@@ -3808,19 +3808,7 @@ MonoBehaviour:
   VFX: {fileID: 7289916171035614637, guid: a9c05c418304b4c41ba7afc550fb97d2, type: 3}
   customerChange:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1939098868}
-        m_TargetAssemblyTypeName: DinamicMusic, Assembly-CSharp
-        m_MethodName: OnClienChange
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &1939098868
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13886,7 +13874,6 @@ GameObject:
   - component: {fileID: 5683640515778885118}
   - component: {fileID: 5683640515778885117}
   - component: {fileID: 5683640515778885116}
-  - component: {fileID: 5683640515778885119}
   m_Layer: 0
   m_Name: ElixirIvrogne
   m_TagString: Untagged
@@ -13982,19 +13969,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5683640515778885090}
   m_CullTransparentMesh: 1
---- !u!114 &5683640515778885119
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5683640515778885090}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 80f0b4a0c85f81c46bdf8972c6806543, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  potion: 0
 --- !u!1 &5683640515803860440
 GameObject:
   m_ObjectHideFlags: 0
@@ -21232,7 +21206,6 @@ GameObject:
   - component: {fileID: 5683640516654132542}
   - component: {fileID: 5683640516654132541}
   - component: {fileID: 5683640516654132540}
-  - component: {fileID: 5683640516654132543}
   m_Layer: 0
   m_Name: SuperElixir
   m_TagString: Untagged
@@ -21328,19 +21301,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5683640516654132514}
   m_CullTransparentMesh: 1
---- !u!114 &5683640516654132543
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5683640516654132514}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 80f0b4a0c85f81c46bdf8972c6806543, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  potion: 0
 --- !u!114 &5683640516667193728
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22864,7 +22824,6 @@ GameObject:
   - component: {fileID: 5683640516891677885}
   - component: {fileID: 5683640516891677884}
   - component: {fileID: 5683640516891677859}
-  - component: {fileID: 5683640516891677886}
   m_Layer: 0
   m_Name: PotionGamer
   m_TagString: Untagged
@@ -22962,19 +22921,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5683640516891677857}
   m_CullTransparentMesh: 1
---- !u!114 &5683640516891677886
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5683640516891677857}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 80f0b4a0c85f81c46bdf8972c6806543, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  potion: 0
 --- !u!114 &5683640516892954080
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32743,19 +32689,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ButonShop:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 8504958890499057133}
-        m_TargetAssemblyTypeName: PostAkEvent, Assembly-CSharp
-        m_MethodName: PostEvent
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!61 &8504958890499057128
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -35339,19 +35273,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ButonBank:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 8504958891344538840}
-        m_TargetAssemblyTypeName: PostAkEvent, Assembly-CSharp
-        m_MethodName: PostEvent
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!61 &8504958891344538838
 BoxCollider2D:
   m_ObjectHideFlags: 0
