@@ -44,7 +44,7 @@ public class GameManager : MonoBehaviour
     public bool bellIsAvailable = false;
     public bool[] Bp = new bool[(int)PotionBp.PotionBpNb];
     public int[] potionPrice = new int[(int)PotionBp.PotionBpNb];
-    public bool tutoState = false;
+    public bool tutoState = true;
     #endregion
 
     #region getters/setters

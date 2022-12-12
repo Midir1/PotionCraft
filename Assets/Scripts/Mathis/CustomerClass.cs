@@ -172,7 +172,6 @@ public class CustomerClass
 
             float temp = ((timer/nbPotion) * 10)/100.0f;
 
-            Debug.Log(temp);
             result = (uint)(price * temp);
         }
 
@@ -256,9 +255,10 @@ public class CustomerClass
         parent.tag = "Customer";
         parent.GetComponent<RectTransform>().anchoredPosition = new Vector3(0, 1.8f);
         parent.GetComponent<RectTransform>().SetParent(customerParent);
-        parent.AddComponent<SiblingIndex>();
+       
         if (!GameManager.Instance.tutoState)
         {
+            parent.AddComponent<SiblingIndex>();
             anim = parent.AddComponent<Animator>();
             anim.runtimeAnimatorController = Resources.Load("AnimationController/Customer") as RuntimeAnimatorController;
             anim.SetInteger("Race", (int)race);

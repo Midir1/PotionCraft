@@ -118,8 +118,11 @@ public class StateManager : MonoBehaviour
             drawPanel.SetActive(false);
             inputManager.SetActive(false);
         }
-        else if (currentState == 12 && potion == null)
-            currentState++;
+        else if (currentState == 12)
+        {
+                currentState++;
+        }
+            
         
 
 

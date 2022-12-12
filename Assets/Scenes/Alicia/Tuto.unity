@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.3708985, g: 0.3783704, b: 0.35722548, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074014, b: 0.3587274, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1924,7 +1924,7 @@ MonoBehaviour:
   grimoireCanvas: {fileID: 0}
   potions: []
   turnPage: {fileID: 0}
-  VFX: {fileID: 0}
+  VFX: {fileID: 7289916171035614637, guid: a9c05c418304b4c41ba7afc550fb97d2, type: 3}
   customerChange:
     m_PersistentCalls:
       m_Calls: []

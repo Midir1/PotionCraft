@@ -113,6 +113,19 @@ public class ButtonManager : MonoBehaviour
 
     public void CustomerMove()
     {
+
+        if (GameManager.Instance.tutoState)
+        {
+            for (int i = 0; i < customerTab.Count; i++)
+            {
+                {
+                    customerTab[i].parent.transform.position = new Vector3(customerTab[i].pos.x, customerTab[i].pos.y);
+                    Vector3 pos = customerTab[i].parent.GetComponent<RectTransform>().anchoredPosition3D;
+                    customerTab[i].parent.GetComponent<RectTransform>().anchoredPosition3D = new Vector3(pos.x, pos.y, 0);
+                }
+            }
+        }
+
         for (int i = 0; i < customerTab.Count; i++)
         {
             {
@@ -128,7 +141,16 @@ public class ButtonManager : MonoBehaviour
 
     public void EraseCustomer(Transform parent, int potionIndex)
     {
-        
+        if (GameManager.Instance.tutoState)
+        {
+            for (int i = 0; i < pickedCustomer.nbPart; i++)
+            {
+                Destroy(pickedCustomer.partDisplay[i]);
+            }
+            Destroy(parent.gameObject);
+        }
+        else
+        {
             int nb = 0;
 
             for (int i = 0; i < customerTab.Count; i++)
@@ -164,7 +186,7 @@ public class ButtonManager : MonoBehaviour
                             go.GetComponent<ParticleSystem>().Play();
                             Destroy(go, 1.0f);
                         }
-                    
+
                         Destroy(pickedCustomer.parchemin[i]);
                         Destroy(pickedCustomer.potionGo[i]);
                         pickedCustomer.parchemin.RemoveAt(i);
@@ -185,15 +207,16 @@ public class ButtonManager : MonoBehaviour
                     pickedCustomer.anim.SetInteger("Pos", 4);
                     for (int i = 0; i < pickedCustomer.nbPart; i++)
                     {
-                    Destroy(pickedCustomer.partDisplay[i]) ;
+                        Destroy(pickedCustomer.partDisplay[i]);
                     }
                     Destroy(parent.gameObject);
                     customerTab.RemoveAt(nb);
-                    
+
                     CustomerMove();
                 }
 
             }
+        }
 
         if (!GameManager.Instance.tutoState)
         {
