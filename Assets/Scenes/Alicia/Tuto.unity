@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074014, b: 0.3587274, a: 1}
+  m_IndirectSpecularColor: {r: 0.3708985, g: 0.3783704, b: 0.35722548, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1898,6 +1898,7 @@ GameObject:
   m_Component:
   - component: {fileID: 509528062}
   - component: {fileID: 509528061}
+  - component: {fileID: 509528063}
   m_Layer: 0
   m_Name: CustomerManager
   m_TagString: Untagged
@@ -1924,6 +1925,9 @@ MonoBehaviour:
   potions: []
   turnPage: {fileID: 0}
   VFX: {fileID: 0}
+  customerChange:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!4 &509528062
 Transform:
   m_ObjectHideFlags: 0
@@ -1939,6 +1943,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &509528063
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 509528060}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6bc28044094bc90449141d04f21a426a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isTuto: 1
 --- !u!1 &515706335
 GameObject:
   m_ObjectHideFlags: 0
@@ -3627,13 +3644,11 @@ MonoBehaviour:
   - {fileID: 2075358053}
   - {fileID: 743399357}
   - {fileID: 1507932159}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
   defaultResolution: {x: 1080, y: 1920}
   swipeTolerance: 0.2
   shopCanvas: {fileID: 1760692841}
   grimoireCanvas: {fileID: 950892586}
+  uiToHide: []
   laderEvent:
     idInternal: 0
     valueGuidInternal: 

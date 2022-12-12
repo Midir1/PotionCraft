@@ -981,7 +981,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7775186501621568675, guid: abc56da131ba2d041b595836269c3387, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0
+      value: -5
       objectReference: {fileID: 0}
     - target: {fileID: 7775186501621568675, guid: abc56da131ba2d041b595836269c3387, type: 3}
       propertyPath: m_LocalRotation.w
@@ -2345,7 +2345,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4458238965302764731, guid: 3f4e20d23f5592749b15e565e52ce11f, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0
+      value: -5
       objectReference: {fileID: 0}
     - target: {fileID: 4458238965302764731, guid: 3f4e20d23f5592749b15e565e52ce11f, type: 3}
       propertyPath: m_LocalRotation.w
@@ -2680,7 +2680,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buttonManager: {fileID: 1939098867}
   scroll: {fileID: 1319380534289054652}
-  cycleTimer: 120
+  cycleTimer: 60
 --- !u!114 &1266263413
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3752,6 +3752,7 @@ GameObject:
   - component: {fileID: 1939098866}
   - component: {fileID: 1939098867}
   - component: {fileID: 1939098868}
+  - component: {fileID: 1939098869}
   m_Layer: 0
   m_Name: CustomerManager
   m_TagString: Untagged
@@ -3899,6 +3900,19 @@ MonoBehaviour:
   - idInternal: 0
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 11400000, guid: f5560788074b37c4b8cc6a7721078eb8, type: 2}
+--- !u!114 &1939098869
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1939098865}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6bc28044094bc90449141d04f21a426a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isTuto: 0
 --- !u!1001 &1939895115
 PrefabInstance:
   m_ObjectHideFlags: 0
